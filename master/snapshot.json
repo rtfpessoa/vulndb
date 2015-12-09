@@ -47,7 +47,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/backbone/20110701/backbone_20110701_0_0_0cdc525961d3fa98e810ffae6bcc8e3838e36d93.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/backbone/20110701/backbone_20110701_0_0_0cdc525961d3fa98e810ffae6bcc8e3838e36d93.patch"
 						],
 						"version": "<0.5.0 >=0.3.3",
 						"modificationTime": "2015-11-06T02:09:36.180Z",
@@ -89,7 +89,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/bassmaster/20140927/bassmaster_20140927_0_0_b751602d8cb7194ee62a61e085069679525138c4.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/bassmaster/20140927/bassmaster_20140927_0_0_b751602d8cb7194ee62a61e085069679525138c4.patch"
 						],
 						"version": "<=1.5.1 >=0.4.0 || <=0.3.0 >=0.0.1",
 						"modificationTime": "2014-09-27T05:44:48.000Z",
@@ -377,30 +377,6 @@
 		],
 		"ember": [
 			{
-				"title": "Bound attributes don't get escaped properly",
-				"credit": [],
-				"description": "## References\n- https://github.com/emberjs/ember.js/issues/699\n",
-				"semver": {
-					"vulnerable": "< 0.9.7",
-					"unaffected": ">= 0.9.7"
-				},
-				"CVSSv3": "",
-				"severity": "medium",
-				"identifiers": {
-					"CWE": [
-						"CWE-79"
-					],
-					"CVE": [],
-					"NSP": ""
-				},
-				"patches": [],
-				"moduleName": "ember",
-				"creationTime": "2015-11-06T02:09:36.180Z",
-				"publicationTime": "2015-11-06T02:09:36.180Z",
-				"modificationTime": "2015-11-06T02:09:36.180Z",
-				"id": "npm:ember:20120418"
-			},
-			{
 				"title": "Potential XSS Exploit When Binding `tagName` to User-Supplied Data",
 				"credit": [
 					"Mario Heiderich"
@@ -536,7 +512,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/ep_imageconvert/20130506/ep_imageconvert_20130506_0_0_04bfc27f0d7aa0bfe1c515c9254a874165d2725c.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ep_imageconvert/20130506/ep_imageconvert_20130506_0_0_04bfc27f0d7aa0bfe1c515c9254a874165d2725c.patch"
 						],
 						"version": "<=0.0.2",
 						"modificationTime": "2013-05-06T06:33:48.000Z",
@@ -587,30 +563,6 @@
 				"alternativeIds": [
 					"npm:express:20140912-1"
 				]
-			},
-			{
-				"title": "root path disclosure vulnerability in express.static, res.sendfile, and res.sendFile",
-				"credit": [],
-				"description": "## Overview\n\nRoot path disclosure vulnerability in express.static, res.sendfile, and res.sendFile.\n\n## Remediation\n\nUpgrade to version 1.8.1 or greater.\n\n## References:\n- https://github.com/expressjs/serve-static/blob/856c5e0f796a8988525c356018594bfb8c51a4fa/HISTORY.md#181--2015-01-20\n- http://expressjs.com/en/advanced/security-updates.html\n- https://github.com/expressjs/serve-static/commit/30fe8b1596e8879923610c0421598669c39aecc2\n- https://github.com/expressjs/serve-static/blob/master/HISTORY.md#181--2015-01-20\n",
-				"semver": {
-					"vulnerable": "<4.11.1",
-					"unaffected": ">=4.11.1"
-				},
-				"CVSSv3": "",
-				"severity": "low",
-				"identifiers": {
-					"CWE": [
-						"CWE-211"
-					],
-					"CVE": [],
-					"NSP": ""
-				},
-				"patches": [],
-				"moduleName": "express",
-				"creationTime": "2015-01-20T04:46:45.000Z",
-				"publicationTime": "2015-01-20T04:46:45.000Z",
-				"modificationTime": "2015-11-06T02:09:36.180Z",
-				"id": "npm:express:20150120"
 			}
 		],
 		"fancy-server": [
@@ -665,7 +617,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/geddy/20150727/geddy_20150727_0_0_3f1bacd7cfda6556f35563f3e79c60c62aa9d286.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/geddy/20150727/geddy_20150727_0_0_3f1bacd7cfda6556f35563f3e79c60c62aa9d286.patch"
 						],
 						"version": "<13.0.8 >=0.12.1",
 						"modificationTime": "2015-07-27T12:33:48.000Z",
@@ -710,7 +662,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/gm/20151026/gm_20151026_0_0_5f5c77490aa84ed313405c88905eb4566135be31_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/gm/20151026/gm_20151026_0_0_5f5c77490aa84ed313405c88905eb4566135be31_snyk.patch"
 						],
 						"version": "<=1.20.0 >=1.17.0",
 						"modificationTime": "2015-10-26T20:12:18.990Z",
@@ -719,7 +671,7 @@
 					},
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/gm/20151026/gm_20151026_1_0_5f5c77490aa84ed313405c88905eb4566135be31_snyk_c1.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/gm/20151026/gm_20151026_1_0_5f5c77490aa84ed313405c88905eb4566135be31_snyk_c1.patch"
 						],
 						"version": "<1.17.0 >=1.16.0",
 						"modificationTime": "2015-10-26T20:12:18.990Z",
@@ -728,7 +680,7 @@
 					},
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/gm/20151026/gm_20151026_2_0_5f5c77490aa84ed313405c88905eb4566135be31_snyk_c2.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/gm/20151026/gm_20151026_2_0_5f5c77490aa84ed313405c88905eb4566135be31_snyk_c2.patch"
 						],
 						"version": "<1.16.0 >=1.15.0",
 						"modificationTime": "2015-10-26T20:12:18.990Z",
@@ -761,7 +713,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/handlebars/20110425/handlebars_20110425_0_0_b291a1ad8c9a33f834d126450635f0b6ca546a0c.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/handlebars/20110425/handlebars_20110425_0_0_b291a1ad8c9a33f834d126450635f0b6ca546a0c.patch"
 						],
 						"version": "<=1.0.0-beta.3",
 						"modificationTime": "2015-11-06T02:09:36.180Z",
@@ -827,7 +779,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/hapi/20140708-1/hapi_20140708-1_0_0_94c6f0f223c3c2c915ba80adec58b153f435b2d1.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/hapi/20140708-1/hapi_20140708-1_0_0_94c6f0f223c3c2c915ba80adec58b153f435b2d1.patch"
 						],
 						"version": "< 6.1.0 >=2.3.0",
 						"modificationTime": "2014-07-08T06:33:48.000Z",
@@ -917,7 +869,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/inert/20141215/inert_20141215_0_0_e8f99f94da4cb08e8032eda984761c3f111e3e82_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/inert/20141215/inert_20141215_0_0_e8f99f94da4cb08e8032eda984761c3f111e3e82_snyk.patch"
 						],
 						"version": "<1.1.1",
 						"modificationTime": "2014-12-15T17:13:48.000Z",
@@ -1013,7 +965,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/jsonwebtoken/20150331/jsonwebtoken_20150331_0_0_1bb584bc382295eeb7ee8c4452a673a77a68b687_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/jsonwebtoken/20150331/jsonwebtoken_20150331_0_0_1bb584bc382295eeb7ee8c4452a673a77a68b687_snyk.patch"
 						],
 						"version": "=4.0.0 || =4.1.0 || =4.2.1",
 						"modificationTime": "2015-03-31T16:00:00.000Z",
@@ -1051,7 +1003,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/keystone/20151204/v0.3.15.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/keystone/20151204/v0.3.15.patch"
 						],
 						"version": "<0.3.16 >=0.3.13",
 						"modificationTime": "2015-12-05T16:00:00.000Z",
@@ -1118,7 +1070,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/ldapauth-fork/20150918/ldapauth-fork_20150918_0_0_3feea43e243698bcaeffa904a7324f4d96df60e4.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ldapauth-fork/20150918/ldapauth-fork_20150918_0_0_3feea43e243698bcaeffa904a7324f4d96df60e4.patch"
 						],
 						"version": "<2.3.3 >=2.3.0",
 						"modificationTime": "2015-09-18T09:29:10.000Z",
@@ -1160,7 +1112,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/libnotify/20130515/libnotify_20130515_0_0_8e2e7306088624503ba5eec592b502c4f97d8846.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/libnotify/20130515/libnotify_20130515_0_0_8e2e7306088624503ba5eec592b502c4f97d8846.patch"
 						],
 						"version": "<= 1.0.3",
 						"modificationTime": "2013-05-15T19:30:05.000Z",
@@ -1231,7 +1183,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/mapbox.js/20151024/mapbox.js_20151024_0_0_538d229ab6767bb4c3f3969c417f9884189c1512.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/mapbox.js/20151024/mapbox.js_20151024_0_0_538d229ab6767bb4c3f3969c417f9884189c1512.patch"
 						],
 						"version": "=2.1.6",
 						"modificationTime": "2015-11-24T20:39:59.852Z",
@@ -1298,7 +1250,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/marked/20140131-1/marked_20140131-1_0_0_a37bd643f05bf95ff18cafa2b06e7d741d2e2157.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/marked/20140131-1/marked_20140131-1_0_0_a37bd643f05bf95ff18cafa2b06e7d741d2e2157.patch"
 						],
 						"version": "<=0.3.3 >=0.2.8",
 						"modificationTime": "2014-01-30T22:33:12.000Z",
@@ -1338,7 +1290,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/marked/20140131-2/marked_20140131-2_0_0_3c191144939107c45a7fa11ab6cb88be6694a1ba.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/marked/20140131-2/marked_20140131-2_0_0_3c191144939107c45a7fa11ab6cb88be6694a1ba.patch"
 						],
 						"version": "<=0.3.2 >=0.3.1",
 						"modificationTime": "2014-01-30T22:33:12.000Z",
@@ -1383,7 +1335,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/millisecond/20151120/millisecond_20151120_0_0_d3e03f8cd2089806b522e867505e14444fbac838.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/millisecond/20151120/millisecond_20151120_0_0_d3e03f8cd2089806b522e867505e14444fbac838.patch"
 						],
 						"version": "=0.1.1",
 						"modificationTime": "2015-11-24T20:39:59.852Z",
@@ -1421,7 +1373,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/ms/20151024/ms_20151024_0_0_48701f029417faf65e6f5e0b61a3cebe5436b07b.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ms/20151024/ms_20151024_0_0_48701f029417faf65e6f5e0b61a3cebe5436b07b.patch"
 						],
 						"version": "=0.7.0",
 						"modificationTime": "2015-10-24T20:39:59.852Z",
@@ -1430,7 +1382,7 @@
 					},
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/ms/20151024/ms_20151024_1_0_48701f029417faf65e6f5e0b61a3cebe5436b07b_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ms/20151024/ms_20151024_1_0_48701f029417faf65e6f5e0b61a3cebe5436b07b_snyk.patch"
 						],
 						"version": "<0.7.0 >=0.6.0",
 						"modificationTime": "2015-10-24T20:39:59.852Z",
@@ -1439,7 +1391,7 @@
 					},
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/ms/20151024/ms_20151024_2_0_48701f029417faf65e6f5e0b61a3cebe5436b07b_snyk2.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ms/20151024/ms_20151024_2_0_48701f029417faf65e6f5e0b61a3cebe5436b07b_snyk2.patch"
 						],
 						"version": "<0.6.0 >0.3.0",
 						"modificationTime": "2015-10-24T20:39:59.852Z",
@@ -1448,7 +1400,7 @@
 					},
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/ms/20151024/ms_20151024_3_0_48701f029417faf65e6f5e0b61a3cebe5436b07b_snyk3.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ms/20151024/ms_20151024_3_0_48701f029417faf65e6f5e0b61a3cebe5436b07b_snyk3.patch"
 						],
 						"version": "=0.3.0",
 						"modificationTime": "2015-10-24T20:39:59.852Z",
@@ -1457,7 +1409,7 @@
 					},
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/ms/20151024/ms_20151024_4_0_48701f029417faf65e6f5e0b61a3cebe5436b07b_snyk4.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ms/20151024/ms_20151024_4_0_48701f029417faf65e6f5e0b61a3cebe5436b07b_snyk4.patch"
 						],
 						"version": "=0.2.0",
 						"modificationTime": "2015-10-24T20:39:59.852Z",
@@ -1466,7 +1418,7 @@
 					},
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/ms/20151024/ms_20151024_5_0_48701f029417faf65e6f5e0b61a3cebe5436b07b_snyk5.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ms/20151024/ms_20151024_5_0_48701f029417faf65e6f5e0b61a3cebe5436b07b_snyk5.patch"
 						],
 						"version": "=0.1.0",
 						"modificationTime": "2015-10-24T20:39:59.852Z",
@@ -1581,7 +1533,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/printer/20140306/printer_20140306_0_0_e001e38738c17219a1d9dd8c31f7d82b9c0013c7.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/printer/20140306/printer_20140306_0_0_e001e38738c17219a1d9dd8c31f7d82b9c0013c7.patch"
 						],
 						"version": "<= 0.0.1",
 						"modificationTime": "2014-03-06T07:33:48.000Z",
@@ -1650,7 +1602,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/qs/20140806-1/qs_20140806-1_0_0_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/qs/20140806-1/qs_20140806-1_0_0_snyk.patch"
 						],
 						"version": "<1.0.0 >=0.6.5",
 						"modificationTime": "2014-11-20T06:10:22.000Z",
@@ -1659,7 +1611,7 @@
 					},
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/qs/20140806-1/qs_20140806-1_0_1_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/qs/20140806-1/qs_20140806-1_0_1_snyk.patch"
 						],
 						"version": "=0.5.6",
 						"modificationTime": "2014-11-20T06:10:22.000Z",
@@ -1750,7 +1702,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/secure-compare/20151024/secure-compare_20151024_0_0_b768f45003dad04743c91747e35df1b0a4c4c897.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/secure-compare/20151024/secure-compare_20151024_0_0_b768f45003dad04743c91747e35df1b0a4c4c897.patch"
 						],
 						"version": "=3.0.0",
 						"modificationTime": "2015-10-24T21:00:53.201Z",
@@ -1787,7 +1739,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/semver/20150403/semver_20150403_0_0_c80180d8341a8ada0236815c29a2be59864afd70.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/semver/20150403/semver_20150403_0_0_c80180d8341a8ada0236815c29a2be59864afd70.patch"
 						],
 						"version": "<4.3.2 >= 2.0.2",
 						"modificationTime": "2015-04-03T16:00:00.000Z",
@@ -1829,7 +1781,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/send/20140912/send_20140912_0_0_9c6ca9b2c0b880afd3ff91ce0d211213c5fa_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/send/20140912/send_20140912_0_0_9c6ca9b2c0b880afd3ff91ce0d211213c5fa_snyk.patch"
 						],
 						"version": "< 0.8.4 >=0.7.3",
 						"modificationTime": "2014-09-12T05:06:33.000Z",
@@ -1866,7 +1818,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/send/20151103/send_20151103_0_1_98a5b89982b38e79db684177cf94730ce7fc7aed.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/send/20151103/send_20151103_0_1_98a5b89982b38e79db684177cf94730ce7fc7aed.patch"
 						],
 						"version": "<0.11.1 >=0.9.0",
 						"modificationTime": "2015-11-03T07:12:20.676Z",
@@ -1907,7 +1859,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/sequelize/20150118/sequelize_20150118_0_0_f6ff86f7af6e2d15906ad1511b234d19adcccb07_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/sequelize/20150118/sequelize_20150118_0_0_f6ff86f7af6e2d15906ad1511b234d19adcccb07_snyk.patch"
 						],
 						"version": "=2.0.0-rc7",
 						"modificationTime": "2015-01-18T20:00:00.000Z",
@@ -1945,7 +1897,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/serve-index/20150314/serve-index_20150314_0_0_0d135e710d717d7d9a3a3994f611214fb42e2191_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/serve-index/20150314/serve-index_20150314_0_0_0d135e710d717d7d9a3a3994f611214fb42e2191_snyk.patch"
 						],
 						"version": "<1.6.3 >1.5.1",
 						"modificationTime": "2015-03-13T23:24:28.000Z",
@@ -1985,7 +1937,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/serve-static/20150113/serve-static_20150113_0_0_0399e399935bab99530d6926094b4451438c2d50_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/serve-static/20150113/serve-static_20150113_0_0_0399e399935bab99530d6926094b4451438c2d50_snyk.patch"
 						],
 						"version": ">=1.7.0 <1.7.2",
 						"modificationTime": "2015-01-13T12:50:48.000Z",
@@ -2022,33 +1974,6 @@
 				"publicationTime": "2015-01-20T04:46:45.000Z",
 				"modificationTime": "2015-11-06T02:09:36.180Z",
 				"id": "npm:serve-static:20150120"
-			}
-		],
-		"snyk-litmus-test": [
-			{
-				"title": "Sample vulnerability",
-				"credit": [
-					"Snyk"
-				],
-				"description": "Description",
-				"semver": {
-					"vulnerable": "< 0.0.1",
-					"unaffected": ">= 0.0.2"
-				},
-				"CVSSv3": "",
-				"severity": "low",
-				"identifiers": {
-					"CWE": [],
-					"CVE": [],
-					"NSP": ""
-				},
-				"info": [],
-				"patches": [],
-				"moduleName": "snyk-litmus-test",
-				"creationTime": "2015-11-06T02:09:36.180Z",
-				"publicationTime": "2015-11-06T02:09:36.180Z",
-				"modificationTime": "2015-11-06T02:09:36.180Z",
-				"id": "npm:snyk-litmus-test:20150101"
 			}
 		],
 		"st": [
@@ -2133,7 +2058,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/tar/20151103/tar_20151103_0_0_a5337a6cd58a2d800fc03b3781a25751cf459f28_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/tar/20151103/tar_20151103_0_0_a5337a6cd58a2d800fc03b3781a25751cf459f28_snyk.patch"
 						],
 						"version": "<2.0.0 >=0.1.13",
 						"modificationTime": "2015-11-17T09:29:10.000Z",
@@ -2144,7 +2069,7 @@
 					},
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/tar/20151103/tar_20151103_0_1_a5337a6cd58a2d800fc03b3781a25751cf459f28_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/tar/20151103/tar_20151103_0_1_a5337a6cd58a2d800fc03b3781a25751cf459f28_snyk.patch"
 						],
 						"version": "<0.1.13 >0.0.1",
 						"modificationTime": "2015-11-17T09:29:10.000Z",
@@ -2184,7 +2109,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/tomato/20130307/tomato_20130307_0_0_9e427d524e04a905312a3294c85e939ed7d57b8c.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/tomato/20130307/tomato_20130307_0_0_9e427d524e04a905312a3294c85e939ed7d57b8c.patch"
 						],
 						"version": "<= 0.0.5 >=0.0.2",
 						"modificationTime": "2013-03-07T19:52:30.000Z",
@@ -2253,7 +2178,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/uglify-js/20151024/uglify-js_20151024_0_0_63d35f8_snyk_inc.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/uglify-js/20151024/uglify-js_20151024_0_0_63d35f8_snyk_inc.patch"
 						],
 						"version": "<= 2.4.23 >=2.2.0",
 						"modificationTime": "2015-11-16T09:29:10.000Z",
@@ -2264,7 +2189,7 @@
 					},
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/uglify-js/20151024/uglify-js_20151024_0_0_63d35f8_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/uglify-js/20151024/uglify-js_20151024_0_0_63d35f8_snyk.patch"
 						],
 						"version": "<2.6.0 >2.4.23",
 						"modificationTime": "2015-11-16T09:29:10.000Z",
@@ -2357,7 +2282,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/validator/20130705-1/validator_20130705-1_0_0_2d5d6999541add350fb396ef02dc42ca3215049e_snyk.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/validator/20130705-1/validator_20130705-1_0_0_2d5d6999541add350fb396ef02dc42ca3215049e_snyk.patch"
 						],
 						"version": "<2.0.0 >=1.5.1",
 						"modificationTime": "2014-10-27T06:33:48.000Z",
@@ -2425,7 +2350,7 @@
 				"patches": [
 					{
 						"urls": [
-							"https://s3.amazonaws.com/snyk-rules-pre-repository/snapshots-public/master/patches/npm/yar/20140616/yar_20140616_0_0_66b981a47655bef2fed84f90b86fc5b43edaea8e.patch"
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/yar/20140616/yar_20140616_0_0_66b981a47655bef2fed84f90b86fc5b43edaea8e.patch"
 						],
 						"version": "<2.2.0 >=0.3.0",
 						"modificationTime": "2014-06-16T09:29:10.000Z",
