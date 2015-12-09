@@ -1034,7 +1034,7 @@
 				"credit": [
 					"Greg Meyer"
 				],
-				"description": "## Overview\nInvalid email addresses can be mistakenly matched during sign-in. This affects the `User` record to be fetched from the DB. Correct password for that `User` is still required to authenticate.\n\n## Recommendations\nUpgrade to version 0.3.16 or greater. \n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/documentation/#wizard) to patch this vulnerability.\n\n## References\n- https://nodesecurity.io/advisories/60\n- https://www.npmjs.com/package/keystone\n",
+				"description": "## Overview\nInvalid email addresses can be mistakenly matched during sign-in. This affects the `User` record to be fetched from the DB. Correct password for that `User` is still required to authenticate.\n\n## Recommendations\nUpgrade to version 0.3.16 or greater. \n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/documentation/#wizard) to patch this vulnerability.\n\n## References\n- https://nodesecurity.io/advisories/60\n- https://www.npmjs.com/package/keystone\n- https://github.com/keystonejs/keystone/issues/1085\n",
 				"semver": {
 					"vulnerable": "<0.3.16",
 					"unaffected": ">=0.3.16"
