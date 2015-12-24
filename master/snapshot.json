@@ -375,6 +375,34 @@
 				"id": "npm:dojo:20100614-6"
 			}
 		],
+		"ecstatic": [
+			{
+				"title": "Denial of Service through an invalid If-Modified-Since header",
+				"credit": [
+					"James Halliday"
+				],
+				"creationTime": "2015-12-24T09:29:48.262Z",
+				"modificationTime": "2015-12-24T09:29:48.262Z",
+				"publicationTime": "2015-12-23T23:21:25.322Z",
+				"description": "## Overview\nSending a purposefully crafted invalid date in the `If-Modified-Since` header will cause the `Ecstatic` server to crash, enabling an easily exploited `Denial of Service` attack. \n\nThe vulnerability is caused by the combination of two bugs. \nFirst, the underlying V8 engine throws an exception when processing the specially crafted date, instead of stating the date is invalid as it should. Second, the ecstatic server does not handle the exception, triggering the crash.\n\nUpgrading `Ecstatic` will address the second issue and thus fix the vulnerability.\n\n## References\n- Ecstatic fix: https://github.com/jfhbrook/node-ecstatic/pull/179\n- V8 bug: https://bugs.chromium.org/p/v8/issues/detail?id=4640\n\n",
+				"semver": {
+					"vulnerable": "<1.4.0",
+					"unaffected": ">=1.4.0"
+				},
+				"CVSSv3": "",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-248"
+					],
+					"CVE": [],
+					"NSP": 64
+				},
+				"patches": [],
+				"moduleName": "ecstatic",
+				"id": "npm:ecstatic:20151223"
+			}
+		],
 		"ember": [
 			{
 				"title": "Potential XSS Exploit When Binding `tagName` to User-Supplied Data",
@@ -856,6 +884,32 @@
 				"patches": [],
 				"moduleName": "hapi",
 				"id": "npm:hapi:20151020"
+			},
+			{
+				"title": "Denial of Service through invalid If-Modified-Since/Last-Modified headers",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2015-12-24T09:29:48.265Z",
+				"modificationTime": "2015-12-24T09:29:48.265Z",
+				"publicationTime": "2015-12-23T23:17:51.134Z",
+				"description": "## Overview\nSending a purposefully crafted invalid date in the `If-Modified-Since` or `Last-Modified` header will cause the `Hapi` server to err but keep the socket open (the socket will time out after 2 minutes by default). This allows an attacker to quickly exhaust the sockets on the server, making it unavailable (a `Denial of Service` attack).\n\nThe vulnerability is caused by the combination of two bugs. \nFirst, the underlying V8 engine throws an exception when processing the specially crafted date, instead of stating the date is invalid as it should. Second, the `Hapi` server does not handle the exception well, leading to the socket remaining open.\n\nUpgrading `Hapi` will address the second issue and thus fix the vulnerability.\n\n## References\n- Hapi fix: https://github.com/hapijs/hapi/commit/aab2496e930dce5ee1ab28eecec94e0e45f03580\n- V8 bug: https://bugs.chromium.org/p/v8/issues/detail?id=4640\n",
+				"semver": {
+					"vulnerable": "<11.1.3",
+					"unaffected": ">=11.1.3"
+				},
+				"CVSSv3": "",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [
+						"CWE-400"
+					],
+					"CVE": [],
+					"NSP": 63
+				},
+				"patches": [],
+				"moduleName": "hapi",
+				"id": "npm:hapi:20151223"
 			}
 		],
 		"hubot-scripts": [
