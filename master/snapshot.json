@@ -1823,7 +1823,7 @@
 				"credit": [
 					"Dustin Shiver"
 				],
-				"description": "## Overview\nThe qs module has the ability to create sparse arrays during parsing. By specifying a high index it is possible to create a large array that will eventually take up all the allocated memory of the running process, resulting in a crash.\n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/29)_\n\n## Remediation\nUpgrade qs to version 1.0.0 or greater.\n\n## References\n- https://nodesecurity.io/advisories/29\n- https://github.com/visionmedia/node-querystring/issues/104\n\n",
+				"description": "## Overview\nDuring parsing, the qs module may create a sparse area (an array where not elements are filled), and grow that array to the necessary size based on the indices used on it. An attacker can specify a high index value in a query string, thus making the server allocate a respectively big array. Truly large values can cause the server to run out of memory and cause it to crash - thus enabling a Denial-of-Service attack.\n\n## Remediation\nUpgrade qs to version 1.0.0 or greater. In these versions, qs introduced a low limit on the index value, preventing such an attack\n\n## References\n- https://nodesecurity.io/advisories/29\n- https://github.com/visionmedia/node-querystring/issues/104\n\n",
 				"semver": {
 					"vulnerable": "<1.0.0",
 					"unaffected": ">= 1.x"
@@ -1867,11 +1867,11 @@
 				"id": "npm:qs:20140806"
 			},
 			{
-				"title": "qs Denial-of-Service Extended Event Loop Blocking",
+				"title": "Denial-of-Service through Event Loop Blocking",
 				"credit": [
 					"Tom Steele"
 				],
-				"description": "## Overview\nThe qs module does not have an option or default for specifying object depth and, when parsing a string representing a deeply nested object, will block the event loop for long periods of time. An attacker could leverage this to cause a temporary denial-of-service condition, for example in a web application, other requests would not be processed while this blocking is occurring.\n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/28)_\n\n## Remediation\nUpdate qs to version 1.0.0 or greater.\n\n## References\nhttps://nodesecurity.io/advisories/28\n",
+				"description": "## Overview\nWhen parsing a string representing a deeply nested object, qs will block the event loop for long periods of time. Such a delay may hold up the server's resources, keeping it from processing other requests in the meantime, thus enabling a Denial-of-Service attack. \n\n## Remediation\nUpdate qs to version 1.0.0 or greater. In these versions, qs enforces a max object depth (along with other limits), limiting the event loop length and thus preventing such an attack.\n\n## References\nhttps://nodesecurity.io/advisories/28\n",
 				"semver": {
 					"vulnerable": "<1.0.0",
 					"unaffected": ">= 1.x"
@@ -2008,7 +2008,7 @@
 				"credit": [
 					"Adam Baldwin"
 				],
-				"description": "## Overview\n\nsemver is vulnerable to regular expression denial of service ([ReDoS](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS)) when extremely long version strings are parsed.\n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/31)_\n\n## Details\n\"The Regular expression Denial of Service (ReDoS) is a Denial of Service attack, that exploits the fact that most Regular Expression implementations may reach extreme situations that cause them to work very slowly (exponentially related to input size). An attacker can then cause a program using a Regular Expression to enter these extreme situations and then hang for a very long time.\" [1]\n\n## Remediation\nUpdate to a version 4.3.2 or greater. Package version can no longer be more than 256 characters long. This prevents a situation in which parsing the version number can use exponentially more time and memory to parse, leading to a potential denial of service.\n\n## References\n- https://nodesecurity.io/advisories/31\n- [1] https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS\n- https://github.com/npm/npm/releases/tag/v2.7.5\n",
+				"description": "## Overview\nThe semver module uses regular expressions when parsing a version string. For a carefully crafted input, the time it takes to process these regular expressions is not linear to the length of the input. Since the semver module did not enforce a limit on the version string length, an attacker could provide a long string that would take up a large amount of resources, potentially taking a server down. This issue therefore enables a potential Denial of Service attack. This is a slightly differnt variant of a typical Regular Expression Denial of Service ([ReDoS](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS)) vulnerability.\n\n## Remediation\nUpdate to a version 4.3.2 or greater. From the issue description [2]: \"Package version can no longer be more than 256 characters long. This prevents a situation in which parsing the version number can use exponentially more time and memory to parse, leading to a potential denial of service.\"\n\n## References\n- https://nodesecurity.io/advisories/31\n- [1] https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS\n- [2] https://github.com/npm/npm/releases/tag/v2.7.5\n",
 				"semver": {
 					"vulnerable": "<4.3.2",
 					"unaffected": ">=4.3.2"
