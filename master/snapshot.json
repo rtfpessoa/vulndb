@@ -1396,6 +1396,32 @@
 				],
 				"moduleName": "mapbox.js",
 				"id": "npm:mapbox.js:20151024"
+			},
+			{
+				"title": "Content Injection via TileJSON Name",
+				"credit": [
+					"Alexandra Ulsh"
+				],
+				"creationTime": "2016-01-14T09:03:36.375Z",
+				"modificationTime": "2016-01-14T09:03:36.375Z",
+				"publicationTime": "2016-01-12T23:35:56.853Z",
+				"description": "## Overview\nMapbox.js is vulnerable to script content injection when `L.mapbox.map` and `L.mapbox.shareControl` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- the map does not use a share control (L.mapbox.sharecontrol)\n- only trusted TileJSON content is loaded\n\n## References\n- [1] https://nodesecurity.io/advisories/74\n \n\n",
+				"semver": {
+					"vulnerable": "<1.6.6 || < 2.2.4 > 2.0.0",
+					"unaffected": ">=1.6.6 <2.0.0 || >= 2.2.4"
+				},
+				"CVSSv3": "",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [
+						"CWE-74"
+					],
+					"CVE": [],
+					"NSP": 74
+				},
+				"patches": [],
+				"moduleName": "mapbox.js",
+				"id": "npm:mapbox.js:20160112"
 			}
 		],
 		"marked": [
