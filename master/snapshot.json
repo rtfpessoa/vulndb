@@ -1574,6 +1574,32 @@
 				"id": "npm:millisecond:20151120"
 			}
 		],
+		"mqtt-packet": [
+			{
+				"title": "mqtt-packet Denial of Service",
+				"credit": [
+					"Peter Sorowka"
+				],
+				"creationTime": "2016-01-17T09:13:27.330Z",
+				"modificationTime": "2016-01-17T09:13:27.330Z",
+				"publicationTime": "2016-01-15T17:01:49.053Z",
+				"description": "## Overview\nInsufficient validation of MQTT packets allows the attacker to crash the application using a specially crafted packet.\n\n## References\n- https://nodesecurity.io/advisories/75\n- https://github.com/mqttjs/mqtt-packet/pull/8 \n- https://github.com/mcollina/mosca/issues/393\n\n",
+				"semver": {
+					"vulnerable": "<3.4.6 || > 4.0.0 <4.0.5",
+					"unaffected": ">=3.4.6 < 4.0.0|| >=4.0.5"
+				},
+				"CVSSv3": "",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 75
+				},
+				"patches": [],
+				"moduleName": "mqtt-packet",
+				"id": "npm:mqtt-packet:20160115"
+			}
+		],
 		"ms": [
 			{
 				"title": "Regular Expression Denial of Service",
