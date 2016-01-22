@@ -976,8 +976,8 @@
 				"publicationTime": "2016-01-19T21:51:35.396Z",
 				"description": "## Overview\nA [Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) vulnerability exists in `hawk` package, affecting version 4.1.0 and below.\n\n\"The Regular expression Denial of Service (ReDoS) is a Denial of Service attack, that exploits the fact that most Regular Expression implementations may reach extreme situations that cause them to work very slowly (exponentially related to input size). An attacker can then cause a program using a Regular Expression to enter these extreme situations and then hang for a very long time.\" [1](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS)\n\n## References\n- https://github.com/hueniverse/hawk/issues/168\n- https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS\n",
 				"semver": {
-					"vulnerable": "<4.1.1",
-					"unaffected": ">=4.1.1"
+					"vulnerable": "<=3.1.2 || >= 4.0.0 <4.1.1",
+					"unaffected": ">3.1.2 < 4.0.0 || >=4.1.1"
 				},
 				"CVSSv3": "",
 				"severity": "low",
