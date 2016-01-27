@@ -1040,6 +1040,42 @@
 				"id": "npm:hubot-scripts:20130515"
 			}
 		],
+		"i18n-node-angular": [
+			{
+				"title": "Denial of Service and Content Injection",
+				"credit": [
+					"Garth Boyd"
+				],
+				"creationTime": "2016-01-25T19:00:11.028Z",
+				"modificationTime": "2016-01-25T19:00:11.028Z",
+				"publicationTime": "2016-01-25T17:56:55.455Z",
+				"description": "## Overview\nA REST API `/i18n/:locale/:phrase` endpoint was accessible in production environment, allowing to add previously unknown translation literals to the translation files. This feature can be abused to mount a XSS attack via content injection, or a Denial of Service attack by exhausting storage resources on the server.\n\n## Remediation\nUpgrade `i18n-node-angular` to version 1.4.0 or greater.\n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/documentation/#wizard) to patch this vulnerability.\n\n## References\n- https://github.com/oliversalzburg/i18n-node-angular/commit/877720d2d9bb90dc8233706e81ffa03f99fc9dc8\n- https://nodesecurity.io/advisories/80\n",
+				"semver": {
+					"vulnerable": "<1.4.0",
+					"unaffected": ">=1.4.0"
+				},
+				"CVSSv3": "",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 80
+				},
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/i18n-node-angular/20160125/i1n-20160125_0_0_877720d2d9bb90dc8233706e81ffa03f99fc9dc8.patch"
+						],
+						"version": "<1.4.0 >1.2.1 || <1.2.1 >0.3.3",
+						"modificationTime": "2016-01-20T12:51:35.396Z",
+						"comments": [],
+						"id": "patch:npm:i18n-node-angular:20160125:0"
+					}
+				],
+				"moduleName": "i18n-node-angular",
+				"id": "npm:i18n-node-angular:20160125"
+			}
+		],
 		"inert": [
 			{
 				"title": "inert Hidden Directories always served",
