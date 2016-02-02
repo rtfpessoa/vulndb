@@ -1732,6 +1732,34 @@
 				"id": "npm:millisecond:20151120"
 			}
 		],
+		"moment": [
+			{
+				"title": "Regular Expression Denial of Service",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2016-02-01T19:00:03.862Z",
+				"modificationTime": "2016-02-01T19:00:03.862Z",
+				"publicationTime": "2016-01-26T20:04:21.225Z",
+				"description": "## Overview\nThe `duration` function in the [`moment`](https://www.npmjs.com/package/moment) package is vulnerable to [Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) attacks when long inputs of certain patterns are processed.\n\n## Details\n\"The Regular expression Denial of Service (ReDoS) is a Denial of Service attack, that exploits the fact that most Regular Expression implementations may reach extreme situations that cause them to work very slowly (exponentially related to input size). An attacker can then cause a program using a Regular Expression to enter these extreme situations and then hang for a very long time.\" [1]\n\n## References\n- [1] https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS\n- https://nodesecurity.io/advisories/55\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [
+						"CWE-400"
+					],
+					"CVE": [],
+					"NSP": 55
+				},
+				"patches": [],
+				"moduleName": "moment",
+				"id": "npm:moment:20160126"
+			}
+		],
 		"mongoose": [
 			{
 				"title": "Remote Memory Exposure",
