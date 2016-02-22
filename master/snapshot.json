@@ -1488,6 +1488,49 @@
 				"id": "npm:libnotify:20130515"
 			}
 		],
+		"libxmljs": [
+			{
+				"title": "Multiple vulnerabilities in embedded binary version of libxml2",
+				"credit": [
+					"Caleb Fenton"
+				],
+				"description": "## Overview\n[libxmljs npm package](https://www.npmjs.com/package/libxmljs) prior to version 0.17.0 embeds and uses an outdated and vulnerable binary version of libxml2 library. The embedded libxml2 version 2.9.0 potentially contains the following vulnerabilities:\n```\n2.9.2\nCVE-2015-8242 Buffer overead with HTML parser in push mode (Hugh Davenport)\nCVE-2015-7500 Fix memory access error due to incorrect entities boundaries (Daniel Veillard)\nCVE-2015-7499-2 Detect incoherency on GROW (Daniel Veillard)\nCVE-2015-7499-1 Add xmlHaltParser() to stop the parser (Daniel Veillard)\nCVE-2015-5312 Another entity expansion issue (David Drysdale)\nCVE-2015-7497 Avoid an heap buffer overflow in xmlDictComputeFastQKey (David Drysdale),\nCVE-2015-7498 Avoid processing entities after encoding conversion failures (Daniel Veillard)\nCVE-2015-7942-2 Fix an error in previous Conditional section patch (Daniel Veillard)\nCVE-2015-7942 Another variation of overflow in Conditional sections (Daniel Veillard)\nCVE-2015-1819 Enforce the reader to run in constant memory (Daniel Veillard)\nCVE-2015-7941_2 Cleanup conditional section error handling (Daniel Veillard)\nCVE-2015-7941_1 Stop parsing on entities boundaries errors (Daniel Veillard)\n\n2.9.1\nCVE-2014-3660 Does not properly prevent entity expansion (Daniel Veillard),\nCVE-2014-0191 Do not fetch external parameter entities (Daniel Veillard)\nCVE-2013-0339 Does not properly handle external entities expansion \n\n2.9.0\nCVE-2013-1969 Multiple use-after-free vulnerabilities in libxml2 2.9.0\nCVE-2013-0338 Allows context-dependent attackers to cause a denial of service\nCVE-2012-5134 Heap-based buffer underflow in the xmlParseAttValueComplex (Daniel Veillard)\n```\n\n## Remediation\nUpgrade `libxmljs` to version 0.17.0 or greater. \n\n## References\n- https://github.com/polotek/libxmljs/pull/375\n- https://github.com/polotek/libxmljs/commit/9acfcaf7d736ec64656bce04259e3b526ecc4b5d\n",
+				"semver": {
+					"vulnerable": "<= 0.16.1",
+					"unaffected": "> 0.16.1"
+				},
+				"CVSSv3": "",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [
+						"CVE-2015-8317",
+						"CVE-2015-8242",
+						"CVE-2015-8241",
+						"CVE-2015-8035",
+						"CVE-2015-7942",
+						"CVE-2015-7941",
+						"CVE-2015-7500",
+						"CVE-2015-7499",
+						"CVE-2015-7498",
+						"CVE-2015-7497",
+						"CVE-2015-5312",
+						"CVE-2014-3660",
+						"CVE-2013-1969",
+						"CVE-2013-0339",
+						"CVE-2014-0191",
+						"CVE-2013-0338",
+						"CVE-2012-5134"
+					]
+				},
+				"patches": [],
+				"moduleName": "libxmljs",
+				"creationTime": "2016-02-14T07:31:34.000Z",
+				"publicationTime": "2016-02-14T07:31:34.000Z",
+				"modificationTime": "2016-02-14T07:31:34.000Z",
+				"id": "npm:libxmljs:20151214"
+			}
+		],
 		"libyaml": [
 			{
 				"title": "libyaml - heap-based buffer overflow when parsing YAML tags",
@@ -2623,9 +2666,9 @@
 			{
 				"title": "st directory traversal",
 				"credit": [
-					"Isaac Schlueter"
+					"Charlie Somerville"
 				],
-				"description": "## Overview\nVersions prior to 0.2.5 did not properly prevent folder traversal. Literal dots in a path were resolved out, but url encoded dots were not. Thus, a request like ``` /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd ``` would leak sensitive data from the server.\n\nAs of version 0.2.5, any ```'/../'``` in the request path, urlencoded or not, will be replaced with ```'/'```. If your application depends on url traversal, then you are encouraged to please refactor so that you do not depend on having ```..``` in url paths, as this tends to expose data that you may be surprised to be exposing.\n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/36)_\n\n## Remediation\nUpgrade to version 0.2.5 or greater.\n\n## References\n- https://nodesecurity.io/advisories/36\n- https://github.com/isaacs/st#security-status\n",
+				"description": "## Overview\nVersions prior to 0.2.5 did not properly prevent folder traversal. Literal dots in a path were resolved out, but url encoded dots were not. Thus, a request like ``` /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd ``` would leak sensitive data from the server.\n\nAs of version 0.2.5, any ```'/../'``` in the request path, urlencoded or not, will be replaced with ```'/'```. If your application depends on url traversal, then you are encouraged to please refactor so that you do not depend on having ```..``` in url paths, as this tends to expose data that you may be surprised to be exposing.\n\n## Remediation\nUpgrade to version 0.2.5 or greater.\n\n## References\n- https://github.com/isaacs/st#security-status\n- http://blog.npmjs.org/post/80277229932/newly-paranoid-maintainers",
 				"semver": {
 					"vulnerable": "<0.2.5",
 					"unaffected": ">=0.2.5"
@@ -2641,7 +2684,17 @@
 					],
 					"NSP": 36
 				},
-				"patches": [],
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/st/20140206/st-20140206_0_0_6b54ce2d2fb912eadd31e2c25c65456d2c8666e1.patch"
+						],
+						"version": "<0.2.5 >0.1.4",
+						"modificationTime": "2016-02-17T12:50:48.000Z",
+						"comments": [],
+						"id": "patch:npm:st:20140206:0"
+					}
+				],
 				"moduleName": "st",
 				"creationTime": "2014-02-06T07:33:48.000Z",
 				"publicationTime": "2014-02-06T07:33:48.000Z",
