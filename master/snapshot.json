@@ -30,7 +30,7 @@
 		],
 		"backbone": [
 			{
-				"title": "Cross Site Scripting vulnerability in backbone",
+				"title": "Cross Site Scripting",
 				"credit": [],
 				"description": "## Overview\n\nPotential XSS Exploit With User-Supplied Data in Model#escape\n\nIn applications that use the escape function, a specially-crafted payload\ncould execute arbitrary JavaScript in the context of the current domain\n(\"XSS\").\n\nThis vulnerability has not been assigned CVE identifier.\n\n## References\n- http://backbonejs.org/#changelog\n",
 				"semver": {
@@ -66,7 +66,7 @@
 		],
 		"bassmaster": [
 			{
-				"title": "Arbitrary JavaScript Execution in Bassmaster",
+				"title": "Arbitrary JavaScript Code Execution",
 				"credit": [
 					"Jarda Kotěšovec"
 				],
@@ -108,7 +108,7 @@
 		],
 		"bittorrent-dht": [
 			{
-				"title": "Remote Memory Disclosure",
+				"title": "Remote Memory Exposure",
 				"credit": [
 					"Feross Aboukhadijeh",
 					"Mathias Buss Madsen"
@@ -167,7 +167,7 @@
 		],
 		"codem-transcode": [
 			{
-				"title": "codem-transcode potential command injection in ffprobe functionality",
+				"title": "Command Injection in ffprobe",
 				"credit": [
 					"Neal Poole"
 				],
@@ -223,7 +223,7 @@
 		],
 		"crumb": [
 			{
-				"title": "Crumb CORS Token Disclosure",
+				"title": "CORS Token Disclosure",
 				"credit": [
 					"Marcus Stong"
 				],
@@ -254,7 +254,7 @@
 		],
 		"datatables": [
 			{
-				"title": "datatables Cross-Site Scripting",
+				"title": "Cross-Site Scripting",
 				"credit": [
 					"Onur Yilmaz"
 				],
@@ -284,7 +284,7 @@
 		],
 		"dns-sync": [
 			{
-				"title": "dns-sync Command Injection",
+				"title": "Arbitrary Command Injection",
 				"credit": [
 					"Steve Kemp"
 				],
@@ -310,7 +310,7 @@
 		],
 		"dojo": [
 			{
-				"title": "XSS in dojo",
+				"title": "Cross-Site Scripting",
 				"credit": [],
 				"description": "## Overview\nCross-site scripting (XSS) vulnerability in dijit.Editor in Dojo before 1.1 allows remote attackers to inject arbitrary web script or HTML via XML entities in a TEXTAREA element.\t\n\n## References\n- http://www.cvedetails.com/cve/CVE-2008-6681/\n",
 				"semver": {
@@ -336,7 +336,7 @@
 				"id": "npm:dojo:20090409"
 			},
 			{
-				"title": "XSS in dojo",
+				"title": "Cross-Site Scripting",
 				"credit": [],
 				"description": "## Overview\nThe default configuration of the build process in Dojo 0.4.x before 0.4.4, 1.0.x before 1.0.3, 1.1.x before 1.1.2, 1.2.x before 1.2.4, 1.3.x before 1.3.3, and 1.4.x before 1.4.2 has the copyTests=true and mini=false options, which makes it easier for remote attackers to have an unspecified impact via a request to a (1) test or (2) demo component.\n\n## References\n- http://dojotoolkit.org/blog/dojo-security-advisory\n- http://www.cvedetails.com/cve/CVE-2010-2276/\n- http://www.cvedetails.com/cve/CVE-2010-2272/\n",
 				"semver": {
@@ -378,7 +378,7 @@
 				]
 			},
 			{
-				"title": "XSS vulnerability in dojo",
+				"title": "Cross-Site Scripting",
 				"credit": [],
 				"description": "## Overview\nCross-site scripting (XSS) vulnerability in dijit/tests/_testCommon.js in Dojo Toolkit SDK before 1.4.2 allows remote attackers to inject arbitrary web script or HTML via the theme parameter, as demonstrated by an attack against dijit/tests/form/test_Button.html.\n\n## References\n- http://www.cvedetails.com/cve/CVE-2010-2275/\n",
 				"semver": {
@@ -406,7 +406,7 @@
 		],
 		"ecstatic": [
 			{
-				"title": "Denial of Service through an invalid If-Modified-Since header",
+				"title": "Denial of Service",
 				"credit": [
 					"James Halliday"
 				],
@@ -434,7 +434,7 @@
 		],
 		"ember": [
 			{
-				"title": "Potential XSS Exploit When Binding `tagName` to User-Supplied Data",
+				"title": "Potential Cross-Site Scripting",
 				"credit": [
 					"Mario Heiderich"
 				],
@@ -476,7 +476,7 @@
 				]
 			},
 			{
-				"title": "Potential XSS Exploit With User-Supplied Data When Binding Primitive Values",
+				"title": "Potential Cross-Site Scripting",
 				"credit": [
 					"Robert Jackson"
 				],
@@ -515,7 +515,7 @@
 				]
 			},
 			{
-				"title": "XSS Vulnerability with helper in Non-block Form",
+				"title": "Cross-Site Scripting",
 				"credit": [
 					"Hyder Ali"
 				],
@@ -547,7 +547,7 @@
 		],
 		"ep_imageconvert": [
 			{
-				"title": "ep_imageconvert unauthenticated remote command injection",
+				"title": "Unauthenticated Remote Command Injection",
 				"credit": [
 					"Neal Poole"
 				],
@@ -588,7 +588,7 @@
 		],
 		"express": [
 			{
-				"title": "express No Charset in Content-Type Header",
+				"title": "Cross-Site Scripting",
 				"credit": [
 					"Paweł Hałdrzyński"
 				],
@@ -624,7 +624,7 @@
 		],
 		"fancy-server": [
 			{
-				"title": "fancy-server Directory Traversal",
+				"title": "Directory Traversal",
 				"credit": [
 					"Adam Baldwin"
 				],
@@ -652,7 +652,7 @@
 		],
 		"geddy": [
 			{
-				"title": "Geddy Directory Traversal",
+				"title": "Directory Traversal",
 				"credit": [
 					"Vikram Chaitanya"
 				],
@@ -693,7 +693,7 @@
 		],
 		"gm": [
 			{
-				"title": "Command Injection in gm.compare function",
+				"title": "Remote Shell Command Injection",
 				"credit": [
 					"Brendan Scarvell of Console"
 				],
@@ -751,7 +751,7 @@
 		],
 		"handlebars": [
 			{
-				"title": "handlebars XSS",
+				"title": "Cross-Site Scripting",
 				"credit": [],
 				"description": "## Overview\nPreviously, only < and > were escaped. This meant that any Handlebars template that used user input in an HTML attribute value was wide open to a trivial XSS exploit. Note that unquoted attribute values are still open to attack, but this set of characters at least brings Handlebars in line with other Mustache implementations and other template languages.\n\n## References\n- https://github.com/wycats/handlebars.js/pull/68\n",
 				"semver": {
@@ -787,7 +787,7 @@
 				"id": "npm:handlebars:20110425"
 			},
 			{
-				"title": "Quoteless Attributes in Templates can lead to Content Injection",
+				"title": "Content Injection",
 				"credit": [
 					"Matias P. Brutti"
 				],
@@ -827,7 +827,7 @@
 		],
 		"hapi": [
 			{
-				"title": "hapi File descriptor leak can cause DoS vulnerability",
+				"title": "Denial of Service due to file descriptor leak",
 				"credit": [
 					"Jo Liss"
 				],
@@ -853,7 +853,7 @@
 				"id": "npm:hapi:20140708"
 			},
 			{
-				"title": "hapi.js rosetta-flash jsonp vulnerability",
+				"title": "Rosetta-flash jsonp vulnerability",
 				"credit": [
 					"Michele Spagnuolo"
 				],
@@ -941,7 +941,7 @@
 				"id": "npm:hapi:20151223"
 			},
 			{
-				"title": "Route level CORS config overrides connection level defaults",
+				"title": "Potentially loose security restrictions",
 				"credit": [
 					"Eran Hammer"
 				],
@@ -1042,7 +1042,7 @@
 		],
 		"hubot-scripts": [
 			{
-				"title": "Hubot Scripts Potential command injection in email.coffee",
+				"title": "Command Injection in email.coffee",
 				"credit": [
 					"Neal Poole"
 				],
@@ -1106,7 +1106,7 @@
 		],
 		"inert": [
 			{
-				"title": "inert Hidden Directories always served",
+				"title": "Hidden Directories Leakage",
 				"credit": [
 					"Gil Pedersen"
 				],
@@ -1217,7 +1217,7 @@
 		],
 		"jquery-ujs": [
 			{
-				"title": "CSRF Vulnerability in jquery-ujs",
+				"title": "Cross-Site Request Forgery",
 				"credit": [
 					"Ben Toews of GitHub"
 				],
@@ -1246,7 +1246,7 @@
 		],
 		"js-yaml": [
 			{
-				"title": "JS-YAML Deserialization Code Execution",
+				"title": "Code Execution due to Deserialization",
 				"credit": [
 					"Neal Poole"
 				],
@@ -1305,11 +1305,11 @@
 		],
 		"jsonwebtoken": [
 			{
-				"title": "jsonwebtoken Verification Bypass",
+				"title": "Authentication Bypass",
 				"credit": [
 					"Tim McLean"
 				],
-				"description": "## Overview\n\nIt is possible for an attacker to bypass verification. The verification part is expecting a token digitally signed with an asymetric key (RS/ES family) of algorithms; instead, the attacker sends a token digitally signed with a symmetric algorithm (HS* family).\n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/17)_\n\n## Remediation\nUgrade to version 4.2.2 or greater.\n\n## References\n- https://nodesecurity.io/advisories/17\n- https://github.com/auth0/node-jsonwebtoken/commit/1bb584bc382295eeb7ee8c4452a673a77a68b687\n- https://www.timmclean.net/2015/02/25/jwt-alg-none.html\n- https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/\n",
+				"description": "## Overview\n\nIt is possible for an attacker to bypass authentication. The authentication part is expecting a token digitally signed with an asymetric key (RS/ES family) of algorithms; instead, the attacker sends a token digitally signed with a symmetric algorithm (HS* family).\n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/17)_\n\n## Remediation\nUgrade to version 4.2.2 or greater.\n\n## References\n- https://nodesecurity.io/advisories/17\n- https://github.com/auth0/node-jsonwebtoken/commit/1bb584bc382295eeb7ee8c4452a673a77a68b687\n- https://www.timmclean.net/2015/02/25/jwt-alg-none.html\n- https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/\n",
 				"semver": {
 					"vulnerable": "<4.2.2",
 					"unaffected": ">=4.2.2"
@@ -1379,7 +1379,7 @@
 		],
 		"ldapauth": [
 			{
-				"title": "ldapauth LDAP Injection",
+				"title": "LDAP Injection",
 				"credit": [
 					"David Black",
 					"Jerome Touffe-Blin"
@@ -1408,7 +1408,7 @@
 		],
 		"ldapauth-fork": [
 			{
-				"title": "ldapauth-fork LDAP Injection",
+				"title": "LDAP Injection",
 				"credit": [
 					"Jerome Touffe-Blin"
 				],
@@ -1448,7 +1448,7 @@
 		],
 		"libnotify": [
 			{
-				"title": "Potential command injection in libnotify.notify",
+				"title": "Potential Command Injection",
 				"credit": [
 					"Adam Baldwin"
 				],
@@ -1533,7 +1533,7 @@
 		],
 		"libyaml": [
 			{
-				"title": "libyaml - heap-based buffer overflow when parsing YAML tags",
+				"title": "Heap-based Buffer Overflow",
 				"credit": [
 					"N/A"
 				],
@@ -1627,7 +1627,7 @@
 		],
 		"marked": [
 			{
-				"title": "Marked multiple content injection vulnerabilities",
+				"title": "Multiple Content Injection Vulnerabilities",
 				"credit": [
 					"Adam Baldwin"
 				],
@@ -1656,7 +1656,7 @@
 				"id": "npm:marked:20140131"
 			},
 			{
-				"title": "marked regular expression denial of service",
+				"title": "Regular Expression Denial of Service",
 				"credit": [
 					"Barış Soner Uşaklı"
 				],
@@ -1695,7 +1695,7 @@
 				"id": "npm:marked:20140131-1"
 			},
 			{
-				"title": "marked VBScript Content Injection",
+				"title": "VBScript Content Injection",
 				"credit": [
 					"Xiao Long"
 				],
@@ -1924,7 +1924,7 @@
 		],
 		"mqtt-packet": [
 			{
-				"title": "mqtt-packet Denial of Service",
+				"title": "Denial of Service",
 				"credit": [
 					"Peter Sorowka"
 				],
@@ -2033,7 +2033,7 @@
 		],
 		"mustache": [
 			{
-				"title": "XSS in mustache",
+				"title": "Cross-Site Scripting",
 				"credit": [],
 				"description": "## Overview\n\nAn escaping problem within to_html function can lead to a XSS vulnerability.\n\n## Details\n\n**Example:**\n\n```\ndocument.write(Mustache.to_html('<input value=\"{{val}}\" />', {val:'maybe\" onclick=\"alert(\\'xss\\');\" nothing=\"'}));\n```\n## References\n- https://github.com/janl/mustache.js/issues/112\n",
 				"semver": {
@@ -2057,7 +2057,7 @@
 				"id": "npm:mustache:20110814"
 			},
 			{
-				"title": "Quoteless Attributes in Templates can lead to Content Injection",
+				"title": "Content Injection due to quoteless attributes",
 				"credit": [
 					"Matias P. Brutti"
 				],
@@ -2125,7 +2125,7 @@
 		],
 		"nhouston": [
 			{
-				"title": "nhouston Directory Traversal",
+				"title": "Directory Traversal",
 				"credit": [
 					"Riku Keski-Keturi"
 				],
@@ -2153,7 +2153,7 @@
 		],
 		"paypal-ipn": [
 			{
-				"title": "paypal-ipn validation bypass",
+				"title": "Validation Bypass",
 				"credit": [
 					"Martin Angelov"
 				],
@@ -2179,7 +2179,7 @@
 		],
 		"printer": [
 			{
-				"title": "printer potential command injection on untrusted input",
+				"title": "Command Injection due to untrusted input",
 				"credit": [
 					"Adam Baldwin"
 				],
@@ -2219,7 +2219,7 @@
 		],
 		"qs": [
 			{
-				"title": "qs Denial-of-Service Memory Exhaustion",
+				"title": "Denial of Service (Memory Exhaustion)",
 				"credit": [
 					"Dustin Shiver"
 				],
@@ -2267,7 +2267,7 @@
 				"id": "npm:qs:20140806"
 			},
 			{
-				"title": "Denial-of-Service through Event Loop Blocking",
+				"title": "Denial of Service (Event Loop Blocking)",
 				"credit": [
 					"Tom Steele"
 				],
@@ -2314,7 +2314,7 @@
 		],
 		"remarkable": [
 			{
-				"title": "remarkable Content Injection",
+				"title": "Content Injection",
 				"credit": [
 					"Adam Baldwin"
 				],
@@ -2342,7 +2342,7 @@
 		],
 		"sanitize-html": [
 			{
-				"title": "Sanitization not applied recursively",
+				"title": "Partial Sanitization",
 				"credit": [],
 				"description": "## Overview\n\nSince the sanitize-html module trusts 'text' coming from htmlparser2, and outputs it without further escaping (because htmlparser2 does not decode entities in text before delivering it), this results in an XSS attack vector if sanitize-html ignores the img tag (according to user-configured filter rules) but passes the text intact, as it must do to keep any text in documents.\n\n## References\n- https://github.com/punkave/sanitize-html/issues/29\n",
 				"semver": {
@@ -2444,7 +2444,7 @@
 		],
 		"send": [
 			{
-				"title": "send Directory Traversal",
+				"title": "Directory Traversal",
 				"credit": [
 					"Ilya Kantor"
 				],
@@ -2521,7 +2521,7 @@
 		],
 		"sequelize": [
 			{
-				"title": "sequelize SQL Injection in Order",
+				"title": "SQL Injection in Order",
 				"credit": [
 					"Levan Basharuli"
 				],
@@ -2562,7 +2562,7 @@
 		],
 		"serve-index": [
 			{
-				"title": "File and directory names are not escaped and can lead to XSS attacks",
+				"title": "Cross-Site Scripting due to improper file and directory names escaping",
 				"credit": [
 					"Ivan Kozik"
 				],
@@ -2600,7 +2600,7 @@
 		],
 		"serve-static": [
 			{
-				"title": "serve-static Open Redirect",
+				"title": "Open Redirect",
 				"credit": [
 					"Pierre-Élie Fauché"
 				],
@@ -2638,7 +2638,7 @@
 				"id": "npm:serve-static:20150113"
 			},
 			{
-				"title": "root path disclosure vulnerability in express.static",
+				"title": "Root Path Disclosure",
 				"credit": [],
 				"description": "## Overview:\n\nroot path disclosure vulnerability in express.static, res.sendfile, and res.sendFile\n\n_Original description taken from the [Node Security Project](https://nodesecurity.io/)_\n\n## Recommendations:\n\n  * Update to version 1.8.1 or greater.\n\n## References:\n- http://expressjs.com/ja/advanced/security-updates.html\n- https://github.com/expressjs/serve-static/commit/30fe8b1596e8879923610c0421598669c39aecc2\n- https://github.com/expressjs/serve-static/blob/master/HISTORY.md#181--2015-01-20\n",
 				"semver": {
@@ -2664,11 +2664,11 @@
 		],
 		"st": [
 			{
-				"title": "st directory traversal",
+				"title": "Directory Traversal",
 				"credit": [
 					"Charlie Somerville"
 				],
-				"description": "## Overview\nVersions prior to 0.2.5 did not properly prevent folder traversal. Literal dots in a path were resolved out, but url encoded dots were not. Thus, a request like ``` /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd ``` would leak sensitive data from the server.\n\nAs of version 0.2.5, any ```'/../'``` in the request path, urlencoded or not, will be replaced with ```'/'```. If your application depends on url traversal, then you are encouraged to please refactor so that you do not depend on having ```..``` in url paths, as this tends to expose data that you may be surprised to be exposing.\n\n## Remediation\nUpgrade to version 0.2.5 or greater.\n\n## References\n- https://github.com/isaacs/st#security-status\n- http://blog.npmjs.org/post/80277229932/newly-paranoid-maintainers",
+				"description": "## Overview\nVersions prior to 0.2.5 did not properly prevent path traversal. Literal dots in a path were resolved out, but url encoded dots were not. Thus, a request like ``` /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd ``` would leak sensitive files and data from the server.\n\nAs of version 0.2.5, any ```'/../'``` in the request path, urlencoded or not, will be replaced with ```'/'```. If your application depends on url traversal, then you are encouraged to please refactor so that you do not depend on having ```..``` in url paths, as this tends to expose data that you may be surprised to be exposing.\n\n## Remediation\nUpgrade to version 0.2.5 or greater.\n\n## References\n- https://github.com/isaacs/st#security-status\n- http://blog.npmjs.org/post/80277229932/newly-paranoid-maintainers",
 				"semver": {
 					"vulnerable": "<0.2.5",
 					"unaffected": ">=0.2.5"
@@ -2704,7 +2704,7 @@
 		],
 		"syntax-error": [
 			{
-				"title": "syntax-error potential for script injection",
+				"title": "Potential Script Injection",
 				"credit": [
 					"Cal Leeming"
 				],
@@ -2781,7 +2781,7 @@
 		],
 		"tomato": [
 			{
-				"title": "Tomato API Admin Auth Weakness",
+				"title": "API Admin Auth Weakness",
 				"credit": [
 					"Adam Baldwin"
 				],
@@ -2824,7 +2824,7 @@
 		],
 		"uglify-js": [
 			{
-				"title": "uglify-js incorrectly handles non-boolean comparisons during minification",
+				"title": "Improper minification of non-boolean comparisons",
 				"credit": [
 					"Tom MacWright"
 				],
@@ -2911,7 +2911,7 @@
 		],
 		"ungit": [
 			{
-				"title": "ungit command injection",
+				"title": "Command Injection",
 				"credit": [
 					"CodingTwinky"
 				],
@@ -2939,7 +2939,7 @@
 		],
 		"validator": [
 			{
-				"title": "validator isURL Regular Expression Denial of Service",
+				"title": "Regular Expression Denial of Service",
 				"credit": [
 					"Karl Düüna"
 				],
@@ -2967,7 +2967,7 @@
 				"id": "npm:validator:20130705"
 			},
 			{
-				"title": "Validator XSS Filter Bypass via Encoded URL",
+				"title": "XSS Filter Bypass via Encoded URL",
 				"credit": [
 					"taku0"
 				],
@@ -3107,7 +3107,7 @@
 		],
 		"yar": [
 			{
-				"title": "Yar Denial-of-Service",
+				"title": "Denial of Service",
 				"credit": [
 					"Reid Burke"
 				],
