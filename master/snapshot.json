@@ -749,6 +749,34 @@
 				"id": "npm:gm:20151026"
 			}
 		],
+		"grunt-gh-pages": [
+			{
+				"title": "Credentials saved as clear-text in log",
+				"credit": [
+					"Stephan Bönnemann"
+				],
+				"creationTime": "2016-03-17T13:35:57.747Z",
+				"modificationTime": "2016-03-17T13:35:57.747Z",
+				"publicationTime": "2016-03-16T16:29:31.778Z",
+				"description": "## Overview\n[`grunt-gh-pages`](https://www.npmjs.com/package/grunt-gh-pages) writes the repository url to log without redacting the github authentication token. The token can be compromised if the logs become publicly available.  \n\n## Remediation\nUpgrade to version 1.0.0 or greater and consider revoking previously used credentials with the module.\n\n## References\n- https://github.com/tschaub/grunt-gh-pages/pull/41\n- https://github.com/tschaub/grunt-gh-pages/commit/590f69767203d8c379fe18cded93bd5ad6cb53cb\n\n\n",
+				"semver": {
+					"vulnerable": "<=0.9.1",
+					"unaffected": ">=1.0.0"
+				},
+				"CVSSv3": "",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [
+						"CWE-319"
+					],
+					"CVE": [],
+					"NSP": 85
+				},
+				"patches": [],
+				"moduleName": "grunt-gh-pages",
+				"id": "npm:grunt-gh-pages:20160316"
+			}
+		],
 		"handlebars": [
 			{
 				"title": "Cross-Site Scripting",
