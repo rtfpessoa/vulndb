@@ -2368,6 +2368,34 @@
 				"id": "npm:remarkable:20141113"
 			}
 		],
+		"riot-compiler": [
+			{
+				"title": "Regular Expression Denial of Service",
+				"credit": [
+					"Alberto Martínez"
+				],
+				"creationTime": "2016-03-21T22:00:02.570Z",
+				"modificationTime": "2016-03-21T22:00:02.570Z",
+				"publicationTime": "2016-03-21T21:27:58.413Z",
+				"description": "## Overview\n[Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) vulnerability exists in `riot-compiler`, affecting version 2.3.21 only. \n\n## Recommendation\nUpgrade to version 2.3.22 or greater.\n\n## References\n- https://github.com/riot/compiler/issues/46\n\n",
+				"semver": {
+					"vulnerable": "2.3.21",
+					"unaffected": ">2.3.21"
+				},
+				"CVSSv3": "",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [
+						"CWE-400"
+					],
+					"CVE": [],
+					"NSP": 86
+				},
+				"patches": [],
+				"moduleName": "riot-compiler",
+				"id": "npm:riot-compiler:20160321"
+			}
+		],
 		"sanitize-html": [
 			{
 				"title": "Partial Sanitization",
