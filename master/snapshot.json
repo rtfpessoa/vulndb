@@ -2819,7 +2819,7 @@
 				"credit": [
 					"Cal Leeming"
 				],
-				"description": "## Overview\n\nThere was a security vulnerability where a malicious file could execute code when browserified. Make sure your installation of browserify is using syntax-error@1.1.1 or later. \n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/37)_\n\n## Details\n\nThe vulnerability involves breaking out of Function(), which was used to check syntax for more informative errors. In node 0.10, Function() seems to be implemented in terms of eval(), so malicious code can execute even if the function returned by Function() was never called. node 0.11 does not appear to be vulnerable.\n\nThanks to [Cal Leeming] (cal@iops.io) for discovering and disclosing this bug!\n\n## Remediation\nUpdate to version 1.1.1 or greater. If this is being used in conjunction with browserify, update browserify to 4.2.1 or greater.\n\n## References\n- https://nodesecurity.io/advisories/37\n- [Browserify 4.2.1 Update](https://github.com/substack/node-browserify/blob/master/changelog.markdown#421)\n",
+				"description": "## Overview\n\nThere was a security vulnerability where a malicious file could execute code when browserified. Make sure your installation of browserify is using syntax-error@1.1.1 or later. \n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/37)_\n\n## Details\n\nThe vulnerability involves breaking out of Function(), which was used to check syntax for more informative errors. In node 0.10, Function() seems to be implemented in terms of eval(), so malicious code can execute even if the function returned by Function() was never called. node 0.11 does not appear to be vulnerable.\n\nThanks to [Cal Leeming] (cal@iops.io) for discovering and disclosing this bug!\n\n## Remediation\nUpdate to version 1.1.1 or greater. If this is being used in conjunction with browserify, update browserify to 4.2.1 or greater.\n\n## References\n- https://nodesecurity.io/advisories/37\n- [Browserify 4.2.1 Update](https://github.com/substack/node-browserify/blob/master/changelog.markdown#421)\n- https://github.com/substack/node-syntax-error/commit/9aa4e66eb90ec595d2dba55e6f9c2dd9a668b309\n- https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7192",
 				"semver": {
 					"vulnerable": "< 1.1.1",
 					"unaffected": ">= 1.1.1"
@@ -2830,7 +2830,9 @@
 					"CWE": [
 						"CWE-94"
 					],
-					"CVE": [],
+					"CVE": [
+						"CVE-2014-7192"
+					],
 					"NSP": 37
 				},
 				"patches": [],
