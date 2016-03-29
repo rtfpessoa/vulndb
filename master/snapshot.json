@@ -9,7 +9,7 @@
 				"creationTime": "2016-03-29T00:00:02.780Z",
 				"modificationTime": "2016-03-29T00:00:02.780Z",
 				"publicationTime": "2016-03-28T22:48:46.000Z",
-				"description": "## Overview\nThe airbrake module defaults to sending environment variables over HTTP. Environment variables can contain secret keys and other sensitive values. A malicious user could be on the same network as a regular user and intercept all the secret keys the user is sending. This goes against common best practice, which is to use HTTPS.\n\n## Remediation\nUpgrade to version 0.4.0 or greater.\n\n## References\n- https://github.com/airbrake/node-airbrake/issues/70\n\n",
+				"description": "## Overview\n`airbrake` versions prior to 0.4.0 defaults to sending environment variables over an unencrypted HTTP channel. These can be intercepted by an attacker, potentially exposing sensitive information. \n\n## Remediation\nUpgrade to version 0.4.0 or greater.\n\n## References\n- https://github.com/airbrake/node-airbrake/issues/70\n\n",
 				"semver": {
 					"vulnerable": "<=0.3.8",
 					"unaffected": ">=0.4.0"
