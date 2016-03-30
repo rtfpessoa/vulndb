@@ -2235,6 +2235,34 @@
 				"id": "npm:nhouston:20141114"
 			}
 		],
+		"node-uuid": [
+			{
+				"title": "Insecure Randomness",
+				"credit": [
+					"Fedot Praslov"
+				],
+				"creationTime": "2016-03-28T22:00:02.566Z",
+				"modificationTime": "2016-03-28T22:00:02.566Z",
+				"publicationTime": "2016-03-28T21:29:30.000Z",
+				"description": "## Overview\nA bug in `node-uuid` prior to 1.4.4 caused it to use the cryptographically insecure `Math.random` which can produce predictable values and should not be used in security-sensitive context.\n\n## Remediation\nUpgrade to version 1.4.4 or greater.\n\n## References\n- https://github.com/broofa/node-uuid/issues/108\n- https://github.com/broofa/node-uuid/issues/122\n\n",
+				"semver": {
+					"vulnerable": "<1.4.4",
+					"unaffected": ">=1.4.4"
+				},
+				"CVSSv3": "",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [
+						"CWE-330"
+					],
+					"CVE": [],
+					"NSP": 93
+				},
+				"patches": [],
+				"moduleName": "node-uuid",
+				"id": "npm:node-uuid:20160328"
+			}
+		],
 		"paypal-ipn": [
 			{
 				"title": "Validation Bypass",
@@ -3186,34 +3214,6 @@
 				"publicationTime": "2015-01-22T07:33:48.000Z",
 				"modificationTime": "2015-11-06T02:09:36.180Z",
 				"id": "npm:ungit:20150122"
-			}
-		],
-		"uuid": [
-			{
-				"title": "Insecure Randomness",
-				"credit": [
-					"Fedot Praslov"
-				],
-				"creationTime": "2016-03-28T22:00:02.566Z",
-				"modificationTime": "2016-03-28T22:00:02.566Z",
-				"publicationTime": "2016-03-28T21:29:30.000Z",
-				"description": "## Overview\nA bug in `node-uuid` prior to 1.4.4 caused it to use the cryptographically insecure `Math.random` which can produce predictable values and should not be used in security-sensitive context.\n\n## Remediation\nUpgrade to version 1.4.4 or greater.\n\n## References\n- https://github.com/broofa/node-uuid/issues/108\n- https://github.com/broofa/node-uuid/issues/122\n\n",
-				"semver": {
-					"vulnerable": "<1.4.4",
-					"unaffected": ">=1.4.4"
-				},
-				"CVSSv3": "",
-				"severity": "low",
-				"identifiers": {
-					"CWE": [
-						"CWE-330"
-					],
-					"CVE": [],
-					"NSP": 93
-				},
-				"patches": [],
-				"moduleName": "uuid",
-				"id": "npm:uuid:20160328"
 			}
 		],
 		"validator": [
