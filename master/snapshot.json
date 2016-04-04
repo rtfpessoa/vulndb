@@ -1423,6 +1423,36 @@
 				"id": "npm:jsonwebtoken:20150331"
 			}
 		],
+		"jsrender": [
+			{
+				"title": "Template Injection",
+				"credit": [
+					"Paweł Hałdrzyński"
+				],
+				"creationTime": "2016-03-31T09:02:43.772Z",
+				"modificationTime": "2016-03-31T09:02:43.772Z",
+				"publicationTime": "2016-03-30T22:25:57.000Z",
+				"description": "## Overview\n`jsrender` versions prior to 0.9.74 are vulnerable to Template Injection, where user input is embedded in a template in an unsafe manner.\n\n## Remediation\nUpdate to version 0.9.74 or greater.\n\n## References\n- https://github.com/BorisMoore/jsrender/commit/f984e139deb0a7648d5b543860ec652c21f6dcf6\n",
+				"semver": {
+					"vulnerable": "<=0.9.73",
+					"unaffected": ">=0.9.74"
+				},
+				"CVSSv3": "",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-94"
+					],
+					"CVE": [
+						"CVE-2016-3942"
+					],
+					"NSP": 97
+				},
+				"patches": [],
+				"moduleName": "jsrender",
+				"id": "npm:jsrender:20160330"
+			}
+		],
 		"keystone": [
 			{
 				"title": "Authentication Weakness",
@@ -2798,11 +2828,37 @@
 		],
 		"sequelize": [
 			{
+				"title": "SQL Injection",
+				"credit": [
+					""
+				],
+				"description": "## Overview\n`sequelize` versions prior to 1.7.0-alpha3 are vulnerable to SQL Injection attacks if untrusted user input is passed into the `order` parameter.\n\n## Remediation\nUpdate to version 1.7.0-alpha3 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/commit/c876192aa6ce1f67e22b26a4d175b8478615f42d\n\n",
+				"semver": {
+					"vulnerable": "<=1.7.0-alpha2 >=0.2.2",
+					"unaffected": ">1.7.0-alpha3 || <0.2.2"
+				},
+				"CVSSv2": "",
+				"CVSSv3": "",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "sequelize",
+				"creationTime": "2016-04-01T02:09:36.180Z",
+				"publicationTime": "2013-05-24T00:00:00.000Z",
+				"modificationTime": "2016-04-01T02:09:36.180Z",
+				"id": "npm:sequelize:20130614"
+			},
+			{
 				"title": "SQL Injection in Order",
 				"credit": [
 					"Levan Basharuli"
 				],
-				"description": "## Overview\n\nSQL Injection is possible in an application using the npm module sequelize if untrusted user input is passed into the order parameter.\n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/33)_\n\n## Details\n\n**Example:**\n\n```\nTest.findAndCountAll({\nwhere: { id :1 },\norder : [['id', 'UNTRUSTED USER INPUT']]\n})\n```\n\n\n\n## Remediation\n\nUpdate to version 2.0.0-rc8 or greater.\n\n## References\n- https://nodesecurity.io/advisories/33\n- https://github.com/sequelize/sequelize/issues/2906\n",
+				"description": "## Overview\n`sequelize` versions prior to 2.0.0-rc7 are vulnerable to SQL Injection attacks if untrusted user input is passed into the `order` parameter.\n\n## Remediation\nUpdate to version 2.0.0-rc8 or greater.\n\n## References\n- https://nodesecurity.io/advisories/33\n- https://github.com/sequelize/sequelize/issues/2906\n",
 				"semver": {
 					"vulnerable": "<=2.0.0-rc7",
 					"unaffected": ">=2.0.0-rc8"
@@ -2835,6 +2891,110 @@
 				"publicationTime": "2015-01-18T20:00:00.000Z",
 				"modificationTime": "2015-11-06T02:09:36.180Z",
 				"id": "npm:sequelize:20150118"
+			},
+			{
+				"title": "Potential SQL Injection",
+				"credit": [
+					""
+				],
+				"description": "## Overview\nBeginning with `sequelize` version 3.0.0, two security related changes were introduced:\n- `findOne` no longer takes a string / integer / binary argument to represent a primaryKey. Use `findById` instead.\n- `where: \"raw query\"` is no longer legal, you must now explicitly use `where: [\"raw query\", [replacements]]`\n\n## Remediation\nUpdate to version 3.0.0 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/blob/master/changelog.md#300\n",
+				"semver": {
+					"vulnerable": "<=2.1.3",
+					"unaffected": ">=3.0.0"
+				},
+				"CVSSv2": "",
+				"CVSSv3": "",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "sequelize",
+				"creationTime": "2016-04-01T02:09:36.180Z",
+				"publicationTime": "2015-05-17T00:00:00.000Z",
+				"modificationTime": "2016-04-01T02:09:36.180Z",
+				"id": "npm:sequelize:20150517"
+			},
+			{
+				"title": "SQL Injection in order/limit",
+				"credit": [
+					"Spencer Creasey"
+				],
+				"description": "## Overview\n`sequelize` versions prior to 3.17.0 are vulnerable to SQL Injection attacks if untrusted user input is passed into the `order` or `limit` parameters.\n\n## Example\n```javascript\nmodels.User.findAll({\n  limit: '1; DELETE FROM \"Users\" WHERE 1=1; --',\n}).then(function (users) {\n  console.log(users);\n});\n```\n\n## Remediation\nUpdate to version 3.17.0 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/pull/5167\n- https://github.com/sequelize/sequelize/blob/master/changelog.md#3170\n- https://github.com/sequelize/sequelize/commit/d198d78182cbf1ea3ef1706740b35813a6aa0838\n",
+				"semver": {
+					"vulnerable": "<=3.16.0 >=0.2.2",
+					"unaffected": "<0.2.2 || >3.16.0"
+				},
+				"CVSSv2": "",
+				"CVSSv3": "",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "sequelize",
+				"creationTime": "2016-04-01T00:00:00.000Z",
+				"publicationTime": "2015-01-06T00:00:00.000Z",
+				"modificationTime": "2016-04-01T00:00:00.000Z",
+				"id": "npm:sequelize:20160106"
+			},
+			{
+				"title": "Remote Memory Exposure",
+				"credit": [
+					""
+				],
+				"description": "## Overview\nA potential memory disclosure vulnerability exists in sequelize versions prior to 3.17.2.\nA field of type `DataTypes.BLOB` can be used to expose sensitive information such as code, runtime memory and user data into MongoDB.\n\n### Details\n`sequelize` uses the `Buffer` type to represent `DataTypes.BLOB`. \nInitializing a `Buffer` with integer `N` creates a `Buffer`\nof length `N` with non zero-ed out memory.\n**Example:**\n```\nvar x = new Buffer(100); // uninitialized Buffer of length 100\n// vs\nvar x = new Buffer('100'); // initialized Buffer with value of '100'\n```\nInitializing a `BLOB` field in such manner will dump uninitialized\nmemory into the database.\nThe patch wraps `Buffer` field initialization in sequelize by converting a\n`number` value `N` to a string, initializing the `Buffer` with `N` in its\nascii form.\n\n#### Proof of concept\n```javascript\nvar Sequelize = require('sequelize');\nvar sequelize = new Sequelize('pastebin', null, null,\n    { host: '127.0.0.1', dialect: 'postgres', });\n\nvar Task = sequelize.define('Pastebin', {\n    title: Sequelize.STRING,\n    content: Sequelize.BLOB,\n  });\n\nTask.create({\n  title: 'title',\n  content: 100,\n}).then(function (task) {\n  console.log(task.title);\n  console.log(task.content); // will print out 100 bytes of previously used memory\n});\n```\n\n## Remediation\nUpgrade `mongoose` to version >= 3.17.3\n\n## References\n- https://github.com/sequelize/sequelize/blob/master/changelog.md#3172\n- https://github.com/sequelize/sequelize/commit/cbfaa4f0a135cfc55874c9bfc39ead2d85c417e9\n- https://github.com/ChALkeR/notes/blob/master/Lets-fix-Buffer-API.md#previous-materials\n- https://github.com/ChALkeR/notes/blob/master/Buffer-knows-everything.md\n",
+				"semver": {
+					"vulnerable": "<3.17.2",
+					"unaffected": ">3.17.2"
+				},
+				"CVSSv2": "",
+				"CVSSv3": "",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-201"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "sequelize",
+				"creationTime": "2016-04-01T02:09:36.180Z",
+				"publicationTime": "2016-01-15T00:00:00.000Z",
+				"modificationTime": "2016-04-01T02:09:36.180Z",
+				"id": "npm:sequelize:20160115"
+			},
+			{
+				"title": "SQL Injection in IN statement",
+				"credit": [
+					""
+				],
+				"description": "## Overview\n`sequelize` versions prior to 3.20.0 improperly escape arrays of strings bound to named parameters.\n\n## Remediation\nUpdate to version 3.20.0 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/issues/5671\n- https://github.com/sequelize/sequelize/commit/23952a2b020cc3571f090e67dae7feb084e1be71\n",
+				"semver": {
+					"vulnerable": "<=3.19.3",
+					"unaffected": ">3.19.3"
+				},
+				"CVSSv2": "",
+				"CVSSv3": "",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "sequelize",
+				"creationTime": "2016-04-01T00:00:00.000Z",
+				"publicationTime": "2016-03-29T00:00:00.000Z",
+				"modificationTime": "2016-04-01T00:00:00.000Z",
+				"id": "npm:sequelize:20160329"
 			}
 		],
 		"serve-index": [
