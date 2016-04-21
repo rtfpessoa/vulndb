@@ -1847,6 +1847,32 @@
 				"publicationTime": "2014-01-30T22:33:12.000Z",
 				"modificationTime": "2015-11-06T02:09:36.180Z",
 				"id": "npm:marked:20140131-2"
+			},
+			{
+				"title": "Content & Code Injection",
+				"credit": [
+					"Matt Austin"
+				],
+				"creationTime": "2016-04-20T14:45:19.556Z",
+				"modificationTime": "2016-04-20T14:45:19.556Z",
+				"publicationTime": "2015-05-20T16:45:00.000Z",
+				"description": "## Overview\n[marked](https://www.npmjs.com/package/marked) is a markdown parser and compiler used for rendering markdown content to html. It is vulnerable to content injection attack allowing the attacker to bypass its output sanitization (`sanitize: true`) protection. Using the [HTML Coded Character Set](https://www.w3.org/MarkUp/html-spec/html-spec_13.html#SEC13), attackers can inject `javascript:` code snippets into the output. For example, the following input `javascript&#x58document;alert&#40;1&#41;`  will result in `alert(1)` being executed when the user clicks on the link.\n\n## Remediation\nThere's no official fix available yet, but there's an outstanding [pull-request](https://github.com/chjj/marked/pull/592) that fixes the issue. Alternatively you can use [remarkable](https://www.npmjs.com/package/remarkable) or other markdown library.\nMeanwhile, Snyk research team is working on providing patches for this vulnerability.\n\n## References\n- https://github.com/chjj/marked/pull/592\n- https://github.com/chjj/marked/pull/592/commits/2cff85979be8e7a026a9aca35542c470cf5da523\n\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-94"
+					],
+					"CVE": [],
+					"NSP": 101
+				},
+				"patches": [],
+				"moduleName": "marked",
+				"id": "npm:marked:20150520"
 			}
 		],
 		"millisecond": [
@@ -2291,6 +2317,37 @@
 				"patches": [],
 				"moduleName": "node-uuid",
 				"id": "npm:node-uuid:20160328"
+			}
+		],
+		"npm": [
+			{
+				"title": "npm Token Leak",
+				"credit": [
+					"Mitar",
+					"Will White & the team at Mapbox",
+					"Max Motovilov",
+					"James Taylor"
+				],
+				"creationTime": "2016-04-20T14:45:19.556Z",
+				"modificationTime": "2016-04-20T14:45:19.556Z",
+				"publicationTime": "2016-04-18T21:16:44.000Z",
+				"description": "## Overview\nThis vulnerability could cause the unintentional leakage of bearer tokens.\nA design flaw in npm's registry allows an attacker to set up an HTTP server that could collect authentication information, and then use this authentication information to impersonate the users whose tokens they collected. The attacker could do anything the compromised users could do, including publishing new versions of packages.\n\n## Details\nThe primary npm registry has, since late 2014, used HTTP bearer tokens to authenticate requests from the npm command-line interface. Due to a design flaw in the CLI, these bearer tokens were sent with every request made by logged-in users, regardless of the destination of the request. (The bearers only should have been included for requests made against a registry or registries used for the current install.)\n\nThis flaw allows an attacker to set up an HTTP server that could collect authentication information. They could then use this information to impersonate the users whose tokens they collected. This impersonation would allow them to do anything the compromised users could do, including publishing new versions of packages.\n\nWith the fixes npm have released, the CLI will only send bearer tokens with requests made against a registry.\nnpm’s CLI team believe that the fix won’t break any existing registry setups. However, it’s possible the change will be breaking in some cases, due to the large number of registry software suites used.\n\n## Remediation\n1. Upgrade npm to \">= 3.8.3 || >= 2.15.1\"\n2. Invalidate your [current npm bearer tokens](https://www.npmjs.com/settings/tokens)\n\n## References\n- https://nodejs.org/en/blog/vulnerability/npm-tokens-leak-march-2016/\n- http://blog.npmjs.org/post/142036323955/fixing-a-bearer-token-vulnerability\n\n",
+				"semver": {
+					"vulnerable": "<= 3.8.2 || <= 2.15.0",
+					"unaffected": ">= 3.8.3 || >= 2.15.1"
+				},
+				"CVSSv3": "",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-200"
+					],
+					"CVE": [],
+					"NSP": 98
+				},
+				"patches": [],
+				"moduleName": "npm",
+				"id": "npm:npm:20160418"
 			}
 		],
 		"paypal-ipn": [
@@ -2937,7 +2994,17 @@
 					],
 					"CVE": []
 				},
-				"patches": [],
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/sequelize/20160106/sequelize_20160106_d198d78182cbf1ea3ef1706740b35813a6aa0838.patch"
+						],
+						"version": "<=3.16.0 >=3.2.0",
+						"modificationTime": "2016-04-17T10:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:sequelize:20160106:0"
+					}
+				],
 				"moduleName": "sequelize",
 				"creationTime": "2016-04-01T00:00:00.000Z",
 				"publicationTime": "2015-01-06T00:00:00.000Z",
@@ -2949,21 +3016,40 @@
 				"credit": [
 					""
 				],
-				"description": "## Overview\nA potential memory disclosure vulnerability exists in sequelize versions prior to 3.17.2.\nA field of type `DataTypes.BLOB` can be used to expose sensitive information such as code, runtime memory and user data into MongoDB.\n\n### Details\n`sequelize` uses the `Buffer` type to represent `DataTypes.BLOB`. \nInitializing a `Buffer` with integer `N` creates a `Buffer`\nof length `N` with non zero-ed out memory.\n**Example:**\n```\nvar x = new Buffer(100); // uninitialized Buffer of length 100\n// vs\nvar x = new Buffer('100'); // initialized Buffer with value of '100'\n```\nInitializing a `BLOB` field in such manner will dump uninitialized\nmemory into the database.\nThe patch wraps `Buffer` field initialization in sequelize by converting a\n`number` value `N` to a string, initializing the `Buffer` with `N` in its\nascii form.\n\n#### Proof of concept\n```javascript\nvar Sequelize = require('sequelize');\nvar sequelize = new Sequelize('pastebin', null, null,\n    { host: '127.0.0.1', dialect: 'postgres', });\n\nvar Task = sequelize.define('Pastebin', {\n    title: Sequelize.STRING,\n    content: Sequelize.BLOB,\n  });\n\nTask.create({\n  title: 'title',\n  content: 100,\n}).then(function (task) {\n  console.log(task.title);\n  console.log(task.content); // will print out 100 bytes of previously used memory\n});\n```\n\n## Remediation\nUpgrade `mongoose` to version >= 3.17.3\n\n## References\n- https://github.com/sequelize/sequelize/blob/master/changelog.md#3172\n- https://github.com/sequelize/sequelize/commit/cbfaa4f0a135cfc55874c9bfc39ead2d85c417e9\n- https://github.com/ChALkeR/notes/blob/master/Lets-fix-Buffer-API.md#previous-materials\n- https://github.com/ChALkeR/notes/blob/master/Buffer-knows-everything.md\n",
+				"description": "## Overview\nA potential memory disclosure vulnerability exists in sequelize versions prior to 3.17.2.\nA field of type `DataTypes.BLOB` can be used to expose sensitive information such as code, runtime memory and user data into the database.\n\n### Details\n`sequelize` uses the `Buffer` type to represent `DataTypes.BLOB`. \nInitializing a `Buffer` with integer `N` creates a `Buffer`\nof length `N` with non zero-ed out memory.\n**Example:**\n```\nvar x = new Buffer(100); // uninitialized Buffer of length 100\n// vs\nvar x = new Buffer('100'); // initialized Buffer with value of '100'\n```\nInitializing a `BLOB` field in such manner will dump uninitialized\nmemory into the database.\nThe patch wraps `Buffer` field initialization in sequelize by converting a\n`number` value `N` to a string, initializing the `Buffer` with `N` in its\nascii form.\n\n#### Proof of concept\n```javascript\nvar Sequelize = require('sequelize');\nvar sequelize = new Sequelize('pastebin', null, null,\n    { host: '127.0.0.1', dialect: 'postgres', });\n\nvar Task = sequelize.define('Pastebin', {\n    title: Sequelize.STRING,\n    content: Sequelize.BLOB,\n  });\n\nTask.create({\n  title: 'title',\n  content: 100,\n}).then(function (task) {\n  console.log(task.title);\n  console.log(task.content); // will print out 100 bytes of previously used memory\n});\n```\n\n## Remediation\nUpgrade `sequelize` to version >= 3.17.3\n\n## References\n- https://github.com/sequelize/sequelize/blob/master/changelog.md#3172\n- https://github.com/sequelize/sequelize/commit/cbfaa4f0a135cfc55874c9bfc39ead2d85c417e9\n- https://github.com/ChALkeR/notes/blob/master/Lets-fix-Buffer-API.md#previous-materials\n- https://github.com/ChALkeR/notes/blob/master/Buffer-knows-everything.md\n",
 				"semver": {
 					"vulnerable": "<3.17.2",
 					"unaffected": ">3.17.2"
 				},
 				"CVSSv2": "",
 				"CVSSv3": "",
-				"severity": "high",
+				"severity": "medium",
 				"identifiers": {
 					"CWE": [
 						"CWE-201"
 					],
 					"CVE": []
 				},
-				"patches": [],
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/sequelize/20160115/sequelize_20160115_0_0_b85f78a318e6f7112a3374498171a3e148cdc4da.patch"
+						],
+						"version": "<3.17.2 >3.16.0",
+						"modificationTime": "2016-04-13T10:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:sequelize:20160115:0"
+					},
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/sequelize/20160115/sequelize_20160115_0_0_b85f78a318e6f7112a3374498171a3e148cdc4da_w_20160106.patch"
+						],
+						"version": "<=3.16.0 >3.13.0",
+						"modificationTime": "2016-04-17T10:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:sequelize:20160115:1"
+					}
+				],
 				"moduleName": "sequelize",
 				"creationTime": "2016-04-01T02:09:36.180Z",
 				"publicationTime": "2016-01-15T00:00:00.000Z",
@@ -2989,7 +3075,39 @@
 					],
 					"CVE": []
 				},
-				"patches": [],
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/sequelize/20160329/sequelize_20160329_0_0_23952a2b020cc3571f090e67dae7feb084e1be71.patch"
+						],
+						"version": "<=3.19.3 >=3.17.2",
+						"modificationTime": "2016-04-12T10:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:sequelize:20160329:0"
+					},
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/sequelize/20160329/sequelize_20160329_0_0_23952a2b020cc3571f090e67dae7feb084e1be71_w_20160115.patch"
+						],
+						"version": "<3.17.2 >3.16.0",
+						"modificationTime": "2016-04-13T10:00:00.000Z",
+						"comments": [
+							"also carries a fix for npm:sequelize:20160115"
+						],
+						"id": "patch:npm:sequelize:20160329:1"
+					},
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/sequelize/20160329/sequelize_20160329_0_0_23952a2b020cc3571f090e67dae7feb084e1be71_w_20160115_w_20160106.patch"
+						],
+						"version": "=3.16.0",
+						"modificationTime": "2016-04-13T10:00:00.000Z",
+						"comments": [
+							"also carries a fix for npm:sequelize:20160115"
+						],
+						"id": "patch:npm:sequelize:20160329:3"
+					}
+				],
 				"moduleName": "sequelize",
 				"creationTime": "2016-04-01T00:00:00.000Z",
 				"publicationTime": "2016-03-29T00:00:00.000Z",
