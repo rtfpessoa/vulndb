@@ -1904,14 +1904,14 @@
 				"id": "npm:marked:20140131-2"
 			},
 			{
-				"title": "Content & Code Injection",
+				"title": "Content & Code Injection (XSS)",
 				"credit": [
 					"Matt Austin"
 				],
 				"creationTime": "2016-04-20T14:45:19.556Z",
 				"modificationTime": "2016-04-20T14:45:19.556Z",
 				"publicationTime": "2016-04-20T14:45:19.556Z",
-				"description": "## Overview\n[marked](https://www.npmjs.com/package/marked) is a markdown parser and compiler used for rendering markdown content to html. It is vulnerable to content injection attack allowing the attacker to bypass its output sanitization (`sanitize: true`) protection. Using the [HTML Coded Character Set](https://www.w3.org/MarkUp/html-spec/html-spec_13.html#SEC13), attackers can inject `javascript:` code snippets into the output. For example, the following input `javascript&#x58document;alert&#40;1&#41;`  will result in `alert(1)` being executed when the user clicks on the link.\n\n## Remediation\nThere's no official fix available yet, but there's an outstanding [pull-request](https://github.com/chjj/marked/pull/592) that fixes the issue. Alternatively you can use [remarkable](https://www.npmjs.com/package/remarkable) or other markdown library.\nMeanwhile, Snyk research team is working on providing patches for this vulnerability.\n\n## References\n- https://github.com/chjj/marked/pull/592\n- https://github.com/chjj/marked/pull/592/commits/2cff85979be8e7a026a9aca35542c470cf5da523\n\n",
+				"description": "## Overview\n[marked](https://www.npmjs.com/package/marked) is a markdown parser and compiler used for rendering markdown content to html. It is vulnerable to content injection attack allowing the attacker to bypass its output sanitization (`sanitize: true`) protection. Using the [HTML Coded Character Set](https://www.w3.org/MarkUp/html-spec/html-spec_13.html#SEC13), attackers can inject `javascript:` code snippets into the output. For example, the following input `javascript&#x58document;alert&#40;1&#41;`  will result in `alert(1)` being executed when the user clicks on the link.\n\n## Remediation\nThere’s no official fix available yet, but you can patch the vulnerability using [Snyk wizard](https://snyk.io/docs/using-snyk/#wizard). Alternatively you can use `remarkable` or other markdown libraries.\n\n## References\n- https://github.com/chjj/marked/pull/592\n- https://github.com/chjj/marked/pull/592/commits/2cff85979be8e7a026a9aca35542c470cf5da523\n\n",
 				"semver": {
 					"vulnerable": "<=0.3.5",
 					"unaffected": "<0.0.0"
