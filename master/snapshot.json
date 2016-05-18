@@ -257,6 +257,35 @@
 				"id": "npm:connect:20130701"
 			}
 		],
+		"console-io": [
+			{
+				"title": "Authentication Bypass",
+				"credit": [
+					"Craig Arendt"
+				],
+				"creationTime": "2016-04-20T14:42:40.365Z",
+				"modificationTime": "2016-04-20T14:42:40.365Z",
+				"publicationTime": "2016-05-17T21:17:58.000Z",
+				"disclosureTime": "2016-04-18T21:17:58.000Z",
+				"description": "## Overview\nThe `console-io` package allows users to have a web console in their application. \n\nVersions prior to 2.3.0 did not require authentication for socket.io, thus allowing attackers to send and execute shell commands over a websocket.\n\n## Remediation\nUpgrade `console-io` to version 2.3.0 or higher.\n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/documentation/#wizard) to patch this vulnerability.\n\n## References\n- https://github.com/cloudcmd/console/compare/v2.2.13...v2.3.0\n- https://github.com/cloudcmd/console/commit/62f0fbcb36226436af0dad52ffe4d8cd9a0c533f\n",
+				"semver": {
+					"vulnerable": "<=2.2.13",
+					"unaffected": ">=2.3.0"
+				},
+				"CVSSv3": "",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-592"
+					],
+					"CVE": [],
+					"NSP": 90
+				},
+				"patches": [],
+				"moduleName": "console-io",
+				"id": "npm:console-io:20160418"
+			}
+		],
 		"crumb": [
 			{
 				"title": "CORS Token Disclosure",
@@ -502,6 +531,45 @@
 				"moduleName": "ecstatic",
 				"disclosureTime": "2015-12-23T23:21:25.322Z",
 				"id": "npm:ecstatic:20151223"
+			}
+		],
+		"electron-packager": [
+			{
+				"title": "SSL Validation disabled by default",
+				"credit": [
+					"Mark Lee"
+				],
+				"creationTime": "2016-04-22T16:00:02.673Z",
+				"modificationTime": "2016-04-22T16:00:02.673Z",
+				"publicationTime": "2016-05-17T00:00:00.000Z",
+				"disclosureTime": "2016-04-22T15:56:50.000Z",
+				"description": "## Overview\n`electron-packager` is a command line tool that lets you package and distribute your Electron app with OS-specific bundles (.app, .exe etc) via JS or CLI.\n\nVersions `5.2.1-6.0.2` have the `--strict-ssl` command line option default to false (causing strict-ssl to not be enabled). This could allow an attacker to execute a SSL Man In The Middle attack and deliver a malicious electron version that also gets cached in `~/.electron` folder. \n\n## Remediation\nUpgrade `electron-packager` to version 7.0.0 or higher.\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/documentation/#wizard) to patch this vulnerability.\n\nDelete the electron-download cache folder, by default named `.electron`, located in your home folder.\n\n## References\n- https://github.com/electron-userland/electron-packager/issues/333\n\n",
+				"semver": {
+					"vulnerable": ">= 5.2.1 <= 6.0.2",
+					"unaffected": ">= 7.0.0"
+				},
+				"CVSSv3": "",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-295"
+					],
+					"CVE": [],
+					"NSP": 104
+				},
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/electron-packager/20160422/electron-packager_20160422_ebea1d8c177f2a2816687c4a445998cc35375a18.patch"
+						],
+						"version": ">= 5.2.1 <= 6.0.2",
+						"modificationTime": "2016-04-26T10:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:electron-packager:20160422:0"
+					}
+				],
+				"moduleName": "electron-packager",
+				"id": "npm:electron-packager:20160422"
 			}
 		],
 		"ember": [
@@ -3185,7 +3253,7 @@
 				},
 				"CVSSv2": "",
 				"CVSSv3": "",
-				"severity": "low",
+				"severity": "high",
 				"identifiers": {
 					"CWE": [
 						"CWE-89"
