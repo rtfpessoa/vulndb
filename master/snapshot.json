@@ -2154,6 +2154,15 @@
 						"modificationTime": "2016-06-20T16:00:06.484Z",
 						"comments": [],
 						"id": "patch:npm:minimatch:20160620:0"
+					},
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/minimatch/20160620/minimatch_20160620_0_1_6944abf9e0694bd22fd9dad293faa40c2bc8a955.patch"
+						],
+						"version": "<=2.0.5 >0.0.5",
+						"modificationTime": "2016-06-23T12:00:06.484Z",
+						"comments": [],
+						"id": "patch:npm:minimatch:20160620:1"
 					}
 				],
 				"moduleName": "minimatch",
@@ -3521,6 +3530,46 @@
 				"modificationTime": "2015-11-06T02:09:36.180Z",
 				"disclosureTime": "2015-01-20T04:46:45.000Z",
 				"id": "npm:serve-static:20150120"
+			}
+		],
+		"shell-quote": [
+			{
+				"title": "Command Injection",
+				"credit": [
+					"Koki Takahashi",
+					"Node Security Team"
+				],
+				"creationTime": "2016-06-21T18:00:10.120Z",
+				"modificationTime": "2016-06-21T18:00:10.120Z",
+				"publicationTime": "2016-06-21T17:40:40.000Z",
+				"disclosureTime": "2016-06-21T17:40:40.000Z",
+				"description": "## Overview\n[`shell-quote`](https://www.npmjs.com/package/shell-quote) is an npm package used to quote and parse shell commands. \nThe `quote` function does not properly escape the following special characters `<`, `>`, `;`, `{`, `}` , and as a result can be used by an attacker to inject malicious shell commands or leak sensitive information.\n\n## Shell command injection proof of concept\nConsider the following `poc.js` application\n\n```javascript\nvar quote = require('shell-quote').quote;\nvar exec = require('child_process').exec;\n\nvar userInput = process.argv[2];\n\nvar safeCommand = quote(['echo', userInput]);\n\nexec(safeCommand, function (err, stdout, stderr) {\n  console.log(stdout);\n});\n```\n\nRunning the following command will not only print the character `a` as expected, but will also run the another command, i.e `touch malicious.sh`\n\n```bash\n$ node poc.js 'a;{touch,malicious.sh}'\n```\n\n## Remediation\nUpgrade `shell-quote` to version 1.6.1 or greater.\n\n## References\n- https://github.com/substack/node-shell-quote/compare/1.6.0...1.6.1\n",
+				"semver": {
+					"vulnerable": "<=1.6.0",
+					"unaffected": ">=1.6.1"
+				},
+				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-78"
+					],
+					"CVE": [],
+					"NSP": 117
+				},
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/shell-quote/20160621/shell-quote_20160621_0_0.patch"
+						],
+						"version": "<=1.6.0 >1.4.2",
+						"modificationTime": "2016-06-29T00:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:shell-quote:20160621:0"
+					}
+				],
+				"moduleName": "shell-quote",
+				"id": "npm:shell-quote:20160621"
 			}
 		],
 		"st": [
