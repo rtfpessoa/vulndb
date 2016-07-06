@@ -199,35 +199,6 @@
 				"id": "npm:bleach:20151024"
 			}
 		],
-		"cli": [
-			{
-				"title": "Insecure use of /tmp folder",
-				"credit": [
-					"Steve Kemp"
-				],
-				"creationTime": "2016-06-16T00:00:02.709Z",
-				"modificationTime": "2016-06-16T00:00:02.709Z",
-				"publicationTime": "2016-06-15T23:22:22.000Z",
-				"disclosureTime": "2015-12-28T18:28:58.000Z",
-				"description": "## Overview\n[`cli`](https://www.npmjs.com/package/cli) is an npm package used for rapidly building command line apps. \n\nThe library makes insecure use of two files in the `/tmp/` folder, `/tmp/<app-name>.pid` and `/tmp/<app-name>.log`, which allow an attacker to overwrite files it typically cannot access, but that are accessible by the user running the cli-using app. This is possible since the `/tmp/` folder is (typically) writeable to all system users, and because the names of the files in question are easily predicted by an attacker.\n\nFor example, assume user _victim_ occasionally runs a cli tool called `cli-tool`, which uses the `cli` package.\nIf an attacker gains write access to the `/tmp/` folder of that machine (but not the higher permissions _victim_ has), they can create the symbolic link `/tmp/cli-tool.pid -> /home/victim/important-file`. When _victim_ runs `cli-tool`, the `important-file` in victim's root directory will be nullified. If the CLI tool is run as root, the same can be done to nullify `/etc/passwd` and make the system unbootable. \n\nNote that popular CLI tools have no reason to mask their names, and so attackers can easily guess a long list of tools victims may run by checking the `cli` package [dependents](https://www.npmjs.com/browse/depended/cli).\n\n## Remediation\nThere’s no official fix available yet.\nTo ensure your package is not susceptible to this type of attack, apply the Snyk patch.\n\n## References\nhttps://bugs.debian.org/cgi-bin/bugreport.cgi?bug=809252\n\n",
-				"semver": {
-					"vulnerable": "<=0.11.2",
-					"unaffected": "<0.0.0"
-				},
-				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
-				"severity": "medium",
-				"identifiers": {
-					"CWE": [
-						"CWE-59"
-					],
-					"CVE": [],
-					"NSP": 95
-				},
-				"patches": [],
-				"moduleName": "cli",
-				"id": "npm:cli:20160615"
-			}
-		],
 		"codem-transcode": [
 			{
 				"title": "Command Injection in ffprobe",
