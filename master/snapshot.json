@@ -199,6 +199,54 @@
 				"id": "npm:bleach:20151024"
 			}
 		],
+		"call": [
+			{
+				"title": "Improper input validation",
+				"credit": [
+					"Nicolas Morel"
+				],
+				"creationTime": "2016-07-05T20:00:02.950Z",
+				"modificationTime": "2016-07-05T20:00:02.950Z",
+				"publicationTime": "2016-07-05T18:05:37.000Z",
+				"disclosureTime": "2016-07-05T18:05:37.000Z",
+				"description": "## Overview\n[`call`](https://www.npmjs.com/package/call) is the primary HTTP router of the [`hapi`](https://www.npmjs.com/package/hapi) framework.\n\nThe vulnerability arise from `undefined` values inside a path (last segment being an exception) making their way into components that do not care for values being `undefined` (eg. the database layer).\n\nFor example, the request URI `/delete/company//` may incorrectly match a route looking for `/delete/company/{company}/`. By itself, the bad match is not a vulnerability. However, depending on the remaining logic in the application, such a bad match may result in skipping a protection mechanisms. In the above example, if the route translates to a DB delete command, it might delete all the companies from the db.\n\n## Remediation\nUpgrade to version 3.0.2 or higher. \n\n## References\nhttps://github.com/hapijs/hapi/issues/3228\nhttps://github.com/hapijs/call/commit/9570eee5358b4383715cc6a13cb95971678efd30\n",
+				"semver": {
+					"vulnerable": ">=2.0.1 <3.0.2",
+					"unaffected": ">=3.0.2"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-20"
+					],
+					"CVE": [],
+					"NSP": 121
+				},
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/call/20160705/call_20160705_0_0_fa786f85fd32314358a0540c22c4ec25c4bff709.patch"
+						],
+						"version": "=3.0.1",
+						"modificationTime": "2016-07-05T18:05:37.000Z",
+						"comments": [],
+						"id": "patch:npm:call:20160705:0"
+					},
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/call/20160705/call_20160705_0_1_fa786f85fd32314358a0540c22c4ec25c4bff709.patch"
+						],
+						"version": "<3.0.1 >=2.0.1",
+						"modificationTime": "2016-07-05T18:05:37.000Z",
+						"comments": [],
+						"id": "patch:npm:call:20160705:1"
+					}
+				],
+				"moduleName": "call",
+				"id": "npm:call:20160705"
+			}
+		],
 		"codem-transcode": [
 			{
 				"title": "Command Injection in ffprobe",
