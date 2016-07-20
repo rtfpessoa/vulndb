@@ -3298,7 +3298,7 @@
 				"credit": [
 					""
 				],
-				"description": "## Overview\n`sequelize` versions prior to 1.7.0-alpha3 are vulnerable to SQL Injection attacks if untrusted user input is passed into the `order` parameter.\n\n## Remediation\nUpdate to version 1.7.0-alpha3 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/commit/c876192aa6ce1f67e22b26a4d175b8478615f42d\n\n",
+				"description": "## Overview\n`sequelize` versions prior to 1.7.0-alpha3 are vulnerable to SQL Injection attacks if untrusted user input is passed into the `order` parameter.\n\n## Remediation\nUpgrade to version 1.7.0-alpha3 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/commit/c876192aa6ce1f67e22b26a4d175b8478615f42d\n\n",
 				"semver": {
 					"vulnerable": "<=1.7.0-alpha2 >=0.2.2",
 					"unaffected": ">1.7.0-alpha3 || <0.2.2"
@@ -3325,7 +3325,7 @@
 				"credit": [
 					"Levan Basharuli"
 				],
-				"description": "## Overview\n`sequelize` versions prior to 2.0.0-rc7 are vulnerable to SQL Injection attacks if untrusted user input is passed into the `order` parameter.\n\n## Remediation\nUpdate to version 2.0.0-rc8 or greater.\n\n## References\n- https://nodesecurity.io/advisories/33\n- https://github.com/sequelize/sequelize/issues/2906\n",
+				"description": "## Overview\n`sequelize` versions prior to 2.0.0-rc7 are vulnerable to SQL Injection attacks if untrusted user input is passed into the `order` parameter.\n\n## Remediation\nUpgrade to version 2.0.0-rc8 or greater.\n\n## References\n- https://nodesecurity.io/advisories/33\n- https://github.com/sequelize/sequelize/issues/2906\n",
 				"semver": {
 					"vulnerable": "<=2.0.0-rc7",
 					"unaffected": ">=2.0.0-rc8"
@@ -3365,7 +3365,7 @@
 				"credit": [
 					""
 				],
-				"description": "## Overview\nBeginning with `sequelize` version 3.0.0, two security related changes were introduced:\n- `findOne` no longer takes a string / integer / binary argument to represent a primaryKey. Use `findById` instead.\n- `where: \"raw query\"` is no longer legal, you must now explicitly use `where: [\"raw query\", [replacements]]`\n\n## Remediation\nUpdate to version 3.0.0 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/blob/master/changelog.md#300\n",
+				"description": "## Overview\nBeginning with `sequelize` version 3.0.0, two security related changes were introduced:\n- `findOne` no longer takes a string / integer / binary argument to represent a primaryKey. Use `findById` instead.\n- `where: \"raw query\"` is no longer legal, you must now explicitly use `where: [\"raw query\", [replacements]]`\n\n## Remediation\nUpgrade to version 3.0.0 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/blob/master/changelog.md#300\n",
 				"semver": {
 					"vulnerable": "<=2.1.3",
 					"unaffected": ">=3.0.0"
@@ -3392,7 +3392,7 @@
 				"credit": [
 					"Spencer Creasey"
 				],
-				"description": "## Overview\n`sequelize` versions prior to 3.17.0 are vulnerable to SQL Injection attacks if untrusted user input is passed into the `order` or `limit` parameters.\n\n## Example\n```javascript\nmodels.User.findAll({\n  limit: '1; DELETE FROM \"Users\" WHERE 1=1; --',\n}).then(function (users) {\n  console.log(users);\n});\n```\n\n## Remediation\nUpdate to version 3.17.0 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/pull/5167\n- https://github.com/sequelize/sequelize/blob/master/changelog.md#3170\n- https://github.com/sequelize/sequelize/commit/d198d78182cbf1ea3ef1706740b35813a6aa0838\n",
+				"description": "## Overview\n`sequelize` versions prior to 3.17.0 are vulnerable to SQL Injection attacks if untrusted user input is passed into the `order` or `limit` parameters.\n\n## Example\n```javascript\nmodels.User.findAll({\n  limit: '1; DELETE FROM \"Users\" WHERE 1=1; --',\n}).then(function (users) {\n  console.log(users);\n});\n```\n\n## Remediation\nUpgrade to version 3.17.0 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/pull/5167\n- https://github.com/sequelize/sequelize/blob/master/changelog.md#3170\n- https://github.com/sequelize/sequelize/commit/d198d78182cbf1ea3ef1706740b35813a6aa0838\n",
 				"semver": {
 					"vulnerable": "<=3.16.0 >=0.2.2",
 					"unaffected": "<0.2.2 || >3.16.0"
@@ -3475,7 +3475,7 @@
 				"credit": [
 					""
 				],
-				"description": "## Overview\n`sequelize` versions prior to 3.20.0 improperly escape arrays of strings bound to named parameters.\n\n## Remediation\nUpdate to version 3.20.0 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/issues/5671\n- https://github.com/sequelize/sequelize/commit/23952a2b020cc3571f090e67dae7feb084e1be71\n",
+				"description": "## Overview\n`sequelize` versions prior to 3.20.0 improperly escape arrays of strings bound to named parameters.\n\n## Remediation\nUpgrade to version 3.20.0 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/issues/5671\n- https://github.com/sequelize/sequelize/commit/23952a2b020cc3571f090e67dae7feb084e1be71\n",
 				"semver": {
 					"vulnerable": "<=3.19.3",
 					"unaffected": ">3.19.3"
@@ -3528,6 +3528,63 @@
 				"modificationTime": "2016-04-01T00:00:00.000Z",
 				"disclosureTime": "2016-03-29T00:00:00.000Z",
 				"id": "npm:sequelize:20160329"
+			},
+			{
+				"title": "SQL Injection via GeoJSON",
+				"credit": [
+					"contra"
+				],
+				"creationTime": "2016-07-18T22:00:02.516Z",
+				"modificationTime": "2016-07-18T22:00:02.516Z",
+				"publicationTime": "2016-07-18T20:40:51.000Z",
+				"disclosureTime": "2016-07-20T00:00:00.000Z",
+				"description": "## Overview\n`sequelize` versions prior to `3.23.6` are vulnerable to SQL injection via [GeoJSON](http://geojson.org/) documents that contain a value with a single quote. GeoJSON is a format used for encoding a variety of geographic data structures in a standard JSON document. The vulnerability exists within GeoJSON documents using the function \n`ST_GeomFromGeoJSON` (for postgresql/postgis) and the function `GeomFromText` (for mysql). \n\nNote that `sequelize` users who do not use these specific functions are not affected. For users who do use these functions, this vulnerability has a high impact and is easily expoited, hence its high severity classification.\n\n## Remediation\nUpgrade to version 3.23.6 or greater.\n\n## References\n- https://github.com/sequelize/sequelize/issues/6194\n- http://geojson.org/\n- http://docs.sequelizejs.com/en/latest/api/datatypes/#geometry\n\n",
+				"semver": {
+					"vulnerable": "<3.23.6 >=3.4.0",
+					"unaffected": ">=3.23.6 || <3.4.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					],
+					"CVE": [],
+					"NSP": 122
+				},
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/sequelize/20160718/sequelize_20160718_0_0_f93af43a1d86400487f5e3d9762f1a4b7cf6b1e1.patch"
+						],
+						"version": "<= 3.23.4 > 3.20.0",
+						"modificationTime": "2016-07-20T12:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:sequelize:20160718:0"
+					},
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/sequelize/20160718/sequelize_20160718_0_1_f93af43a1d86400487f5e3d9762f1a4b7cf6b1e1.patch"
+						],
+						"version": "<= 3.20.0 > 3.19.3",
+						"modificationTime": "2016-07-20T12:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:sequelize:20160718:1"
+					},
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/sequelize/20160718/sequelize_20160718_0_1_f93af43a1d86400487f5e3d9762f1a4b7cf6b1e1_w_20160329.patch"
+						],
+						"version": "<= 3.19.3 > 3.18.0",
+						"modificationTime": "2016-07-20T12:00:00.000Z",
+						"comments": [
+							"also carries a fix for npm:sequelize:20160329"
+						],
+						"id": "patch:npm:sequelize:20160718:2"
+					}
+				],
+				"moduleName": "sequelize",
+				"id": "npm:sequelize:20160718"
 			}
 		],
 		"serve-index": [
