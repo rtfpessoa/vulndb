@@ -93,6 +93,33 @@
 				"modificationTime": "2015-11-06T02:09:36.180Z",
 				"disclosureTime": "2015-11-06T02:09:36.180Z",
 				"id": "npm:backbone:20110701"
+			},
+			{
+				"title": "Cross Site Scripting",
+				"credit": [
+					"Unknown"
+				],
+				"creationTime": "2016-05-24T06:45:20.086Z",
+				"modificationTime": "2016-05-24T06:45:20.086Z",
+				"publicationTime": "2016-06-22T17:50:20.000Z",
+				"disclosureTime": "2016-05-23T17:50:20.000Z",
+				"description": "## Overview\nbackbone is a module that adds in structure to a JavaScript heavy application through key-value pairs and custom events connecting to your RESTful API through JSON\n\n`backbone` is the npm package for Backbone.js, which uses key-value binding and custom events to connects existing API over a RESTful JSON interface.\n\nBackbone has a security control in its `Escape` function, which performs HTML encoding. However, the regex is incomplete, notably not properly handling cases such as HTML entities (e.g. not treating `&#60` as `<`). HTML Entities are often overlooked by HTML Encoding security controls, you can read more detail about a similar one in the [`Marked` package](https://snyk.io/blog/marked-xss-vulnerability/)\n\nThis exposes a Cross-Site Scripting (XSS) vulnerability if users can influence the input provided.\n\n## Remediation\nUpgrade to version `0.5.0` or higher.\n\n## References\n- https://github.com/jashkenas/backbone/compare/0.3.3...0.5.0#diff-0d56d0d310de7ff18b3cef9c2f8f75dcL1008\n- backbonejs.org/#changelog\n- https://snyk.io/blog/marked-xss-vulnerability/\n\n",
+				"semver": {
+					"vulnerable": "<= 0.3.3",
+					"unaffected": ">= 0.5.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"NSP": 108
+				},
+				"patches": [],
+				"moduleName": "backbone",
+				"id": "npm:backbone:20160523"
 			}
 		],
 		"bassmaster": [
@@ -197,6 +224,35 @@
 				"moduleName": "bleach",
 				"disclosureTime": "2015-10-24T20:46:42.522Z",
 				"id": "npm:bleach:20151024"
+			}
+		],
+		"bootstrap-tagsinput": [
+			{
+				"title": "XSS in itemTitle parameter",
+				"credit": [
+					"Alex Wong"
+				],
+				"creationTime": "2016-07-20T22:00:03.024Z",
+				"modificationTime": "2016-07-20T22:00:03.024Z",
+				"publicationTime": "2016-07-20T21:20:51.000Z",
+				"disclosureTime": "2016-07-20T21:20:51.000Z",
+				"description": "## Overview\nBootstrap Tags Input is a jQuery plugin providing a Twitter Bootstrap user interface for managing tags. \n\nThe plugin supports various inputs for each tag, such as tagClass, itemValue and itemText, and all of those are HTML Encoded as they should be. However, HTML encoding was overlooked for the `itemTitle` parameter, exposing a potential Cross-Site Scripting (XSS) vulnerability.\n\n## Remediation\nAvoid passing user input to the `itemTitle` parameter, or avoid using it altogether, until a patch is made available.\n\n## References\n- https://github.com/bootstrap-tagsinput/bootstrap-tagsinput/issues/501\n",
+				"semver": {
+					"vulnerable": "<=0.8.0",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"NSP": 124
+				},
+				"patches": [],
+				"moduleName": "bootstrap-tagsinput",
+				"id": "npm:bootstrap-tagsinput:20160720"
 			}
 		],
 		"call": [
@@ -366,6 +422,33 @@
 				"id": "npm:crumb:20140801"
 			}
 		],
+		"csrf-lite": [
+			{
+				"title": "Non-Constant Time String Comparison",
+				"credit": [
+					"Todd Wolfson"
+				],
+				"creationTime": "2016-04-23T04:00:02.713Z",
+				"modificationTime": "2016-04-23T04:00:02.713Z",
+				"publicationTime": "2016-06-22T00:00:00.000Z",
+				"disclosureTime": "2016-04-23T03:42:03.000Z",
+				"description": "## Overview\n`csrf-lite` is a cross-site request forgery protection library for framework-less node sites.\n\nWhile the CSRF protection itself works well and increases security, the library uses the built-in string comparison mechanism, `===`, and not a time constant string comparison. As a result, the comparison will fail faster when the first characters in the token are incorrect. \nAn attacker can use this difference to perform a timing attack, essentially allowing them to guess the CSRF token one character at a time.\n\nYou can read more about timing attacks in Node.js on the Snyk blog: https://snyk.io/blog/node-js-timing-attack-ccc-ctf/\n\n## Remediation\nUpdate to version `0.1.2` or higher.\n\n## References\n- https://github.com/isaacs/csrf-lite/pull/1\n- https://snyk.io/blog/node-js-timing-attack-ccc-ctf/\n",
+				"semver": {
+					"vulnerable": "<=0.1.1",
+					"unaffected": ">=0.1.2"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 94
+				},
+				"patches": [],
+				"moduleName": "csrf-lite",
+				"id": "npm:csrf-lite:20160423"
+			}
+		],
 		"datatables": [
 			{
 				"title": "Cross-Site Scripting",
@@ -521,6 +604,35 @@
 				"modificationTime": "2015-11-06T02:09:36.180Z",
 				"disclosureTime": "2015-11-06T02:09:36.180Z",
 				"id": "npm:dojo:20100614-6"
+			},
+			{
+				"title": "Cross Site Scripting",
+				"credit": [
+					"Unknown"
+				],
+				"creationTime": "2016-05-24T06:45:20.086Z",
+				"modificationTime": "2016-05-24T06:45:20.086Z",
+				"publicationTime": "2016-06-22T00:00:00.000Z",
+				"disclosureTime": "2016-05-23T16:48:27.000Z",
+				"description": "## Overview\n`dojo` is the core module for the Dojo Toolkit. The dojo package covers a wide range of functionality like AJAX, DOM manipulation, class-type programming, events, promises, data stores, drag-and-drop and internationalization libraries.\n\nThere is a bug in the `dijit.Editor` and `textarea` where input, even sanitized, executes javascript. This is because the `<textarea>` tag only sees the final, unsanitized, user input.\n\nSource: _Node Security Project_\n\n## Remediation\nUpgrade to version `1.1` or higher.\n\n## References\n- https://bugs.dojotoolkit.org/ticket/2140\n\n",
+				"semver": {
+					"vulnerable": "<= 1.0.0",
+					"unaffected": ">= 1.1.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [
+						"CVE-2008-6681"
+					],
+					"NSP": 107
+				},
+				"patches": [],
+				"moduleName": "dojo",
+				"id": "npm:dojo:20160523"
 			}
 		],
 		"droppy": [
@@ -864,6 +976,35 @@
 				]
 			}
 		],
+		"express-restify-mongoose": [
+			{
+				"title": "Private Data Disclosure",
+				"credit": [
+					"Stefan Mirea"
+				],
+				"creationTime": "2016-04-20T14:45:19.555Z",
+				"modificationTime": "2016-04-20T14:45:19.555Z",
+				"publicationTime": "2016-06-22T00:00:00.000Z",
+				"disclosureTime": "2016-04-19T23:24:17.000Z",
+				"description": "## Overview\n`express-restify-mongoose` is a module to easily create a flexible REST interface for mongoose models.\n\nIf you have a user model that you want to protect:\n```\nconst User = mongoose.model('User', new mongoose.Schema({\n    name: String,\n    password: String,\n}));\n```\n\nYou would normally do something such as:\n```\nrestify.serve(router, User, {\n    private: ['password'], // Set the password part of User as private, so outside people can't read it\n})\n```\n\nThis would hide the password field from people that send your application a `GET /User` and `GET /User/some-user-id` request. \n\nBut a malicious user could go to your application and send a request for `GET /User?distinct=password` and get all the passwords for all the users in the database, despite the field being set to private. This could also be used for other private data if the malicious user knew what was set as private for specific routes. \n\nSource: Node Security Project\n\n## Remediation\nUpdate to at least version 3.1.0 or 2.5.0\n\n## References\n- https://github.com/florianholzapfel/express-restify-mongoose/issues/252\n\n",
+				"semver": {
+					"vulnerable": "<= 2.4.2 || >= 3.0.0 <=3.0.1",
+					"unaffected": ">=2.5.0 <= 3.0.0 || >=3.1.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-200"
+					],
+					"CVE": [],
+					"NSP": 92
+				},
+				"patches": [],
+				"moduleName": "express-restify-mongoose",
+				"id": "npm:express-restify-mongoose:20160419"
+			}
+		],
 		"fancy-server": [
 			{
 				"title": "Directory Traversal",
@@ -992,6 +1133,35 @@
 				"moduleName": "gm",
 				"disclosureTime": "2015-10-26T20:12:18.990Z",
 				"id": "npm:gm:20151026"
+			}
+		],
+		"gmail-js": [
+			{
+				"title": "DOM-based XSS",
+				"credit": [
+					"Gursev Singh Kalra"
+				],
+				"creationTime": "2016-07-21T16:00:02.338Z",
+				"modificationTime": "2016-07-21T16:00:02.338Z",
+				"publicationTime": "2016-07-21T14:59:33.000Z",
+				"disclosureTime": "2016-07-21T14:59:33.000Z",
+				"description": "## Overview\n`gmail-js` is a client side library for interacting with the Gmail API.\n\nAs part of its execution, the library dynamically creates functions out of response data, loaded into a `new Function(data)` call, and executes the function. The response data read is not encoded and may include user content (e.g. from the emails themselves), thus exposing a DOM-Based Cross-Site Scripting (DOMXSS) vulnerability.\n\nAt least three functions perform this vulnerable flow: `tools.parse_response`, `helper.get.visible_emails_post`, and `helper.get.email_data_post`.\n\n## Remediation\nSince there is no public patch yet available, we recommend you avoid using this library until a patch is released.\n\n## References\n- https://github.com/KartikTalwar/gmail.js/issues/281\n- https://www.owasp.org/index.php/DOM_Based_XSS\n\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"NSP": 125
+				},
+				"patches": [],
+				"moduleName": "gmail-js",
+				"id": "npm:gmail-js:20160721"
 			}
 		],
 		"grunt-gh-pages": [
@@ -1519,6 +1689,35 @@
 				"moduleName": "jadedown",
 				"disclosureTime": "2016-01-05T23:00:45.777Z",
 				"id": "npm:jadedown:20160105"
+			}
+		],
+		"jquery-ui": [
+			{
+				"title": "XSS in dialog closeText",
+				"credit": [
+					"Phat Ly"
+				],
+				"creationTime": "2016-07-22T00:00:02.715Z",
+				"modificationTime": "2016-07-22T00:00:02.715Z",
+				"publicationTime": "2016-07-21T22:21:41.000Z",
+				"disclosureTime": "2016-07-21T22:21:41.000Z",
+				"description": "## Overview\njQuery-UI is a library for manipulating UI elements via jQuery.\n\nOne of the provided elements is a dialog, which also supports showing custom text for closing via the [_closeText_](https://api.jqueryui.com/dialog/#option-closeText) property. However, the content of this property is added to the HTML with no sanitization, allowing arbitrary scripts.\n\nIf you allow user input to be passed through to the _closeText_ property, you may have a Cross-Site Scripting (XSS) vulnerability.\n\n## Remediation\nUpgrade `jquery-ui` to `1.12.0` or greater.\n\n## References\n- https://github.com/jquery/jquery-ui/pull/1622\n- https://github.com/jquery/api.jqueryui.com/issues/281\n",
+				"semver": {
+					"vulnerable": "<=1.11.4",
+					"unaffected": ">=1.12.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"NSP": 127
+				},
+				"patches": [],
+				"moduleName": "jquery-ui",
+				"id": "npm:jquery-ui:20160721"
 			}
 		],
 		"jquery-ujs": [
@@ -2708,7 +2907,17 @@
 					"CVE": [],
 					"NSP": 93
 				},
-				"patches": [],
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/node-uuid/20160328/node-uuid_20160328_0_0_616ad3800f35cf58089215f420db9654801a5a02.patch"
+						],
+						"version": "<=1.4.3 >=1.4.2",
+						"modificationTime": "2016-07-19T13:00:00.396Z",
+						"comments": [],
+						"id": "patch:npm:node-uuid:20160328:0"
+					}
+				],
 				"moduleName": "node-uuid",
 				"disclosureTime": "2016-03-28T21:29:30.000Z",
 				"id": "npm:node-uuid:20160328"
@@ -3771,6 +3980,35 @@
 				"modificationTime": "2015-11-06T02:09:36.180Z",
 				"disclosureTime": "2014-02-06T07:33:48.000Z",
 				"id": "npm:st:20140206"
+			}
+		],
+		"swagger-ui": [
+			{
+				"title": "XSS in Consumes/Produces Parameter",
+				"credit": [
+					"Joe Vennix"
+				],
+				"creationTime": "2016-07-20T20:00:03.160Z",
+				"modificationTime": "2016-07-20T20:00:03.160Z",
+				"publicationTime": "2016-07-20T19:01:30.000Z",
+				"disclosureTime": "2016-07-20T19:01:30.000Z",
+				"description": "## Overview\nSwagger is a standardized library for documenting API endpoints and their parameters.  Swagger uses a JSON document to organize API endpoint parameter data.\n\nSwagger-UI version 2.1.4 contains a cross site scripting (XSS) vulnerability in the `consumes` and `produces` parameters of the swagger json document for a given API.  A maliciously crafted swagger JSON doc can be loaded via the URL query-string parameter `url`.\n\nTo exploit the vulnerability, an attacker would convince a user to visit a malicious url crafted in the following format:\n```\nhttp://<USER_HOSTNAME>/swagger-ui/index.html?url=http://<MALICIOUS_HOSTNAME>/malicious-swagger-file.json\n```\n\nThis issue is being disclosed before a public patched release is available due to the issue being made public in a Github issue.\n\nSource: _Node Security Project_\n\n## Remediation\nUpgrade `swagger-ui` to version `2.1.5` or greater. \n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/docs/using-snyk#wizard) to patch this vulnerability.\n\n## References\n- https://github.com/swagger-api/swagger-ui/issues/1866\n- https://github.com/swagger-api/swagger-ui/pull/1867\n\n",
+				"semver": {
+					"vulnerable": "<=2.1.4",
+					"unaffected": ">2.1.5"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"NSP": 123
+				},
+				"patches": [],
+				"moduleName": "swagger-ui",
+				"id": "npm:swagger-ui:20160720"
 			}
 		],
 		"syntax-error": [
