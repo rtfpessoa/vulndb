@@ -3265,7 +3265,7 @@
 				"id": "npm:remarkable:20141113"
 			}
 		],
-		"rendr-handlebars": [
+		"rendr": [
 			{
 				"title": "XSS in client rendered block templates",
 				"credit": [
@@ -3290,8 +3290,8 @@
 					"NSP": 128
 				},
 				"patches": [],
-				"moduleName": "rendr-handlebars",
-				"id": "npm:rendr-handlebars:20160725"
+				"moduleName": "rendr",
+				"id": "npm:rendr:20160725"
 			}
 		],
 		"request": [
