@@ -4269,6 +4269,33 @@
 				"patches": [],
 				"moduleName": "swagger-ui",
 				"id": "npm:swagger-ui:20160725"
+			},
+			{
+				"title": "XSS in URL Query String Parameter",
+				"credit": [
+					"mehmetaydogdu"
+				],
+				"creationTime": "2016-08-15T06:54:38.003Z",
+				"modificationTime": "2016-08-15T06:54:38.003Z",
+				"publicationTime": "2016-08-15T00:00:00.000Z",
+				"disclosureTime": "2016-08-15T00:00:00.000Z",
+				"description": "## Overview\nSwagger is a standardized library for documenting API endpoints and their parameters. Versions 2.1.0-M1 and 2.1.0-M2 of the library contain a cross site scripting (XSS) vulnerability in the the `url` query string parameter.\n\n## Remediation\nUpgrade to 2.1.0 or later.\n\n## References\n- https://github.com/swagger-api/swagger-ui/issues/1262\n\n",
+				"semver": {
+					"vulnerable": "2.1.0-M1 || 2.1.0-M2",
+					"unaffected": ">=2.1.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-80"
+					],
+					"CVE": [],
+					"NSP": 137
+				},
+				"patches": [],
+				"moduleName": "swagger-ui",
+				"id": "npm:swagger-ui:20160815"
 			}
 		],
 		"syntax-error": [
