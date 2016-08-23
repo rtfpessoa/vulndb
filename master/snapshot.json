@@ -3030,6 +3030,33 @@
 				"id": "npm:nhouston:20141114"
 			}
 		],
+		"node-krb5": [
+			{
+				"title": "Spoofing attack due to unvalidated KDC",
+				"credit": [
+					"Richard Silverman"
+				],
+				"creationTime": "2016-08-05T01:38:52.280Z",
+				"modificationTime": "2016-08-05T01:38:52.280Z",
+				"publicationTime": "2016-08-04T21:27:06.000Z",
+				"disclosureTime": "2016-08-04T21:27:06.000Z",
+				"description": "## Overview\n['node-krb5'](https://www.npmjs.com/package/node-krb5) is a node.js native add-on for simple krb5 user authentication.\n\nCurrent implementation does not verify the Kerberos Key Distribution Center (KDC): it accepts a username/password from the user, then asks a KDC whether that password is correct for the corresponding Kerberos principal - without assurance that the response came from a real KDC.\n\n## Remediation\nThere's no official fix for the vulnerability. In the meanwhile, consider switching to a ['different npm module'](https://www.npmjs.com/package/kerberos).\n\n## References\n- https://github.com/qesuto/node-krb5/issues/13\n- http://archive.hack.lu/2010/Bouillon-Stealing-credentials-for-impersonation.pdf\n\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 136
+				},
+				"patches": [],
+				"moduleName": "node-krb5",
+				"id": "npm:node-krb5:20160804"
+			}
+		],
 		"node-uuid": [
 			{
 				"title": "Insecure Randomness",
