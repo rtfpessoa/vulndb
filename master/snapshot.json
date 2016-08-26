@@ -2758,6 +2758,35 @@
 				"id": "npm:mongoose:20160116"
 			}
 		],
+		"mqtt": [
+			{
+				"title": "Denial of Service",
+				"credit": [
+					"Matteo Collina"
+				],
+				"creationTime": "2016-08-17T15:13:32.563Z",
+				"modificationTime": "2016-08-17T15:13:32.563Z",
+				"publicationTime": "2016-08-17T15:13:32.563Z",
+				"disclosureTime": "2016-08-17T15:13:32.563Z",
+				"description": "## Overview\n['mqtt'](https://www.npmjs.com/package/mqtt) is a library implementing the MQTT protocol. Versions `1.0.0` and earlier allow a remote attacker to cause Denial of Service (DoS) by sending a specifically crafted packet, crashing the application.\n\n## Remediation\nUpgrade `mqtt` to version 1.0.0 or later\n\n## References\n- https://github.com/mqttjs/MQTT.js/blob/388a084d7803934b18b43c1146c817deaa1396b1/lib/parse.js#L230\n\n",
+				"semver": {
+					"vulnerable": "<=0.3.13",
+					"unaffected": ">=1.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-248"
+					],
+					"CVE": [],
+					"NSP": 140
+				},
+				"patches": [],
+				"moduleName": "mqtt",
+				"id": "npm:mqtt:20160817"
+			}
+		],
 		"mqtt-packet": [
 			{
 				"title": "Denial of Service",
