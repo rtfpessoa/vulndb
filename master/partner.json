@@ -247,6 +247,34 @@
         "id": "npm:bootstrap-tagsinput:20160720"
       }
     ],
+    "c3": [
+      {
+        "title": "XSS via tooltips",
+        "credit": [
+          "Calvin K Cox"
+        ],
+        "creationTime": "2016-08-17T15:13:32.564Z",
+        "modificationTime": "2016-08-17T15:13:32.564Z",
+        "publicationTime": "2016-08-17T15:13:32.564Z",
+        "disclosureTime": "2016-08-17T15:13:32.564Z",
+        "semver": {
+          "vulnerable": "<=0.4.10",
+          "unaffected": ">=0.4.11"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-80"
+          ],
+          "CVE": [],
+          "NSP": 138
+        },
+        "patches": [],
+        "moduleName": "c3",
+        "id": "npm:c3:20160817"
+      }
+    ],
     "call": [
       {
         "title": "Improper input validation",
@@ -3066,6 +3094,34 @@
         "modificationTime": "2015-11-06T02:09:36.180Z",
         "disclosureTime": "2014-12-03T03:00:00.000Z",
         "id": "npm:paypal-ipn:20141203"
+      }
+    ],
+    "pivottable": [
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "credit": [
+          "Todd Wolfson"
+        ],
+        "creationTime": "2016-08-17T15:13:32.564Z",
+        "modificationTime": "2016-08-17T15:13:32.564Z",
+        "publicationTime": "2016-08-17T15:13:32.564Z",
+        "disclosureTime": "2016-08-17T15:13:32.564Z",
+        "semver": {
+          "vulnerable": ">=1.4.0 <2.0.0",
+          "unaffected": ">=2.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-80"
+          ],
+          "CVE": [],
+          "NSP": 139
+        },
+        "patches": [],
+        "moduleName": "pivottable",
+        "id": "npm:pivottable:20160817"
       }
     ],
     "printer": [

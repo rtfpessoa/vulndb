@@ -255,6 +255,35 @@
 				"id": "npm:bootstrap-tagsinput:20160720"
 			}
 		],
+		"c3": [
+			{
+				"title": "XSS via tooltips",
+				"credit": [
+					"Calvin K Cox"
+				],
+				"creationTime": "2016-08-17T15:13:32.564Z",
+				"modificationTime": "2016-08-17T15:13:32.564Z",
+				"publicationTime": "2016-08-17T15:13:32.564Z",
+				"disclosureTime": "2016-08-17T15:13:32.564Z",
+				"description": "## Overview\n['c3'](https://www.npmjs.com/package/c3) is a D3-based reusable chart library that enables deeper integration of charts into web applications.\n\nVersions `<=0.4.10` are vulnerable to a Cross-site Scripting (XSS) vulnerability through improper html sanitization on rendered tooltips.\n\n## Remediation\nUpgrade to 0.4.11 or later\n\n## References\n- https://github.com/c3js/c3/issues/1536\n- https://github.com/c3js/c3/commit/de3864650300488a63d0541620e9828b00e94b42\n\n",
+				"semver": {
+					"vulnerable": "<=0.4.10",
+					"unaffected": ">=0.4.11"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-80"
+					],
+					"CVE": [],
+					"NSP": 138
+				},
+				"patches": [],
+				"moduleName": "c3",
+				"id": "npm:c3:20160817"
+			}
+		],
 		"call": [
 			{
 				"title": "Improper input validation",
@@ -3153,6 +3182,35 @@
 				"modificationTime": "2015-11-06T02:09:36.180Z",
 				"disclosureTime": "2014-12-03T03:00:00.000Z",
 				"id": "npm:paypal-ipn:20141203"
+			}
+		],
+		"pivottable": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"Todd Wolfson"
+				],
+				"creationTime": "2016-08-17T15:13:32.564Z",
+				"modificationTime": "2016-08-17T15:13:32.564Z",
+				"publicationTime": "2016-08-17T15:13:32.564Z",
+				"disclosureTime": "2016-08-17T15:13:32.564Z",
+				"description": "## Overview\n[`PivotTable.js`](https://www.npmjs.com/package/pivottable) is a Javascript Pivot Table library with drag-and-drop functionality built on top of jQuery/jQueryUI.\n\nDue to a change from text to html functions in how JSON elements are rendered, a Cross-site scripting (XSS) vulnerability was introduced in version 1.4.0.  This vulnerability remained in place until version 2.0.0.\n\nSource: _Node Security Project_\n\n## Remediation\nUpgrade to version 2.0.0 or later.\n\n## References\n- https://github.com/nicolaskruchten/pivottable/pull/401\n\n",
+				"semver": {
+					"vulnerable": ">=1.4.0 <2.0.0",
+					"unaffected": ">=2.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-80"
+					],
+					"CVE": [],
+					"NSP": 139
+				},
+				"patches": [],
+				"moduleName": "pivottable",
+				"id": "npm:pivottable:20160817"
 			}
 		],
 		"printer": [
