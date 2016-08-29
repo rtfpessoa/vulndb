@@ -434,6 +434,34 @@
         "id": "npm:console-io:20160418"
       }
     ],
+    "cookie-signature": [
+      {
+        "title": "Non-Constant Time String Comparison",
+        "credit": [
+          ""
+        ],
+        "creationTime": "2016-08-04T03:44:13.904Z",
+        "modificationTime": "2016-08-04T03:44:13.904Z",
+        "publicationTime": "2016-08-29T00:00:00.000Z",
+        "disclosureTime": "2014-01-28T00:00:00.000Z",
+        "semver": {
+          "vulnerable": "<=1.0.3",
+          "unaffected": ">=1.0.4"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-208"
+          ],
+          "CVE": [],
+          "NSP": 134
+        },
+        "patches": [],
+        "moduleName": "cookie-signature",
+        "id": "npm:cookie-signature:20160804"
+      }
+    ],
     "crumb": [
       {
         "title": "CORS Token Disclosure",
@@ -482,7 +510,9 @@
         "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
         "severity": "medium",
         "identifiers": {
-          "CWE": [],
+          "CWE": [
+            "CWE-208"
+          ],
           "CVE": [],
           "NSP": 94
         },
