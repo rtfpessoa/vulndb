@@ -2095,7 +2095,7 @@
 				"modificationTime": "2016-07-26T22:10:17.386Z",
 				"publicationTime": "2016-07-26T17:21:17.000Z",
 				"disclosureTime": "2016-07-26T17:21:17.000Z",
-				"description": "## Overview\nSince \"algorithm\" isn't enforced in `jws.verify()`, a malicious user could choose what algorithm is sent to the server. If the server is expecting RSA but is sent HMAC-SHA with RSA's public key, the server will think the public key is actually an HMAC private key. This could be used to forge any data an attacker wants.\n\nIn addition, there is the `none` algorithm to be concerned about.  In versions prior to 2.0.0, verification of the token could be bypassed when the `alg` field is set to `none`.\n\nSource: _Node Security Project_\n\n## Remediation\nUpdate to `jws` version `2.0.0` or later.\n\n## References\nhttps://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/\n\n",
+				"description": "## Overview\nSince \"algorithm\" isn't enforced in `jws.verify()`, a malicious user could choose what algorithm is sent to the server. If the server is expecting RSA but is sent HMAC-SHA with RSA's public key, the server will think the public key is actually an HMAC private key. This could be used to forge any data an attacker wants.\n\nIn addition, there is the `none` algorithm to be concerned about.  In versions prior to 2.0.0, verification of the token could be bypassed when the `alg` field is set to `none`.\n\nSource: _Node Security Project_\n\n## Remediation\nUpgrade `jws` to version `3.0.0` or later.\n\n## References\nhttps://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/\n\n",
 				"semver": {
 					"vulnerable": "<3.0.0",
 					"unaffected": ">=3.0.0"
@@ -2828,7 +2828,7 @@
 				"modificationTime": "2016-08-17T15:13:32.563Z",
 				"publicationTime": "2016-08-17T15:13:32.563Z",
 				"disclosureTime": "2016-08-17T15:13:32.563Z",
-				"description": "## Overview\n['mqtt'](https://www.npmjs.com/package/mqtt) is a library implementing the MQTT protocol. Versions `1.0.0` and earlier allow a remote attacker to cause Denial of Service (DoS) by sending a specifically crafted packet, crashing the application.\n\n## Remediation\nUpgrade `mqtt` to version 1.0.0 or later\n\n## References\n- https://github.com/mqttjs/MQTT.js/blob/388a084d7803934b18b43c1146c817deaa1396b1/lib/parse.js#L230\n\n",
+				"description": "## Overview\n['mqtt'](https://www.npmjs.com/package/mqtt) is a library implementing the MQTT protocol. Versions earlier than `1.0.0` allow a remote attacker to cause Denial of Service (DoS) by sending a specifically crafted packet, crashing the application.\n\n## Remediation\nUpgrade `mqtt` to version 1.0.0 or later\n\n## References\n- https://github.com/mqttjs/MQTT.js/blob/388a084d7803934b18b43c1146c817deaa1396b1/lib/parse.js#L230\n\n",
 				"semver": {
 					"vulnerable": "<=0.3.13",
 					"unaffected": ">=1.0.0"
