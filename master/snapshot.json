@@ -2537,7 +2537,7 @@
 				"severity": "high",
 				"identifiers": {
 					"CWE": [
-						"CWE-94"
+						"CWE-79"
 					],
 					"CVE": [],
 					"NSP": 101
@@ -3244,6 +3244,34 @@
 				"moduleName": "npm",
 				"disclosureTime": "2016-04-18T21:16:44.000Z",
 				"id": "npm:npm:20160418"
+			}
+		],
+		"nunjucks": [
+			{
+				"title": "Content & Code Injection (XSS)",
+				"credit": [
+					"Matt Austin"
+				],
+				"creationTime": "2016-09-06T22:59:30.000Z",
+				"modificationTime": "2016-09-09T22:59:30.000Z",
+				"publicationTime": "2016-09-09T22:59:30.000Z",
+				"disclosureTime": "2016-09-06T22:59:30.000Z",
+				"description": "## Overview\n`nunjucks` is a powerful templating engine.\n\nLike many templating engines, it automatically HTML encodes any `string` value included in the template using the `{{ some-variable }}` notation. These variables are often user-generated, but the HTML Encoding protects the application from Cross-Site Scripting (XSS) attacks.\n\nHowever, if the variable passed in is an array, no HTML encoding is applied, exposing an easy path to XSS. The risk of exploit is especially high given the fact `express`, `koa` and many other Node.js servers allow users to force a query parameter to be an array using the `param[]=value` notation.\n\n## Details\n\nThe [issue](https://github.com/mozilla/nunjucks/issues/835) opened by [Matt Austin](https://github.com/matt-) explains the vulnerability very well:\n\n> The following string works as expected:\n```\nvar res = nunjucks.renderString('Hello {{ username }}', { username: '<s>Matt</s>' });\nconsole.log(res); //Hello &lt;s&gt;Matt&lt;/s&gt;\n```\n\n> If however the variable passed to the template is an array autoescape does nothing:\n```\nvar res = nunjucks.renderString('Hello {{ username }}', { username: ['<s>Matt</s>'] });\nconsole.log(res); // Hello <s>Matt</s>\n```\n...\n> In express / Koa / (anything else using qs or body-parser) is is trivial to coerce query params types. See the following simple example in express:\n```\nvar app = express();\nvar env = nunjucks.configure('views', {\n    autoescape: true,\n    express: app\n});\napp.get('/', function(req, res) {     \n    // This should be fine autoescape is on...\n    res.send(nunjucks.renderString('Hello {{ username }}', { username: req.query.name }));\n    //res.render('index.html', { username: req.query.name });\n});\n```\n\n> Attack URL:\n`http://127.0.0.1:3000/?name[]=<script>alert(1)</script>matt`\n\nA more complete proof of concept (POC) can be found here: https://github.com/matt-/nunjucks_test\n\n## Remediation\nUpgrade to `nunjucks` version 2.4.3 or newer.\n\n## References\n- https://github.com/mozilla/nunjucks/issues/835\n- https://github.com/mozilla/nunjucks/pull/836\n- https://github.com/matt-/nunjucks_test\n",
+				"semver": {
+					"vulnerable": "<2.4.3",
+					"unaffected": ">=2.4.3"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "nunjucks",
+				"id": "npm:nunjucks:20160906"
 			}
 		],
 		"paypal-ipn": [

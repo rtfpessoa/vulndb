@@ -2462,7 +2462,7 @@
         "severity": "high",
         "identifiers": {
           "CWE": [
-            "CWE-94"
+            "CWE-79"
           ],
           "CVE": [],
           "NSP": 101
@@ -3154,6 +3154,33 @@
         "moduleName": "npm",
         "disclosureTime": "2016-04-18T21:16:44.000Z",
         "id": "npm:npm:20160418"
+      }
+    ],
+    "nunjucks": [
+      {
+        "title": "Content & Code Injection (XSS)",
+        "credit": [
+          "Matt Austin"
+        ],
+        "creationTime": "2016-09-06T22:59:30.000Z",
+        "modificationTime": "2016-09-09T22:59:30.000Z",
+        "publicationTime": "2016-09-09T22:59:30.000Z",
+        "disclosureTime": "2016-09-06T22:59:30.000Z",
+        "semver": {
+          "vulnerable": "<2.4.3",
+          "unaffected": ">=2.4.3"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": []
+        },
+        "patches": [],
+        "moduleName": "nunjucks",
+        "id": "npm:nunjucks:20160906"
       }
     ],
     "paypal-ipn": [
