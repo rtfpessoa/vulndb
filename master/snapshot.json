@@ -35,7 +35,7 @@
 				"credit": [
 					"Adam Baldwin"
 				],
-				"description": "## Overview\nansi2html is vulnerable to [Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) when certain types of user input are passed in.\n\n_Source: [Node Security Project] (https://nodesecurity.io/advisories/51)_\n\n## Details\nThe Regular expression Denial of Service (ReDoS) is a Denial of Service attack, that exploits the fact that most Regular Expression implementations may reach extreme situations that cause them to work very slowly (exponentially related to input size). An attacker can then cause a program using a Regular Expression to enter these extreme situations and then hang for a very long time. [1]\n\n## References\n- https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS\n\n",
+				"description": "## Overview\n`ansi2html` does not control the length of the input it processes, and uses regular expressions to parse it. As a result, it is susceptible to a [Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) vulnerabilities, rendering an application unavailable if a long or complex input is passed in.\n\n## References\n- https://github.com/agnoster/ansi2html/blob/master/lib/index.js#L52\n- https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS\n",
 				"semver": {
 					"vulnerable": "*",
 					"unaffected": "<0.0.0"
@@ -124,11 +124,11 @@
 		],
 		"bassmaster": [
 			{
-				"title": "Arbitrary JavaScript Code Execution",
+				"title": "Arbitrary JavaScript Code Injection",
 				"credit": [
 					"Jarda Kotěšovec"
 				],
-				"description": "## Overview\nA vulnerability exists in bassmaster <= 1.5.1 that allows for an attacker to provide arbitrary JavaScript that is then executed server side via eval.\n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/1)_\n\n## Remediation\nUpdate to bassmaster version 1.5.2 or greater.\n\n## References\n- https://www.npmjs.org/package/bassmaster\n- https://github.com/hapijs/bassmaster/commit/b751602d8cb7194ee62a61e085069679525138c4\n",
+				"description": "## Overview\nOld versions of `bassmaster`, a Hapi server plugin used to process batches of requests, use the `eval` method as part of its processing and validation of user input.\n\nAn attacker can therefore provide arbitrary javascript in this input, which will be executed by this `eval` function without limitation.\n\nThis is a very severe remote JavaScript code execution, and depending on the node process permissions can turn into [Arbitrary Remote Code Execution](https://en.wikipedia.org/wiki/Arbitrary_code_execution) on the operating system level as well.\n\n## Remediation\nUpdate to bassmaster version 1.5.2 or greater.\n\n## References\n- https://www.npmjs.org/package/bassmaster\n- https://github.com/hapijs/bassmaster/commit/b751602d8cb7194ee62a61e085069679525138c4\n",
 				"semver": {
 					"vulnerable": "<=1.5.1",
 					"unaffected": ">=1.5.2"
@@ -204,7 +204,7 @@
 				"creationTime": "2015-11-06T02:09:36.187Z",
 				"modificationTime": "2015-11-06T02:09:36.187Z",
 				"publicationTime": "2015-11-06T02:09:36.187Z",
-				"description": "## Overview\nbleach 3.0 and earlier is vulnerable to [Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) when certain types of input are passed into the sanitize function.\n\n_Source: [Node Security Project] (https://nodesecurity.io/advisories/47)_\n\n## Details\nThe Regular expression Denial of Service (ReDoS) is a Denial of Service attack, that exploits the fact that most Regular Expression implementations may reach extreme situations that cause them to work very slowly (exponentially related to input size). An attacker can then cause a program using a Regular Expression to enter these extreme situations and then hang for a very long time. [1]\n\n## References\n- https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS\n\n",
+				"description": "## Overview\nbleach 3.0 and earlier is vulnerable to [Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) when certain types of input are passed into the sanitize function.\n\n`bleach` performs html sanitization, which has definite value from a security perspective. However, it does not control the length of the html it processes, and uses regular expressions to parse it. As a result, it is susceptible to a [Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) vulnerabilities, rendering an application unavailable if a long or complex input is passed in.\n\n## References\n- https://github.com/ecto/bleach/blob/master/lib/bleach.js#L29\n- https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS\n",
 				"semver": {
 					"vulnerable": "*",
 					"unaffected": "<0.0.0"
@@ -367,7 +367,7 @@
 				"credit": [
 					"Neal Poole"
 				],
-				"description": "## Overview\n\nWhen the ffprobe functionality is enabled on the server, HTTP POST requests can be made to /probe. These requests are passed to the ffprobe binary on the server. Through this HTTP endpoint it is possible to send a malformed source file name to ffprobe that results in arbitrary command execution.\n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/2)_\n\n## Details\n\n**Mitigating Factors:**\nThe ffprobe functionality is not enabled by default. In addition, exploitation opportunities are limited in a standard configuration because the server binds to the local interface by default.\n\n## Remediation\nAn updated and patched version of the module (version 0.5.0) is [available via npm] (https://www.npmjs.com/package/codem-transcode). Users who have enabled the ffprobe functionality are especially encouraged to upgrade.\n\n",
+				"description": "## Overview\nThe `codem-transcode` package supports a feature (off by default) to interact with a local `ffprobe`. When enabled, POST requests to `/probe` trigger the execution of the local `ffprobe` binary, with the provided parameters.\n\nThis execution is done using `exec`, allowing piped requests, and therefore enabling remote command execution. Newer versions use `execFile` instead, preventing such injection (though still giving attackers to whatever functionality `ffprobe` supports, and any weaknesses in it).\n\nNote that, by default, the package only listens for such requests from the local network interface, greatly reducing the likelihood of exploitation.\n\n## Remediation\nEither turn off the `ffprobe` functionality or upgrade to (at least) version `0.5.0`, which address this issue by using `execFile` instead of `exec`.\n\n## References\n- https://github.com/madebyhiro/codem-transcode/commit/477aac9da7aab5d3f661ef4c0bf4accae5dff292\n- https://dzone.com/articles/understanding-execfile-spawn-exec-and-fork-in-node\n",
 				"semver": {
 					"vulnerable": "<0.5.0",
 					"unaffected": ">=0.5.0"
@@ -703,7 +703,7 @@
 				"modificationTime": "2016-05-24T06:45:20.086Z",
 				"publicationTime": "2016-06-22T00:00:00.000Z",
 				"disclosureTime": "2016-05-23T16:48:27.000Z",
-				"description": "## Overview\n`dojo` is the core module for the Dojo Toolkit. The dojo package covers a wide range of functionality like AJAX, DOM manipulation, class-type programming, events, promises, data stores, drag-and-drop and internationalization libraries.\n\nThere is a bug in the `dijit.Editor` and `textarea` where input, even sanitized, executes javascript. This is because the `<textarea>` tag only sees the final, unsanitized, user input.\n\nSource: _Node Security Project_\n\n## Remediation\nUpgrade to version `1.1` or higher.\n\n## References\n- https://bugs.dojotoolkit.org/ticket/2140\n\n",
+				"description": "## Overview\nThe editor widget of `dojo`, a popular JavaScript toolkit, is vulnerable to XSS attacks.\n\nWhen saving (potentially) encoded HTML scripts in the editor and loading them again, the scripts are executed anyway.\n\n## Remediation\nUpgrade to version `1.1` or higher, which xml-encodes the output.\n\n## References\n- https://bugs.dojotoolkit.org/ticket/2140\n- https://bugs.dojotoolkit.org/changeset/8069/legacy\n",
 				"semver": {
 					"vulnerable": "<= 1.0.0",
 					"unaffected": ">= 1.1.0"
@@ -751,6 +751,34 @@
 				"moduleName": "droppy",
 				"disclosureTime": "2016-03-28T22:40:54.000Z",
 				"id": "npm:droppy:20160328"
+			}
+		],
+		"dustjs-linkedin": [
+			{
+				"title": "Code Injection",
+				"credit": [
+					"Michael Stepankin"
+				],
+				"creationTime": "2016-09-14T00:00:00.000Z",
+				"modificationTime": "2016-09-14T00:00:00.000Z",
+				"publicationTime": "2016-09-14T00:00:00.000Z",
+				"disclosureTime": "2015-01-09T00:00:00.000Z",
+				"description": "## Overview\n[`dustjs-linkedin`](https://www.npmjs.com/package/dustjs-linkedin) is a Javascript templating engine designed to run asynchronously on both the server and the browser.\n\nDust.js uses Javascript's `eval()` function to evaluate the \"if\" statement conditions. The input to the function is sanitized by escaping all potentially dangerous characters.\n\nHowever, if the variable passed in is an array, no escaping is applied, exposing an easy path to code injection. The risk of exploit is especially high given the fact `express`, `koa` and many other Node.js servers allow users to force a query parameter to be an array using the `param[]=value` notation.\n\n## Remediation\nUpgrade to version `2.6.0` or greater.\n\n## References\n- https://github.com/linkedin/dustjs/pull/534/commits/884be3bb3a34a843e6fb411100088e9b02326bd4\n- https://github.com/linkedin/dustjs/pull/534\n- https://github.com/linkedin/dustjs/issues/741\n- https://artsploit.blogspot.co.il/2016/08/pprce2.html\n\n\n",
+				"semver": {
+					"vulnerable": "<=2.5.1",
+					"unaffected": ">=2.6.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-95"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "dustjs-linkedin",
+				"id": "npm:dustjs-linkedin:20160819"
 			}
 		],
 		"ecstatic": [
@@ -947,7 +975,7 @@
 				"modificationTime": "2016-07-25T22:53:17.243Z",
 				"publicationTime": "2016-07-25T16:25:00.000Z",
 				"disclosureTime": "2016-07-25T16:25:00.000Z",
-				"description": "## Overview\nEmojione is a module built to facilitate translating between emoji and shortcodes.\n\nVersion 1.3.0 and below have four primary functions:\n\n* toShort()\n* shortnameToImage()\n* unicodeToImage()\n* toImage()\n\nAll four do not properly sanitize input and are thus vulnerable to cross site scripting (XSS).  If you application passes user supplied input to these functions, it may be vulnerable to this attack.\n\nSource: _Node Security Project_\n\n## Remediation\nUpgrade to version `1.3.1` or latest.\n\n## References\n* https://github.com/Ranks/emojione/issues/61\n\n",
+				"description": "## Overview\n`emojione` is a module supporting an open list of emojis, replacing shortcodes with the corresponding image.\n\nWhile this package doesn't control this decision, emoji shortcodes are typically provided by users as part of some interaction or comment, and often persist on the page. Therefore, sanitizing them to prevent scripts is critical.\n\nWhile `emojione` does sanitize passed in shortcodes before echoing back the resulting values, a clever sequence of encoded values will still allow attackers to inject scripts into the result. As a result, attacker can perform a Cross-Site Scripting (XSS) attack whenever the output of `emojione` is passed into the page output.\n\n## Remediation\nUpgrade `emojione` to at least version `1.3.1`.\n\n## References\n- https://github.com/Ranks/emojione/issues/61\n- https://github.com/Ranks/emojione/commit/613079b16c00e47fb3c44744a67ed88a9295afb1\n- https://gist.github.com/WebReflection/df05641bd04954f6d366\n",
 				"semver": {
 					"vulnerable": "<=1.3.0",
 					"unaffected": ">=1.3.1"
@@ -1104,7 +1132,7 @@
 				"modificationTime": "2016-04-20T14:45:19.555Z",
 				"publicationTime": "2016-06-22T00:00:00.000Z",
 				"disclosureTime": "2016-04-19T23:24:17.000Z",
-				"description": "## Overview\n`express-restify-mongoose` is a module to easily create a flexible REST interface for mongoose models.\n\nIf you have a user model that you want to protect:\n```\nconst User = mongoose.model('User', new mongoose.Schema({\n    name: String,\n    password: String,\n}));\n```\n\nYou would normally do something such as:\n```\nrestify.serve(router, User, {\n    private: ['password'], // Set the password part of User as private, so outside people can't read it\n})\n```\n\nThis would hide the password field from people that send your application a `GET /User` and `GET /User/some-user-id` request. \n\nBut a malicious user could go to your application and send a request for `GET /User?distinct=password` and get all the passwords for all the users in the database, despite the field being set to private. This could also be used for other private data if the malicious user knew what was set as private for specific routes. \n\nSource: Node Security Project\n\n## Remediation\nUpdate to at least version 3.1.0 or 2.5.0\n\n## References\n- https://github.com/florianholzapfel/express-restify-mongoose/issues/252\n\n",
+				"description": "## Overview\n`express-restify-mongoose` is a module to easily create a flexible REST interface for mongoose models.\n\nIt supports marking certain fields as private, to keep from exposing them to users, but fails to remove those fields from certain output scenarios, resulting in potential private data exposure.\n\nFor instance, if you have the following User model:\n\n```\nconst User = mongoose.model('User', new mongoose.Schema({\n    name: String,\n    password: String,\n}));\n```\n\nTo keep from exposing the password, you'll likely to want to call it out as a private field like so:\n\n```\nrestify.serve(router, User, {\n    private: ['password'],\n})\n```\n\nThis will indeed result in the password field not showing when you request an item, for instance via `GET /User` or `GET /User/some-id`.\n\nHowever, when querying on that field, using `GET /User?distinct=password`, ALL passwords for ALL the users in the DB would be shown.\n\n## Remediation\nUpdate to version `3.1.0` or newer on the `3.x` branch, or to version `2.5.0` or newer on the `2.x` branch.\n\n## References\n- https://github.com/florianholzapfel/express-restify-mongoose/issues/252\n- https://github.com/florianholzapfel/express-restify-mongoose/pull/253\n",
 				"semver": {
 					"vulnerable": "<= 2.4.2 || >= 3.0.0 <=3.0.1",
 					"unaffected": ">=2.5.0 <= 3.0.0 || >=3.1.0"
@@ -3674,13 +3702,13 @@
 				"creationTime": "2016-03-21T22:00:02.570Z",
 				"modificationTime": "2016-03-21T22:00:02.570Z",
 				"publicationTime": "2016-03-21T22:00:02.570Z",
-				"description": "## Overview\n[Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) vulnerability exists in `riot-compiler`, affecting version 2.3.21 only. \n\n## Recommendation\nUpgrade to version 2.3.22 or greater.\n\n## References\n- https://github.com/riot/compiler/issues/46\n\n",
+				"description": "## Overview\n`riot-compiler` is a compiler for riot .tag files. Affected versions of this package are vulnerable to [Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) attacks due to an issue in a regex that makes it unusable under certain conditions.\n\n## Recommendation\nUpgrade `riot-compiler` to version 2.3.22 or greater.\n\n## References\n- https://github.com/riot/compiler/issues/46\n",
 				"semver": {
-					"vulnerable": "2.3.21",
+					"vulnerable": "<=2.3.21",
 					"unaffected": ">2.3.21"
 				},
-				"CVSSv3": "",
-				"severity": "low",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+				"severity": "high",
 				"identifiers": {
 					"CWE": [
 						"CWE-400"
@@ -4397,13 +4425,13 @@
 					"Joe Vennix"
 				],
 				"creationTime": "2016-07-20T20:00:03.160Z",
-				"modificationTime": "2016-07-20T20:00:03.160Z",
+				"modificationTime": "2016-09-11T20:00:03.160Z",
 				"publicationTime": "2016-07-20T19:01:30.000Z",
 				"disclosureTime": "2016-07-20T19:01:30.000Z",
-				"description": "## Overview\nSwagger is a standardized library for documenting API endpoints and their parameters.  Swagger uses a JSON document to organize API endpoint parameter data.\n\nSwagger-UI version 2.1.4 contains a cross site scripting (XSS) vulnerability in the `consumes` and `produces` parameters of the swagger json document for a given API.  A maliciously crafted swagger JSON doc can be loaded via the URL query-string parameter `url`.\n\nTo exploit the vulnerability, an attacker would convince a user to visit a malicious url crafted in the following format:\n```\nhttp://<USER_HOSTNAME>/swagger-ui/index.html?url=http://<MALICIOUS_HOSTNAME>/malicious-swagger-file.json\n```\n\nThis issue is being disclosed before a public patched release is available due to the issue being made public in a Github issue.\n\nSource: _Node Security Project_\n\n## Remediation\nUpgrade `swagger-ui` to version `2.1.5` or greater. \n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/docs/using-snyk#wizard) to patch this vulnerability.\n\n## References\n- https://github.com/swagger-api/swagger-ui/issues/1866\n- https://github.com/swagger-api/swagger-ui/pull/1867\n\n",
+				"description": "## Overview\nSwagger UI is a dependency-free collection of HTML, Javascript, and CSS assets that dynamically generate  documentation from a Swagger-compliant API.\n\nA key part of this generation is the use of a JSON schema, which can be read locally or by providing a `url` parameter to the Swagger server (e.g. `http://swagger-server/swagger-ui/index.html?url=<schema-url>`).\n\nThe `produces` and `consumes` schema fields are written to the HTML without any HTML encoding, allowing an attacker to perform XSS by adding malicious scripts to their values.\n\n## Remediation\nUpgrade `swagger-ui` to version `2.1.5` or greater.\n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/docs/using-snyk#wizard) to patch this vulnerability.\n\n## References\n- https://github.com/swagger-api/swagger-ui/issues/1866\n- https://github.com/swagger-api/swagger-ui/pull/1867\n",
 				"semver": {
 					"vulnerable": "<=2.1.4",
-					"unaffected": ">2.1.5"
+					"unaffected": ">=2.1.5"
 				},
 				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
@@ -4424,13 +4452,13 @@
 					"Joe Vennix"
 				],
 				"creationTime": "2016-07-25T22:53:17.243Z",
-				"modificationTime": "2016-07-25T22:53:17.243Z",
+				"modificationTime": "2016-09-11T20:00:03.160Z",
 				"publicationTime": "2016-07-21T20:38:25.000Z",
 				"disclosureTime": "2016-07-21T20:38:25.000Z",
-				"description": "## Overview\nSwagger is a standardized library for documenting API endpoints and their parameters.  Swagger uses a JSON document to organize API endpoint parameter data.\n\nSwagger-ui contains a cross site scripting (XSS) vulnerability in the key names for the following object path in the JSON document:\n```\n .definitions.<USER_DEFINED>.properties.<INJECTABLE_KEY_NAME>\n```\nSupplying a key name with script tags causes arbitrary code execution.  In addition it is possible to load the arbitrary JSON files remotely via the `URL` query-string parameter.\n\nThis advisory is being disclosed before a public patched release is available because of a public Github issue documenting the vulnerability.\n\nSource: _Node Security Project_\n\n## Remediation\nOur primary recommendation is to host swagger documentation on a separate domain distinct from the application domain.  Also, we recommend implementing a content security policy (CSP) that restricts the domains from which JSON files can be requested in order to avoid loading malicious JSON docs via the `URL` query string parameter.\n\n## References\n- https://github.com/swagger-api/swagger-ui/issues/1865\n- https://en.wikipedia.org/wiki/Content_Security_Policy\n\n",
+				"description": "## Overview\nSwagger UI is a dependency-free collection of HTML, Javascript, and CSS assets that dynamically generate  documentation from a Swagger-compliant API.\n\nA key part of this generation is the use of a JSON schema, which can be read locally or by providing a `url` parameter to the Swagger server (e.g. `http://swagger-server/swagger-ui/index.html?url=<schema-url>`).\n\nThe schema supports property fields, which are in turn included in the generated HTML without any HTML encoding, allowing an attacker to perform XSS by adding malicious scripts to their values.\n\n## Remediation\nUpgrade to version `2.2.1` or newer.\n\n## References\n- https://github.com/swagger-api/swagger-ui/issues/1865\n- https://github.com/swagger-api/swagger-ui/releases/tag/v2.2.1\n",
 				"semver": {
-					"vulnerable": "*",
-					"unaffected": "<0.0.0"
+					"vulnerable": "<2.2.1",
+					"unaffected": ">=2.2.1"
 				},
 				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
@@ -4451,12 +4479,12 @@
 					"Joe Vennix"
 				],
 				"creationTime": "2016-07-25T22:53:17.243Z",
-				"modificationTime": "2016-07-25T22:53:17.243Z",
+				"modificationTime": "2016-09-11T20:00:03.160Z",
 				"publicationTime": "2016-07-25T16:25:23.000Z",
 				"disclosureTime": "2016-07-25T16:25:23.000Z",
-				"description": "## Overview\nBy using a malicious server which returns script as the value of the Content-Type header, it is possible to execute arbitrary code using the demonstration capabilities of Swagger-UI.\n\nSource: _Node Security Project_\n\n## Remediation\nUpgrade to `swagger-ui` version 2.1.5 or later.\n\nIf a direct dependency update is not possible, use snyk wizard to patch this vulnerability.\n\n## References\n* https://github.com/swagger-api/swagger-ui/issues/1863\n\n",
+				"description": "## Overview\n`swagger-ui` supports receiving headers (e.g. Content-Type) from the Swagger-conforming API server, to be used when demonstrating use of the API using `curl`. Those headers are injected into the documentation as-is (not encoded), allowing a malicious API server to inject a script (XSS) into the swagger-ui front-end.\n\n## Remediation\nUpgrade `swagger-ui` to version `2.1.5` or newer.\nIf a direct dependency update is not possible, use snyk wizard to patch this vulnerability.\n\n## References\n- https://github.com/swagger-api/swagger-ui/issues/1863\n",
 				"semver": {
-					"vulnerable": "2.1.4",
+					"vulnerable": "<=2.1.4",
 					"unaffected": ">=2.1.5"
 				},
 				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
