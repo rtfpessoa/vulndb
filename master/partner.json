@@ -189,6 +189,43 @@
         "id": "npm:bittorrent-dht:20160104"
       }
     ],
+    "bl": [
+      {
+        "title": "Uninitialized Memory Exposure",
+        "credit": [
+          "Feross Aboukhadijeh"
+        ],
+        "creationTime": "2016-09-11T17:00:00.000Z",
+        "modificationTime": "2016-09-11T17:00:00.000Z",
+        "publicationTime": "2016-09-18T17:00:00.000Z",
+        "disclosureTime": "2016-01-19T18:58:00.000Z",
+        "semver": {
+          "vulnerable": "<0.9.5 || 1.0.0",
+          "unaffected": ">1.0.0 || 0.9.5"
+        },
+        "CVSSv3": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-201"
+          ],
+          "CVE": []
+        },
+        "patches": [
+          {
+            "urls": [
+              "https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/bl/20160119/bl_20160911_0_0_061279d92f45f4e04f3cb252db3816feb4bc6f33.patch"
+            ],
+            "version": "0.9.4 || 1.0.0",
+            "modificationTime": "2016-09-11T00:00:00.000Z",
+            "comments": [],
+            "id": "patch:npm:bl:20160119:0"
+          }
+        ],
+        "moduleName": "bl",
+        "id": "npm:bl:20160119"
+      }
+    ],
     "bleach": [
       {
         "title": "Regular Expression Denial of Service",
@@ -460,6 +497,31 @@
         "patches": [],
         "moduleName": "cookie-signature",
         "id": "npm:cookie-signature:20160804"
+      }
+    ],
+    "crossbow-lang": [
+      {
+        "title": "Code Injection",
+        "credit": [],
+        "creationTime": "2016-09-17T00:00:00.000Z",
+        "modificationTime": "2016-09-17T00:00:00.000Z",
+        "publicationTime": "2016-09-18T00:00:00.000Z",
+        "disclosureTime": "2015-01-09T00:00:00.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-95"
+          ],
+          "CVE": []
+        },
+        "patches": [],
+        "moduleName": "crossbow-lang",
+        "id": "npm:crossbow-lang:20160819"
       }
     ],
     "crumb": [

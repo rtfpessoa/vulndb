@@ -195,6 +195,44 @@
 				"id": "npm:bittorrent-dht:20160104"
 			}
 		],
+		"bl": [
+			{
+				"title": "Uninitialized Memory Exposure",
+				"credit": [
+					"Feross Aboukhadijeh"
+				],
+				"creationTime": "2016-09-11T17:00:00.000Z",
+				"modificationTime": "2016-09-11T17:00:00.000Z",
+				"publicationTime": "2016-09-18T17:00:00.000Z",
+				"disclosureTime": "2016-01-19T18:58:00.000Z",
+				"description": "## Overview\n[bl](https://www.npmjs.com/package/bl) is a storage object for collections of Node Buffers.\n\nA possible memory disclosure vulnerability exists when a value of type `number` is provided to the `append()` method and results in concatination of uninitialized memory to the buffer collection. \n\nThis is a result of unobstructed use of the `Buffer` constructor, who's [insecure default constructor increases the odds of memory leakage](https://snyk.io/blog/exploiting-buffer/).\n\n## Details\nConstructing a `Buffer` class with integer `N` creates a `Buffer` of length `N` with raw (not \"zero-ed\") memory.\n\nIn the following example, the first call would allocate 100 bytes of memory, while the second example will allocate the memory needed for the string \"100\":\n```js\n// uninitialized Buffer of length 100\nx = new Buffer(100); \n// initialized Buffer with value of '100'\nx = new Buffer('100'); \n```\n\n`bl`'s `append` function uses the default `Buffer` constructor as-is, making it easy to append uninitialized memory to an existing list. If the value of the buffer list is exposed to users, it may expose raw server side memory, potentially holding secrets, private data and code. This is a similar vulnerability to the infamous [`Heartbleed`](http://heartbleed.com/) flaw in OpenSSL.\n\n```js\nconst BufferList = require('bl')\n\nvar bl = new BufferList()\nbl.append(new Buffer('abcd'))\nbl.append(new Buffer('efg'))\nbl.append('100')\n// appends a Buffer holding 100 bytes of uninitialized memory\nbl.append(100)                     \nbl.append(new Buffer('j'))\n```\n\nYou can read more about the insecure `Buffer` behavior [on our blog](https://snyk.io/blog/exploiting-buffer/).\n\nSimilar vulnerabilities were discovered in [request](https://snyk.io/vuln/npm:request:20160119), [mongoose](https://snyk.io/vuln/npm:mongoose:20160116), [ws](https://snyk.io/vuln/npm:ws:20160104) and [sequelize](https://snyk.io/vuln/npm:sequelize:20160115).\n\n## References\n- https://github.com/rvagg/bl/pull/22\n- https://github.com/rvagg/bl/compare/v1.0.0...v1.0.1\n- https://snyk.io/blog/exploiting-buffer/\n",
+				"semver": {
+					"vulnerable": "<0.9.5 || 1.0.0",
+					"unaffected": ">1.0.0 || 0.9.5"
+				},
+				"CVSSv3": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-201"
+					],
+					"CVE": []
+				},
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/bl/20160119/bl_20160911_0_0_061279d92f45f4e04f3cb252db3816feb4bc6f33.patch"
+						],
+						"version": "0.9.4 || 1.0.0",
+						"modificationTime": "2016-09-11T00:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:bl:20160119:0"
+					}
+				],
+				"moduleName": "bl",
+				"id": "npm:bl:20160119"
+			}
+		],
 		"bleach": [
 			{
 				"title": "Regular Expression Denial of Service",
@@ -475,6 +513,32 @@
 				"patches": [],
 				"moduleName": "cookie-signature",
 				"id": "npm:cookie-signature:20160804"
+			}
+		],
+		"crossbow-lang": [
+			{
+				"title": "Code Injection",
+				"credit": [],
+				"creationTime": "2016-09-17T00:00:00.000Z",
+				"modificationTime": "2016-09-17T00:00:00.000Z",
+				"publicationTime": "2016-09-18T00:00:00.000Z",
+				"disclosureTime": "2015-01-09T00:00:00.000Z",
+				"description": "## Overview\n[`crossbow-lang`](https://www.npmjs.com/package/crossbow-lang) is an unmaintaned fork of [`dustjs-linkedin`](https://www.npmjs.com/package/dustjs-linkedin), a Javascript templating engine designed to run asynchronously on both the server and the browser. It is vulnerable to the same [Code Injection vulnerability](https://snyk.io/vuln/npm:dustjs-linkedin:20160819) as Dust.js\n\nDust.js uses Javascript's `eval()` function to evaluate the \"if\" statement conditions. The input to the function is sanitized by escaping all potentially dangerous characters.\n\nHowever, if the variable passed in is an array, no escaping is applied, exposing an easy path to code injection. The risk of exploit is especially high given the fact `express`, `koa` and many other Node.js servers allow users to force a query parameter to be an array using the `param[]=value` notation.\n\n## Remediation\nLatest release (`v1.0.0`) is vulnerable, so we suggest to avoid using it altogether, until a patch is made available.\n\n## References\n- https://snyk.io/vuln/npm:dustjs-linkedin:20160819\n\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-95"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "crossbow-lang",
+				"id": "npm:crossbow-lang:20160819"
 			}
 		],
 		"crumb": [
@@ -4917,7 +4981,7 @@
 				"creationTime": "2016-01-05T12:38:01.749Z",
 				"modificationTime": "2016-01-05T12:38:01.749Z",
 				"publicationTime": "2016-01-05T12:38:01.749Z",
-				"description": "## Overview\nA client side memory disclosure vulnerability exists in ping functionality of the ws service. When a client sends a ping request and provides an integer value as ping data, it will result in leaking an uninitialized memory buffer. \n\n## Details\nThere were no checks performed on the type of data to be sent. With buffers in node when you allocate it with a number instead of a string it will allocate the amount of bytes.\n\n**Example:**\n```\nvar x = new Buffer(100);\n// vs\nvar x = new Buffer('100');\n```\n\nThis would allocate 100 bytes of memory in the first example and just 3 bytes with 100 as value in the second example. \n\n```\nvar ws = require('ws')\n\nvar server = new ws.Server({ port: 9000 })\nvar client = new ws('ws://localhost:9000')\n\nclient.on('open', function () {\n  console.log('open')\n  client.ping(50) // this makes the client allocate an uninitialized buffer of 50 bytes and send it to the server\n\n  client.on('pong', function (data) {\n    console.log('got pong')\n    console.log(data)\n  })\n})\n```\n\n## References\n- https://github.com/websockets/ws/releases/tag/1.0.1\n- https://github.com/nodejs/node-v0.x-archive/issues/4525\n",
+				"description": "## Overview\nA client side memory disclosure vulnerability exists in ping functionality of the ws service. When a client sends a ping request and provides an integer value as ping data, it will result in leaking an uninitialized memory buffer.\n\n## Details\nConstructing a `Buffer` class with integer `N` creates a `Buffer` of length `N` with non zero-ed out memory.\n\n**Example:**\n```\nvar x = new Buffer(100);\n// vs\nvar x = new Buffer('100');\n```\n\nThis would allocate 100 bytes of memory in the first example and just 3 bytes with 100 as value in the second example.\n\n```\nvar ws = require('ws')\n\nvar server = new ws.Server({ port: 9000 })\nvar client = new ws('ws://localhost:9000')\n\nclient.on('open', function () {\n  console.log('open')\n  client.ping(50) // this makes the client allocate an uninitialized buffer of 50 bytes and send it to the server\n\n  client.on('pong', function (data) {\n    console.log('got pong')\n    console.log(data)\n  })\n})\n```\n\n## References\n- https://github.com/websockets/ws/releases/tag/1.0.1\n- https://github.com/nodejs/node-v0.x-archive/issues/4525\n",
 				"semver": {
 					"vulnerable": "< 1.0.1",
 					"unaffected": ">= 1.0.1"
