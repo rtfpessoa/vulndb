@@ -5245,7 +5245,7 @@
           },
           {
             "urls": [
-              "https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ws/20160624/ws_20160624_0_1_101.patch"
+              "https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ws/20160624/ws_20160624_0_1_101_sio.patch"
             ],
             "version": "=1.0.1",
             "modificationTime": "2016-07-07T00:00:00.000Z",
