@@ -1457,6 +1457,36 @@
 				"id": "npm:geddy:20150727"
 			}
 		],
+		"git-ls-remote": [
+			{
+				"title": "Shell Command Injection",
+				"moduleName": "git-ls-remote",
+				"description": "## Overview\n[`git-ls-remote`](https://www.npmjs.com/package/git-ls-remote) is an npm package used for listing references in a remote git repository.\nVulnerable versions of the package pass the git `url` argument to the `exec` function without sanitisation. An attacker can use this to inject malicious shell commands to disrupt server operation or obtain sensitive information.\n\n## Example\n\n```js\nvar git = require('git-ls-remote');\ngit.head('https://gitrepo.com/; cat /etc/passwd', function(err, result) {\n  // ...\n});\n```\n\n## Remediation\nUpgrade `git-ls-remote` to version 0.2.0 or higher.\n\n## References\n- https://github.com/benlemasurier/git-ls-remote/pull/1\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-78"
+					],
+					"CVE": []
+				},
+				"severity": "high",
+				"semver": {
+					"unaffected": ">=0.2.0",
+					"vulnerable": "<0.2.0"
+				},
+				"credit": [
+					"Snyk Security Research"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
+				"disclosureTime": "2016-09-22T21:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-09-25T08:53:46.832Z",
+				"modificationTime": "2016-09-25T08:53:46.832Z",
+				"creationTime": "2016-09-25T08:53:46.832Z",
+				"id": "npm:git-ls-remote:20160923"
+			}
+		],
 		"gm": [
 			{
 				"title": "Remote Shell Command Injection",
