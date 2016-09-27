@@ -2708,6 +2708,46 @@
 				"id": "npm:mapbox.js:20160112"
 			}
 		],
+		"markdown-it": [
+			{
+				"title": "Cross-site Scripting (XSS) via Data URIs",
+				"credit": [
+					"Vitaly Puzrin"
+				],
+				"creationTime": "2016-09-12T00:00:00.780Z",
+				"modificationTime": "2016-09-12T00:00:00.780Z",
+				"publicationTime": "2016-09-27T00:00:00.000Z",
+				"disclosureTime": "2015-03-31T00:00:00.780Z",
+				"description": "## Overview\n[markdown-it](https://www.npmjs.com/package/markdown-it) is a pluggable markdown parser used for rendering markdown content to html. Affected versions of the package allowed the use of `data:` URIs for all mime types by default potentially opening a door for Cross-site Scripting (XSS) attacks. \n\nThe fix was introduced in version `4.1.0`, whitelisting the following four data types `image/gif`, `image/png`, `image/jpeg` and `image/webp` while blocking the others by default.\n\n## Details\nData URIs enable embedding small files in line in HTML documents, provided in the URL itself.\nAttackers can craft malicious web pages containing either HTML or script code that utilizes the data URI scheme, allowing them to bypass access controls or steal sensitive information.\n\nAn example of data URI used to deliver javascript code. The data holds `<script>alert('XSS')</script>` tag in base64 encoded format.\n```html\n[xss link](data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K)\n```\n\n## Remediation\nUpgrade to `markdown-it` version 4.1.0 or newer.\n\n## References\n- https://github.com/markdown-it/markdown-it/blob/master/CHANGELOG.md#410--2015-03-31\n- https://github.com/markdown-it/markdown-it/compare/4.0.3...4.1.0\n- https://github.com/markdown-it/markdown-it/commit/f76d3beb46abd121892a2e2e5c78376354c214e3\n",
+				"semver": {
+					"vulnerable": "<=4.0.3",
+					"unaffected": ">=4.1.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": []
+				},
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/markdown-it/20160912/markdown-it_20160912_0_0_f76d3beb46abd121892a2e2e5c78376354c214e3.patch"
+						],
+						"version": "4.0.3",
+						"modificationTime": "2016-09-12T00:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:markdown-it:20160912:0"
+					}
+				],
+				"moduleName": "markdown-it",
+				"packageManager": "npm",
+				"language": "js",
+				"id": "npm:markdown-it:20160912"
+			}
+		],
 		"marked": [
 			{
 				"title": "Multiple Content Injection Vulnerabilities",
