@@ -422,6 +422,120 @@
 				"id": "npm:call:20160705"
 			}
 		],
+		"ckeditor-dev": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"Mario Heiderich"
+				],
+				"creationTime": "2016-09-15T00:00:00.000Z",
+				"modificationTime": "2016-09-15T00:00:00.000Z",
+				"publicationTime": "2016-09-28T00:00:00.000Z",
+				"disclosureTime": "2016-06-26T00:00:00.000Z",
+				"description": "## Overview\n[ckeditor-dev](https://www.npmjs.com/package/ckeditor-dev) is a browser-based WYSIWYG editor.\nAffected versions of this package were vulnerable to Cross-Site Scripting (XSS) attacks via the preview plugin.\nThe vulnerability was found by [Mario Heiderich](https://github.com/x00mario)\n\n## Remediation\nUpgrade `ckeditor-dev` to version `4.5.11` or greater.\n\n## References\n- https://github.com/ckeditor/ckeditor-dev\n- https://github.com/ckeditor/ckeditor-dev/blob/master/CHANGES.md#ckeditor-443\n- https://github.com/ckeditor/ckeditor-dev/commit/39c08f9fe691a98be61337127dad9e8e8141822f\n",
+				"semver": {
+					"vulnerable": "<4.4.3",
+					"unaffected": ">=4.4.3"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "ckeditor-dev",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:ckeditor-dev:20140626"
+			},
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"Maco Cortes"
+				],
+				"creationTime": "2016-09-15T00:00:00.000Z",
+				"modificationTime": "2016-09-15T00:00:00.000Z",
+				"publicationTime": "2016-09-26T00:00:00.000Z",
+				"disclosureTime": "2014-11-18T00:00:00.000Z",
+				"description": "## Overview\n[ckeditor-dev](https://www.npmjs.com/package/ckeditor-dev) is a browser-based WYSIWYG editor.\nAffected versions of this package were vulnerable to Cross-Site Scripting (XSS) attacks. \nIt was possible to execute XSS inside CKEditor after persuading the victim to: (i) switch CKEditor to source mode, then (ii) paste a specially crafted HTML code, prepared by the attacker, into the opened CKEditor source area, and (iii) switch back to WYSIWYG mode.\n\nThe vulnerability was found by Maco Cortes.\n\n## Remediation\nUpgrade `ckeditor-dev` to version `4.5.11` or greater.\n\n## References\n- https://github.com/ckeditor/ckeditor-dev\n- https://github.com/ckeditor/ckeditor-dev/blob/master/CHANGES.md#ckeditor-446\n- https://github.com/ckeditor/ckeditor-dev/commit/39c08f9fe691a98be61337127dad9e8e8141822f\n",
+				"semver": {
+					"vulnerable": "<4.4.6",
+					"unaffected": ">=4.4.6"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "ckeditor-dev",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:ckeditor-dev:20141118"
+			},
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"Dheeraj Joshi and Prem Kumar"
+				],
+				"creationTime": "2016-09-14T00:00:00.000Z",
+				"modificationTime": "2016-09-14T00:00:00.000Z",
+				"publicationTime": "2016-09-23T00:00:00.000Z",
+				"disclosureTime": "2015-06-30T00:00:00.000Z",
+				"description": "## Overview\n[ckeditor-dev](https://www.npmjs.com/package/ckeditor-dev) is a browser-based WYSIWYG editor.\nAffected versions of this package were vulnerable to Cross-Site Scripting (XSS) attacks via the HTML parser.\nThe vulnerability was found by [Dheeraj Joshi](https://twitter.com/dheerajhere) and [Prem Kumar](https://twitter.com/iAmPr3m)\n\n## Remediation\nUpgrade `ckeditor-dev` to version `4.5.11` or greater.\n\n## References\n- https://github.com/ckeditor/ckeditor-dev\n- https://github.com/ckeditor/ckeditor-dev/blob/master/CHANGES.md#ckeditor-448\n- https://github.com/ckeditor/ckeditor-dev/commit/ccd0038ca5512dbafbb975dd7ec5444ff47f7767\n",
+				"semver": {
+					"vulnerable": "<4.4.8",
+					"unaffected": ">=4.4.8"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "ckeditor-dev",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:ckeditor-dev:20150630"
+			},
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"James Gaskell"
+				],
+				"creationTime": "2016-09-15T00:00:00.000Z",
+				"modificationTime": "2016-09-15T00:00:00.000Z",
+				"publicationTime": "2016-09-19T00:00:00.000Z",
+				"disclosureTime": "2016-06-26T21:27:58.413Z",
+				"description": "## Overview\n[ckeditor-dev](https://www.npmjs.com/package/ckeditor-dev) is a browser-based WYSIWYG editor.\nAffected versions of this package were vulnerable to Cross-Site Scripting (XSS) attacks via a link's display test.\nThe vulnerability was found by James Gaskell\n\n## Remediation\nUpgrade `ckeditor-dev` to version `4.5.11` or greater.\n\n## References\n- https://github.com/ckeditor/ckeditor-dev\n- https://github.com/ckeditor/ckeditor-dev/blob/master/CHANGES.md#ckeditor-4511\n- https://github.com/ckeditor/ckeditor-dev/commit/5b1f7c0da97ebcffff987da3f860dbcee7a24ad9\n",
+				"semver": {
+					"vulnerable": "<4.5.11",
+					"unaffected": ">=4.5.11"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": []
+				},
+				"patches": [],
+				"moduleName": "ckeditor-dev",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:ckeditor-dev:20160822"
+			}
+		],
 		"cli": [
 			{
 				"title": "Insecure use of /tmp folder",
@@ -2723,7 +2837,7 @@
 					"vulnerable": "<=4.0.3",
 					"unaffected": ">=4.1.0"
 				},
-				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
 				"severity": "medium",
 				"identifiers": {
 					"CWE": [
@@ -3028,12 +3142,12 @@
 					"Adam Baldwin"
 				],
 				"creationTime": "2016-02-01T19:00:03.862Z",
-				"modificationTime": "2016-02-01T19:00:03.862Z",
+				"modificationTime": "2016-09-28T19:00:03.862Z",
 				"publicationTime": "2016-02-01T19:00:03.862Z",
-				"description": "## Overview\nThe `duration` function in the [`moment`](https://www.npmjs.com/package/moment) package is vulnerable to [Regular expression Denial of Service (ReDoS)](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS) attacks when long inputs of certain patterns are processed.\n\n## Details\n\"The Regular expression Denial of Service (ReDoS) is a Denial of Service attack, that exploits the fact that most Regular Expression implementations may reach extreme situations that cause them to work very slowly (exponentially related to input size). An attacker can then cause a program using a Regular Expression to enter these extreme situations and then hang for a very long time.\" [1]\n\n## References\n- [1] https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS\n\n- https://github.com/moment/moment/issues/2936",
+				"description": "## Overview\n[`moment`](https://www.npmjs.com/package/moment) is a lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.\n\nAn attacker can provide a long value to the `duration` function, which nearly matches the pattern being matched. This will cause the regular expression matching to take a long time, all the while occupying the event loop and preventing it from processing other requests and making the server unavailable (a Denial of Service attack).\n\n\"The Regular expression Denial of Service (ReDoS) is a Denial of Service attack, that exploits the fact that most Regular Expression implementations may reach extreme situations that cause them to work very slowly (exponentially related to input size). An attacker can then cause a program using a Regular Expression to enter these extreme situations and then hang for a very long time.\" [1](https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS)\n\n## Remediation\nUpgrade `moment` to version `2.11.2` or greater.\n\n## References\n- https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS\n- https://github.com/moment/moment/commit/52a807b961ead925be11ff5e632c8f7325a9ce36\n- https://github.com/moment/moment/issues/2936\n",
 				"semver": {
 					"vulnerable": "<=2.11.1",
-					"unaffected": "<0.0.0"
+					"unaffected": ">2.11.1"
 				},
 				"CVSSv3": "",
 				"severity": "low",

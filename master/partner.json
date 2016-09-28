@@ -410,6 +410,116 @@
         "id": "npm:call:20160705"
       }
     ],
+    "ckeditor-dev": [
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "credit": [
+          "Mario Heiderich"
+        ],
+        "creationTime": "2016-09-15T00:00:00.000Z",
+        "modificationTime": "2016-09-15T00:00:00.000Z",
+        "publicationTime": "2016-09-28T00:00:00.000Z",
+        "disclosureTime": "2016-06-26T00:00:00.000Z",
+        "semver": {
+          "vulnerable": "<4.4.3",
+          "unaffected": ">=4.4.3"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": []
+        },
+        "patches": [],
+        "moduleName": "ckeditor-dev",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:ckeditor-dev:20140626"
+      },
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "credit": [
+          "Maco Cortes"
+        ],
+        "creationTime": "2016-09-15T00:00:00.000Z",
+        "modificationTime": "2016-09-15T00:00:00.000Z",
+        "publicationTime": "2016-09-26T00:00:00.000Z",
+        "disclosureTime": "2014-11-18T00:00:00.000Z",
+        "semver": {
+          "vulnerable": "<4.4.6",
+          "unaffected": ">=4.4.6"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": []
+        },
+        "patches": [],
+        "moduleName": "ckeditor-dev",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:ckeditor-dev:20141118"
+      },
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "credit": [
+          "Dheeraj Joshi and Prem Kumar"
+        ],
+        "creationTime": "2016-09-14T00:00:00.000Z",
+        "modificationTime": "2016-09-14T00:00:00.000Z",
+        "publicationTime": "2016-09-23T00:00:00.000Z",
+        "disclosureTime": "2015-06-30T00:00:00.000Z",
+        "semver": {
+          "vulnerable": "<4.4.8",
+          "unaffected": ">=4.4.8"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": []
+        },
+        "patches": [],
+        "moduleName": "ckeditor-dev",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:ckeditor-dev:20150630"
+      },
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "credit": [
+          "James Gaskell"
+        ],
+        "creationTime": "2016-09-15T00:00:00.000Z",
+        "modificationTime": "2016-09-15T00:00:00.000Z",
+        "publicationTime": "2016-09-19T00:00:00.000Z",
+        "disclosureTime": "2016-06-26T21:27:58.413Z",
+        "semver": {
+          "vulnerable": "<4.5.11",
+          "unaffected": ">=4.5.11"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": []
+        },
+        "patches": [],
+        "moduleName": "ckeditor-dev",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:ckeditor-dev:20160822"
+      }
+    ],
     "cli": [
       {
         "title": "Insecure use of /tmp folder",
@@ -2646,7 +2756,7 @@
           "vulnerable": "<=4.0.3",
           "unaffected": ">=4.1.0"
         },
-        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
         "severity": "medium",
         "identifiers": {
           "CWE": [
@@ -2945,11 +3055,11 @@
           "Adam Baldwin"
         ],
         "creationTime": "2016-02-01T19:00:03.862Z",
-        "modificationTime": "2016-02-01T19:00:03.862Z",
+        "modificationTime": "2016-09-28T19:00:03.862Z",
         "publicationTime": "2016-02-01T19:00:03.862Z",
         "semver": {
           "vulnerable": "<=2.11.1",
-          "unaffected": "<0.0.0"
+          "unaffected": ">2.11.1"
         },
         "CVSSv3": "",
         "severity": "low",
