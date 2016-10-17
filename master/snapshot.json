@@ -4502,6 +4502,75 @@
 				]
 			}
 		],
+		"plotly.js": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"Jared Folkins"
+				],
+				"creationTime": "2016-09-14T00:00:00.000Z",
+				"modificationTime": "2016-10-17T00:00:00.000Z",
+				"publicationTime": "2016-10-17T00:00:00.000Z",
+				"disclosureTime": "2016-08-09T00:00:00.000Z",
+				"description": "## Overview\n[`plotly.js`](https://www.npmjs.com/package/plotly.js) is a high-level, declarative charting library.\n\nAffected versions of the package allow attackers to trick an unsuspecting user into viewing a specially crafted plot on a site that uses `plotly.js`. The vulnerability would have allowed the attacker to retrieve authentication tokens and perform actions on behalf of the user.\n\n## Details\n`plot.ly` is rendering SVG objects inside the DOM. `href` tags are converted to the xlink:href attriubute on the <a> tag. This allowed an attacker to break out into the DOM and inject a payload.\n\nFor more information, see Jared's [post](https://acloudtree.com/2016-08-09-how-i-hacked-plotly-by-exploiting-a-svg-vulnerability-in-plotlyjs/) explaining the issue very well.\n\n## Remediation\nUpgrade to `plotly.js` version 1.16.0 or newer.\n\n## References\n- https://acloudtree.com/2016-08-09-how-i-hacked-plotly-by-exploiting-a-svg-vulnerability-in-plotlyjs/\n- http://help.plot.ly/security-advisories/2016-08-08-plotlyjs-xss-advisory/\n- https://github.com/plotly/plotly.js/pull/736\n- https://github.com/plotly/plotly.js/commit/d5885957f72e21a25782dc28e2028ffe8debf5ef\n",
+				"semver": {
+					"vulnerable": ">=1.10.4 <1.16.0",
+					"unaffected": ">=1.16.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"NSP": 145,
+					"ALTERNATIVE": [
+						"SNYK-JS-PLOTLYJS-10154"
+					]
+				},
+				"patches": [],
+				"moduleName": "plotly.js",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:plotly.js:20160808",
+				"alternativeIds": [
+					"SNYK-JS-PLOTLYJS-10154"
+				]
+			},
+			{
+				"title": "CSS Injection",
+				"credit": [
+					"Jared Folkins"
+				],
+				"creationTime": "2016-09-14T00:00:00.000Z",
+				"modificationTime": "2016-10-17T00:00:00.000Z",
+				"publicationTime": "2016-10-17T00:00:00.000Z",
+				"disclosureTime": "2016-08-09T00:00:00.000Z",
+				"description": "## Overview\n[`plotly.js`](https://www.npmjs.com/package/plotly.js) is a high-level, declarative charting library.\n\nAffected versions of the package allowed the style attribute to be manipulated in the tag inside the embedded `svg` making them vulnerable to a css injection which allowed for tracking images to be embedded and leak information to an external domain.\n\n## Details\nFor more information, see Jared's [post](https://acloudtree.com/2016-08-09-how-i-hacked-plotly-by-exploiting-a-svg-vulnerability-in-plotlyjs/) explaining the issue very well.\n\n## Remediation\nUpgrade to `plotly.js` version 1.16.0 or newer.\n\n## References\n- https://snyk.io/vuln/npm:plotly.js:20160808\n- https://acloudtree.com/2016-08-09-how-i-hacked-plotly-by-exploiting-a-svg-vulnerability-in-plotlyjs/\n- http://help.plot.ly/security-advisories/2016-08-08-plotlyjs-xss-advisory/\n- https://github.com/plotly/plotly.js/pull/736\n- https://github.com/plotly/plotly.js/commit/d5885957f72e21a25782dc28e2028ffe8debf5ef\n",
+				"semver": {
+					"vulnerable": "<1.16.0",
+					"unaffected": ">=1.16.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-PLOTLYJS-10155"
+					]
+				},
+				"patches": [],
+				"moduleName": "plotly.js",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:plotly.js:20160808-1",
+				"alternativeIds": [
+					"SNYK-JS-PLOTLYJS-10155"
+				]
+			}
+		],
 		"pouchdb": [
 			{
 				"title": "Arbitrary Code Injection",
