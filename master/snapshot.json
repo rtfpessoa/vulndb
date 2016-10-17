@@ -6431,6 +6431,42 @@
 				]
 			}
 		],
+		"uws": [
+			{
+				"title": "Denial of Service",
+				"moduleName": "uws",
+				"description": "## Overview\n[`uws`](https://www.npmjs.com/package/uws) is Highly scalable WebSocket server &amp; client library.\nAffected versions of the package are vulnerable to Denial of Service.\n\nIt is possible to crash the node process by sending a 256mb websocket message and exceeding V8's maximum string size.\n\n## Remediation\nUpgrade `uws` to version 0.10.9 or higher.\n\n\n## References\n- https://github.com/uWebSockets/uWebSockets/commit/37deefd01f0875e133ea967122e3a5e421b8fcd9\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-400"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-UWS-10156"
+					]
+				},
+				"severity": "high",
+				"semver": {
+					"unaffected": ">=0.10.9",
+					"vulnerable": "<0.10.9 >=0.10.0"
+				},
+				"credit": [
+					"Luigi Pinca"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+				"disclosureTime": "2016-10-13T07:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-10-17T22:33:27.772Z",
+				"modificationTime": "2016-10-17T22:33:27.772Z",
+				"creationTime": "2016-10-14T22:33:27.772Z",
+				"id": "npm:uws:20161013",
+				"alternativeIds": [
+					"SNYK-JS-UWS-10156"
+				]
+			}
+		],
 		"validator": [
 			{
 				"title": "Regular Expression Denial of Service",
