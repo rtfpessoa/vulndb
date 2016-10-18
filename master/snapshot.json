@@ -4512,7 +4512,7 @@
 				"modificationTime": "2016-10-17T00:00:00.000Z",
 				"publicationTime": "2016-10-17T00:00:00.000Z",
 				"disclosureTime": "2016-08-09T00:00:00.000Z",
-				"description": "## Overview\n[`plotly.js`](https://www.npmjs.com/package/plotly.js) is a high-level, declarative charting library.\n\nAffected versions of the package allow attackers to trick an unsuspecting user into viewing a specially crafted plot on a site that uses `plotly.js`. The vulnerability would have allowed the attacker to retrieve authentication tokens and perform actions on behalf of the user.\n\n## Details\n`plot.ly` is rendering SVG objects inside the DOM. `href` tags are converted to the xlink:href attriubute on the <a> tag. This allowed an attacker to break out into the DOM and inject a payload.\n\nFor more information, see Jared's [post](https://acloudtree.com/2016-08-09-how-i-hacked-plotly-by-exploiting-a-svg-vulnerability-in-plotlyjs/) explaining the issue very well.\n\n## Remediation\nUpgrade to `plotly.js` version 1.16.0 or newer.\n\n## References\n- https://acloudtree.com/2016-08-09-how-i-hacked-plotly-by-exploiting-a-svg-vulnerability-in-plotlyjs/\n- http://help.plot.ly/security-advisories/2016-08-08-plotlyjs-xss-advisory/\n- https://github.com/plotly/plotly.js/pull/736\n- https://github.com/plotly/plotly.js/commit/d5885957f72e21a25782dc28e2028ffe8debf5ef\n",
+				"description": "## Overview\n[`plotly.js`](https://www.npmjs.com/package/plotly.js) is a high-level, declarative charting library.\n\nAffected versions of the package allow attackers to trick an unsuspecting user into viewing a specially crafted plot on a site that uses `plotly.js`. The vulnerability would have allowed the attacker to retrieve authentication tokens and perform actions on behalf of the user.\n\n## Details\n`plot.ly` is rendering SVG objects inside the DOM. `href` tags are converted to the xlink:href attriubute on the `<a>` tag. This allowed an attacker to break out into the DOM and inject a payload.\n\nFor more information, see Jared's [post](https://acloudtree.com/2016-08-09-how-i-hacked-plotly-by-exploiting-a-svg-vulnerability-in-plotlyjs/) explaining the issue very well.\n\n## Remediation\nUpgrade to `plotly.js` version 1.16.0 or newer.\n\n## References\n- https://acloudtree.com/2016-08-09-how-i-hacked-plotly-by-exploiting-a-svg-vulnerability-in-plotlyjs/\n- http://help.plot.ly/security-advisories/2016-08-08-plotlyjs-xss-advisory/\n- https://github.com/plotly/plotly.js/pull/736\n- https://github.com/plotly/plotly.js/commit/d5885957f72e21a25782dc28e2028ffe8debf5ef\n",
 				"semver": {
 					"vulnerable": ">=1.10.4 <1.16.0",
 					"unaffected": ">=1.16.0"
@@ -4581,7 +4581,7 @@
 				"modificationTime": "2016-10-17T00:00:00.000Z",
 				"publicationTime": "2016-10-17T00:00:00.000Z",
 				"disclosureTime": "2016-08-30T00:00:00.000Z",
-				"description": "## Overview\n[`pouchDB`](https://www.npmjs.com/package/pouchdb) is an open-source JavaScript database inspired by `Apache CouchDB` that is designed to run well within the browser.\n\nThe vulnerability was reported by [micaksica](https://github.com/micaksica).\n\n## Remediation\nUpgrade `pouchDB` to version 6.0.5 or later.\n\n## References\n- https://github.com/pouchdb/pouchdb/issues/5612\n- https://github.com/pouchdb/pouchdb/compare/6.0.3...6.0.5\n",
+				"description": "## Overview\n[`pouchDB`](https://www.npmjs.com/package/pouchdb) is an open-source JavaScript database inspired by `Apache CouchDB` that is designed to run well within the browser.\n\nVulnerable versions of the package had the `evalView` function in `pouchdb-core` to execute the view\nfunction without a sandbox. The fix was introduced in version `6.0.5`, executing the view function in a sandbox and enforcing strict mode when running in Node.js.\n\nThe vulnerability was reported by [micaksica](https://github.com/micaksica).\n\n## Remediation\nUpgrade `pouchDB` to version 6.0.5 or later.\n\n## References\n- https://github.com/pouchdb/pouchdb/issues/5612\n- https://github.com/pouchdb/pouchdb/compare/6.0.3...6.0.5\n",
 				"semver": {
 					"vulnerable": "<=6.0.4",
 					"unaffected": ">=6.0.5"
@@ -4772,7 +4772,7 @@
 		],
 		"reduce-css-calc": [
 			{
-				"title": "Arbitrary Code Injection (XSS)",
+				"title": "Arbitrary Code Injection",
 				"credit": [
 					"Сковорода Никита Андреевич (ChALkeR)"
 				],
@@ -4780,7 +4780,7 @@
 				"modificationTime": "2016-10-17T00:00:00.000Z",
 				"publicationTime": "2016-10-17T00:00:00.000Z",
 				"disclosureTime": "2016-08-20T00:00:00.000Z",
-				"description": "## Overview\n`reduce-css-calc` is a package that reduces CSS calc() function to the maximum. Affected versions of the package used `evail()` for evaluation the expression, allowing the attacker to gain arbitrary code execution via specially crafted input.\n\n## Example\nThe [issue](https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9) was reported by [ChALkeR] (https://github.com/ChALkeR) and demonstrated by his [example](https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9) below:\n\n```\nconst reduceCSSCalc = require('reduce-css-calc');\nconsole.log(reduceCSSCalc(`calc(                       (Buffer(10000)))`));\nconsole.log(reduceCSSCalc(`calc(                       (global['fs'] = require('fs')))`));\nconsole.log(reduceCSSCalc(`calc(                       (fs['readFileSync'](\"/etc/passwd\", \"utf-8\")))`));\n```\n\n## Remediation\nUpgrade `reduce-css-calc` version 1.2.5 or greater.\n\n## References\n- https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9\n- https://github.com/MoOx/reduce-css-calc/blob/master/CHANGELOG.md#125---2016-08-22\n",
+				"description": "## Overview\n`reduce-css-calc` is a package that reduces CSS calc() function to the maximum. Affected versions of the package used `evail()` for evaluation the expression, allowing the attacker to gain arbitrary code execution via specially crafted input.\n\n## Example\nThe [issue](https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9) was reported by [ChALkeR](https://github.com/ChALkeR) and demonstrated by his [example](https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9) below:\n\n```\nconst reduceCSSCalc = require('reduce-css-calc');\nconsole.log(reduceCSSCalc(`calc(                       (Buffer(10000)))`));\nconsole.log(reduceCSSCalc(`calc(                       (global['fs'] = require('fs')))`));\nconsole.log(reduceCSSCalc(`calc(                       (fs['readFileSync'](\"/etc/passwd\", \"utf-8\")))`));\n```\n\n## Remediation\nUpgrade `reduce-css-calc` version 1.2.5 or greater.\n\n## References\n- https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9\n- https://github.com/MoOx/reduce-css-calc/blob/master/CHANGELOG.md#125---2016-08-22\n",
 				"semver": {
 					"vulnerable": "<1.2.5",
 					"unaffected": ">=1.2.5"

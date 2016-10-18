@@ -4661,7 +4661,7 @@
     ],
     "reduce-css-calc": [
       {
-        "title": "Arbitrary Code Injection (XSS)",
+        "title": "Arbitrary Code Injection",
         "credit": [
           "Сковорода Никита Андреевич (ChALkeR)"
         ],
