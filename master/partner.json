@@ -551,6 +551,41 @@
         ]
       }
     ],
+    "cheerio": [
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "credit": [
+          "Ben Atkin"
+        ],
+        "creationTime": "2016-09-18T00:00:00.000Z",
+        "modificationTime": "2016-09-18T00:00:00.000Z",
+        "publicationTime": "2016-10-20T18:25:00.00Z",
+        "disclosureTime": "2012-03-11T00:00:00.000Z",
+        "semver": {
+          "vulnerable": "<=0.8.3",
+          "unaffected": ">=0.9.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-CHEERIO-10158"
+          ]
+        },
+        "patches": [],
+        "moduleName": "cheerio",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:cheerio:20120311",
+        "alternativeIds": [
+          "SNYK-JS-CHEERIO-10158"
+        ]
+      }
+    ],
     "ckeditor-dev": [
       {
         "title": "Cross-site Scripting (XSS)",
@@ -2805,6 +2840,41 @@
         ]
       }
     ],
+    "jsjws": [
+      {
+        "title": "Authentication Bypass",
+        "credit": [
+          "Tim McLean"
+        ],
+        "creationTime": "2016-09-14T00:00:00.00Z",
+        "modificationTime": "2016-09-14T00:00:00.00Z",
+        "publicationTime": "2016-10-20T18:30:00.00Z",
+        "disclosureTime": "2016-03-31T00:00:00.000Z",
+        "semver": {
+          "vulnerable": "<=2.0.0",
+          "unaffected": ">=2.0.1"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-592"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-JSJWS-10157"
+          ]
+        },
+        "patches": [],
+        "moduleName": "jsjws",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:jsjws:20150531",
+        "alternativeIds": [
+          "SNYK-JS-JSJWS-10157"
+        ]
+      }
+    ],
     "jsonwebtoken": [
       {
         "title": "Authentication Bypass",
@@ -4954,6 +5024,39 @@
         "id": "npm:riot-compiler:20160321",
         "alternativeIds": [
           "SNYK-JS-RIOTCOMPILER-10087"
+        ]
+      }
+    ],
+    "sails": [
+      {
+        "title": "Broken CORS",
+        "moduleName": "sails",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-SAILS-10159"
+          ]
+        },
+        "severity": "high",
+        "semver": {
+          "unaffected": ">0.12.7",
+          "vulnerable": "<=0.12.7"
+        },
+        "credit": [
+          "Evan Johnson"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "disclosureTime": "2016-10-13T07:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-10-20T00:00:00.000Z",
+        "modificationTime": "2016-10-20T00:00:00.000Z",
+        "creationTime": "2016-10-14T22:59:55.112Z",
+        "id": "npm:sails:20161013",
+        "alternativeIds": [
+          "SNYK-JS-SAILS-10159"
         ]
       }
     ],

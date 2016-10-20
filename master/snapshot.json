@@ -565,6 +565,42 @@
 				]
 			}
 		],
+		"cheerio": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"Ben Atkin"
+				],
+				"creationTime": "2016-09-18T00:00:00.000Z",
+				"modificationTime": "2016-09-18T00:00:00.000Z",
+				"publicationTime": "2016-10-20T18:25:00.00Z",
+				"disclosureTime": "2012-03-11T00:00:00.000Z",
+				"description": "## Overview\n[`cheerio`](https://www.npmjs.com/package/cheerio) is an implementation of core jQuery designed specifically for the server. Affected versions of this package are vulnerable to [Cross-site Scripting (XSS)](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)) attacks via assigned attributes.\n\nThe vulnerability was reported by [Ben Atkin](https://github.com/benatkin)\n\n## Example\n>When assigning attributes, there is no protection against XSS:\n```\nfunction xss() {\n  var $ = require('cheerio').load('<a>GitHub</a>');\n  $('a').attr('href', 'http://github.com/\"><script>alert(\"XSS!\")</script><br');\n  return $.html();\n}\n```\n>xss() returns:\n```\n<a href = \"http://github.com/\"><script>alert(\"XSS!\")</script><br\">GitHub</a>\n```\n\n## Recommendation\nUpgrade `cheerio` to version 0.9.0 or greater.\n\n## References\n- https://github.com/cheeriojs/cheerio/issues/49\n- https://github.com/cheeriojs/cheerio/pull/71\n- https://github.com/cheeriojs/cheerio/pull/71/commits/1e2b3240f11b1a7fa3f0bc9009f18a5d7b59bae1\n- https://github.com/cheeriojs/cheerio/commit/70622480354a3144aad6986d93f0bf48c1d882bf\n",
+				"semver": {
+					"vulnerable": "<=0.8.3",
+					"unaffected": ">=0.9.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-CHEERIO-10158"
+					]
+				},
+				"patches": [],
+				"moduleName": "cheerio",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:cheerio:20120311",
+				"alternativeIds": [
+					"SNYK-JS-CHEERIO-10158"
+				]
+			}
+		],
 		"ckeditor-dev": [
 			{
 				"title": "Cross-site Scripting (XSS)",
@@ -2876,6 +2912,42 @@
 				]
 			}
 		],
+		"jsjws": [
+			{
+				"title": "Authentication Bypass",
+				"credit": [
+					"Tim McLean"
+				],
+				"creationTime": "2016-09-14T00:00:00.00Z",
+				"modificationTime": "2016-09-14T00:00:00.00Z",
+				"publicationTime": "2016-10-20T18:30:00.00Z",
+				"disclosureTime": "2016-03-31T00:00:00.000Z",
+				"description": "## Overview\nThe `jsjws` is a pure JavaScript implementation of JSON Web Signature. JSON Web Tokens are an open, industry standard method for representing claims securely between two parties.\n\nAffected versions of this module treated tokens signed with the `none` algorithm as a valid token with a verified signature and resulted in giving attackers arbitrary account access.\n\n## Remediation\nUpgrade `jsjws` to version 2.0.1 or higher.\n\n## References\n- https://github.com/kjur/jsjws/issues/25\n- https://github.com/kjur/jsjws/releases/tag/3.2.0\n- https://www.chosenplaintext.ca/2015/03/31/jwt-algorithm-confusion.html\n- https://jwt.io/\n",
+				"semver": {
+					"vulnerable": "<=2.0.0",
+					"unaffected": ">=2.0.1"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-592"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-JSJWS-10157"
+					]
+				},
+				"patches": [],
+				"moduleName": "jsjws",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:jsjws:20150531",
+				"alternativeIds": [
+					"SNYK-JS-JSJWS-10157"
+				]
+			}
+		],
 		"jsonwebtoken": [
 			{
 				"title": "Authentication Bypass",
@@ -4581,7 +4653,7 @@
 				"modificationTime": "2016-10-17T00:00:00.000Z",
 				"publicationTime": "2016-10-17T00:00:00.000Z",
 				"disclosureTime": "2016-08-30T00:00:00.000Z",
-				"description": "## Overview\n[`pouchDB`](https://www.npmjs.com/package/pouchdb) is an open-source JavaScript database inspired by `Apache CouchDB` that is designed to run well within the browser.\n\nVulnerable versions of the package had the `evalView` function in `pouchdb-core` to execute the view\nfunction without a sandbox. The fix was introduced in version `6.0.5`, executing the view function in a sandbox and enforcing strict mode when running in Node.js.\n\nThe vulnerability was reported by [micaksica](https://github.com/micaksica).\n\n## Remediation\nUpgrade `pouchDB` to version 6.0.5 or later.\n\n## References\n- https://github.com/pouchdb/pouchdb/issues/5612\n- https://github.com/pouchdb/pouchdb/compare/6.0.3...6.0.5\n",
+				"description": "## Overview\n[`pouchDB`](https://www.npmjs.com/package/pouchdb) is an open-source JavaScript database inspired by `Apache CouchDB` that is designed to run well within the browser.\n\nVulnerable versions of the package had the `evalView` function in `pouchdb-core` to execute the view\nfunction without a sandbox. The fix was introduced in version `6.0.5`, executing the view function in a sandbox and enforcing strict mode when running in Node.js.\n\nThe vulnerability was reported by [micaksica](https://github.com/micaksica).\n\n## Remediation\nUpgrade `pouchDB` to version 6.0.5 or later.\n\n## References\n- https://github.com/pouchdb/pouchdb/issues/5612\n- https://github.com/pouchdb/pouchdb/compare/6.0.3...6.0.5\n- https://medium.com/@micaksica/from-pouchdb-to-rce-a-node-js-injection-vector-ffd1d1dd2807\n",
 				"semver": {
 					"vulnerable": "<=6.0.4",
 					"unaffected": ">=6.0.5"
@@ -5071,6 +5143,40 @@
 				"id": "npm:riot-compiler:20160321",
 				"alternativeIds": [
 					"SNYK-JS-RIOTCOMPILER-10087"
+				]
+			}
+		],
+		"sails": [
+			{
+				"title": "Broken CORS",
+				"moduleName": "sails",
+				"description": "## Overview\n[`sails`](https://www.npmjs.com/package/sails) is API-driven framework for building realtime apps, using MVC conventions (based on Express and Socket.io).\n\nSails version `0.12.6` and lower allowed the default CORS settings to be very permissive, letting the attacker to bypass the Same Origin Policy.\n\n## Remediation\nUpgrade `sails` to version 0.12.7 or higher.\n\n## References\n- https://github.com/balderdashy/sails/commit/0057123a0321be6758845abbeb4290bf418ce542\n\n\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-SAILS-10159"
+					]
+				},
+				"severity": "high",
+				"semver": {
+					"unaffected": ">0.12.7",
+					"vulnerable": "<=0.12.7"
+				},
+				"credit": [
+					"Evan Johnson"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"disclosureTime": "2016-10-13T07:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-10-20T00:00:00.000Z",
+				"modificationTime": "2016-10-20T00:00:00.000Z",
+				"creationTime": "2016-10-14T22:59:55.112Z",
+				"id": "npm:sails:20161013",
+				"alternativeIds": [
+					"SNYK-JS-SAILS-10159"
 				]
 			}
 		],
