@@ -1958,7 +1958,7 @@
 					"vulnerable": "<0.2.0"
 				},
 				"credit": [
-					"Snyk Security Research"
+					"Snyk Security Research Team"
 				],
 				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
 				"disclosureTime": "2016-09-22T21:00:00.000Z",
@@ -3864,6 +3864,59 @@
 				"alternativeIds": [
 					"SNYK-JS-MOMENT-10084"
 				]
+			},
+			{
+				"title": "Regular Expression Denial of Service",
+				"moduleName": "moment",
+				"description": "## Overview\n[`moment`](https://www.npmjs.com/package/moment) is a lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.\n\nAffected versions of the package are vulnerable to Regular Expression Denial of Service (ReDoS) attacks for any locale that has separate format and standalone options and `format` input can be controlled by the user.\n\nAn attacker can provide a specially crafted input to the `format` function, which nearly matches the pattern being matched. This will cause the regular expression matching to take a long time, all the while occupying the event loop and preventing it from processing other requests and making the server unavailable (a Denial of Service attack).\n\n## Disclosure Timeline\n- October 19th, 2016 - Reported the issue to package owner.\n- October 19th, 2016 - Issue acknowledged by package owner.\n- October 24th, 2016 - Issue fixed and version `2.15.2` released.\n\n## References\n- [Proof of concept](https://gist.github.com/grnd/50192ce22681848a7de812d95241b7fc)\n- [Fix commit](https://github.com/moment/moment/commit/663f33e333212b3800b63592cd8e237ac8fabdb9)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-400"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-MOMENT-10164"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"vulnerable": "<2.15.2",
+					"unaffected": ">=2.15.2"
+				},
+				"credit": [
+					"Snyk Security Research Team"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+				"disclosureTime": "2016-10-18T21:00:00.000Z",
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/moment/20161019/moment_20161019_0_1.patch"
+						],
+						"version": "<2.15.2 >=2.14.0",
+						"modificationTime": "2016-10-24T00:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:moment:20161019:0"
+					},
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/moment/20161019/moment_20161019_0_0.patch"
+						],
+						"version": "<2.14.0 >=2.12.0",
+						"modificationTime": "2016-10-24T00:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:moment:20161019:1"
+					}
+				],
+				"publicationTime": "2016-10-24T06:57:59.675Z",
+				"modificationTime": "2016-10-23T06:57:59.675Z",
+				"creationTime": "2016-10-23T06:57:59.675Z",
+				"id": "npm:moment:20161019",
+				"alternativeIds": [
+					"SNYK-JS-MOMENT-10164"
+				]
 			}
 		],
 		"mongoose": [
@@ -4852,7 +4905,7 @@
 				"modificationTime": "2016-10-17T00:00:00.000Z",
 				"publicationTime": "2016-10-17T00:00:00.000Z",
 				"disclosureTime": "2016-08-20T00:00:00.000Z",
-				"description": "## Overview\n`reduce-css-calc` is a package that reduces CSS calc() function to the maximum. Affected versions of the package used `evail()` for evaluation the expression, allowing the attacker to gain arbitrary code execution via specially crafted input.\n\n## Example\nThe [issue](https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9) was reported by [ChALkeR](https://github.com/ChALkeR) and demonstrated by his [example](https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9) below:\n\n```\nconst reduceCSSCalc = require('reduce-css-calc');\nconsole.log(reduceCSSCalc(`calc(                       (Buffer(10000)))`));\nconsole.log(reduceCSSCalc(`calc(                       (global['fs'] = require('fs')))`));\nconsole.log(reduceCSSCalc(`calc(                       (fs['readFileSync'](\"/etc/passwd\", \"utf-8\")))`));\n```\n\n## Remediation\nUpgrade `reduce-css-calc` version 1.2.5 or greater.\n\n## References\n- https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9\n- https://github.com/MoOx/reduce-css-calc/blob/master/CHANGELOG.md#125---2016-08-22\n",
+				"description": "## Overview\n`reduce-css-calc` is a package that reduces CSS calc() function to the maximum. Affected versions of the package used `eval()` for evaluation the expression, allowing the attacker to gain arbitrary code execution via specially crafted input.\n\n## Example\nThe [issue](https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9) was reported by [ChALkeR](https://github.com/ChALkeR) and demonstrated by his [example](https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9) below:\n\n```\nconst reduceCSSCalc = require('reduce-css-calc');\nconsole.log(reduceCSSCalc(`calc(                       (Buffer(10000)))`));\nconsole.log(reduceCSSCalc(`calc(                       (global['fs'] = require('fs')))`));\nconsole.log(reduceCSSCalc(`calc(                       (fs['readFileSync'](\"/etc/passwd\", \"utf-8\")))`));\n```\n\n## Remediation\nUpgrade `reduce-css-calc` version 1.2.5 or greater.\n\n## References\n- https://gist.github.com/ChALkeR/415a41b561ebea9b341efbb40b802fc9\n- https://github.com/MoOx/reduce-css-calc/blob/master/CHANGELOG.md#125---2016-08-22\n",
 				"semver": {
 					"vulnerable": "<1.2.5",
 					"unaffected": ">=1.2.5"
