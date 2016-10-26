@@ -6313,6 +6313,42 @@
 				]
 			}
 		],
+		"tinymce": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"moduleName": "tinymce",
+				"description": "## Overview\n[`tinymce`](https://www.npmjs.com/package/tinymce) is Web based JavaScript HTML WYSIWYG editor control.\nThe `tinymce` media plugin has security controls that aim to mitigate Cross-Site Scripting (XSS) attacks, but overlooked certain attributes that can contain script, introducing a vulnerability.\n\n## Remediation\nUpgrade `tinymce` to version 4.2.4 or higher.\n\n## References\n- https://github.com/tinymce/tinymce\n- https://github.com/tinymce/tinymce/commit/c68a5930512d7b37b5dc495bde5f7cbb739e11e7\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-TINYMCE-10165"
+					]
+				},
+				"severity": "high",
+				"semver": {
+					"unaffected": ">=4.2.4",
+					"vulnerable": "<4.2.4"
+				},
+				"credit": [
+					"Johan Sörlin"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+				"disclosureTime": "2015-08-12T21:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-10-27T13:49:24.240Z",
+				"modificationTime": "2016-09-27T13:49:24.240Z",
+				"creationTime": "2016-09-27T13:49:24.240Z",
+				"id": "npm:tinymce:20150813",
+				"alternativeIds": [
+					"SNYK-JS-TINYMCE-10165"
+				]
+			}
+		],
 		"tomato": [
 			{
 				"title": "API Admin Auth Weakness",
