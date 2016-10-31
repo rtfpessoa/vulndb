@@ -2521,6 +2521,40 @@
         ]
       }
     ],
+    "igniteui": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-08-04T03:44:13.902Z",
+        "modificationTime": "2016-08-04T03:44:13.902Z",
+        "publicationTime": "2016-10-31T00:00:00.000Z",
+        "disclosureTime": "2016-10-31T00:00:00.000Z",
+        "semver": {
+          "vulnerable": "<=0.0.5",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:A/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+        "severity": "low",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 116,
+          "ALTERNATIVE": [
+            "SNYK-JS-IGNITEUI-10167"
+          ]
+        },
+        "patches": [],
+        "moduleName": "igniteui",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:igniteui:20160804",
+        "alternativeIds": [
+          "SNYK-JS-IGNITEUI-10167"
+        ]
+      }
+    ],
     "inert": [
       {
         "title": "Hidden Directories Leakage",
@@ -2990,6 +3024,42 @@
         "id": "npm:jws:20160726",
         "alternativeIds": [
           "SNYK-JS-JWS-10125"
+        ]
+      }
+    ],
+    "jwt-simple": [
+      {
+        "title": "Forgeable public/private tokens",
+        "credit": [
+          "Theofanis Katsimpas"
+        ],
+        "creationTime": "2016-08-18T03:44:13.905Z",
+        "modificationTime": "2016-10-31T03:44:13.905Z",
+        "publicationTime": "2016-10-31T03:44:13.905Z",
+        "disclosureTime": "2016-08-18T03:44:13.905Z",
+        "semver": {
+          "vulnerable": "<0.3.0",
+          "unaffected": ">=0.3.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-310"
+          ],
+          "CVE": [],
+          "NSP": 87,
+          "ALTERNATIVE": [
+            "SNYK-JS-JWTSIMPLE-10166"
+          ]
+        },
+        "patches": [],
+        "moduleName": "jwt-simple",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:jwt-simple:20160804",
+        "alternativeIds": [
+          "SNYK-JS-JWTSIMPLE-10166"
         ]
       }
     ],
@@ -5887,6 +5957,51 @@
         ]
       }
     ],
+    "shout": [
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "credit": [
+          "Oddbjørn Haaland"
+        ],
+        "creationTime": "2016-09-13T00:00:00.780Z",
+        "modificationTime": "2016-09-13T00:00:00.780Z",
+        "publicationTime": "2016-10-31T17:00:00.000Z",
+        "disclosureTime": "2015-08-16T00:00:00.780Z",
+        "semver": {
+          "vulnerable": "<=0.51.0",
+          "unaffected": ">=0.51.2"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-SHOUT-10169"
+          ]
+        },
+        "patches": [
+          {
+            "urls": [
+              "https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/shout/20160913/shout_20160913_0_0_7ef2da0c832175cea1776a651a3c14051468fdc2.patch"
+            ],
+            "version": "0.51.0",
+            "modificationTime": "2016-09-13T00:00:00.000Z",
+            "comments": [],
+            "id": "patch:npm:shout:20160913:0"
+          }
+        ],
+        "moduleName": "shout",
+        "packageManager": "npm",
+        "language": "js",
+        "id": "npm:shout:20160913",
+        "alternativeIds": [
+          "SNYK-JS-SHOUT-10169"
+        ]
+      }
+    ],
     "st": [
       {
         "title": "Directory Traversal",
@@ -6624,6 +6739,42 @@
         "id": "npm:validator:20130705-2",
         "alternativeIds": [
           "SNYK-JS-VALIDATOR-10006"
+        ]
+      }
+    ],
+    "waterline-sequel": [
+      {
+        "title": "SQL Injection",
+        "credit": [
+          "James Hush"
+        ],
+        "creationTime": "2016-08-04T03:44:13.903Z",
+        "modificationTime": "2016-10-31T03:44:13.903Z",
+        "publicationTime": "2016-10-31T00:00:00.000Z",
+        "disclosureTime": "2016-08-04T00:00:00.000Z",
+        "semver": {
+          "vulnerable": "<0.5.0",
+          "unaffected": ">= 0.5.1"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-89"
+          ],
+          "CVE": [],
+          "NSP": 115,
+          "ALTERNATIVE": [
+            "SNYK-JS-WATERLINESEQUEL-10168"
+          ]
+        },
+        "patches": [],
+        "moduleName": "waterline-sequel",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:waterline-sequel:20160804",
+        "alternativeIds": [
+          "SNYK-JS-WATERLINESEQUEL-10168"
         ]
       }
     ],

@@ -2585,6 +2585,41 @@
 				]
 			}
 		],
+		"igniteui": [
+			{
+				"title": "Resources downloaded over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2016-08-04T03:44:13.902Z",
+				"modificationTime": "2016-08-04T03:44:13.902Z",
+				"publicationTime": "2016-10-31T00:00:00.000Z",
+				"disclosureTime": "2016-10-31T00:00:00.000Z",
+				"description": "## Overview\nThis package downloads static resources such as js and css files and processes them locally. \n\nThe resources are downloaded over an unencrypted HTTP connection, allowing a malicious man in the middle to tamper with their content in transit.\n \n## References\n- https://www.npmjs.com/package/igniteui\n- https://github.com/SamDLT/igniteui-npm\n",
+				"semver": {
+					"vulnerable": "<=0.0.5",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:A/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+				"severity": "low",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 116,
+					"ALTERNATIVE": [
+						"SNYK-JS-IGNITEUI-10167"
+					]
+				},
+				"patches": [],
+				"moduleName": "igniteui",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:igniteui:20160804",
+				"alternativeIds": [
+					"SNYK-JS-IGNITEUI-10167"
+				]
+			}
+		],
 		"inert": [
 			{
 				"title": "Hidden Directories Leakage",
@@ -3066,6 +3101,43 @@
 				"id": "npm:jws:20160726",
 				"alternativeIds": [
 					"SNYK-JS-JWS-10125"
+				]
+			}
+		],
+		"jwt-simple": [
+			{
+				"title": "Forgeable public/private tokens",
+				"credit": [
+					"Theofanis Katsimpas"
+				],
+				"creationTime": "2016-08-18T03:44:13.905Z",
+				"modificationTime": "2016-10-31T03:44:13.905Z",
+				"publicationTime": "2016-10-31T03:44:13.905Z",
+				"disclosureTime": "2016-08-18T03:44:13.905Z",
+				"description": "## Overview\n['jwt-simple'](https://www.npmjs.com/package/jwt-simple) is a `JSON Web Token` encode and decode module.\nAffected versions of this package are vulnerable to an Authentication Bypass attack, due to the \"algorithm\" not being enforced. Attackers are given the opportunity to choose the algorithm sent to the server and generate signatures with arbitrary contents. The server expects an asymmetric key (RSA) but is sent a symmetric key (HMAC-SHA) with RSA's public key, so instead of going through a key validation process, the server will think the public key is actually an HMAC private key.\n\n## Remediation\nUpgrade `jwt-simple` to version 0.3.0 or higher.\n\n## References\n- https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/\n- https://github.com/hokaccha/node-jwt-simple/pull/14\n- https://github.com/hokaccha/node-jwt-simple/pull/16\n- https://github.com/hokaccha/node-jwt-simple/commit/957957cfa44474049b4603b293569588ee9ffd97\n",
+				"semver": {
+					"vulnerable": "<0.3.0",
+					"unaffected": ">=0.3.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-310"
+					],
+					"CVE": [],
+					"NSP": 87,
+					"ALTERNATIVE": [
+						"SNYK-JS-JWTSIMPLE-10166"
+					]
+				},
+				"patches": [],
+				"moduleName": "jwt-simple",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:jwt-simple:20160804",
+				"alternativeIds": [
+					"SNYK-JS-JWTSIMPLE-10166"
 				]
 			}
 		],
@@ -6025,6 +6097,52 @@
 				]
 			}
 		],
+		"shout": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"Oddbjørn Haaland"
+				],
+				"creationTime": "2016-09-13T00:00:00.780Z",
+				"modificationTime": "2016-09-13T00:00:00.780Z",
+				"publicationTime": "2016-10-31T17:00:00.000Z",
+				"disclosureTime": "2015-08-16T00:00:00.780Z",
+				"description": "## Overview\n[shout](https://github.com/erming/shout) is a self-hosted web IRC client. Versions prior to `0.51.2` are vulnerable to a Cross-site Scripting (XSS) attack.\n\n## Remediation\nUpgrade to `shout` version 0.51.2 or newer.\n\n## References\n- https://github.com/erming/shout/blob/master/CHANGELOG.md#0512--2015-09-18\n- https://github.com/erming/shout/commit/7ef2da0c832175cea1776a651a3c14051468fdc2\n",
+				"semver": {
+					"vulnerable": "<=0.51.0",
+					"unaffected": ">=0.51.2"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-SHOUT-10169"
+					]
+				},
+				"patches": [
+					{
+						"urls": [
+							"https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/shout/20160913/shout_20160913_0_0_7ef2da0c832175cea1776a651a3c14051468fdc2.patch"
+						],
+						"version": "0.51.0",
+						"modificationTime": "2016-09-13T00:00:00.000Z",
+						"comments": [],
+						"id": "patch:npm:shout:20160913:0"
+					}
+				],
+				"moduleName": "shout",
+				"packageManager": "npm",
+				"language": "js",
+				"id": "npm:shout:20160913",
+				"alternativeIds": [
+					"SNYK-JS-SHOUT-10169"
+				]
+			}
+		],
 		"st": [
 			{
 				"title": "Directory Traversal",
@@ -6780,6 +6898,43 @@
 				"id": "npm:validator:20130705-2",
 				"alternativeIds": [
 					"SNYK-JS-VALIDATOR-10006"
+				]
+			}
+		],
+		"waterline-sequel": [
+			{
+				"title": "SQL Injection",
+				"credit": [
+					"James Hush"
+				],
+				"creationTime": "2016-08-04T03:44:13.903Z",
+				"modificationTime": "2016-10-31T03:44:13.903Z",
+				"publicationTime": "2016-10-31T00:00:00.000Z",
+				"disclosureTime": "2016-08-04T00:00:00.000Z",
+				"description": "## Overview\n['waterline-sequel'](https://www.npmjs.com/package/waterline-sequel) is a helper library for generating SQL queries from the Waterline Query Language.\n\n`waterline-sequel` version `0.5.0` is vulnerable to SQL Injection via `like`, `contains`, `startsWith` or `endsWith` methods.\n\n## Remediation\nUpgrade `waterline-sequel` to version `0.5.1` or greater\n\n## References\n- https://github.com/balderdashy/waterline/issues/1219#issuecomment-157294530\n- https://www.owasp.org/index.php/SQL_Injection\n\n",
+				"semver": {
+					"vulnerable": "<0.5.0",
+					"unaffected": ">= 0.5.1"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					],
+					"CVE": [],
+					"NSP": 115,
+					"ALTERNATIVE": [
+						"SNYK-JS-WATERLINESEQUEL-10168"
+					]
+				},
+				"patches": [],
+				"moduleName": "waterline-sequel",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:waterline-sequel:20160804",
+				"alternativeIds": [
+					"SNYK-JS-WATERLINESEQUEL-10168"
 				]
 			}
 		],
