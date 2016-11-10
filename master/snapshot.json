@@ -2503,6 +2503,42 @@
 				]
 			}
 		],
+		"hoek": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"moduleName": "hoek",
+				"description": "## Overview\n[`hoek`](https://www.npmjs.com/package/hoek) is an npm package used as a central place to store hapi-specific utility methods.\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS).\nThe fix was introduced in version 0.7.3 by adding comprehensive html and javascript escaping.\n\n## Remediation\nUpgrade `hoek` to version 0.7.3 or higher.\n\n## References\n- https://github.com/hapijs/hoek\n- https://github.com/hapijs/hoek/pull/23\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-HOEK-10171"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=0.7.3",
+					"vulnerable": "<0.7.3"
+				},
+				"credit": [
+					"Wyatt Preul"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+				"disclosureTime": "2013-03-25T22:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-11-10T00:00:00.000Z",
+				"modificationTime": "2016-09-25T08:18:13.239Z",
+				"creationTime": "2016-09-25T08:18:13.239Z",
+				"id": "npm:hoek:20130326",
+				"alternativeIds": [
+					"SNYK-JS-HOEK-10171"
+				]
+			}
+		],
 		"hubot-scripts": [
 			{
 				"title": "Command Injection in email.coffee",
@@ -3413,6 +3449,42 @@
 				"id": "npm:libyaml:20140204",
 				"alternativeIds": [
 					"SNYK-JS-LIBYAML-10011"
+				]
+			}
+		],
+		"life_star": [
+			{
+				"title": "Uninitialized Memory Exposure",
+				"credit": [
+					"Сковорода Никита Андреевич (ChALkeR)"
+				],
+				"creationTime": "2016-09-19T00:00:00.000Z",
+				"modificationTime": "2016-09-19T00:00:00.000Z",
+				"publicationTime": "2016-11-10T00:00:00.000Z",
+				"disclosureTime": "2016-02-12T00:00:00.000Z",
+				"description": "## Overview\n[`life_star`](https://www.npmjs.com/package/life_star) is a web server for [`Lively`](https://github.com/LivelyKernel/LivelyKernel).\n\nA possible memory disclosure vulnerability exists when a value of type `number` is provided to the `buffer` and results in concatenation of uninitialized memory to the buffer collection. \nThis is a result of unobstructed use of the `Buffer` constructor, who's [insecure default constructor increases the odds of memory leakage](https://snyk.io/blog/exploiting-buffer/).\n\nYou can read more about the insecure `Buffer` behavior [on our blog](https://snyk.io/blog/exploiting-buffer/).\n\nSimilar vulnerabilities were discovered in [bl](https://snyk.io/vuln/npm:bl:20160119), [request](https://snyk.io/vuln/npm:request:20160119), [mongoose](https://snyk.io/vuln/npm:mongoose:20160116), [ws](https://snyk.io/vuln/npm:ws:20160104) and [sequelize](https://snyk.io/vuln/npm:sequelize:20160115).\n\n## References\n- https://github.com/LivelyKernel/life_star/issues/8\n- https://github.com/LivelyKernel/life_star/compare/0.8.4...0.8.6\n- https://github.com/LivelyKernel/life_star/commit/b8d80b3209dcc26fc1f7784facaad0442b8c4218\n",
+				"semver": {
+					"vulnerable": "<=0.8.4",
+					"unaffected": ">=0.8.6"
+				},
+				"CVSSv3": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [
+						"CWE-201"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-LIFESTAR-10172"
+					]
+				},
+				"patches": [],
+				"moduleName": "life_star",
+				"packageManager": "npm",
+				"language": "js",
+				"id": "npm:life_star:20160212",
+				"alternativeIds": [
+					"SNYK-JS-LIFESTAR-10172"
 				]
 			}
 		],
@@ -7195,7 +7267,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[VladTheEnterprising](https://rubygems.org/gems/VladTheEnterprising) is a series of packages to help using the `Vlad` gem to manage \"enterprise\" environments.\n\nAffected versions of this Gem contain a flaw causing the program to create temporary files insecurely. It is possible for a local attacker to use a symlink attack against the `/tmp/my.cnf.#{target_host}` file they can overwrite arbitrary files, gain access to the MySQL root password, or inject arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4996\n",
+				"description": "## Overview\n[VladTheEnterprising](https://rubygems.org/gems/VladTheEnterprising) is a series of packages to help using the `Vlad` gem to manage \"enterprise\" environments.\nAffected versions of this Gem contain a flaw causing the program to create temporary files insecurely. It is possible for a local attacker to use a symlink attack against the `/tmp/my.cnf.#{target_host}` file they can overwrite arbitrary files, gain access to the MySQL root password, or inject arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4996\n",
 				"moduleName": "VladTheEnterprising",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7219,7 +7291,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[VladTheEnterprising](https://rubygems.org/gems/VladTheEnterprising) is a series of packages to help using the `Vlad` gem to manage \"enterprise\" environments.\n\nAffected versions of this Gem contain a flaw causing the program to create temporary files insecurely. It is possible for a local attacker to use a symlink attack against the `/tmp/my.cnf.#{target_host}` file they can overwrite arbitrary files, gain access to the MySQL root password, or inject arbitrary commands.\na\n## References\n- http://rubysec.com/advisories/CVE-2014-4995\n",
+				"description": "## Overview\n[VladTheEnterprising](https://rubygems.org/gems/VladTheEnterprising) is a series of packages to help using the `Vlad` gem to manage \"enterprise\" environments.\nAffected versions of this Gem contain a flaw causing the program to create temporary files insecurely. It is possible for a local attacker to use a symlink attack against the `/tmp/my.cnf.#{target_host}` file they can overwrite arbitrary files, gain access to the MySQL root password, or inject arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4995\n",
 				"moduleName": "VladTheEnterprising",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -8670,11 +8742,11 @@
 		],
 		"activerecord-jdbc-adapter": [
 			{
-				"title": "ActiveRecord-JDBC-Adapter (AR-JDBC) lib/arjdbc/jdbc/adapter.rb sql.gsub()\nFunction SQL Injection\n",
+				"title": "SQL Injection",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nActiveRecord-JDBC-Adapter (AR-JDBC) contains a flaw that may allow carrying\nout an SQL injection attack. The issue is due to the sql.gsub() function in\nlib/arjdbc/jdbc/adapter.rb not properly sanitizing user-supplied input before\nusing it in SQL queries. This may allow a remote attacker to inject or\nmanipulate SQL queries in the back-end database, allowing for the\nmanipulation or disclosure of arbitrary data.\n\n\n## Remediation\nUpgrade to version `>= 1.2.8` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-114854\n- http://osvdb.org/show/osvdb/114854\n",
+				"description": "## Overview\n[`ActiveRecord-JDBC-Adapter (AR-JDBC)`](https://rubygems.org/gems/activerecord-jdbc-adapter) is a database adapter for Rails' ActiveRecord component designed to be used with JRuby built upon Java's JDBC API for database access.\nAffected versions of this gem are vulnerable to SQL injection attacks. The `sql.gsub()` function in `lib/arjdbc/jdbc/adapter.rb` is not properly sanitizing user-supplied input before using it in SQL queries. This may allow a remote attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## Remediation\nUpgrade to version `>= 1.2.8` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-114854\n",
 				"moduleName": "activerecord-jdbc-adapter",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -8692,6 +8764,7 @@
 						"OSVDB-114854"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:43.000Z",
 				"modificationTime": "2016-09-21T12:36:43.000Z",
@@ -8702,11 +8775,11 @@
 		],
 		"activerecord-oracle_enhanced-adapter": [
 			{
-				"title": "Oracle \"enhanced\" ActiveRecord Gem for Ruby :limit / :offset SQL Injection",
+				"title": "SQL Injection",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nOracle \"enhanced\" ActiveRecord Gem for Ruby contains a flaw that may allow an\nattacker to carry out an SQL injection attack. The issue is due to the\nprogram not properly sanitizing user-supplied input related to the :limit and\n:offset functions. This may allow an attacker to inject or manipulate SQL\nqueries in the back-end database, allowing for the manipulation or disclosure\nof arbitrary data.\n\n\n## Remediation\nUpgrade to version `>= 1.1.8` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-95376\n- http://osvdb.org/show/osvdb/95376\n",
+				"description": "## Overview\n[Oracle \"enhanced\" ActiveRecord adapter](https://rubygems.org/gems/activerecord-oracle_enhanced-adapter) contains useful additional methods for working with new and legacy Oracle databases.\nAffected versions of this gem are vulnerable SQL injection attacks. The issue is due to the program not properly sanitizing user-supplied input related to the `:limit` and `:offset` functions. This may allow an attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## Remediation\nUpgrade to version `>= 1.1.8` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-95376\n",
 				"moduleName": "activerecord-oracle_enhanced-adapter",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -8721,6 +8794,7 @@
 						"OSVDB-95376"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:43.000Z",
 				"modificationTime": "2016-09-21T12:36:43.000Z",
@@ -9036,11 +9110,11 @@
 		],
 		"as": [
 			{
-				"title": "as Gem for Ruby Process List Local Plaintext Credentials Disclosure",
+				"title": "Local Plaintext Credentials Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nas Gem for Ruby contains a flaw that is due to the program displaying\ncredential information in plaintext in the process list. This may\nallow a local attacker to gain access to credential information.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-112683\n- http://osvdb.org/show/osvdb/112683\n",
+				"description": "## Overview\n[`as`](https://rubygems.org/gems/as) is a CLI for anotherservice.com.\nAffected versions of this gem exposes credential information in plaintext in the process list. This may allow a local attacker to gain access to credential information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-112683\n",
 				"moduleName": "as",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9123,11 +9197,11 @@
 		],
 		"auto_select2": [
 			{
-				"title": "auto_select2 Gem for Ruby allows arbitrary search execution\n",
+				"title": "Arbitrary Search Execution",
 				"credit": [
-					"Unknown"
+					"Boris Kocherov"
 				],
-				"description": "## Oerview\nauto_select2 Gem for Ruby contains a flaw that is triggered when handling the\n'params[:default_class_name]' option. This allows users to search any object\nof all given ActiveRecord classes.\n\n\n## Remediation\nUpgrade to version `>= 0.5.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-132800\n- https://github.com/Loriowar/auto_select2/issues/4\n",
+				"description": "## Overview\n[`auto_select2`](https://rubygems.org/gems/auto_select2) provides scripts and helpers for initialize different select2 elements: static, ajax and multi-ajax.\nAffected versions of this gem are vulnerable to arbitrary command execution via the `params[:default_class_name]` option. This allows users to search any object\nof all given ActiveRecord classes.\n\n## Remediation\nUpgrade to version `>= 0.5.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-132800\n- https://github.com/Loriowar/auto_select2/issues/4\n",
 				"moduleName": "auto_select2",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9142,7 +9216,8 @@
 						"OSVDB-132800"
 					]
 				},
-				"severity": "medium",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+				"severity": "high",
 				"creationTime": "2016-09-21T12:36:45.000Z",
 				"modificationTime": "2016-09-21T12:36:45.000Z",
 				"publicationTime": "2016-01-07T22:00:00.000Z",
@@ -9214,11 +9289,11 @@
 		],
 		"backup_checksum": [
 			{
-				"title": "backup_checksum Gem for Ruby /lib/backup/cli/utility.rb Process List Local Plaintext Password Disclosure",
+				"title": "Local Plaintext Password Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nbackup_checksum Gem for Ruby contains a flaw in /lib/backup/cli/utility.rb\nthat is triggered as the program displays password information in plaintext\nin the process list. This may allow a local attacker to gain access to\npassword information.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-108569\n- http://osvdb.org/show/osvdb/108569\n",
+				"description": "## Overview\n[backup_checksum](https://rubygems.org/gems/backup_checksum) is a clone of [backup](http://rubygems.org/gems/backup) with checksum added.\n\n`backup_checksum` contains a flaw in `/lib/backup/cli/utility.rb` that displays password information in plaintext in the process list. This may allow a local attacker to gain access to password information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108569\n",
 				"moduleName": "backup_checksum",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9243,11 +9318,11 @@
 				"id": "SNYK-RUBY-BACKUPCHECKSUM-20164"
 			},
 			{
-				"title": "backup_checksum Gem for Ruby /lib/backup/cli/utility.rb Metacharacter Handling Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nbackup_checksum Gem for Ruby contains a flaw in /lib/backup/cli/utility.rb\nthat is triggered when handling metacharacters. This may allow a remote\nattacker to execute arbitrary commands.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-108570\n- http://osvdb.org/show/osvdb/108570\n",
+				"description": "## Overview\n[backup_checksum](https://rubygems.org/gems/backup_checksum) is a clone of [backup](http://rubygems.org/gems/backup) with checksum added.\n\n`backup_checksum` contains a flaw in `/lib/backup/cli/utility.rb`\nthat is triggered when handling metacharacters. This may allow a remote\nattacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108570\n",
 				"moduleName": "backup_checksum",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9258,7 +9333,8 @@
 						"OSVDB-108570"
 					]
 				},
-				"severity": "high",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:46.000Z",
 				"modificationTime": "2016-09-21T12:36:46.000Z",
 				"publicationTime": "2014-06-29T21:00:00.000Z",
@@ -9363,11 +9439,11 @@
 		],
 		"brbackup": [
 			{
-				"title": "brbackup Gem for Ruby Process List Local Plaintext Password Disclosure",
+				"title": "Local Plaintext Password Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nbrbackup Gem for Ruby contains a flaw that is due to the program exposing\npassword information in plaintext in the process list. This may allow a\nlocal attacker to gain access to password information.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-108901\n- http://osvdb.org/show/osvdb/108901\n",
+				"description": "## Overview\n[`brbackup`](https://rubygems.org/gems/brbackup) Gem exposes password information in plaintext in the process list. This may allow a local attacker to gain access to password information.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-5004/\n",
 				"moduleName": "brbackup",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9392,11 +9468,11 @@
 				"id": "SNYK-RUBY-BRBACKUP-20186"
 			},
 			{
-				"title": "brbackup Gem for Ruby dbuser Variable Shell Metacharacter Injection Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nbrbackup Gem for Ruby contains a flaw that is triggered as input passed\nvia the 'dbuser' variable is not properly sanitized. This may allow a\nremote attacker to inject shell metacharacters and execute arbitrary\ncommands.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-108900\n- http://osvdb.org/show/osvdb/108900\n",
+				"description": "## Overview\n[`brbackup`](https://rubygems.org/gems/brbackup) Gem for Ruby contains a flaw that is triggered as input passed via the `dbuser` variable is not properly sanitized. This may allow a remote attacker to inject shell metacharacters and execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108900\n",
 				"moduleName": "brbackup",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9407,6 +9483,7 @@
 						"OSVDB-108900"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:46.000Z",
 				"modificationTime": "2016-09-21T12:36:46.000Z",
@@ -9415,11 +9492,11 @@
 				"id": "SNYK-RUBY-BRBACKUP-20187"
 			},
 			{
-				"title": "brbackup Gem for Ruby /lib/brbackup.rb name Parameter SQL Injection",
+				"title": "SQL Injection",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nbrbackup Gem for Ruby contains a flaw that may allow carrying out an SQL\ninjection attack. The issue is due to the /lib/brbackup.rb script not\nproperly sanitizing user-supplied input to the 'name' parameter. This may\nallow a remote attacker to inject or manipulate SQL queries in the back-end\ndatabase, allowing for the manipulation or disclosure of arbitrary data.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-108899\n- http://osvdb.org/show/osvdb/108899\n",
+				"description": "## Overview\n[`brbackup`](https://rubygems.org/gems/brbackup) Gem for Ruby contains a flaw that may allow carrying out an SQL injection attack. The issue is due to the `/lib/brbackup.rb` script not properly sanitizing user-supplied input to the `name` parameter. This may allow a remote attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-108899\n",
 				"moduleName": "brbackup",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9430,6 +9507,7 @@
 						"OSVDB-108899"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:46.000Z",
 				"modificationTime": "2016-09-21T12:36:46.000Z",
@@ -9471,11 +9549,11 @@
 		],
 		"builder": [
 			{
-				"title": "Builder Gem for Ruby Tag Name Handling Private Method Exposure",
+				"title": "Information Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nBuilder Gem for Ruby contains a flaw in the handling of tag names. The issue\nis triggered when the program reads tag names from XML data and then calls a\nmethod with that name. With a specially crafted file, a context-dependent\nattacker can call private methods and manipulate data.\n\n\n## Remediation\nUpgrade to version `>= 2.1.2` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-95668\n- http://osvdb.org/show/osvdb/95668\n",
+				"description": "## Overview\n[`builder`](https://rubygems.org/gems/builder) provides a number of builder objects that make creating structured data simple to do.\nAffected version of this gem mishandles reading tag names from XML data and then calls a method with the same name. With a specially crafted file, a context-dependent attacker can call private methods and manipulate data.\n\n## References\n- http://rubysec.com/advisories/OSVDB-95668\n",
 				"moduleName": "builder",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9490,6 +9568,7 @@
 						"OSVDB-95668"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "low",
 				"creationTime": "2016-09-21T12:36:46.000Z",
 				"modificationTime": "2016-09-21T12:36:46.000Z",
@@ -9624,11 +9703,11 @@
 		],
 		"cap-strap": [
 			{
-				"title": "cap-strap Gem for Ruby Process Table Local Plaintext Credential Disclosure",
+				"title": "Local Plaintext Credential Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\ncap-strap Gem for Ruby contains a flaw that is due to the application exposing credential information in plaintext in the process table listing. This may allow a local attacker to gain access to credential information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108574\n- http://osvdb.org/show/osvdb/108574\n",
+				"description": "## Overview\n[`cap-strap`](https://rubygems.org/gems/cap-strap) is a bootstrap for machines.\nAffected versions of this gem exposes credential information in plaintext in the process table listing. This may allow a local attacker to gain access to credential information.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4992\n",
 				"moduleName": "cap-strap",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9653,11 +9732,11 @@
 				"id": "SNYK-RUBY-CAPSTRAP-20168"
 			},
 			{
-				"title": "cap-strap Gem for Ruby Hardcoded Password Crypt Hash Salt Weakness",
+				"title": "Information Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\ncap-strap Gem for Ruby contains a flaw that is due to the application using a hardcoded default 'sa' salt for password encryption. This may allow a local attacker to more easily decrypt passwords.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108575\n- http://osvdb.org/show/osvdb/108575\n",
+				"description": "## Overview\n[`cap-strap`](https://rubygems.org/gems/cap-strap) is a bootstrap for machines.\nAffected versions of this gem use a hardcoded default `sa` salt for password encryption. This may allow a local attacker to more easily decrypt passwords.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108575\n",
 				"moduleName": "cap-strap",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9668,6 +9747,7 @@
 						"OSVDB-108575"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "low",
 				"creationTime": "2016-09-21T12:36:47.000Z",
 				"modificationTime": "2016-09-21T12:36:47.000Z",
@@ -9743,11 +9823,11 @@
 		],
 		"codders-dataset": [
 			{
-				"title": "codders-dataset Gem for Ruby /lib/dataset/database/postgresql.rb Process Table Local Plaintext Credential Disclosure",
+				"title": "Local Plaintext Credential Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\ncodders-dataset Gem for Ruby contains a flaw in /lib/dataset/database/postgresql.rb that is due to the application exposing credential information in plaintext in the process table. This may allow a local attacker to gain access to credential information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108582\n- http://osvdb.org/show/osvdb/108582\n",
+				"description": "## Overview\n[`codders-dataset`](https://rubygems.org/gems/codders-dataset) is a simple API for creating and finding sets of data in your database, built on ActiveRecord.\nAffected versions of this gem expose credential information in plaintext in the process table due to a flaw in `/lib/dataset/database/postgresql.rb`. This may allow a local attacker to gain access to credential information.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4991\n",
 				"moduleName": "codders-dataset",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9763,6 +9843,7 @@
 						"OSVDB-108582"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:47.000Z",
 				"modificationTime": "2016-09-21T12:36:47.000Z",
@@ -9771,11 +9852,11 @@
 				"id": "SNYK-RUBY-CODDERSDATASET-20162"
 			},
 			{
-				"title": "codders-dataset Gem for Ruby /lib/dataset/database/mysql.rb Process Table Local Plaintext Credential Disclosure",
+				"title": "Local Plaintext Credential Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\ncodders-dataset Gem for Ruby contains a flaw in /lib/dataset/database/mysql.rb that is due to the application exposing credential information in plaintext in the process table. This may allow a local attacker to gain access to credential information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108583\n- http://osvdb.org/show/osvdb/108583\n",
+				"description": "## Overview\n[`codders-dataset`](https://rubygems.org/gems/codders-dataset) is a simple API for creating and finding sets of data in your database, built on ActiveRecord.\nAffected versions of this gem expose credential information in plaintext in the process table due to a flaw in `/lib/dataset/database/mysql.rb`. This may allow a local attacker to gain access to credential information.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4991\n",
 				"moduleName": "codders-dataset",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9791,6 +9872,7 @@
 						"OSVDB-108583"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:48.000Z",
 				"modificationTime": "2016-09-21T12:36:48.000Z",
@@ -9801,11 +9883,11 @@
 		],
 		"colorscore": [
 			{
-				"title": "colorscore Gem for Ruby lib/colorscore/histogram.rb Arbitrary Command Injection",
+				"title": "Arbitrary Command Execution",
 				"credit": [
-					"Unknown"
+					"Dirk Zittersteyn"
 				],
-				"description": "## Oerview\nThe contents of the `image_path`, `colors`, and `depth` variables generated\nfrom possibly user-supplied input are passed directly to the shell via\n`convert ...`.\n\nIf a user supplies a value that includes shell metacharacters such as ';', an\nattacker may be able to execute shell commands on the remote system as the\nuser id of the Ruby process.\n\nTo resolve this issue, the aforementioned variables (especially `image_path`)\nmust be sanitized for shell metacharacters.\n\nCurrently, no fix for this issue exists.\n\n\n## References\n- http://rubysec.com/advisories/CVE-2015-7541\n- http://seclists.org/oss-sec/2016/q1/17\n",
+				"description": "## Overview\n[`colorscore`](https://rubygems.org/gems/colorscore) finds the dominant colors in an image and scores them against a user-defined palette.\n\nThe contents of the `image_path`, `colors`, and `depth` variables generated\nfrom possibly user-supplied input are passed directly to the shell via\n`convert ...`.\n\nIf a user supplies a value that includes shell metacharacters such as `;`, an\nattacker may be able to execute shell commands on the remote system as the\nuser id of the Ruby process.\n\nTo resolve this issue, the aforementioned variables (especially `image_path`)\nmust be sanitized for shell metacharacters.\n\n```ruby\n  module Colorscore\n    class Histogram\n      def initialize(image_path, colors=16, depth=8)\n        output = `convert #{image_path} -resize 400x400 -format %c -dither\nNone -quantize YIQ -colors #{colors} -depth #{depth} histogram:info:-`\n        @lines = output.lines.sort.reverse.map(&:strip).reject(&:empty?)\n      end\n```\n\n\n## References\n- http://rubysec.com/advisories/CVE-2015-7541\n- http://seclists.org/oss-sec/2016/q1/17\n",
 				"moduleName": "colorscore",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9816,6 +9898,7 @@
 						"CVE-2015-7541"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:48.000Z",
 				"modificationTime": "2016-09-21T12:36:48.000Z",
@@ -9888,11 +9971,11 @@
 		],
 		"cremefraiche": [
 			{
-				"title": "Creme Fraiche Gem for Ruby File Name Shell Metacharacter Injection Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
-					"Unknown"
+					"Larry W. Cashdollar"
 				],
-				"description": "## Oerview\nCreme Fraiche Gem for Ruby contains a flaw that is due to the program failing to properly sanitize input in file names. With a specially crafted file name that contains shell metacharacters, a context-dependent attacker can execute arbitrary commands\n\n## Remediation\nUpgrade to version `>= 0.6.1` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-93395\n- http://osvdb.org/show/osvdb/93395\n",
+				"description": "## Overview\n[`Creme Fraiche`] Converts email to PDF.\nAffected versions of this gem fail to properly sanitize input in file names.\n\nA malicious email attachment with a file name consisting of shell meta﻿characters could inject commands into the shell.\n\nIf the attacker is allowed to specify a filename (via a web gui) commands could be injected that way as well.\n\n```shell\ncmd = \"pdftk %s updateinfo %s output %s\" %[pdf, infofile, tfile]\n@log.debug('pdftk-command is ' << cmd)\npdftkresult = system( cmd)\n```\n\n## Remediation\nUpgrade to version `>= 0.6.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2090\n",
 				"moduleName": "cremefraiche",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9910,7 +9993,7 @@
 						"OSVDB-93395"
 					]
 				},
-				"CVSSv2": 9.3,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:48.000Z",
 				"modificationTime": "2016-09-21T12:36:48.000Z",
@@ -9953,11 +10036,11 @@
 		],
 		"curl": [
 			{
-				"title": "Curl Gem for Ruby URI Handling Arbitrary Command Injection",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nCurl Gem for Ruby contains a flaw that is triggered during the handling of specially crafted input passed via the URL.  This may allow a context-dependent attacker to potentially execute arbitrary commands by injecting them via a semi-colon (;).\n\n## References\n- http://rubysec.com/advisories/OSVDB-91230\n- http://osvdb.org/show/osvdb/91230\n",
+				"description": "## Overview\n[`Curl`](https://rubygems.org/gems/curl) a gem that providees simple methods to use shell curl.\nAffected versions of this gem are vulnerable to arbitrary command execution due to mishandling specially crafted inputs passed through the URL.  This may allow a context-dependent attacker to potentially execute arbitrary commands by injecting them via a semi-colon `;`.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2617\n",
 				"moduleName": "curl",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9971,7 +10054,7 @@
 						"OSVDB-91230"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:48.000Z",
 				"modificationTime": "2016-09-21T12:36:48.000Z",
@@ -10197,11 +10280,11 @@
 		],
 		"dragonfly": [
 			{
-				"title": "Arbitrary Code Injection",
+				"title": "Arbitrary Command Execution via Windows Shell Escaping",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n\n[`dragonfly`](https://rubygems.org/gems/dragonfly) is a framework that enables on-the-fly processing for any content type. Its uses range from image thumbnails to standard attachments to on-demand text generation. This gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to remote attacker executing arbitrary commands, due to a failure to properly escape a shell that contains injected characters.\n\n## References\n\n- http://rubysec.com/advisories/OSVDB-97854\n",
+				"description": "## Overview\n[`dragonfly`](https://rubygems.org/gems/dragonfly) is a framework that enables on-the-fly processing for any content type. This gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker executing arbitrary commands, due to a failure to properly escape a shell that contains injected characters.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20017](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20017)\n\n## References\n\n- http://rubysec.com/advisories/OSVDB-97854\n",
 				"moduleName": "dragonfly",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10225,11 +10308,11 @@
 				"id": "SNYK-RUBY-DRAGONFLY-20016"
 			},
 			{
-				"title": "Arbitrary Code Injection",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Charlie Somerville"
 				],
-				"description": "## Overview\n\n[`dragonfly`](https://rubygems.org/gems/dragonfly) is a framework that enables on-the-fly processing for any content type. Its uses range from image thumbnails to standard attachments to on-demand text generation. This gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to Arbitrary Code Injection.\n\n## References\n\n- https://github.com/markevans/dragonfly/commit/a8775aacf9e5c81cf11bec34b7afa7f27ddfe277\n- https://groups.google.com/forum/?fromgroups=#!topic/dragonfly-users/3c3WIU3VQTo\n",
+				"description": "## Overview\n[`dragonfly`](https://rubygems.org/gems/dragonfly) is a framework that enables on-the-fly processing for any content type. This gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to Arbitrary Command Execution.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20066](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20066)\n\n## References\n- http://rubysec.com/advisories/CVE-2013-1756\n- https://github.com/markevans/dragonfly/commit/a8775aacf9e5c81cf11bec34b7afa7f27ddfe277\n- https://groups.google.com/forum/?fromgroups=#!topic/dragonfly-users/3c3WIU3VQTo\n",
 				"moduleName": "dragonfly",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10259,11 +10342,11 @@
 				"id": "SNYK-RUBY-DRAGONFLY-20065"
 			},
 			{
-				"title": "Arbitrary Code Injection",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Larry W. Cashdollar"
 				],
-				"description": "## Overview\n\n[`dragonfly`](https://rubygems.org/gems/dragonfly) is a framework that enables on-the-fly processing for any content type. Its uses range from image thumbnails to standard attachments to on-demand text generation. This gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker executing arbitrary commands, due to a failure to properly sanitize input passed via the `imagemagickutils.rb` script.\n\n## References\n\n- http://seclists.org/fulldisclosure/2013/Sep/18\n- http://www.vapid.dhs.org/advisories/fog-dragonfly-0.8.2-cmd-inj.html\n",
+				"description": "## Overview\n[`dragonfly`](https://rubygems.org/gems/dragonfly) is a framework that enables on-the-fly processing for any content type. This gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker executing arbitrary commands, due to a failure to properly sanitize input passed via the `imagemagickutils.rb` script.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20108](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20108)\n\n## References\n- http://rubysec.com/advisories/OSVDB-96798\n- http://seclists.org/fulldisclosure/2013/Sep/18\n- http://www.vapid.dhs.org/advisories/fog-dragonfly-0.8.2-cmd-inj.html\n",
 				"moduleName": "dragonfly",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10290,11 +10373,11 @@
 				"id": "SNYK-RUBY-DRAGONFLY-20109"
 			},
 			{
-				"title": "Arbitrary Code Injection",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n\n[`dragonfly`](https://rubygems.org/gems/dragonfly) is a framework that enables on-the-fly processing for any content type. Its uses range from image thumbnails to standard attachments to on-demand text generation. This gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker gaining read/write access to the filesystem, and executing arbitrary commands via a flaw in uploading & processing. This is that is due to the gem failing to restrict arbitrary commands to imagemagicks convert.\n\n## References\n\n- http://rubysec.com/advisories/OSVDB-110439/\n",
+				"description": "## Overview\n\n[`dragonfly`](https://rubygems.org/gems/dragonfly) is a framework that enables on-the-fly processing for any content type. This gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker gaining read/write access to the filesystem, and executing arbitrary commands via a flaw in uploading & processing. This is that is due to the gem failing to restrict arbitrary commands to imagemagicks convert.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20192](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20192)\n\n## References\n- http://rubysec.com/advisories/OSVDB-110439/\n",
 				"moduleName": "dragonfly",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10320,11 +10403,11 @@
 		],
 		"echor": [
 			{
-				"title": "echor Gem for Ruby backplane.rb perform_request Function Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nEchor Gem for Ruby contains a flaw in backplane.rb in the perform_request\nfunction that is triggered when a semi-colon (;) is injected into a username\nor password. This may allow a context-dependent attacker to inject arbitrary\ncommands if the gem is used in a rails application.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-102129\n- http://osvdb.org/show/osvdb/102129\n",
+				"description": "## Overview\n[`Echor`](https://rubygems.org/gems/echor) is a wrapper for echo.\nAffected versions of this gem contain a flaw in `backplane.rb` in the `perform_request` function that is triggered when a semi-colon `;` is injected into a username or password. This may allow a context-dependent attacker to inject arbitrary commands if the gem is used in a rails application.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-1834\n",
 				"moduleName": "echor",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10346,11 +10429,11 @@
 				"id": "SNYK-RUBY-ECHOR-20140"
 			},
 			{
-				"title": "echor Gem for Ruby Process Listing Local Plaintext Credential Disclosure",
+				"title": "Local Plaintext Credential Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nechor Gem for Ruby contains a flaw that is due to the program exposing\ncredential information in the system process listing. This may allow a local\nattacker to gain access to plaintext credential information.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-102130\n- http://osvdb.org/show/osvdb/102130\n",
+				"description": "## Overview\n[`Echor`](https://rubygems.org/gems/echor) is a wrapper for echo.\nAffected versions of this gem expose credential information in the system process listing. This may allow a local attacker to gain access to plaintext credential information.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-1835\n",
 				"moduleName": "echor",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10589,11 +10672,11 @@
 		],
 		"enum_column3": [
 			{
-				"title": "enum_column3 Gem for Ruby Symbol Creation Remote DoS",
+				"title": "Denial of Service (DoS)",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nThe enum_column3 Gem for Ruby contains a flaw that may allow a remote denial of service. The issue is due to the program typecasting unexpected strings to symbols. This may allow a remote attacker to crash the program.\n\n## References\n- http://rubysec.com/advisories/OSVDB-94679\n- http://osvdb.org/show/osvdb/94679\n",
+				"description": "## Overview\n[`enum_column3`](https://rubygems.org/gems/enum_column3) enables enum type for MySQL db.\nAffected versions of this gem are vulnerable to a denial of service (DoS) attack due to the program typecasting unexpected strings to symbols. This may allow a remote attacker to crash the program.\n\n## References\n- http://rubysec.com/advisories/OSVDB-94679\n",
 				"moduleName": "enum_column3",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10606,6 +10689,7 @@
 						"OSVDB-94679"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:51.000Z",
 				"modificationTime": "2016-09-21T12:36:51.000Z",
@@ -10649,11 +10733,11 @@
 		],
 		"fastreader": [
 			{
-				"title": "fastreader Gem for Ruby URI Handling Arbitrary Command Injection",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nfastreader Gem for Ruby contains a flaw that is triggered during the handling\nof specially crafted input passed via a URL that contains a ';' character.\nThis may allow a context-dependent attacker to potentially execute arbitrary\ncommands.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-91232\n- http://osvdb.org/show/osvdb/91232\n",
+				"description": "## Overview\n[`fastreader`](https://rubygems.org/gems/fastreader) is a terminal-based feed reader.\nAffected versions of this gem are vulnerable to arbitrary command execution due to mishandling of specially crafted input passed via a URL that contains a `;` character. This may allow a context-dependent attacker to potentially execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2615\n",
 				"moduleName": "fastreader",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10667,7 +10751,7 @@
 						"OSVDB-91232"
 					]
 				},
-				"CVSSv2": 9.3,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:51.000Z",
 				"modificationTime": "2016-09-21T12:36:51.000Z",
@@ -10678,11 +10762,11 @@
 		],
 		"fat_free_crm": [
 			{
-				"title": "Fat Free CRM Gem for Ruby allows remote attackers to obtain sensitive informations",
+				"title": "Information Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nFat Free CRM contains a flaw that is triggered when the attacker sends a\ndirect request for XML data. This may allow a remote attacker to gain\naccess to potentially sensitive information.\n\n\n## Remediation\nUpgrade to version `>= 0.13.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101700\n- http://osvdb.org/show/osvdb/101700\n",
+				"description": "## Overview\n[`fat_free_crm`](https://rubygems.org/gems/fat_free_crm) is an open source, Ruby on Rails customer relationship management platform.\nAffected versions of this gem are vulnerable to Information Exposure.\n\n## Details\n`fat_free_crm` contains a flaw that is triggered when the attacker sends a\ndirect request for XML data. This may allow a remote attacker to gain\naccess to sensitive information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101700\n- http://osvdb.org/show/osvdb/101700\n",
 				"moduleName": "fat_free_crm",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10701,7 +10785,7 @@
 						"OSVDB-101700"
 					]
 				},
-				"CVSSv2": 5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:51.000Z",
 				"modificationTime": "2016-09-21T12:36:51.000Z",
@@ -10710,11 +10794,11 @@
 				"id": "SNYK-RUBY-FATFREECRM-20130"
 			},
 			{
-				"title": "Fat Free CRM Gem for Ruby allows remote attackers to inject or manipulate SQL queries",
+				"title": "SQL Injection",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nFat Free CRM contains a flaw that may allow carrying out an SQL injection\nattack. The issue is due to the app/controllers/home_controller.rb script\nnot properly sanitizing user-supplied input to the 'state' parameter or\ninput passed via comments and emails. This may allow a remote attacker to\ninject or manipulate SQL queries in the back-end database, allowing for\nthe manipulation or disclosure of arbitrary data.\n\n\n## Remediation\nUpgrade to version `>= 0.13.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101448\n- http://osvdb.org/show/osvdb/101448\n",
+				"description": "## Overview\n[`fat_free_crm`](https://rubygems.org/gems/fat_free_crm) is an open source, Ruby on Rails customer relationship management platform.\nAffected versions of this gem are vulnerable to SQL injection\nattacks.\n\n## Details\n`fat_free_crm` does not properly sanitize user-supplied input to the `state` parameter or input passed via comments and emails, in the `app/controllers/home_controller.rb` script. This may allow a remote attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101448\n- http://osvdb.org/show/osvdb/101448\n",
 				"moduleName": "fat_free_crm",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10733,7 +10817,7 @@
 						"OSVDB-101448"
 					]
 				},
-				"CVSSv2": 6.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:51.000Z",
 				"modificationTime": "2016-09-21T12:36:51.000Z",
@@ -10742,11 +10826,11 @@
 				"id": "SNYK-RUBY-FATFREECRM-20131"
 			},
 			{
-				"title": "Fat Free CRM Gem for Ruby lack of support for cycling the Rails session secret",
+				"title": "Arbitrary Code Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nFat Free CRM contains a flaw that is due to the application defining a static\nsecurity session token in config/initialiers/secret_token.rb. If a remote\nattacker has explicit knowledge of this token, they can potentially execute\narbitrary code.\n\n\n## Remediation\nUpgrade to version `>= 0.13.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101445\n- http://osvdb.org/show/osvdb/101445\n",
+				"description": "## Overview\n[`fat_free_crm`](https://rubygems.org/gems/fat_free_crm) is an open source, Ruby on Rails customer relationship management platform.\nAffected versions of this gem are vulnerable to Arbitrary Code Execution.\n\n## Details\n`fat_free_crm` contains a flaw that is due to the application defining a static\nsecurity session token in `config/initialiers/secret_token.rb`. If a remote\nattacker has explicit knowledge of this token, they can potentially execute\narbitrary code.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-7222\n",
 				"moduleName": "fat_free_crm",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10765,7 +10849,7 @@
 						"OSVDB-101445"
 					]
 				},
-				"CVSSv2": 5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:51.000Z",
 				"modificationTime": "2016-09-21T12:36:51.000Z",
@@ -10774,11 +10858,11 @@
 				"id": "SNYK-RUBY-FATFREECRM-20132"
 			},
 			{
-				"title": "Fat Free CRM Gem for Ruby contains multiple cross-site request forgery (CSRF) vulnerabilities",
+				"title": "Cross-Site Request Forgery (CSRF/XSRF)",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nFat Free CRM contains a flaw as the application is missing the protect_from_forgery\nstatement, therefore HTTP requests to app/controllers/application_controller.rb\ndo not require multiple steps, explicit confirmation, or a unique token when\nperforming certain sensitive actions. By tricking a user into following a specially\ncrafted link, a context-dependent attacker can perform a Cross-Site Request Forgery\n(CSRF / XSRF) attack causing the victim to perform unspecified actions.\n\n\n## Remediation\nUpgrade to version `>= 0.13.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101446\n- http://osvdb.org/show/osvdb/101446\n",
+				"description": "## Overview\n[`fat_free_crm`](https://rubygems.org/gems/fat_free_crm) is an open source, Ruby on Rails customer relationship management platform.\nAffected versions of this gem are vulnerable to Cross-Site Request Forgery (CSRF/XSRF).\n\n## Details\n`fat_free_crm` is missing the `protect_from_forgery` statement. It does not require multiple steps, explicit confirmation, or a unique token when performing HTTP requests to `app/controllers/application_controller.rb`. By tricking a user into following a specially crafted link, a context-dependent attacker can perform a Cross-Site Request Forgery (CSRF/XSRF) attack causing the victim to perform unspecified actions.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101446\n- http://osvdb.org/show/osvdb/101446\n",
 				"moduleName": "fat_free_crm",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10797,7 +10881,7 @@
 						"OSVDB-101446"
 					]
 				},
-				"CVSSv2": 6.8,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:51.000Z",
 				"modificationTime": "2016-09-21T12:36:51.000Z",
@@ -10806,11 +10890,11 @@
 				"id": "SNYK-RUBY-FATFREECRM-20133"
 			},
 			{
-				"title": "Fat Free CRM Gem for Ruby allows remote attackers to obtain sensitive informations",
+				"title": "Information Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nFat Free CRM contains a flaw in user controllers that is triggered as JSON\nrequests are rendered with a full JSON object. This may allow a remote\nattacker to gain access to potentially sensitive information e.g. other\nusers password hashes.\n\n\n## Remediation\nUpgrade to version `>= 0.13.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101447\n- http://osvdb.org/show/osvdb/101447\n",
+				"description": "## Overview\n[`fat_free_crm`](https://rubygems.org/gems/fat_free_crm) is an open source, Ruby on Rails customer relationship management platform.\nAffected versions of this gem are vulnerable to Information Exposure.\n\n## Details\n`fat_free_crm` contains a flaw in user controllers that is triggered as JSON\nrequests are rendered with a full JSON object. This may allow a remote\nattacker to gain access to sensitive information e.g. other\nusers password hashes.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101447\n- http://osvdb.org/show/osvdb/101447\n",
 				"moduleName": "fat_free_crm",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10829,7 +10913,7 @@
 						"OSVDB-101447"
 					]
 				},
-				"CVSSv2": 5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:51.000Z",
 				"modificationTime": "2016-09-21T12:36:51.000Z",
@@ -10838,11 +10922,11 @@
 				"id": "SNYK-RUBY-FATFREECRM-20134"
 			},
 			{
-				"title": "Fat Free CRM Gem contains a javascript cross-site scripting (XSS) vulnerability",
+				"title": "Cross-site Scripting (XSS)",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nFat Free CRM Gem contains a javascript cross-site scripting (XSS)\nvulnerability. When a user is created/updated using a specifically\ncrafted username, first name or last name, it is possible for\narbitrary javascript to be executed on all Fat Free CRM pages.\nThis code would be executed for all logged in users.\n\n\n## Remediation\nUpgrade to version `>= 0.13.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-110420\n- http://osvdb.org/show/osvdb/110420\n",
+				"description": "## Overview\n[`fat_free_crm`](https://rubygems.org/gems/fat_free_crm) is an open source, Ruby on Rails customer relationship management platform.\nAffected versions of this gem are vulnerable to Cross-site Scripting (XSS) attacks.\n\n## Details\n`fat_free_crm` gem does not contains a Cross-site Scripting (XSS) vulnerability. When a user is created/updated using a specifically crafted username, first name or last name, it is possible for arbitrary javascript to be executed on all `fat_free_crm` pages. This code would be executed for all logged in users.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-5441\n",
 				"moduleName": "fat_free_crm",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10865,7 +10949,7 @@
 						"OSVDB-110420"
 					]
 				},
-				"CVSSv2": 4.3,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:52.000Z",
 				"modificationTime": "2016-09-21T12:36:52.000Z",
@@ -10874,11 +10958,11 @@
 				"id": "SNYK-RUBY-FATFREECRM-20191"
 			},
 			{
-				"title": "Fat Free CRM Gem being vulnerable to CSRF-type attacks",
+				"title": "Cross-Site Request Forgery (CSRF/XSRF)",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nFat Free CRM contains a flaw as HTTP requests to /admin/users do not require\nmultiple steps, explicit confirmation, or a unique token when performing\ncertain sensitive actions. By tricking a user into following a specially\ncrafted link, a context-dependent attacker can perform a Cross-Site Request\nForgery (CSRF / XSRF) attack causing the victim to creating administrative\nusers.\n\n\n## Remediation\nUpgrade to version `>= 0.13.6` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-118465\n- http://osvdb.org/show/osvdb/118465\n",
+				"description": "## Overview\n[`fat_free_crm`](https://rubygems.org/gems/fat_free_crm) is an open source, Ruby on Rails customer relationship management platform.\nAffected versions of this gem are vulnerable to Cross-Site Request Forgery (CSRF/XSRF).\n\n## Details\n`fat_free_crm` does not require multiple steps, explicit confirmation, or a unique token when performing HTTP requests to `/admin/users`. By tricking a user into following a specially crafted link, a context-dependent attacker can perform a Cross-Site Request Forgery (CSRF/XSRF) attack causing the victim to creating administrative\nusers.\n\n## References\n- http://rubysec.com/advisories/CVE-2015-1585\n",
 				"moduleName": "fat_free_crm",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10896,7 +10980,7 @@
 						"OSVDB-118465"
 					]
 				},
-				"CVSSv2": 6.8,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:52.000Z",
 				"modificationTime": "2016-09-21T12:36:52.000Z",
@@ -10907,11 +10991,11 @@
 		],
 		"features": [
 			{
-				"title": "Features Gem for Ruby /tmp/out.html Local XSS",
+				"title": "Cross-site Scripting (XSS)",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nFeatures Gem for Ruby contains a flaw that allows a local cross-site scripting (XSS) attack. This flaw exists because the application does not validate certain input upon submission to /tmp/out.html. This may allow an attacker to create a specially crafted request that would execute arbitrary script code in a user's browser within the trust relationship between their browser and the server.\n\n## References\n- http://rubysec.com/advisories/OSVDB-96975\n- http://osvdb.org/show/osvdb/96975\n",
+				"description": "## Overview\n[`Features`](https://rubygems.org/gems/features) is a plaintext user-stories parser supporting native programming languages.\n\nAffected versions of this gem are vulnerable to a local cross-site scripting  (XSS) attack due to no validation on certain inputs upon submission to `/tmp/out.html`. This may allow an attacker to create a specially crafted request that would execute arbitrary script code in a user's browser within the trust relationship between their browser and the server.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-4318\n",
 				"moduleName": "features",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10927,6 +11011,7 @@
 						"OSVDB-96975"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:52.000Z",
 				"modificationTime": "2016-09-21T12:36:52.000Z",
@@ -10937,11 +11022,11 @@
 		],
 		"fileutils": [
 			{
-				"title": "fileutils Gem for Ruby files_utils.rb /tmp File Symlink Arbitrary File Overwrite",
+				"title": "Symlink Arbitrary File Overwrite",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nfileutils Gem for Ruby contains a flaw as the program creates temporary files insecurely. It is possible for a local attacker to use a symlink attack against temporary files created by files_utils.rb to cause the program to unexpectedly overwrite an arbitrary file.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90715\n- http://osvdb.org/show/osvdb/90715\n",
+				"description": "## Overview\n[`fileutils`](https://rubygems.org/gems/fileutils) is a set of utility classes to extract meta data from different file types.\nAffected versions of this gem are vulnerable to arbitrary file overwrite. It is possible for a local attacker to use a symlink attack against temporary files created by `files_utils.rb` to cause the program to unexpectedly overwrite an arbitrary file.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90715\n- http://osvdb.org/show/osvdb/90715\n",
 				"moduleName": "fileutils",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10952,6 +11037,7 @@
 						"OSVDB-90715"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:52.000Z",
 				"modificationTime": "2016-09-21T12:36:52.000Z",
@@ -10960,11 +11046,11 @@
 				"id": "SNYK-RUBY-FILEUTILS-20077"
 			},
 			{
-				"title": "fileutils Gem for Ruby Temporary Directory Hijacking Weakness",
+				"title": "Directory Hijacking",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nfileutils Gem for Ruby contains a flaw that is due to the program not verifying the existence of a directory before attempting to create it. This may allow a local attacker to create the directory in advance, thus owning any files subsequently written to it.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90716\n- http://osvdb.org/show/osvdb/90716\n",
+				"description": "## Overview\n[`fileutils`](https://rubygems.org/gems/fileutils) is a set of utility classes to extract meta data from different file types.\nAffected versions of this gem are vulnerable to directory hijacking, due to the program not verifying the existence of a directory before attempting to create it. This may allow a local attacker to create the directory in advance, thus owning any files subsequently written to it.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90716\n",
 				"moduleName": "fileutils",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10975,6 +11061,7 @@
 						"OSVDB-90716"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:52.000Z",
 				"modificationTime": "2016-09-21T12:36:52.000Z",
@@ -10983,11 +11070,11 @@
 				"id": "SNYK-RUBY-FILEUTILS-20078"
 			},
 			{
-				"title": "fileutils Gem for Ruby /lib/file_utils/open_office.rb Character Handling Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nfileutils Gem for Ruby contains a flaw in /lib/file_utils/open_office.rb. The issue is triggered when handling a specially crafted URL containing a command after a delimiter (;). This may allow a remote attacker to potentially execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90718\n- http://osvdb.org/show/osvdb/90718\n",
+				"description": "## Overview\n[`fileutils`](https://rubygems.org/gems/fileutils) is a set of utility classes to extract meta data from different file types.\nAffected versions of this gem are vulnerable to arbitrary command execution via a specially crafted URL containing a command after a delimiter (;). This allows a remote attacker to potentially execute arbitrary commands. The flaw is in the `/lib/file_utils/open_office.rb` script.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90718\n",
 				"moduleName": "fileutils",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11006,11 +11093,11 @@
 				"id": "SNYK-RUBY-FILEUTILS-20079"
 			},
 			{
-				"title": "fileutils Gem for Ruby file_utils.rb Crafted URL Handling Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nfileutils Gem for Ruby contains a flaw in file_utils.rb. The issue is triggered when handling a specially crafted URL containing a command after a delimiter (;). This may allow a remote attacker to potentially execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90717\n- http://osvdb.org/show/osvdb/90717\n",
+				"description": "## Overview\n[`fileutils`](https://rubygems.org/gems/fileutils) is a set of utility classes to extract meta data from different file types.\nAffected versions of this gem are vulnerable to arbitrary command execution via a specially crafted URL containing a command after a delimiter (;). This allows a remote attacker to potentially execute arbitrary commands. The flaw is in the `file_utils.rb` script.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90717\n",
 				"moduleName": "fileutils",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11034,11 +11121,11 @@
 		],
 		"flash_tool": [
 			{
-				"title": "flash_tool Gem for Ruby File Download Handling Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nflash_tool Gem for Ruby contains a flaw that is triggered during the handling of downloaded files that contain shell characters. With a specially crafted file, a context-dependent attacker can execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90829\n- http://osvdb.org/show/osvdb/90829\n",
+				"description": "## Overview\n[`flash_tool`](https://rubygems.org/gems/flash_tool) is a wrapper for swftool command line tool.\n\nAffected versions of this gem contain a flaw that is triggered during the handling of downloaded files that contain shell characters. With a specially crafted file, a context-dependent attacker can execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2513\n",
 				"moduleName": "flash_tool",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11052,6 +11139,7 @@
 						"OSVDB-90829"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:52.000Z",
 				"modificationTime": "2016-09-21T12:36:52.000Z",
@@ -11062,11 +11150,11 @@
 		],
 		"flavour_saver": [
 			{
-				"title": "FlavourSaver handlebars helper remote code execution.\n",
+				"title": "Arbitrary Command Execution.",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nFlavourSaver contains a flaw in helper method dispatch where it uses\nKernel::send to call helpers without checking that they are defined\nwithin the template context first.  This allows expressions such as\n{{system \"ls\"}} or {{eval \"puts 1 + 1\"}} to be executed.\n\n\n## Remediation\nUpgrade to version `>= 0.3.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-110796\n- http://osvdb.org/show/osvdb/110796\n",
+				"description": "## Overview\n[`FlavourSaver`](https://rubygems.org/gems/flavour_saver) is a pure-ruby implementation of the Handlebars templating language.\nAffected versions of this gem are vulnerable to arbitrary command execution via the helper method dispatch where it uses `Kernel::send` to call helpers without checking that they are defined within the template context first.  This allows expressions such as `{{system \"ls\"}}` or `{{eval \"puts 1 + 1\"}}` to be executed.\n\n## Remediation\nUpgrade to version `>= 0.3.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-110796\n",
 				"moduleName": "flavour_saver",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11081,6 +11169,7 @@
 						"OSVDB-110796"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:53.000Z",
 				"modificationTime": "2016-09-21T12:36:53.000Z",
@@ -11091,11 +11180,11 @@
 		],
 		"flukso4r": [
 			{
-				"title": "flukso4r Gem for Ruby /lib/flukso/R.rb Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nflukso4r Gem for Ruby contains a flaw in /lib/flukso/R.rb that is due to the application failing to properly validate user-supplied input. This may allow a context-dependent attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101577\n- http://osvdb.org/show/osvdb/101577\n",
+				"description": "## Overview\n[`flukso4r`](https://rubygems.org/gems/flukso4r) provides a library for the Flukso API.\nAffected versions of this gem are vulnerable to arbitrary command executions due to a flaw in the `/lib/flukso/R.rb` causing the application to fail properly validating user-supplied input. This may allow a context-dependent attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-101577\n",
 				"moduleName": "flukso4r",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11106,6 +11195,7 @@
 						"OSVDB-101577"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:53.000Z",
 				"modificationTime": "2016-09-21T12:36:53.000Z",
@@ -11116,11 +11206,11 @@
 		],
 		"fog-dragonfly": [
 			{
-				"title": "Dragonfly Gem for Ruby on Windows Shell Escaping Weakness",
+				"title": "Arbitrary Command Execution via Windows Shell Escaping",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nDragonfly Gem for Ruby contains a flaw that is due to the program failing to\nproperly escape a shell that contains injected characters. This may allow a\ncontext-dependent attacker to potentially execute arbitrary commands.\n\nThis gem has been renamed. Please use \"dragonfly\" from now on.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-97854\n- http://osvdb.org/show/osvdb/97854\n",
+				"description": "## Overview\n[`fog-dragonfly`](https://rubygems.org/gems/fog-dragonfly) is an on-the-fly Rack-based image handling framework.\nThis gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker executing arbitrary commands, due to a failure to properly escape a shell that contains injected characters.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20016](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20016)\n\n## References\n- http://rubysec.com/advisories/OSVDB-97854\n",
 				"moduleName": "fog-dragonfly",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11131,7 +11221,8 @@
 						"OSVDB-97854"
 					]
 				},
-				"severity": "low",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+				"severity": "high",
 				"creationTime": "2016-09-21T12:36:53.000Z",
 				"modificationTime": "2016-09-21T12:36:53.000Z",
 				"publicationTime": "2011-08-31T21:00:00.000Z",
@@ -11139,11 +11230,11 @@
 				"id": "SNYK-RUBY-FOGDRAGONFLY-20017"
 			},
 			{
-				"title": "Dragonfly Gem for Ruby Crafted Request Parsing Remote Code Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
-					"Unknown"
+					"Charlie Somerville"
 				],
-				"description": "## Oerview\nDragonfly Gem for Ruby contains a flaw that is triggered during the parsing\nof a specially crafted request. This may allow a remote attacker to execute\narbitrary code.\n\nThis gem has been renamed. Please use \"dragonfly\" from now on.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-90647\n- http://www.osvdb.org/show/osvdb/90647\n",
+				"description": "## Overview\n[`fog-dragonfly`](https://rubygems.org/gems/fog-dragonfly) is an on-the-fly Rack-based image handling framework.\nThis gem was renamed from `fog-dragonfly` to `dragonfly`.\n\n\nAffected versions of this gem are vulnerable to Arbitrary Command Execution.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20065](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20065)\n\n## References\n- http://rubysec.com/advisories/CVE-2013-1756\n- https://github.com/markevans/dragonfly/commit/a8775aacf9e5c81cf11bec34b7afa7f27ddfe277\n- https://groups.google.com/forum/?fromgroups=#!topic/dragonfly-users/3c3WIU3VQTo\n",
 				"moduleName": "fog-dragonfly",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11161,7 +11252,7 @@
 						"OSVDB-90647"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:53.000Z",
 				"modificationTime": "2016-09-21T12:36:53.000Z",
@@ -11170,11 +11261,11 @@
 				"id": "SNYK-RUBY-FOGDRAGONFLY-20066"
 			},
 			{
-				"title": "fog-dragonfly Gem for Ruby imagemagickutils.rb Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
-					"Unknown"
+					"Larry W. Cashdollar"
 				],
-				"description": "## Oerview\nfog-dragonfly Gem for Ruby contains a flaw that is due to the program\nfailing to properly sanitize input passed via the imagemagickutils.rb script.\nThis may allow a remote attacker to execute arbitrary commands.\n\nThis gem has been renamed. Please use \"dragonfly\" from now on.\n\n\n## Remediation\nUpgrade to version `>= 0.8.4` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-96798\n- http://osvdb.org/show/osvdb/96798\n",
+				"description": "## Overview\n[`fog-dragonfly`](https://rubygems.org/gems/fog-dragonfly) is an on-the-fly Rack-based image handling framework.\nThis gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker executing arbitrary commands, due to a failure to properly sanitize input passed via the `imagemagickutils.rb` script.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20109](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20109)\n\n\n## Remediation\nUpgrade to version `>= 0.8.4` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-96798\n- http://seclists.org/fulldisclosure/2013/Sep/18\n- http://www.vapid.dhs.org/advisories/fog-dragonfly-0.8.2-cmd-inj.html\n",
 				"moduleName": "fog-dragonfly",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11192,7 +11283,7 @@
 						"OSVDB-96798"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:53.000Z",
 				"modificationTime": "2016-09-21T12:36:53.000Z",
@@ -11201,11 +11292,11 @@
 				"id": "SNYK-RUBY-FOGDRAGONFLY-20108"
 			},
 			{
-				"title": "Dragonfly Gem for Ruby Image Uploading & Processing Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nDragonfly Gem for Ruby contains a flaw in Uploading & Processing that is due\nto the gem failing to restrict arbitrary commands to imagemagicks convert.\nThis may allow a remote attacker to gain read/write access to the filesystem\nand execute arbitrary commands.\n\nThis gem has been renamed. Please use \"dragonfly\" from now on.\n\n\n## Remediation\nUpgrade to version `>= 0.8.4` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-110439\n- http://osvdb.org/show/osvdb/110439\n",
+				"description": "## Overview\n[`fog-dragonfly`](https://rubygems.org/gems/fog-dragonfly) is an on-the-fly Rack-based image handling framework.\nThis gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker gaining read/write access to the filesystem, and executing arbitrary commands via a flaw in uploading & processing. This is that is due to the gem failing to restrict arbitrary commands to imagemagicks convert.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20193](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20193)\n\n## Remediation\nUpgrade to version `>= 0.8.4` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-110439\n- http://osvdb.org/show/osvdb/110439\n",
 				"moduleName": "fog-dragonfly",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11221,6 +11312,7 @@
 					]
 				},
 				"severity": "high",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
 				"creationTime": "2016-09-21T12:36:53.000Z",
 				"modificationTime": "2016-09-21T12:36:53.000Z",
 				"publicationTime": "2014-08-24T21:00:00.000Z",
@@ -11230,11 +11322,11 @@
 		],
 		"ftpd": [
 			{
-				"title": "ftpd Gem for Ruby Shell Character Handling Remote Command Injection",
+				"title": "Arbitrary Command Injection",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nftpd Gem for Ruby contains a flaw that is triggered when handling a\nspecially crafted option or filename that contains a shell\ncharacter. This may allow a remote attacker to inject arbitrary\ncommands.\n\n\n## Remediation\nUpgrade to version `>= 0.2.2` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90784\n- http://osvdb.org/show/osvdb/90784\n",
+				"description": "## Overview\n[`ftpd`](https://rubygems.org/gems/ftpd) is a pure Ruby FTP server library.\nAffected versions of this gem are vulnerable to arbitrary command injection.\nThe flaw is triggered when handling a specially crafted option or filename that contains a shell character.\n\n## Remediation\nUpgrade to version `>= 0.2.2` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2512\n",
 				"moduleName": "ftpd",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11252,7 +11344,7 @@
 						"OSVDB-90784"
 					]
 				},
-				"CVSSv2": 9,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:53.000Z",
 				"modificationTime": "2016-09-21T12:36:53.000Z",
@@ -11296,11 +11388,11 @@
 		],
 		"gnms": [
 			{
-				"title": "gnms Gem for Ruby /lib/cmd_parse.rb ip Variable Shell Metacharacter Handling Remote Command Injection",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\ngnms Gem for Ruby contains a flaw in /lib/cmd_parse.rb that is triggered when handling shell metacharacters passed via the 'ip' variable. This may allow a remote attacker to inject arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108594\n- http://osvdb.org/show/osvdb/108594\n",
+				"description": "## Overview\n[`gnms`](https://rubygems.org/gems/gnms) is a graphical tool used to monitor state of network elements.\nAffected versions of this gem are vulnerable to arbitrary code executions via the `/lib/cmd_parse.rb` script. The flaw is triggered when handling shell metacharacters passed via the `ip` variable.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108594\n",
 				"moduleName": "gnms",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11311,7 +11403,8 @@
 						"OSVDB-108594"
 					]
 				},
-				"severity": "high",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:54.000Z",
 				"modificationTime": "2016-09-21T12:36:54.000Z",
 				"publicationTime": "2014-06-29T21:00:00.000Z",
@@ -11321,11 +11414,11 @@
 		],
 		"gollum": [
 			{
-				"title": "gollum Upload File Functionality Permits Arbitrary File Access",
+				"title": "Arbitrary File Access",
 				"credit": [
-					"Unknown"
+					"Bart Kamphorst"
 				],
-				"description": "## Oerview\nThe gollum gem contains a flaw in its upload file functionality that can\nallow arbitrary file access. This occurs due to a lack of type checking\nwhen handling temporary files during the upload process.\n\n\n## Remediation\nUpgrade to version `>= 4.0.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2015-7314\n- https://github.com/gollum/gollum/commit/ce68a88293ce3b18c261312392ad33a88bb69ea1\n",
+				"description": "## Overview\n[`gollum`](https://rubygems.org/gems/gollum) is a simple, Git-powered wiki with an API and local frontend.\nAffected versions of this gem are vulnerable to arbitrary file access via its upload file functionality lacking validation when handling temporary files during the upload process.\n\n## Remediation\nUpgrade to version `>= 4.0.1` or greater.\n\n## References\n- [Rubysec](http://rubysec.com/advisories/CVE-2015-7314)\n- [Github commit]( https://github.com/gollum/gollum/commit/ce68a88293ce3b18c261312392ad33a88bb69ea1)\n",
 				"moduleName": "gollum",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11340,6 +11433,7 @@
 						"CVE-2015-7314"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:54.000Z",
 				"modificationTime": "2016-09-21T12:36:54.000Z",
@@ -11350,11 +11444,11 @@
 		],
 		"gollum-grit_adapter": [
 			{
-				"title": "gollum-grit_adapter Search Functionality Allows Arbitrary Command\nExecution\n",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nThe gollum-grit_adapter gem contains a flaw that can allow arbitrary\ncommand execution. \n\nGrit implements its search functionality by shelling out to `git grep`. In \nturn, `git grep` takes a `-O` or `--open-files-in-pages` option that will \npipe the results of `grep` to an arbitrary process. By failing to properly\nsanitize user input search parameters, an attacker can thus perform command \nexecution.\n\nNote that the grep result must find the string 'master' (or \nwhatever is the default branch that gollum uses) in any of the wiki's\ndocuments for this to succeed.\n\n\n## Remediation\nUpgrade to version `>= 0.1.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-9489\n- https://github.com/gollum/gollum/issues/913\n",
+				"description": "## Overview\n[`gollum-grit_adapter`](https://rubygems.org/gems/gollum-grit_adapter) is an adapter for Gollum to use Grit at the backend.\nAffected versions of this gem are vulnerable to arbitrary command execution.\n\nGrit implements its search functionality by shelling out to `git grep`. In\nturn, `git grep` takes a `-O` or `--open-files-in-pages` option that will\npipe the results of `grep` to an arbitrary process. By failing to properly\nsanitize user input search parameters, an attacker can thus perform command\nexecution.\n\nNote that the grep result must find the string `master` (or\nwhatever is the default branch that gollum uses) in any of the wiki's\ndocuments for this to succeed.\n\n## Remediation\nUpgrade to version `>= 0.1.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-9489\n- https://github.com/gollum/gollum/issues/913\n",
 				"moduleName": "gollum-grit_adapter",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11369,6 +11463,7 @@
 						"CVE-2014-9489"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:54.000Z",
 				"modificationTime": "2016-09-21T12:36:54.000Z",
@@ -11379,11 +11474,11 @@
 		],
 		"gtk2": [
 			{
-				"title": "Ruby-GNOME2 gtk/src/rbgtkmessagedialog.c Gtk::MessageDialog.new() Function Format String",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nFormat string vulnerability in the mdiag_initialize function in\ngtk/src/rbgtkmessagedialog.c in Ruby-GNOME 2 (aka Ruby/Gnome2) 0.16.0, and\nSVN versions before 20071127, allows context-dependent attackers to execute\narbitrary code via format string specifiers in the message parameter.\n\n\n## Remediation\nUpgrade to version `> 0.16.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-40774\n- http://osvdb.org/show/osvdb/40774\n",
+				"description": "## Overview\n[`GTK2`](https://rubygems.org/gems/gtk2) is a Ruby binding of GTK+-2.x.\nAffected versions of this gem are vulnerable to arbitrary command execution via format string specifiers in the message parameter (the `mdiag_initialize` function in `gtk/src/rbgtkmessagedialog.c`)\n\n## Remediation\nUpgrade to version `0.16.0` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2007-6183\n",
 				"moduleName": "gtk2",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11401,7 +11496,7 @@
 						"OSVDB-40774"
 					]
 				},
-				"CVSSv2": 6.8,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:54.000Z",
 				"modificationTime": "2016-09-21T12:36:54.000Z",
@@ -11412,11 +11507,11 @@
 		],
 		"gyazo": [
 			{
-				"title": "gyazo Gem for Ruby client.rb Metacharacter Handling Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\ngyazo Gem for Ruby contains a flaw in client.rb that is triggered when handling metacharacters. This may allow a remote attacker to execute arbitrary commands.\n\n## Remediation\nUpgrade to version `>= 2.0.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108563\n- http://osvdb.org/show/osvdb/108563\n",
+				"description": "## Overview\n[`gyazo`](https://rubygems.org/gems/gyazo) is an API wrapper for gyazo.com.\nAffected versions of this gem are vulnerable to arbitrary command execution via the `client.rb` script mishandling metacharacters.\n\n## Remediation\nUpgrade to version `>= 2.0.0` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4994\n",
 				"moduleName": "gyazo",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11434,6 +11529,7 @@
 						"OSVDB-108563"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:54.000Z",
 				"modificationTime": "2016-09-21T12:36:54.000Z",
@@ -11507,11 +11603,11 @@
 		],
 		"httparty": [
 			{
-				"title": "httparty Gem for Ruby Type Casting Parameter Parsing Remote Code Execution",
+				"title": "Arbitrary Code Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nhttparty Gem for Ruby contains a flaw that is triggered when a type casting\nerror occurs during the parsing of parameters. This may allow a\ncontext-dependent attacker to potentially execute arbitrary code.\n\n\n## Remediation\nUpgrade to version `>= 0.10.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90741\n- http://osvdb.org/show/osvdb/90741\n",
+				"description": "## Overview\n[`httparty`](https://rubygems.org/gems/httparty) makes consuming restful web services easy.\nAffected versions of this gem contains a flaw that is triggered when a type casting error occurs during the parsing of parameters. This may allow a context-dependent attacker to potentially execute arbitrary code.\n\n## Remediation\nUpgrade to version `>= 0.10.0` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-1801\n",
 				"moduleName": "httparty",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11529,7 +11625,7 @@
 						"OSVDB-90741"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:54.000Z",
 				"modificationTime": "2016-09-21T12:36:54.000Z",
@@ -11637,11 +11733,11 @@
 		],
 		"jruby-openssl": [
 			{
-				"title": "jruby-openssl Gem for JRuby fails to do proper certificate validation",
+				"title": "Authentication Bypass",
 				"credit": [
-					"Unknown"
+					"Hiroshi Nakamura"
 				],
-				"description": "## Oerview\nA security problem involving peer certificate verification was found where\nfailed verification silently did nothing, making affected applications\nvulnerable to attackers. Attackers could lead a client application to believe\nthat a secure connection to a rogue SSL server is legitimate. Attackers could\nalso penetrate client-validated SSL server applications with a dummy\ncertificate.\n\n\n## Remediation\nUpgrade to version `>= 0.6` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2009-4123\n- http://jruby.org/2009/12/07/vulnerability-in-jruby-openssl\n",
+				"description": "## Overview\n[`JRuby-OpenSSL`](https://rubygems.org/gems/jruby-openssl) is an add-on gem for JRuby that emulates the Ruby OpenSSL native library.\nA security problem involving peer certificate verification was found where\nfailed verification silently did nothing, making affected applications\nvulnerable to attackers. Attackers could lead a client application to believe\nthat a secure connection to a rogue SSL server is legitimate. Attackers could\nalso penetrate client-validated SSL server applications with a dummy\ncertificate.\n\n## Remediation\nUpgrade to version `>= 0.6` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2009-4123\n- http://jruby.org/2009/12/07/vulnerability-in-jruby-openssl\n",
 				"moduleName": "jruby-openssl",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11656,6 +11752,7 @@
 						"CVE-2009-4123"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:55.000Z",
 				"modificationTime": "2016-09-21T12:36:55.000Z",
@@ -11664,14 +11761,14 @@
 				"id": "SNYK-RUBY-JRUBYOPENSSL-20007"
 			}
 		],
-		"jruby-sandbox": [
+		"jruby_sandbox": [
 			{
-				"title": "jruby-sandbox Java Class Importation Sandbox Bypass",
+				"title": "Arbitrary Code Execution via Sandbox Bypass",
 				"credit": [
-					"Unknown"
+					"joernchen"
 				],
-				"description": "## Oerview\njruby-sandbox contains a flaw that is triggered when importing Java Classes.\nThis may allow a remote attacker to bypass the sandbox for code execution.\n\n\n## Remediation\nUpgrade to version `>= 0.2.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-106279\n- http://www.phenoelit.org/stuff/jruby-sandbox.txt\n",
-				"moduleName": "jruby-sandbox",
+				"description": "## Overview\n[`jruby_sandbox`](https://rubygems.org/gems/jruby_sandbox) is a version of `_why's Freaky Freaky Sandbox` for JRuby.\nAffected versions of this gem are vulnerable to sandbox bypassing for arbitrary code execution while importing Java classes.\n\n## Details\n`jruby_sandbox` aims to allow safe execution of user given Ruby code within a JRuby [0] runtime. However via import of Java classes it is possible to circumvent those protections and execute arbitrary code outside the sandboxed environment.\n\n**Example:**\n```ruby\nrequire 'sandbox'\nsand = Sandbox.safe\nsand.activate!\n\nbegin\n  sand.eval(\"print `id`\")\nrescue Exception => e\n  puts \"fail via Ruby ;)\"\nend\nputs \"Now for some Java\"\n\nsand.eval(\"Kernel.send :java_import, 'java.lang.ProcessBuilder'\")\nsand.eval(\"Kernel.send :java_import, 'java.util.Scanner'\")\nsand.eval(\"s = Java::java.util.Scanner.new( \" +\n          \"Java::java.lang.ProcessBuilder.new('sh','-c','id')\" +\n          \".start.getInputStream  ).useDelimiter(\\\"\\x00\\\").next\")\nsand.eval(\"print s\")\n```\n\n## Remediation\nUpgrade to version `>= 0.2.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-106279\n- http://www.phenoelit.org/stuff/jruby-sandbox.txt\n",
+				"moduleName": "jruby_sandbox",
 				"language": "ruby",
 				"packageManager": "rubygems",
 				"semver": {
@@ -11685,6 +11782,7 @@
 						"OSVDB-106279"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:55.000Z",
 				"modificationTime": "2016-09-21T12:36:55.000Z",
@@ -11820,11 +11918,11 @@
 		],
 		"kafo": [
 			{
-				"title": "Kafo default_values.yaml Insecure Permissions Local Information Disclosure",
+				"title": "Information Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nKafo contains a flaw that is due to the program using insecure world-readable permissions for the default_values.yaml file. This may allow a local attacker to gain access to password and other unspecified sensitive information located within the file.\n\n## Remediation\nUpgrade to version `~> 0.3.17` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-106826\n- http://osvdb.org/show/osvdb/106826\n",
+				"description": "## Overview\n[`Kafo`](https://rubygems.org/gems/kafo) is a gem for making puppet-based installations user friendly.\nAffected versions of this gem are vulnerable to sensitive information exposure due to the program using insecure world-readable permissions for the `default_values.yaml` file. This may allow a local attacker to gain access to password and other unspecified sensitive information located within the file.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-0135\n",
 				"moduleName": "kafo",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11845,7 +11943,7 @@
 						"OSVDB-106826"
 					]
 				},
-				"CVSSv2": 1.9,
+				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "low",
 				"creationTime": "2016-09-21T12:36:55.000Z",
 				"modificationTime": "2016-09-21T12:36:55.000Z",
@@ -11856,11 +11954,11 @@
 		],
 		"kajam": [
 			{
-				"title": "kajam Gem for Ruby /dataset/lib/dataset/database/postgresql.rb Process List Local Plaintext Password Disclosure",
+				"title": "Local Plaintext Password Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nkajam Gem for Ruby contains a flaw in\n/dataset/lib/dataset/database/postgresql.rb that is triggered as the program\nexposes the MySQL or PostgreSQL password in the process list. This may allow\na local attacker to gain access to password information.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-108529\n- http://osvdb.org/show/osvdb/108529\n",
+				"description": "## Overview\n[`kajam`](https://rubygems.org/gems/kajam) is a lightweight content management system for middle and small teams.\nAffected versions of this gem expose the MySQL or PostgreSQL password in the process list, due to a flaw in `/dataset/lib/dataset/database/postgresql.rb`.  This may allow a local attacker to gain access to password information.\n\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4999\n",
 				"moduleName": "kajam",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11885,11 +11983,11 @@
 				"id": "SNYK-RUBY-KAJAM-20170"
 			},
 			{
-				"title": "kajam Gem for Ruby /dataset/lib/dataset/database/postgresql.rb Metacharacter Handling Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nkajam Gem for Ruby contains a flaw in\n/dataset/lib/dataset/database/postgresql.rb that is triggered when handling\nmetacharacters. This may allow a remote attacker to execute arbitrary\ncommands.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-108530\n- http://osvdb.org/show/osvdb/108530\n",
+				"description": "## Overview\n[`kajam`](https://rubygems.org/gems/kajam) is a lightweight content management system for middle and small teams.\nAffected versions of this gem are vulnerable to arbitrary command execution due to a flaw in `/dataset/lib/dataset/database/postgresql.rb` that is triggered when handling metacharacters. This may allow a remote attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108530\n",
 				"moduleName": "kajam",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11900,7 +11998,8 @@
 						"OSVDB-108530"
 					]
 				},
-				"severity": "high",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:56.000Z",
 				"modificationTime": "2016-09-21T12:36:56.000Z",
 				"publicationTime": "2014-06-29T21:00:00.000Z",
@@ -11910,11 +12009,11 @@
 		],
 		"karo": [
 			{
-				"title": "karo Gem for Ruby db.rb Metacharacter Handling Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nkaro Gem for Ruby contains a flaw in db.rb that is triggered when handling\nmetacharacters. This may allow a remote attacker to execute arbitrary\ncommands.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-108573\n- http://osvdb.org/show/osvdb/108573\n",
+				"description": "## Overview\n[`karo`](https://rubygems.org/gems/karo) is an SSH toolbox to make running logs, sync, cache commands easier for a given rails app.\nAffected versions of this gem are vulnerable to an arbitrary command execution attack via the `db.rb` script that contains a flaw triggered when handling metacharacters.  \n\n## References\n- http://rubysec.com/advisories/OSVDB-108573\n",
 				"moduleName": "karo",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11925,6 +12024,7 @@
 						"OSVDB-108573"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:56.000Z",
 				"modificationTime": "2016-09-21T12:36:56.000Z",
@@ -11935,11 +12035,11 @@
 		],
 		"karteek-docsplit": [
 			{
-				"title": "Karteek Docsplit Gem for Ruby text_extractor.rb File Name Shell Metacharacter Injection Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nKarteek Docsplit Gem for Ruby contains a flaw that is due to the program failing to properly sanitize input passed to text_extractor.rb. With a specially crafted file name that contains shell metacharacters, a context-dependent attacker can execute arbitrary commands\n\n## References\n- http://rubysec.com/advisories/OSVDB-92117\n- http://osvdb.org/show/osvdb/92117\n",
+				"description": "## Overview\nKarteek Docsplit contains a flaw that is due to the program failing to properly sanitize input passed to `text_extractor.rb`. With a specially crafted file name that contains shell metacharacters, a context-dependent attacker can execute arbitrary commands\n\n## References\n- http://rubysec.com/advisories/CVE-2013-1933\n",
 				"moduleName": "karteek-docsplit",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11953,7 +12053,7 @@
 						"OSVDB-92117"
 					]
 				},
-				"CVSSv2": 9.3,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:56.000Z",
 				"modificationTime": "2016-09-21T12:36:56.000Z",
@@ -11964,11 +12064,11 @@
 		],
 		"kcapifony": [
 			{
-				"title": "kcapifony Gem for Ruby /lib/ksymfony1.rb Process List Local Plaintext Password Disclosure",
+				"title": "Local Plaintext Password Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nkcapifony Gem for Ruby contains a flaw in /lib/ksymfony1.rb that is triggered as the program displays password information in plaintext in the process list. This may allow a local attacker to gain access to password information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108571\n- http://osvdb.org/show/osvdb/108571\n",
+				"description": "## Overview\n[`kcapifony`] is an open source tool for running scripts on multiple servers.\nAffected versions of this gem displays password information in plaintext in the process list due to a flaw in `/lib/ksymfony1.rb`. This may allow a local attacker to gain access to password information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108571\n",
 				"moduleName": "kcapifony",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11993,11 +12093,11 @@
 				"id": "SNYK-RUBY-KCAPIFONY-20174"
 			},
 			{
-				"title": "kcapifony Gem for Ruby /lib/ksymfony1.rb Metacharacter Handling Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nkcapifony Gem for Ruby contains a flaw in /lib/ksymfony1.rb that is triggered when handling metacharacters. This may allow a remote attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108572\n- http://osvdb.org/show/osvdb/108572\n",
+				"description": "## Overview\n[`kcapifony`] is an open source tool for running scripts on multiple servers.\nAffected versions of this gem contain a flaw in `/lib/ksymfony1.rb` that is triggered when handling metacharacters. This may allow a remote attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108572\n",
 				"moduleName": "kcapifony",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12008,7 +12108,8 @@
 						"OSVDB-108572"
 					]
 				},
-				"severity": "high",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:56.000Z",
 				"modificationTime": "2016-09-21T12:36:56.000Z",
 				"publicationTime": "2014-06-29T21:00:00.000Z",
@@ -12018,11 +12119,11 @@
 		],
 		"kelredd-pruview": [
 			{
-				"title": "kelredd-pruview Gem for Ruby /lib/pruview/document.rb File Name Shell Metacharacter Injection Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nkelredd-pruview Gem for Ruby contains a flaw in /lib/pruview/document.rb. The issue is triggered during the handling of a specially crafted file name that contains injected shell metacharacters. This may allow a context-dependent attacker to potentially execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-92228\n- http://osvdb.org/show/osvdb/92228\n",
+				"description": "## Overview\n[`kelredd-pruview`](https://rubygems.org/gems/kelredd-pruview) generates image previews (thumbnails) of various files.\nAffected versions of this gem are vulnerable to arbitrary command execution via the `/lib/pruview/document.rb` script. The issue is triggered during the handling of a specially crafted file name that contains injected shell metacharacters.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-1947\n",
 				"moduleName": "kelredd-pruview",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12036,7 +12137,7 @@
 						"OSVDB-92228"
 					]
 				},
-				"CVSSv2": 9.3,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:56.000Z",
 				"modificationTime": "2016-09-21T12:36:56.000Z",
@@ -12047,11 +12148,11 @@
 		],
 		"kompanee-recipes": [
 			{
-				"title": "kompanee-recipes Gem for Ruby /lib/kompanee-recipes/heroku.rb Multiple Variable Handling Remote Command Execution Weakness",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nkompanee-recipes Gem for Ruby contains a flaw in\n/lib/kompanee-recipes/heroku.rb that is triggered when handling shell\nmetacharacters passed via the 'password', 'user', 'deploy_name', and\n'application' variables. This may allow a remote attacker to execute\narbitrary commands.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-108593\n- http://osvdb.org/show/osvdb/108593\n",
+				"description": "## Overview\n[`kompanee-recipes`](https://rubygems.org/gems/kompanee-recipes) is a gem containing \"recipies\" for [`The Kompanee`](https://github.com/thekompanee).\nAffected versions of this gem contain a flaw in `/lib/kompanee-recipes/heroku.rb` that is triggered when handling shell metacharacters passed via the `password`, `user`, `deploy_name`, and `application` variables. This may allow a remote attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108593\n",
 				"moduleName": "kompanee-recipes",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12062,7 +12163,8 @@
 						"OSVDB-108593"
 					]
 				},
-				"severity": "high",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:56.000Z",
 				"modificationTime": "2016-09-21T12:36:56.000Z",
 				"publicationTime": "2014-06-29T21:00:00.000Z",
@@ -12072,11 +12174,11 @@
 		],
 		"lawn-login": [
 			{
-				"title": "lawn-login Gem for Ruby /lib/lawn.rb Process Table Local Plaintext Password Disclosure",
+				"title": "Local Plaintext Password Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nlawn-login Gem for Ruby contains a flaw in /lib/lawn.rb that is due to the application exposing password information in plaintext in the process table. This may allow a local attacker to gain access to password information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108576\n- http://osvdb.org/show/osvdb/108576\n",
+				"description": "## Overview\n[`lawn-login`](https://rubygems.org/gems/lawn-login) is a small gem which provides a secure method of logging into the GATech LAWN network.\nAffected versions of this gem expose password information in plaintext in the process table due to a flaw in `/lib/lawn.rb`. This may allow a local attacker to gain access to password information.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-5000\n",
 				"moduleName": "lawn-login",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12103,11 +12205,11 @@
 		],
 		"ldap_fluff": [
 			{
-				"title": "Red Hat Subscription Asset Manager rubygem-ldap_fluff Active Directory Authentication Bypass",
+				"title": "Authentication Bypass",
 				"credit": [
-					"Unknown"
+					"Og Maciel"
 				],
-				"description": "## Oerview\nRed Hat Subscription Asset Manager contains a flaw in the rubygem-ldap_fluff component. The issue is triggered when using Microsoft Active Directory server as the authentication back-end. This may result in authentication no longer being enforced, allowing a remote attacker to trivially bypass it.\n\n## Remediation\nUpgrade to version `>= 0.1.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90579\n- http://osvdb.org/show/osvdb/90579\n",
+				"description": "## Overview\n[`ldap_fluff`](https://rubygems.org/gems/ldap_fluff) is a simple library for binding & group querying on top of various LDAP implementations.\nAffected versions of the gem are vulnerable to authentication bypass. When using Microsoft Active Directory server as the authentication back-end, authentication is no longer being enforced, allowing a remote attacker to trivially bypass it.\n\n## Remediation\nUpgrade to version `>= 0.1.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90579\n- https://access.redhat.com/security/cve/cve-2012-5604\n",
 				"moduleName": "ldap_fluff",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12125,7 +12227,7 @@
 						"OSVDB-90579"
 					]
 				},
-				"CVSSv2": 5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:57.000Z",
 				"modificationTime": "2016-09-21T12:36:57.000Z",
@@ -12136,11 +12238,11 @@
 		],
 		"ldoce": [
 			{
-				"title": "ldoce Gem for Ruby MP3 URL Shell Metacharacter Injection Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nldoce Gem for Ruby contains a flaw that is triggered during the handling of a specially crafted URL or filename for MP3 files that have shell metacharacters injected in to it. This may allow a context-dependent attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-91870\n- http://osvdb.org/show/osvdb/91870\n",
+				"description": "## Overview\n[`ldoce`](https://rubygems.org/gems/ldoce) is an API for the Longman Dictionary of Contemporary English.\nAffected versions of this gem are vulnerable to arbitrary command execution by context-dependent attackers.\nSpecially crafted URL or filename for MP3 files that have shell metacharacters injected in to it are not properly handled.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-1911\n",
 				"moduleName": "ldoce",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12154,7 +12256,7 @@
 						"OSVDB-91870"
 					]
 				},
-				"CVSSv2": 6.8,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:57.000Z",
 				"modificationTime": "2016-09-21T12:36:57.000Z",
@@ -12165,11 +12267,11 @@
 		],
 		"lean-ruport": [
 			{
-				"title": "lean-ruport Gem for Ruby /test/tc_database.rb Process Table Local Plaintext MySQL Password Disclosure",
+				"title": "Local Plaintext Password Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nlean-ruport Gem for Ruby contains a flaw in /test/tc_database.rb that is due to the application exposing MySQL password information in plaintext in the process table. This may allow a local attacker to gain access to MySQL password information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108581\n- http://osvdb.org/show/osvdb/108581\n",
+				"description": "## Overview\n[`lean-ruport`](https://rubygems.org/gems/lean-ruport) is a  report generation engine that allows users to generate custom ERb templates and easily query various forms of SQL databases via DBI.\nAffected versions of this gem are vulnerable due to the `/test/tc_database.rb` script exposing MySQL password information in plaintext in the process table. This may allow a local attacker to gain access to MySQL password information.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4998\n",
 				"moduleName": "lean-ruport",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12196,11 +12298,11 @@
 		],
 		"lingq": [
 			{
-				"title": "lingq Gem for Ruby client.rb Metacharacter Handling Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nlingq Gem for Ruby contains a flaw in client.rb that is triggered when handling metacharacters. This may allow a remote attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108585\n- http://osvdb.org/show/osvdb/108585\n",
+				"description": "## Overview\n[`lingq`](https://rubygems.org/gems/lingq) is a gem for interacting with the API of lingq.com.\nAffected versions of this gem contain a flaw in `client.rb` that is triggered when handling metacharacters. This may allow a remote attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108585\n",
 				"moduleName": "lingq",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12211,7 +12313,8 @@
 						"OSVDB-108585"
 					]
 				},
-				"severity": "high",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:57.000Z",
 				"modificationTime": "2016-09-21T12:36:57.000Z",
 				"publicationTime": "2014-06-29T21:00:00.000Z",
@@ -12225,7 +12328,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nLoofah Gem for Ruby contains a flaw that allows a remote cross-site\nscripting (XSS) attack. This flaw exists because the\nLoofah::HTML::Document\\#text function passes properly sanitized\nuser-supplied input to the Loofah::XssFoliate and\nLoofah::Helpers\\#strip_tags functions which convert input back to\ntext. This may allow an attacker to create a specially crafted\nrequest that would execute arbitrary script code in a user's browser\nwithin the trust relationship between their browser and the server.\n\n\n## Remediation\nUpgrade to version `>=  0.4.6` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90945\n- http://www.osvdb.org/show/osvdb/90945\n",
+				"description": "## Overview\nLoofah Gem for Ruby contains a flaw that allows a remote cross-site\nscripting (XSS) attack. This flaw exists because the\nLoofah::HTML::Document\\#text function passes properly sanitized\nuser-supplied input to the Loofah::XssFoliate and\nLoofah::Helpers\\#strip_tags functions which convert input back to\ntext. This may allow an attacker to create a specially crafted\nrequest that would execute arbitrary script code in a user's browser\nwithin the trust relationship between their browser and the server.\n\n\n## Remediation\nUpgrade to version `>=  0.4.6` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90945\n- http://www.osvdb.org/show/osvdb/90945\n",
 				"moduleName": "loofah",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12253,11 +12356,11 @@
 		],
 		"lynx": [
 			{
-				"title": "lynx Gem for Ruby lib/lynx/pipe/run.rb Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nlynx Gem for Ruby contains a flaw in lib/lynx/pipe/run.rb that may allow a remote attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108579\n- http://osvdb.org/show/osvdb/108579\n",
+				"description": "## Overview\n[`lynx`](https://rubygems.org/gems/lynx) is a command line wrapper for MySQL.\nAffected versions of this gem are vulnerable to arbitrary command executions due to a flaw in `lib/lynx/pipe/run.rb`.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108579\n",
 				"moduleName": "lynx",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12276,11 +12379,11 @@
 				"id": "SNYK-RUBY-LYNX-20160"
 			},
 			{
-				"title": "lynx Gem for Ruby command/basic.rb Process Table Local Plaintext Password Disclosure",
+				"title": "Local Plaintext Password Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nlynx Gem for Ruby contains a flaw in command/basic.rb that is due to the application exposing password information in plaintext in the process table. This may allow a local attacker to gain access to password information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108580\n- http://osvdb.org/show/osvdb/108580\n",
+				"description": "## Overview\n[`lynx`](https://rubygems.org/gems/lynx) is a command line wrapper for MySQL.\nAffected versions of this gem are vulnerable due to a flaw in `command/basic.rb` that exposes password information in plaintext in the process table. This may allow a local attacker to gain access to password information.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-5002\n",
 				"moduleName": "lynx",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12435,7 +12538,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nMapbox.js versions 1.x prior to 1.6.5 and 2.x prior to 2.1.7 are vulnerable\nto a cross-site-scripting attack in certain uncommon usage scenarios.\n\nIf you use L.mapbox.map or L.mapbox.tileLayer to load untrusted TileJSON\ncontent from a non-Mapbox URL, it is possible for a malicious user with\ncontrol over the TileJSON content to inject script content into the\n\"attribution\" value of the TileJSON which will be executed in the context of\nthe page using Mapbox.js.\n\nSuch usage is uncommon. The following usage scenarios are not vulnerable:\n\n* only trusted TileJSON content is loaded\n* TileJSON content comes only from mapbox.com URLs\n* a Mapbox map ID is supplied, rather than a TileJSON URL\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-129854\n- https://nodesecurity.io/advisories/49\n",
+				"description": "## Overview\nMapbox.js versions 1.x prior to 1.6.5 and 2.x prior to 2.1.7 are vulnerable\nto a cross-site-scripting attack in certain uncommon usage scenarios.\n\nIf you use L.mapbox.map or L.mapbox.tileLayer to load untrusted TileJSON\ncontent from a non-Mapbox URL, it is possible for a malicious user with\ncontrol over the TileJSON content to inject script content into the\n\"attribution\" value of the TileJSON which will be executed in the context of\nthe page using Mapbox.js.\n\nSuch usage is uncommon. The following usage scenarios are not vulnerable:\n\n* only trusted TileJSON content is loaded\n* TileJSON content comes only from mapbox.com URLs\n* a Mapbox map ID is supplied, rather than a TileJSON URL\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-129854\n- https://nodesecurity.io/advisories/49\n",
 				"moduleName": "mapbox-rails",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12458,7 +12561,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nMapbox.js versions 1.x prior to 1.6.6 and 2.x prior to 2.2.4 are vulnerable\nto a cross-site-scripting attack in certain uncommon usage scenarios.\n\nIf you use L.mapbox.map and L.mapbox.shareControl it is possible for a\nmalicious user with control over the TileJSON content to inject script\ncontent into the name value of the TileJSON. After clicking on the share\ncontrol, the malicious code will execute in the context of the page using\nMapbox.js.\n\nSuch usage is uncommon. L.mapbox.shareControl is not automatically added to\nMapbox.js maps and must be explicitly added. The following usage scenarios\nare not vulnerable:\n\n* the map does not use a share control (L.mapbox.sharecontrol)\n* only trusted TileJSON content is loaded\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-132871\n- https://nodesecurity.io/advisories/74\n",
+				"description": "## Overview\nMapbox.js versions 1.x prior to 1.6.6 and 2.x prior to 2.2.4 are vulnerable\nto a cross-site-scripting attack in certain uncommon usage scenarios.\n\nIf you use L.mapbox.map and L.mapbox.shareControl it is possible for a\nmalicious user with control over the TileJSON content to inject script\ncontent into the name value of the TileJSON. After clicking on the share\ncontrol, the malicious code will execute in the context of the page using\nMapbox.js.\n\nSuch usage is uncommon. L.mapbox.shareControl is not automatically added to\nMapbox.js maps and must be explicitly added. The following usage scenarios\nare not vulnerable:\n\n* the map does not use a share control (L.mapbox.sharecontrol)\n* only trusted TileJSON content is loaded\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-132871\n- https://nodesecurity.io/advisories/74\n",
 				"moduleName": "mapbox-rails",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12601,11 +12704,11 @@
 		],
 		"multi_xml": [
 			{
-				"title": "multi_xml Gem for Ruby XML Parameter Parsing Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nThe multi_xml Gem for Ruby contains a flaw that is triggered when an error\noccurs during the parsing of the 'XML' parameter. With a crafted request\ncontaining arbitrary symbol and yaml types, a remote attacker can execute\narbitrary commands.\n\n\n## Remediation\nUpgrade to version `>= 0.5.2` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-89148\n- http://osvdb.org/show/osvdb/89148\n",
+				"description": "## Overview\n[`multi_xml`](https://rubygems.org/gems/multi_xml) provides swappable XML backends utilizing LibXML, Nokogiri, Ox, or REXML.\nAffected versions of this gem are vulnerable to arbitrart command executions by a remote attacker via a specially crafted requests containing arbitrary symbol and yaml types. This is due to mishandling the parsing of the `XML` parameter.\n\n## Remediation\nUpgrade to version `>= 0.5.2` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-0175\n",
 				"moduleName": "multi_xml",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12623,6 +12726,7 @@
 						"OSVDB-89148"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:36:59.000Z",
 				"modificationTime": "2016-09-21T12:36:59.000Z",
@@ -12665,11 +12769,11 @@
 		],
 		"net-ldap": [
 			{
-				"title": "Net::LDAP for Ruby lib/net/ldap/password.rb SSHA Password Generation Weak Salt",
+				"title": "Information Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nNet::LDAP for Ruby contains a flaw in lib/net/ldap/password.rb. The issue is due to the program generating SSHA passwords with a weak salt value that is between 0 and 999. This may allow a local attacker to more easily gain access to password information.\n\n## Remediation\nUpgrade to version `>= 0.6.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-106108\n- http://osvdb.org/show/osvdb/106108\n",
+				"description": "## Overview\n[`net-ldap`](https://rubygems.org/gems/net-ldap) implements client access for the Lightweight Directory Access Protocol (LDAP), an IETF standard protocol for accessing distributed directory services.\nAffected versions of this gem generate SSHA passwords with a weak salt value that is between 0 and 999. This may allow a local attacker to more easily gain access to password information.\n\n## Remediation\nUpgrade to version `>= 0.6.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-106108\n- http://osvdb.org/show/osvdb/106108\n",
 				"moduleName": "net-ldap",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12687,7 +12791,7 @@
 						"OSVDB-106108"
 					]
 				},
-				"CVSSv2": 1.9,
+				"CVSSv3": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "low",
 				"creationTime": "2016-09-21T12:36:59.000Z",
 				"modificationTime": "2016-09-21T12:36:59.000Z",
@@ -12698,11 +12802,11 @@
 		],
 		"newrelic_rpm": [
 			{
-				"title": "Ruby on Rails newrelic_rpm Gem Discloses Sensitive Information",
+				"title": "Information Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nA bug in the Ruby agent causes database connection information and raw SQL\nstatements to be transmitted to New Relic servers. The database connection\ninformation includes the database IP address, username, and password\n\n\n## Remediation\nUpgrade to version `>= 3.5.3.25` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90189\n- http://osvdb.org/show/osvdb/90189\n",
+				"description": "## Overview\n[newrelic_rpm](https://rubygems.org/gems/newrelic_rpm) is a performance management system, developed by [New Relic, Inc](https://www.newrelic.com).\n\nA bug in the Ruby agent causes database connection information and raw SQL\nstatements to be transmitted to New Relic servers. The database connection\ninformation includes the database IP address, username, and password.\n\n## Remediation\nUpgrade to version `>= 3.5.3.25` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-0284\n",
 				"moduleName": "newrelic_rpm",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12720,7 +12824,7 @@
 						"OSVDB-90189"
 					]
 				},
-				"CVSSv2": 5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:59.000Z",
 				"modificationTime": "2016-09-21T12:36:59.000Z",
@@ -13101,7 +13205,7 @@
 				"credit": [
 					"Egor Homakov"
 				],
-				"description": "## Oerview\n\n[`omniauth-facebook`](https://rubygems.org/gems/omniauth-facebook) is a Facebook OAuth2 Strategy for OmniAuth.\n\n`omniauth-facebook` Gem for Ruby contains a flaw where an attacker can perform a Cross-Site Request Forgery (CSRF / XSRF) attack causing the victim to perform an unspecified action.\n\n\n## Details\nAs HTTP requests do not require multiple steps, explicit confirmation, or a unique token when performing certain sensitive actions. By tricking a user into following a specially crafted link, a context-dependent attacker can perform a Cross-Site Request Forgery (CSRF / XSRF) attack causing the victim to perform an unspecified action.\n\n## References\n- http://rubysec.com/advisories/OSVDB-99693\n- https://groups.google.com/d/msg/ruby-security-ann/-tJHNlTiPh4/9SJxdEWLIawJ\n",
+				"description": "## Overview\n\n[`omniauth-facebook`](https://rubygems.org/gems/omniauth-facebook) is a Facebook OAuth2 Strategy for OmniAuth.\n\n`omniauth-facebook` Gem for Ruby contains a flaw where an attacker can perform a Cross-Site Request Forgery (CSRF / XSRF) attack causing the victim to perform an unspecified action.\n\n\n## Details\nAs HTTP requests do not require multiple steps, explicit confirmation, or a unique token when performing certain sensitive actions. By tricking a user into following a specially crafted link, a context-dependent attacker can perform a Cross-Site Request Forgery (CSRF / XSRF) attack causing the victim to perform an unspecified action.\n\n## References\n- http://rubysec.com/advisories/OSVDB-99693\n- https://groups.google.com/d/msg/ruby-security-ann/-tJHNlTiPh4/9SJxdEWLIawJ\n",
 				"moduleName": "omniauth-facebook",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13197,11 +13301,11 @@
 		],
 		"open-uri-cached": [
 			{
-				"title": "open-uri-cached Gem for Ruby Unsafe Temporary File Creation Local Privilege Escalation",
+				"title": "Authentication Bypass",
 				"credit": [
-					"Unknown"
+					"Michael Scherer"
 				],
-				"description": "## Oerview\nopen-uri-cached Gem for Ruby contains a flaw that is due to the\nprogram creating temporary files in a predictable, unsafe manner when using\nYAML. This may allow a local attacker to gain elevated privileges.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-121701\n- http://seclists.org/oss-sec/2015/q2/373\n",
+				"description": "## Overview\n[`open-uri-cached`](https://rubygems.org/gems/open-uri-cached) is a rubygem that will cache downloaded data when using open-uri.\nAffected versions of this gem are vulnerable a local authentication bypass attack due to usage of YAML in a insecure way, and using a predictable directory name in `/tmp` for getting that data without verification. \n\n## References\n- http://rubysec.com/advisories/OSVDB-121701\n- http://seclists.org/oss-sec/2015/q2/373\n",
 				"moduleName": "open-uri-cached",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13215,6 +13319,7 @@
 						"OSVDB-121701"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:37:01.000Z",
 				"modificationTime": "2016-09-21T12:37:01.000Z",
@@ -13285,11 +13390,11 @@
 		],
 		"paratrooper-newrelic": [
 			{
-				"title": "Paratrooper-newrelic Gem for Ruby Process Listing API Key Local Disclosure",
+				"title": "Information Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nParatrooper-newrelic Gem for Ruby contains a flaw in\n/lib/paratrooper-newrelic.rb. The issue is triggered when the script exposes\nthe API key, allowing a local attacker to gain access to it by monitoring the\nprocess tree.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-101839\n- http://www.osvdb.org/show/osvdb/101839\n",
+				"description": "## Overview\n[`Paratrooper-newrelic`](https://rubygems.org/gems/paratrooper-newrelic) sends deploy notifications to Newrelic service when deploying with Paratrooper.\nAffected versions of this gem contain a script `/lib/paratrooper-newrelic.rb` that exposes the API key, allowing a local attacker to gain access to it by monitoring the process tree.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-1234/\n",
 				"moduleName": "paratrooper-newrelic",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13305,8 +13410,8 @@
 						"OSVDB-101839"
 					]
 				},
-				"CVSSv2": 2.1,
-				"severity": "low",
+				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:01.000Z",
 				"modificationTime": "2016-09-21T12:37:01.000Z",
 				"publicationTime": "2014-01-07T22:00:00.000Z",
@@ -13316,11 +13421,11 @@
 		],
 		"paratrooper-pingdom": [
 			{
-				"title": "paratrooper-pingdom Gem for Ruby /lib/paratrooper-pingdom.rb API Login Credentials Local Disclosure",
+				"title": "Information Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nparatrooper-pingdom Gem for Ruby contains a flaw in\n/lib/paratrooper-pingdom.rb. The issue is triggered when the script exposes\nAPI login credentials, allowing a local attacker to gain access to the API\nkey, username, and password for the API login by monitoring the process tree.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-101847\n- http://www.osvdb.org/show/osvdb/101847\n",
+				"description": "## Overview\n[`paratrooper-pingdom`](https://rubygems.org/gems/paratrooper-pingdom) sends deploy notifications to Pingdom service when deploying with Paratrooper.\nAffected versions of this gem contain a script `/lib/paratrooper-pingdom.rb` that exposes the API key, username, and password for the API login by monitoring the process tree.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-1233\n",
 				"moduleName": "paratrooper-pingdom",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13336,8 +13441,8 @@
 						"OSVDB-101847"
 					]
 				},
-				"CVSSv2": 2.1,
-				"severity": "low",
+				"CVSSv3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:01.000Z",
 				"modificationTime": "2016-09-21T12:37:01.000Z",
 				"publicationTime": "2013-12-25T22:00:00.000Z",
@@ -13417,7 +13522,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\n\n[`passenger`](https://rubygems.org/gems/passenger) is a modern web server and application server for Ruby, Python and Node.js, optimized for performance, low memory usage and ease of use.\n\nAffected versions of this gem create the server instance directory insecurely. An attacker can create a symlink to overwrite an otherwise inaccessible file, possibly inserting content provided by the attacker. It is possible for a local attacker to use a symlink attack against the Utils.cpp file to allow the attacker to gain elevated privileges.\n\n## References\n\n- http://www.openwall.com/lists/oss-security/2013/07/16/6\n- https://code.google.com/archive/p/phusion-passenger/issues/910\n- http://rubysec.com/advisories/CVE-2013-4136/\n",
+				"description": "## Overview\n\n[`passenger`](https://rubygems.org/gems/passenger) is a modern web server and application server for Ruby, Python and Node.js, optimized for performance, low memory usage and ease of use.\n\nAffected versions of this gem create the server instance directory insecurely. An attacker can create a symlink to overwrite an otherwise inaccessible file, possibly inserting content provided by the attacker. It is possible for a local attacker to use a symlink attack against the Utils.cpp file to allow the attacker to gain elevated privileges.\n\n## References\n\n- http://www.openwall.com/lists/oss-security/2013/07/16/6\n- https://code.google.com/archive/p/phusion-passenger/issues/910\n- http://rubysec.com/advisories/CVE-2013-4136/\n",
 				"moduleName": "passenger",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13566,11 +13671,11 @@
 		],
 		"point-cli": [
 			{
-				"title": "point-cli Gem for Ruby /lib/commands/setup.rb Process Table Local Plaintext Credential Disclosure",
+				"title": "Local Plaintext Credential Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\npoint-cli Gem for Ruby contains a flaw in /lib/commands/setup.rb that is due to the application exposing credential information in plaintext in the process table. This may allow a local attacker to gain access to credential information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-108577\n- http://osvdb.org/show/osvdb/108577\n",
+				"description": "## Overview\n[`point-cli`](https://rubygems.org/gems/point-cli) is a CLI client for the PointHQ DNS Hosting System.\nAffected versions of this gem exposes credential information in plaintext in the process table due to a flaw in `/lib/commands/setup.rb`. This may allow a local attacker to gain access to credential information.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4997\n",
 				"moduleName": "point-cli",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13597,11 +13702,11 @@
 		],
 		"quick_magick": [
 			{
-				"title": "quick_magick Gem for Ruby QuickMagick::Image.read Function Crafted String Handling Remote Command Injection",
+				"title": "Arbitrary Command Injection",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nquick_magick Gem for Ruby contains a flaw in the QuickMagick::Image.read function. The issue is triggered when handling a specially crafted string. This may allow a remote attacker to inject arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-106954\n- http://osvdb.org/show/osvdb/106954\n",
+				"description": "## Overview\n[`quick_magick`](https://rubygems.org/gems/quick_magick) allows you to access ImageMagick command line functions using Ruby interface.\nAffected versions of this gem contain a flaw in the `QuickMagick::Image.read` function. The issue is triggered when handling a specially crafted string. This may allow a remote attacker to inject arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-106954\n",
 				"moduleName": "quick_magick",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13612,6 +13717,7 @@
 						"OSVDB-106954"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:37:02.000Z",
 				"modificationTime": "2016-09-21T12:37:02.000Z",
@@ -13698,7 +13804,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\n[`rack`](https://rubygems.org/gems/rack) is a minimal, modular and adaptable interface for developing web applications in Ruby. \nAffected versions of this Gem are vulnerable to Denial of Service (DoS) attacks.\n\n## Details\nRack contains a flaw that may allow a remote denial of service. The issue is triggered when parsing an overly long string. With a specially crafted string, a remote attacker can cause a consumption of memory. This will result in a loss of availability for the webserver.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-0183\n",
+				"description": "## Overview\n[`rack`](https://rubygems.org/gems/rack) is a minimal, modular and adaptable interface for developing web applications in Ruby. \nAffected versions of this Gem are vulnerable to Denial of Service (DoS) attacks.\n\n## Details\nRack contains a flaw that may allow a remote denial of service. The issue is triggered when parsing an overly long string. With a specially crafted string, a remote attacker can cause a consumption of memory. This will result in a loss of availability for the webserver.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-0183\n",
 				"moduleName": "rack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13897,11 +14003,11 @@
 		],
 		"rack-cache": [
 			{
-				"title": "rack-cache Rubygem Sensitive HTTP Header Caching Weakness",
+				"title": "HTTP Header Caching Weakness",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nRack::Cache (rack-cache) contains a flaw related to the rubygem caching\nsensitive HTTP headers. This will result in a weakness that may make it\neasier for an attacker to gain access to a user's session via a specially\ncrafted header.\n\n\n## Remediation\nUpgrade to version `>= 1.2` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-83077\n- http://osvdb.org/83077\n",
+				"description": "## Overview\n[rack-cache](https://rubygems.org/gems/rack-cache) enables HTTP caching for Rack-based applications.\nAffected versions of this gem contain a flaw related to the rubygem caching sensitive HTTP headers. This will result in a weakness that may make it easier for an attacker to gain access to a user's session via a specially crafted header.\n\n## References\n- http://rubysec.com/advisories/CVE-2012-2671\n",
 				"moduleName": "rack-cache",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13919,7 +14025,7 @@
 						"OSVDB-83077"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:37:03.000Z",
 				"modificationTime": "2016-09-21T12:37:03.000Z",
@@ -13930,11 +14036,11 @@
 		],
 		"rack-mini-profiler": [
 			{
-				"title": "rack-mini-profiler may disclose information to unauthorized users",
+				"title": "Information Exposure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nCarefully crafted requests can expose information about strings and objects allocated during the request for unauthorised users.\n\n## Remediation\nUpgrade to version `>= 0.10.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-4442\n- https://github.com/MiniProfiler/rack-mini-profiler/commit/4273771d65f1a7411e3ef5843329308d0e2d257c\n",
+				"description": "## Overview\n[rack-mini-profiler](https://rubygems.org/gems/rack-mini-profiler) is a profiling toolkit for Rack applications with Rails integration.\nAffected versions of this gem are vulnerable to information exposure via carefully crafted requests. Attackers and unauthorized users can get ahold of strings and objects allocated during the request.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-4442\n- https://github.com/MiniProfiler/rack-mini-profiler/commit/4273771d65f1a7411e3ef5843329308d0e2d257c\n",
 				"moduleName": "rack-mini-profiler",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13949,6 +14055,7 @@
 						"CVE-2016-4442"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:04.000Z",
 				"modificationTime": "2016-09-21T12:37:04.000Z",
@@ -14094,11 +14201,11 @@
 		],
 		"rbovirt": [
 			{
-				"title": "rbovirt Gem for Ruby contains a flaw",
+				"title": "Authentication Bypass",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nrbovirt Gem for Ruby contains a flaw related to certificate validation.\nThe issue is due to the program failing to validate SSL certificates. This may\nallow an attacker with access to network traffic (e.g. MiTM, DNS cache\npoisoning) to spoof the SSL server via an arbitrary certificate that appears\nvalid. Such an attack would allow for the interception of sensitive traffic,\nand potentially allow for the injection of content into the SSL stream.\n\n\n## Remediation\nUpgrade to version `>= 0.0.24` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-104080\n- http://osvdb.org/show/osvdb/104080\n",
+				"description": "## Overview\n[`rbovirt`](https://rubygems.org/gems/rbovirt) is a Ruby client for oVirt REST API.\nAffected versions of this gem are vulnerable to authentication bypass due to failing to validate SSL certificates. This may allow an attacker with access to network traffic (e.g. MiTM, DNS cache poisoning) to spoof the SSL server via an arbitrary certificate that appears valid. Such an attack would allow for the interception of sensitive traffic, and potentially allow for the injection of content into the SSL stream.\n\n## Remediation\nUpgrade to version `>= 0.0.24` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-0036\n",
 				"moduleName": "rbovirt",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14116,7 +14223,7 @@
 						"OSVDB-104080"
 					]
 				},
-				"CVSSv2": 6.8,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:04.000Z",
 				"modificationTime": "2016-09-21T12:37:04.000Z",
@@ -14231,7 +14338,7 @@
 				"credit": [
 					"Steve Klabnik"
 				],
-				"description": "## Oerview\n\n[`redis-namespace`](https://rubygems.org/gems/redis-namespace) adds a `Redis::Namespace` class which can be used to namespace calls to Redis.\n\nAffected versions  contains a flaw in the method_missing implementation. The issue is triggered when handling `exec` commands called via `send()`. This may allow a remote attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-96425\n- http://blog.steveklabnik.com/posts/2013-08-03-redis-namespace-1-3-1--security-release\n",
+				"description": "## Overview\n\n[`redis-namespace`](https://rubygems.org/gems/redis-namespace) adds a `Redis::Namespace` class which can be used to namespace calls to Redis.\n\nAffected versions  contains a flaw in the method_missing implementation. The issue is triggered when handling `exec` commands called via `send()`. This may allow a remote attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-96425\n- http://blog.steveklabnik.com/posts/2013-08-03-redis-namespace-1-3-1--security-release\n",
 				"moduleName": "redis-namespace",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14260,11 +14367,11 @@
 		],
 		"refile": [
 			{
-				"title": "refile Gem for Ruby contains a remote code execution vulnerability",
+				"title": "Arbitrary Code Execution",
 				"credit": [
-					"Unknown"
+					"Ted Johansson"
 				],
-				"description": "## Oerview\nrefile Gem for Ruby contains a flaw that is triggered when input is not\nsanitized when handling the 'remote_image_url' field in a form, where\n'image' is the name of the attachment. This may allow a remote attacker\nto execute arbitrary shell commands.\n\n\n## Remediation\nUpgrade to version `>= 0.5.4` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-120857\n- https://groups.google.com/forum/#!topic/ruby-security-ann/VIfMO2LvzNs\n",
+				"description": "## Overview\n[`refile`](https://rubygems.org/gems/refile) is a file upload library.\nAffected versions of this gem do not sanitize input when handling the `remote_image_url` field in a form, where `image` is the name of the attachment. This may allow a remote attacker to execute arbitrary shell commands.\n\n## Remediation\nUpgrade to version `>= 0.5.4` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-120857\n- https://groups.google.com/forum/#!topic/ruby-security-ann/VIfMO2LvzNs\n",
 				"moduleName": "refile",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14282,6 +14389,7 @@
 						"OSVDB-120857"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:37:05.000Z",
 				"modificationTime": "2016-09-21T12:37:05.000Z",
@@ -14292,11 +14400,11 @@
 		],
 		"rest-client": [
 			{
-				"title": "Rest-Client Gem for Ruby logs password information in plaintext",
+				"title": "Local Plaintext Password Disclosure",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nRest-Client Ruby Gem contains a flaw that is due to the application logging password information in plaintext. This may allow a local attacker to gain access to password information.\n\n## Remediation\nUpgrade to version `>= 1.7.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-117461\n- http://www.osvdb.org/show/osvdb/117461\n",
+				"description": "## Overview\n[`rest-client`](https://rubygems.org/gems/rest-client) gem is an HTTP and REST client for Ruby.\nAffected versions of this gem log password information in plaintext. This may allow a local attacker to gain access to password information.\n\n## References\n- http://rubysec.com/advisories/CVE-2015-3448\n",
 				"moduleName": "rest-client",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14322,11 +14430,11 @@
 				"id": "SNYK-RUBY-RESTCLIENT-20204"
 			},
 			{
-				"title": "rubygem-rest-client: session fixation vulnerability via Set-Cookie headers in 30x redirection responses",
+				"title": "Session Fixation",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nrest-client in abstract_response.rb improperly handles Set-Cookie headers on\nHTTP 30x redirection responses. Any cookies will be forwarded to the\nredirection target regardless of domain, path, or expiration.\n\nIf you control a redirection source, you can cause rest-client to perform a\nrequest to any third-party domain with cookies of your choosing, which may be\nuseful in performing a session fixation attack.\n\nIf you control a redirection target, you can steal any cookies set by the\nthird-party redirection request.\n\n\n## Remediation\nUpgrade to version `>= 1.8.0` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2015-1820\n- https://github.com/rest-client/rest-client/issues/369\n",
+				"description": "## Overview\n[`rest-client`](https://rubygems.org/gems/rest-client) gem is an HTTP and REST client for Ruby.\nAffected versions of this gem improperly handle Set-Cookie headers on\nHTTP 30x redirection responses in `abstract_response.rb`. Any cookies will be forwarded to the redirection target regardless of domain, path, or expiration.\n\nIf an attacker controls a redirection source, they can cause rest-client to perform a request to any third-party domain with cookies of their choosing, which may be useful in performing a Session Fixation attack.\n\nIf an control a redirection target, you can steal any cookies set by the\nthird-party redirection request.\n\n## References\n- http://rubysec.com/advisories/CVE-2015-1820\n- https://github.com/rest-client/rest-client/issues/369\n",
 				"moduleName": "rest-client",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14354,11 +14462,11 @@
 		],
 		"rgpg": [
 			{
-				"title": "rgpg Gem for Ruby lib/rgpg/gpg_helper.rb Remote Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nrgpg Gem for Ruby contains a flaw in the GpgHelper module\n(lib/rgpg/gpg_helper.rb). The issue is due to the program failing to properly\nsanitize user-supplied input before being used in the system() function for\nexecution. This may allow a remote attacker to execute arbitrary commands.\n\n\n## Remediation\nUpgrade to version `>= 0.2.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-95948\n- http://www.osvdb.org/show/osvdb/95948\n",
+				"description": "## Overview\n[`rgpg`](https://rubygems.org/gems/rgpg) is a wrapper around \"gpg\" command for file encryption.\nAffected versions of this gem are vulnerable to Arbitrary command execution via `GpgHelper` module (lib/rgpg/gpg_helper.rb). The program fails to properly sanitize user-supplied input before being used in the `system()` function for execution. This may allow a remote attacker to execute arbitrary commands.\n\n## Remediation\nUpgrade to version `>= 0.2.3` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-4203\n",
 				"moduleName": "rgpg",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14376,7 +14484,7 @@
 						"OSVDB-95948"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:37:05.000Z",
 				"modificationTime": "2016-09-21T12:37:05.000Z",
@@ -14419,7 +14527,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\n\n[`ruby-saml`](https://rubygems.org/gems/ruby-saml) is a SAML toolkit for Ruby on Rails.\n\nAffected versions are vulnerable to XPath injection on `xml_security.rb`. The lack of prepared statements allows for possible command injection, leading to arbitrary code execution.\n\n## References\n\n- http://rubysec.com/advisories/OSVDB-124991\n- https://github.com/onelogin/ruby-saml/pull/225\n",
+				"description": "## Overview\n\n[`ruby-saml`](https://rubygems.org/gems/ruby-saml) is a SAML toolkit for Ruby on Rails.\n\nAffected versions are vulnerable to XPath injection on `xml_security.rb`. The lack of prepared statements allows for possible command injection, leading to arbitrary code execution.\n\n## References\n\n- http://rubysec.com/advisories/OSVDB-124991\n- https://github.com/onelogin/ruby-saml/pull/225\n",
 				"moduleName": "ruby-saml",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14505,7 +14613,7 @@
 				"credit": [
 					"Vincent Danen"
 				],
-				"description": "## Oerview\n[`ruby_parser`](https://rubygems.org/gems/ruby_parser) is a ruby parser written in pure ruby.\n\nVulnerable versions contain a flaw as `ruby_parser` creates temporary files insecurely. It is possible for a local attacker to use a symlink attack to cause the program to unexpectedly overwrite an arbitrary file.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-5697/\n- https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-0162\n",
+				"description": "## Overview\n[`ruby_parser`](https://rubygems.org/gems/ruby_parser) is a ruby parser written in pure ruby.\n\nVulnerable versions contain a flaw as `ruby_parser` creates temporary files insecurely. It is possible for a local attacker to use a symlink attack to cause the program to unexpectedly overwrite an arbitrary file.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-5697/\n- https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-0162\n",
 				"moduleName": "ruby_parser",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14534,11 +14642,11 @@
 		],
 		"safemode": [
 			{
-				"title": "Safemode Gem for Ruby is vulnerable to information disclosure",
+				"title": "Information Exposure",
 				"credit": [
-					"Unknown"
+					"Ivan Necas"
 				],
-				"description": "## Oerview\nSafemode is initialised with an optional 'delegate' object.\nIf the delegated object is a Rails controller, 'inspect' could\nbe called which then exposes all informations about the App,\nincluding routes, secret tokens, caches and so on.\n\n\n## Remediation\nUpgrade to version `>= 1.2.4` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-3693\n- http://seclists.org/oss-sec/2016/q2/119\n",
+				"description": "## Overview\n[`Safemode`](https://rubygems.org/gems/safemode) is a library for safe evaluation of Ruby code based on RubyParser and Ruby2Ruby.\nThis gem is initialized with an optional `delegate` object. If the delegated object is a Rails controller, `inspect` could be called which then exposes all informations about the App, including routes, secret tokens, caches and so on.\n\n## Remediation\nUpgrade to version `>= 1.2.4` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-3693\n- http://seclists.org/oss-sec/2016/q2/119\n",
 				"moduleName": "safemode",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14566,11 +14674,11 @@
 		],
 		"screen_capture": [
 			{
-				"title": "Screen Capture Gem for Ruby screen_capture.rb URL Handling Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nScreen Capture Gem for Ruby contains a flaw in screen_capture.rb that is triggered when handling input passed via the URL. This may allow a context-dependent attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-107783\n- http://osvdb.org/show/osvdb/107783\n",
+				"description": "## Overview\n[`screen_capture`](https://rubygems.org/gems/screen_capture) captures screenshots of web pages.\nAffected versions of this gem are contain a flaw in `screen_capture.rb` that is triggered when handling input passed via the URL. This may allow a context-dependent attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-107783\n",
 				"moduleName": "screen_capture",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14581,7 +14689,8 @@
 						"OSVDB-107783"
 					]
 				},
-				"severity": "high",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:06.000Z",
 				"modificationTime": "2016-09-21T12:37:06.000Z",
 				"publicationTime": "2014-06-06T21:00:00.000Z",
@@ -14626,11 +14735,11 @@
 		],
 		"sfpagent": [
 			{
-				"title": "sfpagent Gem for Ruby JSON[body] Module Name Remote Command Execution",
+				"title": "Arbirary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nsfpagent Gem for Ruby contains a flaw that is triggered as JSON[body]\ninput is not properly sanitized when handling module names with shell\nmetacharacters. This may allow a context-dependent attacker to execute\narbitrary commands.\n\n\n## Remediation\nUpgrade to version `>= 0.4.15` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-105971\n- http://www.osvdb.org/show/osvdb/105971\n",
+				"description": "## Overview\n[`sfpagent`](https://rubygems.org/gems/sfpagent) is a ruby implementation of SFP agent. Affected versions of this gem are vulnerable to context-dependent attackers to execute arbitrary commands, due to no proper sanitization in the `JSON[body]` when handling module names with shell metacharacters.\n\n## Remediation\nUpgrade to version `>= 0.4.15` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-2888\n",
 				"moduleName": "sfpagent",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14648,7 +14757,7 @@
 						"OSVDB-105971"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:37:06.000Z",
 				"modificationTime": "2016-09-21T12:37:06.000Z",
@@ -14659,11 +14768,11 @@
 		],
 		"show_in_browser": [
 			{
-				"title": "Show In Browser Gem for Ruby /tmp/browser.html Arbitrary Script Injection",
+				"title": "Arbitrary Script Injection",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nShow In Browser Gem for Ruby contains a flaw that is triggered when the application does not validate input passed via the /tmp/browser.html file. This may allow a local attacker to create a specially crafted request that would execute arbitrary script code in a user's browser.\n\n## References\n- http://rubysec.com/advisories/OSVDB-93490\n- http://osvdb.org/show/osvdb/93490\n",
+				"description": "## Overview\n[`show_in_browser`](https://rubygems.org/gems/show_in_browser) opens arbitrary text in your browser.\nAffected versions of this gem do not validate input passed via the `/tmp/browser.html` file. This may allow a local attacker to create a specially crafted request that would execute arbitrary script code in a user's browser.\n\n## References\n- http://rubysec.com/advisories/OSVDB-93490\n- http://osvdb.org/show/osvdb/93490\n",
 				"moduleName": "show_in_browser",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14677,6 +14786,7 @@
 						"OSVDB-93490"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
 				"severity": "low",
 				"creationTime": "2016-09-21T12:37:07.000Z",
 				"modificationTime": "2016-09-21T12:37:07.000Z",
@@ -14867,11 +14977,11 @@
 		],
 		"sounder": [
 			{
-				"title": "Sounder Gem for Ruby File Name Handling Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nSounder Gem for Ruby contains a flaw that is triggered during the handling\nof file names. This may allow a context-dependent attacker to execute\narbitrary commands.\n\n\n## Remediation\nUpgrade to version `>= 1.0.2` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-96278\n- http://www.osvdb.org/show/osvdb/96278\n",
+				"description": "## Overview\n[`Sounder`](https://rubygems.org/gems/sounder) plays sounds on macOS.\nAffected versions of this gem are vulnerable to arbitrary command execution by a context-dependent attacker due to mishandling of file names.\n\n## Remediation\nUpgrade to version `>= 1.0.2` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-5647\n",
 				"moduleName": "sounder",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14889,7 +14999,7 @@
 						"OSVDB-96278"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:37:07.000Z",
 				"modificationTime": "2016-09-21T12:37:07.000Z",
@@ -14900,11 +15010,11 @@
 		],
 		"spina": [
 			{
-				"title": "Cross-site request forgery (CSRF) vulnerability in Spina gem",
+				"title": "Cross-site request forgery (CSRF)",
 				"credit": [
-					"Unknown"
+					"Tomek Rabczak"
 				],
-				"description": "## Oerview\n`Spina::ApplicationController` actions didn't have CSRF protection. This causes a CSRF vulnerability across the entire engine which includes administrative functionality such as creating users, changing passwords, and media management.\n\n## Remediation\nUpgrade to version `>= 0.6.29` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2015-4619\n- http://www.openwall.com/lists/oss-security/2015/06/16/11\n",
+				"description": "## Overview\n[`spina`](https://rubygems.org/gems/spina) is a content management system.\n`Spina::ApplicationController` actions didn't have CSRF protection. This causes a CSRF vulnerability across the entire engine which includes administrative functionality such as creating users, changing passwords, and media management.\n\n## Remediation\nUpgrade to version `>= 0.6.29` or greater.\n\n## References\n- [Rubysec](http://rubysec.com/advisories/CVE-2015-4619)\n- [Openwall](http://www.openwall.com/lists/oss-security/2015/06/16/11)\n- [Github Commit](https://github.com/denkGroot/Spina/commit/bfe44f289e336f80b6593032679300c493735e75)\n",
 				"moduleName": "spina",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14919,6 +15029,7 @@
 						"CVE-2015-4619"
 					]
 				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:08.000Z",
 				"modificationTime": "2016-09-21T12:37:08.000Z",
@@ -15407,11 +15518,11 @@
 		],
 		"spree_auth": [
 			{
-				"title": "Spree app/models/spree/user.rb Mass Role Assignment Remote Privilege\nEscalation\n",
+				"title": "Privilege Escalation",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nSpree contains a flaw that leads to unauthorized privileges being gained. The\nissue is triggered as certain input related to mass role assignment in\napp/models/spree/user.rb is not properly verified before being used to update\na user. This may allow a remote attacker to assign arbitrary roles and gain\nelevated administrative privileges.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-90865\n- https://spreecommerce.com/blog/multiple-security-vulnerabilities-fixed\n",
+				"description": "## Overview\n[`spree_auth`](https://rubygems.org/gems/spree_auth) is a required dependency for [`spree`](https://rubygems.org/gems/spree).\n\nAffected versions of this gem are vulnerable to unauthorized privileges being gained. The issue is triggered as certain input related to mass role assignment in `app/models/spree/user.rb` is not properly verified before being used to update a user. This may allow a remote attacker to assign arbitrary roles and gain elevated administrative privileges.\n\nThis vulnerability is related to [spree_auth_devise](https://snyk.io/vuln/SNYK-RUBY-SPREEAUTH-20070)\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2506\n- https://spreecommerce.com/blog/multiple-security-vulnerabilities-fixed\n",
 				"moduleName": "spree_auth",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15425,7 +15536,7 @@
 						"OSVDB-90865"
 					]
 				},
-				"CVSSv2": 4,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:09.000Z",
 				"modificationTime": "2016-09-21T12:37:09.000Z",
@@ -15436,11 +15547,11 @@
 		],
 		"spree_auth_devise": [
 			{
-				"title": "Spree app/models/spree/user.rb Mass Role Assignment Remote Privilege\nEscalation\n",
+				"title": "Privilege Escalation",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nSpree contains a flaw that leads to unauthorized privileges being gained. The\nissue is triggered as certain input related to mass role assignment in\napp/models/spree/user.rb is not properly verified before being used to update\na user. This may allow a remote attacker to assign arbitrary roles and gain\nelevated administrative privileges.\n\n\n## Remediation\nUpgrade to version `~> 1.1.6` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90865\n- https://spreecommerce.com/blog/multiple-security-vulnerabilities-fixed\n",
+				"description": "## Overview\n[`spree_auth_devise`](https://rubygems.org/gems/spree_auth_devise) provides authentication and authorization services for use with [`spree`](https://rubygems.org/gems/spree) by using Devise and CanCan.\n\nAffected versions of this gem are vulnerable to unauthorized privileges being gained. The issue is triggered as certain input related to mass role assignment in `app/models/spree/user.rb` is not properly verified before being used to update a user. This may allow a remote attacker to assign arbitrary roles and gain elevated administrative privileges.\n\nThis vulnerability is related to [spree_auth](https://snyk.io/vuln/SNYK-RUBY-SPREEAUTH-20072).\n\n## Remediation\nUpgrade to version `~> 1.1.6` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2506\n- https://spreecommerce.com/blog/multiple-security-vulnerabilities-fixed\n",
 				"moduleName": "spree_auth_devise",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15460,7 +15571,7 @@
 						"OSVDB-90865"
 					]
 				},
-				"CVSSv2": 4,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:10.000Z",
 				"modificationTime": "2016-09-21T12:37:10.000Z",
@@ -15520,11 +15631,11 @@
 		],
 		"sprout": [
 			{
-				"title": "sprout Gem for Ruby archive_unpacker.rb unpack_zip() Function Multiple Parameter Arbitrary Code Execution",
+				"title": "Arbitrary Code Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nsprout Gem for Ruby contains a flaw in the unpack_zip() function in\narchive_unpacker.rb. The issue is due to the program failing to properly\nsanitize input passed via the 'zip_file', 'dir', 'zip_name', and 'output'\nparameters. This may allow a context-dependent attacker to execute arbitrary\ncode.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-100598\n- http://www.osvdb.org/show/osvdb/100598\n",
+				"description": "## Overview\n[sprout](https://rubygems.org/gems/sprout)  is a modular set of tools that take the tedium and frustration out of creating and managing programming projects by automatically installing and configuring external tools, libraries, commands and build tasks.\nAffected versions of this gem are vulnerable to arbitrary code execution due to a flaw in the `unpack_zip()` function in `archive_unpacker.rb`. The program fails to properly sanitize input passed via the `zip_file`, `dir`, `zip_name`, and `output` parameters which may allow a context-dependent attacker to execute arbitrary code.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-6421\n",
 				"moduleName": "sprout",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15542,7 +15653,7 @@
 						"OSVDB-100598"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:37:10.000Z",
 				"modificationTime": "2016-09-21T12:37:10.000Z",
@@ -15553,11 +15664,11 @@
 		],
 		"sup": [
 			{
-				"title": "Sup MUA Email Attachment Content Type Handling Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nSup MUA contains a flaw that is triggered when handling email attachment content. This may allow a context-dependent attacker to execute arbitrary commands.\n\n## Remediation\nUpgrade to version `~> 0.13.2.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-4479\n- http://www.phenoelit.org/stuff/whatsup.txt\n",
+				"description": "## Overview\n[sup](https://rubygems.org/gems/sup) is a console-based email client for people with a lot of email.\nAffected versions of this gem do not sanitize email attachment content when using quotes (',\") around filename or content_type which is already escaped using Ruby `Shellwords.escape` - this means that the string (content_type, filename) is intended to be used _without_ any further quotes. This may allow a context-dependent attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-4479\n- http://www.phenoelit.org/stuff/whatsup.txt\n- https://github.com/sup-heliotrope/sup/blob/916a354db8eb851bff6ff2e3f2e08727d132a8dc/lib/sup/message_chunks.rb#L175\n",
 				"moduleName": "sup",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15573,7 +15684,7 @@
 						"CVE-2013-4479"
 					]
 				},
-				"CVSSv2": 6.8,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:10.000Z",
 				"modificationTime": "2016-09-21T12:37:10.000Z",
@@ -15582,11 +15693,11 @@
 				"id": "SNYK-RUBY-SUP-20114"
 			},
 			{
-				"title": "Sup MUA Email Attachment Content Type Handling Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nSup MUA contains a flaw that is triggered when handling email attachment content. This may allow a context-dependent attacker to execute arbitrary commands.\n\n## Remediation\nUpgrade to version `~> 0.13.2.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-4478\n- http://www.phenoelit.org/stuff/whatsup.txt\n",
+				"description": "## Overview\n[sup](https://rubygems.org/gems/sup) is a console-based email client for people with a lot of email.\nAffected versions of this gem do not sanitize email attachment content when using quotes (',\") around filename or content_type which is already escaped using Ruby `Shellwords.escape` - this means that the string (content_type, filename) is intended to be used _without_ any further quotes. This may allow a context-dependent attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-4478\n- http://www.phenoelit.org/stuff/whatsup.txt\n- https://github.com/sup-heliotrope/sup/blob/916a354db8eb851bff6ff2e3f2e08727d132a8dc/lib/sup/message_chunks.rb#L175\n",
 				"moduleName": "sup",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15602,7 +15713,7 @@
 						"CVE-2013-4478"
 					]
 				},
-				"CVSSv2": 6.8,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:10.000Z",
 				"modificationTime": "2016-09-21T12:37:10.000Z",
@@ -15613,11 +15724,11 @@
 		],
 		"thumbshooter": [
 			{
-				"title": "Thumbshooter Gem for Ruby thumbshooter.rb URL Shell Metacharacter Injection Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nThumbshooter Gem for Ruby contains a flaw that is due to the program failing to properly sanitize input passed to thumbshooter.rb. With a specially crafted URL that contains shell metacharacters, a context-dependent attacker can execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-91839\n- http://osvdb.org/show/osvdb/91839\n",
+				"description": "## Overview\n[`Thumbshooter`](https://rubygems.org/gems/thumbshooter) creates thumbshots of websites using webkit and qt4.\nAffected versions of this gem are vulnerable to arbitrary command execution by a context-dependent attacker. `thumbshooter` fails to properly sanitize input passed to `thumbshooter.rb`. With a specially crafted URL that contains shell metacharacters, a context-dependent attacker can execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-1898\n",
 				"moduleName": "thumbshooter",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15631,7 +15742,7 @@
 						"OSVDB-91839"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:37:10.000Z",
 				"modificationTime": "2016-09-21T12:37:10.000Z",
@@ -15768,11 +15879,11 @@
 		],
 		"webbynode": [
 			{
-				"title": "Webbynode Gem for Ruby notify.rb growlnotify Message Handling Arbitrary Command Execution",
+				"title": "Arbitrary Command Execution",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Oerview\nWebbynode Gem for Ruby contains a flaw in notify.rb that is triggered\nwhen handling a specially crafted growlnotify message. This may allow a\ncontext-dependent attacker to execute arbitrary commands.\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-100920\n- http://osvdb.org/show/osvdb/100920\n",
+				"description": "## Overview\n[`webbynode`](https://rubygems.org/gems/webbynode) is a Webbynode Deployment Gem.\nAffected versions of this gem contain a flaw in `notify.rb` that is triggered when handling a specially crafted growlnotify message. This may allow a context-dependent attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-7086\n",
 				"moduleName": "webbynode",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15786,7 +15897,7 @@
 						"OSVDB-100920"
 					]
 				},
-				"CVSSv2": 7.5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
 				"severity": "high",
 				"creationTime": "2016-09-21T12:37:12.000Z",
 				"modificationTime": "2016-09-21T12:37:12.000Z",
