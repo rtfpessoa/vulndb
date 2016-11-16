@@ -1589,6 +1589,42 @@
         ]
       }
     ],
+    "engine.io": [
+      {
+        "title": "Denial of Service (DoS)",
+        "moduleName": "engine.io",
+        "description": "## Overview\n[`engine.io`](https://www.npmjs.com/package/engine.io) is the realtime engine behind Socket.IO. It provides the foundation of a bidirectional connection between client and server.\nAffected versions of the package are vulnerable to Denial of Service (DoS) by sending many upgrade events.\nA client could possibly create a lot of intervals without the old ones having a chance of being cleared.\n\n## Remediation\nUpgrade `engine.io` to version 1.0.0 or higher.\n\n## References\n- https://github.com/socketio/engine.io/pull/223\n- https://github.com/socketio/engine.io/commit/27141f962d72e6e1b0940f0cca88265799966b39\n",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-400"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-ENGINEIO-10204"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.0.0",
+          "vulnerable": "<1.0.0"
+        },
+        "credit": [
+          "Nils Kuhnhenn"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "disclosureTime": "2014-02-11T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-11-15T07:41:29.146Z",
+        "modificationTime": "2016-11-15T07:41:29.146Z",
+        "creationTime": "2016-09-27T07:41:29.146Z",
+        "id": "npm:engine.io:20140212",
+        "alternativeIds": [
+          "SNYK-JS-ENGINEIO-10204"
+        ]
+      }
+    ],
     "engine.io-client": [
       {
         "title": "Insecure Defaults Allow MitM Over TLS",
@@ -3492,17 +3528,17 @@
       {
         "title": "Content Injection via TileJSON attribute",
         "credit": [
-          "John Firebaugh"
+          "Juan Broullón"
         ],
         "creationTime": "2015-11-06T02:09:36.186Z",
         "modificationTime": "2015-11-06T02:09:36.186Z",
         "publicationTime": "2015-11-06T02:09:36.186Z",
-        "description": "## Overview\nMapbox.js is vulnerable to script content injection when `L.mapbox.map` or `L.mapbox.tileLayer` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- only trusted TileJSON content is loaded\n- TileJSON content comes only from mapbox.com URLs\n- a Mapbox map ID is supplied, rather than a TileJSON URL\n\n## References\n- [1] https://nodesecurity.io/advisories/49\n- https://github.com/mapbox/mapbox.js/commit/538d229ab6767bb4c3f3969c417f9884189c1512\n",
+        "description": "## Overview\nMapbox.js is vulnerable to script content injection when `L.mapbox.map` or `L.mapbox.tileLayer` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- only trusted TileJSON content is loaded\n- TileJSON content comes only from mapbox.com URLs\n- a Mapbox map ID is supplied, rather than a TileJSON URL\n\n## References\n- [Hackerone](https://hackerone.com/reports/54327a)\n- [Github commit](https://github.com/mapbox/mapbox.js/commit/538d229ab6767bb4c3f3969c417f9884189c1512)\n",
         "semver": {
           "vulnerable": "<1.6.5 || < 2.1.7 > 2.0.0",
           "unaffected": ">=1.6.5 <2.0.0 || >= 2.1.7"
         },
-        "CVSSv3": "",
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
         "severity": "low",
         "identifiers": {
           "CWE": [
@@ -3539,17 +3575,17 @@
       {
         "title": "Content Injection via TileJSON Name",
         "credit": [
-          "Alexandra Ulsh"
+          "Abdullah (enderun07)"
         ],
         "creationTime": "2016-01-14T09:03:36.375Z",
         "modificationTime": "2016-01-14T09:03:36.375Z",
         "publicationTime": "2016-01-14T09:03:36.375Z",
-        "description": "## Overview\nMapbox.js is vulnerable to script content injection when `L.mapbox.map` and `L.mapbox.shareControl` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- the map does not use a share control (L.mapbox.sharecontrol)\n- only trusted TileJSON content is loaded\n\n## References\n- [1] https://nodesecurity.io/advisories/74\n \n\n",
+        "description": "## Overview\nMapbox.js is vulnerable to script content injection when `L.mapbox.map` and `L.mapbox.shareControl` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- the map does not use a share control (L.mapbox.sharecontrol)\n- only trusted TileJSON content is loaded\n\n## References\n- [Hackerone](https://hackerone.com/reports/99245)\n- [Github Issue](https://github.com/mapbox/mapbox.js/pull/1102)\n",
         "semver": {
           "vulnerable": "<1.6.6 || < 2.2.4 > 2.0.0",
           "unaffected": ">=1.6.6 <2.0.0 || >= 2.2.4"
         },
-        "CVSSv3": "",
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
         "severity": "low",
         "identifiers": {
           "CWE": [
@@ -6985,7 +7021,7 @@
         "disclosureTime": "2016-08-04T00:00:00.000Z",
         "description": "## Overview\n['waterline-sequel'](https://www.npmjs.com/package/waterline-sequel) is a helper library for generating SQL queries from the Waterline Query Language.\n\n`waterline-sequel` version `0.5.0` is vulnerable to SQL Injection via `like`, `contains`, `startsWith` or `endsWith` methods.\n\n## Remediation\nUpgrade `waterline-sequel` to version `0.5.1` or greater\n\n## References\n- https://github.com/balderdashy/waterline/issues/1219#issuecomment-157294530\n- https://www.owasp.org/index.php/SQL_Injection\n\n",
         "semver": {
-          "vulnerable": "<0.5.0",
+          "vulnerable": "<=0.5.0",
           "unaffected": ">= 0.5.1"
         },
         "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",

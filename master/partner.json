@@ -1548,6 +1548,41 @@
         ]
       }
     ],
+    "engine.io": [
+      {
+        "title": "Denial of Service (DoS)",
+        "moduleName": "engine.io",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-400"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-ENGINEIO-10204"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.0.0",
+          "vulnerable": "<1.0.0"
+        },
+        "credit": [
+          "Nils Kuhnhenn"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "disclosureTime": "2014-02-11T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-11-15T07:41:29.146Z",
+        "modificationTime": "2016-11-15T07:41:29.146Z",
+        "creationTime": "2016-09-27T07:41:29.146Z",
+        "id": "npm:engine.io:20140212",
+        "alternativeIds": [
+          "SNYK-JS-ENGINEIO-10204"
+        ]
+      }
+    ],
     "engine.io-client": [
       {
         "title": "Insecure Defaults Allow MitM Over TLS",
@@ -3406,7 +3441,7 @@
       {
         "title": "Content Injection via TileJSON attribute",
         "credit": [
-          "John Firebaugh"
+          "Juan Broullón"
         ],
         "creationTime": "2015-11-06T02:09:36.186Z",
         "modificationTime": "2015-11-06T02:09:36.186Z",
@@ -3415,7 +3450,7 @@
           "vulnerable": "<1.6.5 || < 2.1.7 > 2.0.0",
           "unaffected": ">=1.6.5 <2.0.0 || >= 2.1.7"
         },
-        "CVSSv3": "",
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
         "severity": "low",
         "identifiers": {
           "CWE": [
@@ -3452,7 +3487,7 @@
       {
         "title": "Content Injection via TileJSON Name",
         "credit": [
-          "Alexandra Ulsh"
+          "Abdullah (enderun07)"
         ],
         "creationTime": "2016-01-14T09:03:36.375Z",
         "modificationTime": "2016-01-14T09:03:36.375Z",
@@ -3461,7 +3496,7 @@
           "vulnerable": "<1.6.6 || < 2.2.4 > 2.0.0",
           "unaffected": ">=1.6.6 <2.0.0 || >= 2.2.4"
         },
-        "CVSSv3": "",
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
         "severity": "low",
         "identifiers": {
           "CWE": [
@@ -6823,7 +6858,7 @@
         "publicationTime": "2016-10-31T00:00:00.000Z",
         "disclosureTime": "2016-08-04T00:00:00.000Z",
         "semver": {
-          "vulnerable": "<0.5.0",
+          "vulnerable": "<=0.5.0",
           "unaffected": ">= 0.5.1"
         },
         "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",

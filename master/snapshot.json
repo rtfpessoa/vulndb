@@ -1589,6 +1589,42 @@
 				]
 			}
 		],
+		"engine.io": [
+			{
+				"title": "Denial of Service (DoS)",
+				"moduleName": "engine.io",
+				"description": "## Overview\n[`engine.io`](https://www.npmjs.com/package/engine.io) is the realtime engine behind Socket.IO. It provides the foundation of a bidirectional connection between client and server.\nAffected versions of the package are vulnerable to Denial of Service (DoS) by sending many upgrade events.\nA client could possibly create a lot of intervals without the old ones having a chance of being cleared.\n\n## Remediation\nUpgrade `engine.io` to version 1.0.0 or higher.\n\n## References\n- https://github.com/socketio/engine.io/pull/223\n- https://github.com/socketio/engine.io/commit/27141f962d72e6e1b0940f0cca88265799966b39\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-400"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-ENGINEIO-10204"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=1.0.0",
+					"vulnerable": "<1.0.0"
+				},
+				"credit": [
+					"Nils Kuhnhenn"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+				"disclosureTime": "2014-02-11T22:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-11-15T07:41:29.146Z",
+				"modificationTime": "2016-11-15T07:41:29.146Z",
+				"creationTime": "2016-09-27T07:41:29.146Z",
+				"id": "npm:engine.io:20140212",
+				"alternativeIds": [
+					"SNYK-JS-ENGINEIO-10204"
+				]
+			}
+		],
 		"engine.io-client": [
 			{
 				"title": "Insecure Defaults Allow MitM Over TLS",
@@ -3492,17 +3528,17 @@
 			{
 				"title": "Content Injection via TileJSON attribute",
 				"credit": [
-					"John Firebaugh"
+					"Juan Broullón"
 				],
 				"creationTime": "2015-11-06T02:09:36.186Z",
 				"modificationTime": "2015-11-06T02:09:36.186Z",
 				"publicationTime": "2015-11-06T02:09:36.186Z",
-				"description": "## Overview\nMapbox.js is vulnerable to script content injection when `L.mapbox.map` or `L.mapbox.tileLayer` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- only trusted TileJSON content is loaded\n- TileJSON content comes only from mapbox.com URLs\n- a Mapbox map ID is supplied, rather than a TileJSON URL\n\n## References\n- [1] https://nodesecurity.io/advisories/49\n- https://github.com/mapbox/mapbox.js/commit/538d229ab6767bb4c3f3969c417f9884189c1512\n",
+				"description": "## Overview\nMapbox.js is vulnerable to script content injection when `L.mapbox.map` or `L.mapbox.tileLayer` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- only trusted TileJSON content is loaded\n- TileJSON content comes only from mapbox.com URLs\n- a Mapbox map ID is supplied, rather than a TileJSON URL\n\n## References\n- [Hackerone](https://hackerone.com/reports/54327a)\n- [Github commit](https://github.com/mapbox/mapbox.js/commit/538d229ab6767bb4c3f3969c417f9884189c1512)\n",
 				"semver": {
 					"vulnerable": "<1.6.5 || < 2.1.7 > 2.0.0",
 					"unaffected": ">=1.6.5 <2.0.0 || >= 2.1.7"
 				},
-				"CVSSv3": "",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
 				"severity": "low",
 				"identifiers": {
 					"CWE": [
@@ -3539,17 +3575,17 @@
 			{
 				"title": "Content Injection via TileJSON Name",
 				"credit": [
-					"Alexandra Ulsh"
+					"Abdullah (enderun07)"
 				],
 				"creationTime": "2016-01-14T09:03:36.375Z",
 				"modificationTime": "2016-01-14T09:03:36.375Z",
 				"publicationTime": "2016-01-14T09:03:36.375Z",
-				"description": "## Overview\nMapbox.js is vulnerable to script content injection when `L.mapbox.map` and `L.mapbox.shareControl` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- the map does not use a share control (L.mapbox.sharecontrol)\n- only trusted TileJSON content is loaded\n\n## References\n- [1] https://nodesecurity.io/advisories/74\n \n\n",
+				"description": "## Overview\nMapbox.js is vulnerable to script content injection when `L.mapbox.map` and `L.mapbox.shareControl` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- the map does not use a share control (L.mapbox.sharecontrol)\n- only trusted TileJSON content is loaded\n\n## References\n- [Hackerone](https://hackerone.com/reports/99245)\n- [Github Issue](https://github.com/mapbox/mapbox.js/pull/1102)\n",
 				"semver": {
 					"vulnerable": "<1.6.6 || < 2.2.4 > 2.0.0",
 					"unaffected": ">=1.6.6 <2.0.0 || >= 2.2.4"
 				},
-				"CVSSv3": "",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
 				"severity": "low",
 				"identifiers": {
 					"CWE": [
@@ -6985,7 +7021,7 @@
 				"disclosureTime": "2016-08-04T00:00:00.000Z",
 				"description": "## Overview\n['waterline-sequel'](https://www.npmjs.com/package/waterline-sequel) is a helper library for generating SQL queries from the Waterline Query Language.\n\n`waterline-sequel` version `0.5.0` is vulnerable to SQL Injection via `like`, `contains`, `startsWith` or `endsWith` methods.\n\n## Remediation\nUpgrade `waterline-sequel` to version `0.5.1` or greater\n\n## References\n- https://github.com/balderdashy/waterline/issues/1219#issuecomment-157294530\n- https://www.owasp.org/index.php/SQL_Injection\n\n",
 				"semver": {
-					"vulnerable": "<0.5.0",
+					"vulnerable": "<=0.5.0",
 					"unaffected": ">= 0.5.1"
 				},
 				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
@@ -7332,7 +7368,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`actionmailer`](https://rubygems.org/gems/actionmailer) is an Email on Rails. A ruby gem that let's you compose, deliver, receive, and test emails using the familiar controller/view pattern.\nAffected versions of this Gem do not sanitize format string specifiers (e.g. %s and %x) in user-supplied input when handling email addresses. This allows attackers to cause a Denial of Service.\n\n## Remediation\nUpgrade to version `3.2.15` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-4389/\n- https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-4389\n",
+				"description": "## Overview\n[`actionmailer`](https://rubygems.org/gems/actionmailer) is an Email on Rails. A ruby gem that let's you compose, deliver, receive, and test emails using the familiar controller/view pattern.\nAffected versions of this Gem do not sanitize format string specifiers (e.g. %s and %x) in user-supplied input when handling email addresses. This allows attackers to cause a Denial of Service.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-4389/\n- https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-4389\n",
 				"moduleName": "actionmailer",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7374,7 +7410,7 @@
 				"credit": [
 					"Brent Miller"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem, do not sanitize the values provided for response content types, allowing a remote attacker to inject arbitrary HTTP headers into a response.\n\n## Remediation\nUpgrade to version `2.3.13` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2011-3186/\n- https://groups.google.com/forum/#!topic/rubyonrails-security/b_yTveAph2g\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem, do not sanitize the values provided for response content types, allowing a remote attacker to inject arbitrary HTTP headers into a response.\n\n## References\n- http://rubysec.com/advisories/CVE-2011-3186/\n- https://groups.google.com/forum/#!topic/rubyonrails-security/b_yTveAph2g\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7408,7 +7444,7 @@
 				"credit": [
 					"Sergey Nartimov"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site scripting (XSS) attacks via the `translate` helper method.\n\n## Details\nA cross-site scripting (XSS) flaw was found in the way the `translate` helper\nmethod of the Ruby on Rails performed HTML escaping of interpolated user\ninput, when interpolation in combination with HTML-safe translations were used. A remote attacker could use this flaw to execute arbitrary HTML or web\nscript by providing a specially-crafted input to Ruby on Rails application, using the `ActionPack` module and its `translate` helper method without explicit (application specific) sanitization of user provided input.\n\n## Remediation\nUpgrade to version `3.0.11` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2011-4319/\n- https://groups.google.com/forum/#!topic/rubyonrails-security/K2HXD7c8fMU\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site scripting (XSS) attacks via the `translate` helper method.\n\n## Details\nA cross-site scripting (XSS) flaw was found in the way the `translate` helper\nmethod of the Ruby on Rails performed HTML escaping of interpolated user\ninput, when interpolation in combination with HTML-safe translations were used. A remote attacker could use this flaw to execute arbitrary HTML or web\nscript by providing a specially-crafted input to Ruby on Rails application, using the `ActionPack` module and its `translate` helper method without explicit (application specific) sanitization of user provided input.\n\n## References\n- http://rubysec.com/advisories/CVE-2011-4319/\n- https://groups.google.com/forum/#!topic/rubyonrails-security/K2HXD7c8fMU\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7486,7 +7522,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Denial of Service (DoS) attacks when the\nwith_http_digest helper method is being used.\n\n## Details\nRuby on Rails contains a flaw that may allow a remote denial of service. The issue is triggered when an error occurs in when the `with_http_digest` helper method is being used. This may allow a remote attacker to cause a loss of availability for the program.\n\n## Remediation\nUpgrade to version `~> 3.0.16` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2012-3424\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Denial of Service (DoS) attacks when the\nwith_http_digest helper method is being used.\n\n## Details\nRuby on Rails contains a flaw that may allow a remote denial of service. The issue is triggered when an error occurs in when the `with_http_digest` helper method is being used. This may allow a remote attacker to cause a loss of availability for the program.\n\n## References\n- http://rubysec.com/advisories/CVE-2012-3424\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7530,7 +7566,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site Scripting (XSS) attacks.\n\n## Details\nRuby on Rails contains a flaw that allows a remote cross-site scripting (XSS)\nattack. This flaw exists because input passed via the prompt value is not\nproperly sanitized by the select_tag helper method before returning it to\nthe user. This may allow a user to create a specially crafted request that\nwould execute arbitrary script code in a user's browser within the trust\nrelationship between their browser and the server.\n\n## Remediation\nUpgrade to version `~> 3.0.17` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2012-3463\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site Scripting (XSS) attacks.\n\n## Details\nRuby on Rails contains a flaw that allows a remote cross-site scripting (XSS)\nattack. This flaw exists because input passed via the prompt value is not\nproperly sanitized by the select_tag helper method before returning it to\nthe user. This may allow a user to create a specially crafted request that\nwould execute arbitrary script code in a user's browser within the trust\nrelationship between their browser and the server.\n\n## References\n- http://rubysec.com/advisories/CVE-2012-3463\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7734,7 +7770,7 @@
 				"credit": [
 					"Kevin Reintjes"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site Scripting (XSS) attacks via the `simple_format` helper in Ruby on Rails meaning that any user provided HTML attributes will not be escaped correctly.\n\n## Details\nThe simple_format helper converts user supplied text into html text\nwhich is intended to be safe for display. A change made to the\nimplementation of this helper means that any user provided HTML\nattributes will not be escaped correctly. As a result of this error,\napplications which pass user-controlled data to be included as html\nattributes will be vulnerable to an XSS attack.\n\n## Remediation\nUpgrade to version `4.0.2` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-6416\n- https://groups.google.com/forum/#!topic/ruby-security-ann/5ZI1-H5OoIM\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site Scripting (XSS) attacks via the `simple_format` helper in Ruby on Rails meaning that any user provided HTML attributes will not be escaped correctly.\n\n## Details\nThe simple_format helper converts user supplied text into html text\nwhich is intended to be safe for display. A change made to the\nimplementation of this helper means that any user provided HTML\nattributes will not be escaped correctly. As a result of this error,\napplications which pass user-controlled data to be included as html\nattributes will be vulnerable to an XSS attack.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-6416\n- https://groups.google.com/forum/#!topic/ruby-security-ann/5ZI1-H5OoIM\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7777,7 +7813,7 @@
 				"credit": [
 					"Ankit Gupta"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site Scripting (XSS) attacks.\n\n## Details\nThere is an XSS vulnerability in the `number_to_currency` helper in Ruby on Rails.\nThe `number_to_currency` helper allows users to nicely format a numeric value. One\nof the parameters to the helper (unit) is not escaped correctly.  Applications\nwhich pass user controlled data as the unit parameter are vulnerable to an XSS attack.\n\n## Remediation\nUpgrade to version `3.2.16` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-6415\n- https://groups.google.com/forum/#!topic/ruby-security-ann/9WiRn2nhfq0\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site Scripting (XSS) attacks.\n\n## Details\nThere is an XSS vulnerability in the `number_to_currency` helper in Ruby on Rails.\nThe `number_to_currency` helper allows users to nicely format a numeric value. One\nof the parameters to the helper (unit) is not escaped correctly.  Applications\nwhich pass user controlled data as the unit parameter are vulnerable to an XSS attack.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-6415\n- https://groups.google.com/forum/#!topic/ruby-security-ann/9WiRn2nhfq0\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7815,7 +7851,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Denial of Service (DoS) attacks via the header handling component.\n\n## Details\nactionpack/lib/action_view/lookup_context.rb in Action View in Ruby on Rails 3.x before 3.2.16 and 4.x before 4.0.2 allows remote attackers to cause a denial of service (memory consumption) via a header containing an invalid MIME type that leads to excessive caching.\n\n## Remediation\nUpgrade to version `3.2.16` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-6414/\n- https://groups.google.com/forum/#!topic/ruby-security-ann/A-ebV4WxzKg\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Denial of Service (DoS) attacks via the header handling component.\n\n## Details\nactionpack/lib/action_view/lookup_context.rb in Action View in Ruby on Rails 3.x before 3.2.16 and 4.x before 4.0.2 allows remote attackers to cause a denial of service (memory consumption) via a header containing an invalid MIME type that leads to excessive caching.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-6414/\n- https://groups.google.com/forum/#!topic/ruby-security-ann/A-ebV4WxzKg\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7857,7 +7893,7 @@
 				"credit": [
 					"Peter McLarnan"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site scripting (XSS) attacks.\n\n## Details\nThere is a vulnerability in the internationalization component of Ruby on Rails. When the i18n gem is unable to provide a translation for a given string, it creates a fallback HTML string. Under certain configurations, an attacker can provide a specially crafted input which will execute a reflective XSS attack.\n\nThe root cause of this issue is a [vulnerability in the i18n gem](https://snyk.io/vuln/SNYK-RUBY-I18N-20124) which has been assigned the identifier CVE-2013-4492.\n\n## Remediation\n\nUpgrade to version `3.2.16` or greater.\n\n## References\n\n- https://hakiri.io/technologies/rails/issues/4c55efe3784050\n- https://groups.google.com/forum/#!topic/ruby-security-ann/pLrh6DUw998\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site scripting (XSS) attacks.\n\n## Details\nThere is a vulnerability in the internationalization component of Ruby on Rails. When the i18n gem is unable to provide a translation for a given string, it creates a fallback HTML string. Under certain configurations, an attacker can provide a specially crafted input which will execute a reflective XSS attack.\n\nThe root cause of this issue is a [vulnerability in the i18n gem](https://snyk.io/vuln/SNYK-RUBY-I18N-20124) which has been assigned the identifier CVE-2013-4492.\n\n## References\n\n- https://hakiri.io/technologies/rails/issues/4c55efe3784050\n- https://groups.google.com/forum/#!topic/ruby-security-ann/pLrh6DUw998\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7895,7 +7931,7 @@
 				"credit": [
 					"Sudhir Rao"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Unsafe Query Generation Risk.\n\nThe prior fix to [CVE-2013-0155](https://snyk.io/vuln/SNYK-RUBY-ACTIONPACK-20125) was incomplete, and some 3rd party libraries can accidentally circumvent the protection.\n\n## Details\nIt is possible for a 3rd party or custom rack middleware to parse the parameters insecurely and store them in the same key that Rails uses for its own parameters. This is due to the way that `Rack::Request` and `Rails::Request` interact.\n\nIf this happens, the application will receive unsafe parameters and could be vulnerable to the earlier vulnerability.\n\n## Remediation\nUpgrade to version `3.2.16` or greater.\n\n## References\n\n- http://rubysec.com/advisories/CVE-2013-6417/\n- https://groups.google.com/forum/#!topic/ruby-security-ann/niK4drpSHT4\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Unsafe Query Generation Risk.\n\nThe prior fix to [CVE-2013-0155](https://snyk.io/vuln/SNYK-RUBY-ACTIONPACK-20125) was incomplete, and some 3rd party libraries can accidentally circumvent the protection.\n\n## Details\nIt is possible for a 3rd party or custom rack middleware to parse the parameters insecurely and store them in the same key that Rails uses for its own parameters. This is due to the way that `Rack::Request` and `Rails::Request` interact.\n\nIf this happens, the application will receive unsafe parameters and could be vulnerable to the earlier vulnerability.\n\n## References\n\n- http://rubysec.com/advisories/CVE-2013-6417/\n- https://groups.google.com/forum/#!topic/ruby-security-ann/niK4drpSHT4\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7931,7 +7967,7 @@
 				"credit": [
 					"Kevin Reintjes"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site scripting (XSS) attacks.\n\n## Details\nThis flaw exists because the actionpack/lib/action_view/helpers/number_helper.rb script does not validate input to the `number_to_currency`, `number_to_percentage`, and `number_to_human` helpers before returning it to users. This would allow a remote attacker to create a request that executes code in a user's browser session.\n\n## Remediation\nUpgrade to version `3.2.17` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-0081/\n- https://groups.google.com/forum/#!topic/rubyonrails-security/tfp6gZCtzr4\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site scripting (XSS) attacks.\n\n## Details\nThis flaw exists because the actionpack/lib/action_view/helpers/number_helper.rb script does not validate input to the `number_to_currency`, `number_to_percentage`, and `number_to_human` helpers before returning it to users. This would allow a remote attacker to create a request that executes code in a user's browser session.\n\n\n## References\n- http://rubysec.com/advisories/CVE-2014-0081/\n- https://groups.google.com/forum/#!topic/rubyonrails-security/tfp6gZCtzr4\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -7972,7 +8008,7 @@
 				"credit": [
 					"Toby Hsieh"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Denial of Service (DoS) attacks via the text rendering component.\n\n## Details\nRuby on Rails contains a flaw in _actionpack/lib/action_view/template/text.rb_ in the text rendering component of Action View when using render :text. This is triggered when handling MIME types that are converted to symbols.\n\n## Remediation\nUpgrade to version `3.2.17` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-0082/\n- https://groups.google.com/forum/#!topic/rubyonrails-security/LMxO_3_eCuc\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Denial of Service (DoS) attacks via the text rendering component.\n\n## Details\nRuby on Rails contains a flaw in _actionpack/lib/action_view/template/text.rb_ in the text rendering component of Action View when using render :text. This is triggered when handling MIME types that are converted to symbols.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-0082/\n- https://groups.google.com/forum/#!topic/rubyonrails-security/LMxO_3_eCuc\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -8176,7 +8212,7 @@
 				"credit": [
 					"Aaron Patterson"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Denial of Service (DoS) Attacks.\n\n## Details\nA carefully crafted accept header can cause a global cache of mime types to\ngrow indefinitely which can lead to a possible denial of service attack in\nAction Pack.\n\nAll users running an affected release should either upgrade or use one of the\nworkarounds immediately.\n\n## Remediation\nUpgrade to version `~> 5.0.0.beta1.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-0751\n- https://groups.google.com/forum/#!topic/rubyonrails-security/9oLY_FCzvoc\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Denial of Service (DoS) Attacks.\n\n## Details\nA carefully crafted accept header can cause a global cache of mime types to\ngrow indefinitely which can lead to a possible denial of service attack in\nAction Pack.\n\nAll users running an affected release should either upgrade or use one of the\nworkarounds immediately.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-0751\n- https://groups.google.com/forum/#!topic/rubyonrails-security/9oLY_FCzvoc\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -8254,7 +8290,7 @@
 					"Tobias Kraze",
 					"joernchen"
 				],
-				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Arbitrary Code Injection.\n\n## Details\nApplications that pass unverified user input to the `render` method in a\ncontroller or a view may be vulnerable to a code injection.\n\nImpacted code will look like this:\n\n```ruby\nclass TestController < ApplicationController\n  def show\n    render params[:id]\n  end\nend\n```\n\nAn attacker could use the request parameters to coerce the above example\nto execute arbitrary ruby code.\n\nAll users running an affected release should either upgrade or use one of\nthe workarounds immediately.\n\n## Remediation\nUpgrade to version `3.2.22.2` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-2098\n- https://groups.google.com/forum/#!topic/rubyonrails-security/ly-IH-fxr_Q\n",
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Arbitrary Code Injection.\n\n## Details\nApplications that pass unverified user input to the `render` method in a\ncontroller or a view may be vulnerable to a code injection.\n\nImpacted code will look like this:\n\n```ruby\nclass TestController < ApplicationController\n  def show\n    render params[:id]\n  end\nend\n```\n\nAn attacker could use the request parameters to coerce the above example\nto execute arbitrary ruby code.\n\nAll users running an affected release should either upgrade or use one of\nthe workarounds immediately.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-2098\n- https://groups.google.com/forum/#!topic/rubyonrails-security/ly-IH-fxr_Q\n",
 				"moduleName": "actionpack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -8295,7 +8331,7 @@
 				"credit": [
 					"John Poulin"
 				],
-				"description": "## Overview\n[`actionview`](https://rubygems.org/gems/actionview) is a conventions and helpers gem for building web pages.\nAffected versions of this Gem are vulnerable to directory traversal and information leaks.\n\n# Details\nApplications that pass unverified user input to the `render` method in a controller may be vulnerable to an information leak vulnerability.\n\nImpacted code will look something like this:\n\n```ruby\ndef index\n  render params[:id]\nend\n```\n\nCarefully crafted requests can cause the above code to render files from unexpected places like outside the application's view directory, and can possibly escalate this to a remote code execution attack.\n\nAll users running an affected release should either upgrade or use one of the workarounds immediately.\n\nA workaround to this issue is to not pass arbitrary user input to the `render` method.  Instead, verify that data before passing it to the `render` method.\n\nFor example, change this:\n\n```ruby\ndef index\n  render params[:id]\nend\n```\n\nTo this:\n\n```ruby\ndef index\n  render verify_template(params[:id])\nend\n\nprivate\ndef verify_template(name)\n  # add verification logic particular to your application here\nend\n```\n\n## Remediation\nUpgrade to version `5.0.0.beta1.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-0752\n- https://groups.google.com/forum/#!topic/rubyonrails-security/335P1DcLG00\n",
+				"description": "## Overview\n[`actionview`](https://rubygems.org/gems/actionview) is a conventions and helpers gem for building web pages.\nAffected versions of this Gem are vulnerable to directory traversal and information leaks.\n\n# Details\nApplications that pass unverified user input to the `render` method in a controller may be vulnerable to an information leak vulnerability.\n\nImpacted code will look something like this:\n\n```ruby\ndef index\n  render params[:id]\nend\n```\n\nCarefully crafted requests can cause the above code to render files from unexpected places like outside the application's view directory, and can possibly escalate this to a remote code execution attack.\n\nAll users running an affected release should either upgrade or use one of the workarounds immediately.\n\nA workaround to this issue is to not pass arbitrary user input to the `render` method.  Instead, verify that data before passing it to the `render` method.\n\nFor example, change this:\n\n```ruby\ndef index\n  render params[:id]\nend\n```\n\nTo this:\n\n```ruby\ndef index\n  render verify_template(params[:id])\nend\n\nprivate\ndef verify_template(name)\n  # add verification logic particular to your application here\nend\n```\n\n## References\n- http://rubysec.com/advisories/CVE-2016-0752\n- https://groups.google.com/forum/#!topic/rubyonrails-security/335P1DcLG00\n",
 				"moduleName": "actionview",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -8334,7 +8370,7 @@
 				"credit": [
 					"Jyoti Singh and Tobias Kraze"
 				],
-				"description": "## Overview\n[`actionview`](https://rubygems.org/gems/actionview) is a conventions and helpers gem for building web pages.\nAffected versions of this Gem are vulnerable to directory traversal and information leaks. This was meant to be fixed on [CVE-2016-0752](https://snyk.io/vuln/SNYK-RUBY-ACTIONVIEW-20262) but the 3.2 patch was not covering all the scenarios.\n\n## Details\nApplications that pass unverified user input to the `render` method in a controller may be vulnerable to an information leak vulnerability.\n\nImpacted code will look something like this:\n\n```ruby\ndef index\n  render params[:id]\nend\n```\n\nCarefully crafted requests can cause the above code to render files from unexpected places like outside the application's view directory, and can possibly escalate this to a remote code execution attack.\n\nAll users running an affected release should either upgrade or use one of the workarounds immediately.\n\nA workaround to this issue is to not pass arbitrary user input to the `render` method. Instead, verify that data before passing it to the `render` method.\n\nFor example, change this:\n\n```ruby\ndef index\n  render params[:id]\nend\n```\n\nTo this:\n\n```ruby\ndef index\n  render verify_template(params[:id])\nend\n\nprivate\ndef verify_template(name)\n  # add verification logic particular to your application here\nend\n```\n\n## Remediation\nUpgrade to version `3.2.22.2` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-2097\n- https://groups.google.com/forum/#!topic/rubyonrails-security/ddY6HgqB2z4\n",
+				"description": "## Overview\n[`actionview`](https://rubygems.org/gems/actionview) is a conventions and helpers gem for building web pages.\nAffected versions of this Gem are vulnerable to directory traversal and information leaks. This was meant to be fixed on [CVE-2016-0752](https://snyk.io/vuln/SNYK-RUBY-ACTIONVIEW-20262) but the 3.2 patch was not covering all the scenarios.\n\n## Details\nApplications that pass unverified user input to the `render` method in a controller may be vulnerable to an information leak vulnerability.\n\nImpacted code will look something like this:\n\n```ruby\ndef index\n  render params[:id]\nend\n```\n\nCarefully crafted requests can cause the above code to render files from unexpected places like outside the application's view directory, and can possibly escalate this to a remote code execution attack.\n\nAll users running an affected release should either upgrade or use one of the workarounds immediately.\n\nA workaround to this issue is to not pass arbitrary user input to the `render` method. Instead, verify that data before passing it to the `render` method.\n\nFor example, change this:\n\n```ruby\ndef index\n  render params[:id]\nend\n```\n\nTo this:\n\n```ruby\ndef index\n  render verify_template(params[:id])\nend\n\nprivate\ndef verify_template(name)\n  # add verification logic particular to your application here\nend\n```\n\n## References\n- http://rubysec.com/advisories/CVE-2016-2097\n- https://groups.google.com/forum/#!topic/rubyonrails-security/ddY6HgqB2z4\n",
 				"moduleName": "actionview",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -8962,7 +8998,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`ActiveRecord-JDBC-Adapter (AR-JDBC)`](https://rubygems.org/gems/activerecord-jdbc-adapter) is a database adapter for Rails' ActiveRecord component designed to be used with JRuby built upon Java's JDBC API for database access.\nAffected versions of this gem are vulnerable to SQL injection attacks. The `sql.gsub()` function in `lib/arjdbc/jdbc/adapter.rb` is not properly sanitizing user-supplied input before using it in SQL queries. This may allow a remote attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## Remediation\nUpgrade to version `>= 1.2.8` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-114854\n",
+				"description": "## Overview\n[`ActiveRecord-JDBC-Adapter (AR-JDBC)`](https://rubygems.org/gems/activerecord-jdbc-adapter) is a database adapter for Rails' ActiveRecord component designed to be used with JRuby built upon Java's JDBC API for database access.\nAffected versions of this gem are vulnerable to SQL injection attacks. The `sql.gsub()` function in `lib/arjdbc/jdbc/adapter.rb` is not properly sanitizing user-supplied input before using it in SQL queries. This may allow a remote attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## References\n- http://rubysec.com/advisories/OSVDB-114854\n",
 				"moduleName": "activerecord-jdbc-adapter",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -8998,7 +9034,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[Oracle \"enhanced\" ActiveRecord adapter](https://rubygems.org/gems/activerecord-oracle_enhanced-adapter) contains useful additional methods for working with new and legacy Oracle databases.\nAffected versions of this gem are vulnerable SQL injection attacks. The issue is due to the program not properly sanitizing user-supplied input related to the `:limit` and `:offset` functions. This may allow an attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## Remediation\nUpgrade to version `>= 1.1.8` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-95376\n",
+				"description": "## Overview\n[Oracle \"enhanced\" ActiveRecord adapter](https://rubygems.org/gems/activerecord-oracle_enhanced-adapter) contains useful additional methods for working with new and legacy Oracle databases.\nAffected versions of this gem are vulnerable SQL injection attacks. The issue is due to the program not properly sanitizing user-supplied input related to the `:limit` and `:offset` functions. This may allow an attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## References\n- http://rubysec.com/advisories/OSVDB-95376\n",
 				"moduleName": "activerecord-oracle_enhanced-adapter",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9473,7 +9509,7 @@
 				"credit": [
 					"Boris Kocherov"
 				],
-				"description": "## Overview\n[`auto_select2`](https://rubygems.org/gems/auto_select2) provides scripts and helpers for initialize different select2 elements: static, ajax and multi-ajax.\nAffected versions of this gem are vulnerable to arbitrary command execution via the `params[:default_class_name]` option. This allows users to search any object\nof all given ActiveRecord classes.\n\n## Remediation\nUpgrade to version `>= 0.5.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-132800\n- https://github.com/Loriowar/auto_select2/issues/4\n",
+				"description": "## Overview\n[`auto_select2`](https://rubygems.org/gems/auto_select2) provides scripts and helpers for initialize different select2 elements: static, ajax and multi-ajax.\nAffected versions of this gem are vulnerable to arbitrary command execution via the `params[:default_class_name]` option. This allows users to search any object\nof all given ActiveRecord classes.\n\n## References\n- http://rubysec.com/advisories/OSVDB-132800\n- https://github.com/Loriowar/auto_select2/issues/4\n",
 				"moduleName": "auto_select2",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -9828,6 +9864,39 @@
 				"id": "SNYK-RUBY-BRBACKUP-20188"
 			}
 		],
+		"breadcrumbs_on_rails": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"Robin Dunlop"
+				],
+				"description": "## Overview\n[`breadcrumbs_on_rails`](https://rubygems.org/gems/breadcrumbs_on_rails) is a  Ruby on Rails plugin for creating and managing a breadcrumb navigation for a Rails project.\nAffected versions of this gem are vulnerable to Cross-site Scripting (XSS) attacks due to unescaped user input in the breadcrumb. This was solved by passing the elements through Rails `SafeBuffer`.\n\n## References\n- [Github Issue](https://github.com/weppos/breadcrumbs_on_rails/pull/63#issue-44847693)\n- [Github Commit](https://github.com/weppos/breadcrumbs_on_rails/pull/63/commits/9d4705088b6c8635f767e58bef817861410944d8)\n",
+				"moduleName": "breadcrumbs_on_rails",
+				"language": "ruby",
+				"packageManager": "rubygems",
+				"semver": {
+					"patched": [
+						">=3.0.0"
+					],
+					"vulnerable": [
+						"< 3.0.0"
+					]
+				},
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"OSVDB": []
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"creationTime": "2016-10-26T00:00:00.000Z",
+				"modificationTime": "2016-10-26T00:00:00.000Z",
+				"publicationTime": "2016-10-26T00:00:00.000Z",
+				"disclosureTime": "2014-10-03T00:00:00.000Z",
+				"id": "SNYK-RUBY-BREADCRUMBSONRAILS-20297"
+			}
+		],
 		"bson": [
 			{
 				"title": "Data Injection",
@@ -10134,7 +10203,7 @@
 				"credit": [
 					"Holger Just"
 				],
-				"description": "## Overview\n\n[`cocaine`]('https://rubygems.org/gems/cocaine') is a library for doing command lines.\n\nAffected versions of this gem are vulnerable to an attacker injecting hostile commands into a command line via a crafted hash object which is not properly escaped. This is due to the method of variable interpolation used by the gem, allowing an attacker to execute arbitrary commands via a crafted `has` object, related to recursive variable interpolation.\n\n## Details\n\nThe impact is lessened on Ruby version 1.8.* because hashes are not ordered by default, so an attacker must rely on luck for the attack to work.\n\nAn attack of this sort cannot take place if there is only one value being interpolated into the command line.\n\n## Remediation\nUpgrade to version `>= 0.5.3` or greater.\n\n## References\n\n- http://rubysec.com/advisories/CVE-2013-4457/\n- http://www.openwall.com/lists/oss-security/2013/10/22/10\n- https://github.com/thoughtbot/cocaine/blob/master/NEWS.md\n",
+				"description": "## Overview\n\n[`cocaine`]('https://rubygems.org/gems/cocaine') is a library for doing command lines.\n\nAffected versions of this gem are vulnerable to an attacker injecting hostile commands into a command line via a crafted hash object which is not properly escaped. This is due to the method of variable interpolation used by the gem, allowing an attacker to execute arbitrary commands via a crafted `has` object, related to recursive variable interpolation.\n\n## Details\n\nThe impact is lessened on Ruby version 1.8.* because hashes are not ordered by default, so an attacker must rely on luck for the attack to work.\n\nAn attack of this sort cannot take place if there is only one value being interpolated into the command line.\n\n## References\n\n- http://rubysec.com/advisories/CVE-2013-4457/\n- http://www.openwall.com/lists/oss-security/2013/10/22/10\n- https://github.com/thoughtbot/cocaine/blob/master/NEWS.md\n",
 				"moduleName": "cocaine",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -10340,7 +10409,7 @@
 				"credit": [
 					"Larry W. Cashdollar"
 				],
-				"description": "## Overview\n[`Creme Fraiche`] Converts email to PDF.\nAffected versions of this gem fail to properly sanitize input in file names.\n\nA malicious email attachment with a file name consisting of shell meta﻿characters could inject commands into the shell.\n\nIf the attacker is allowed to specify a filename (via a web gui) commands could be injected that way as well.\n\n```shell\ncmd = \"pdftk %s updateinfo %s output %s\" %[pdf, infofile, tfile]\n@log.debug('pdftk-command is ' << cmd)\npdftkresult = system( cmd)\n```\n\n## Remediation\nUpgrade to version `>= 0.6.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2090\n",
+				"description": "## Overview\n[`Creme Fraiche`] Converts email to PDF.\nAffected versions of this gem fail to properly sanitize input in file names.\n\nA malicious email attachment with a file name consisting of shell meta﻿characters could inject commands into the shell.\n\nIf the attacker is allowed to specify a filename (via a web gui) commands could be injected that way as well.\n\n```shell\ncmd = \"pdftk %s updateinfo %s output %s\" %[pdf, infofile, tfile]\n@log.debug('pdftk-command is ' << cmd)\npdftkresult = system( cmd)\n```\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2090\n",
 				"moduleName": "cremefraiche",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11665,7 +11734,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`FlavourSaver`](https://rubygems.org/gems/flavour_saver) is a pure-ruby implementation of the Handlebars templating language.\nAffected versions of this gem are vulnerable to arbitrary command execution via the helper method dispatch where it uses `Kernel::send` to call helpers without checking that they are defined within the template context first.  This allows expressions such as `{{system \"ls\"}}` or `{{eval \"puts 1 + 1\"}}` to be executed.\n\n## Remediation\nUpgrade to version `>= 0.3.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-110796\n",
+				"description": "## Overview\n[`FlavourSaver`](https://rubygems.org/gems/flavour_saver) is a pure-ruby implementation of the Handlebars templating language.\nAffected versions of this gem are vulnerable to arbitrary command execution via the helper method dispatch where it uses `Kernel::send` to call helpers without checking that they are defined within the template context first.  This allows expressions such as `{{system \"ls\"}}` or `{{eval \"puts 1 + 1\"}}` to be executed.\n\n## References\n- http://rubysec.com/advisories/OSVDB-110796\n",
 				"moduleName": "flavour_saver",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11790,7 +11859,7 @@
 				"credit": [
 					"Larry W. Cashdollar"
 				],
-				"description": "## Overview\n[`fog-dragonfly`](https://rubygems.org/gems/fog-dragonfly) is an on-the-fly Rack-based image handling framework.\nThis gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker executing arbitrary commands, due to a failure to properly sanitize input passed via the `imagemagickutils.rb` script.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20109](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20109)\n\n\n## Remediation\nUpgrade to version `>= 0.8.4` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-96798\n- http://seclists.org/fulldisclosure/2013/Sep/18\n- http://www.vapid.dhs.org/advisories/fog-dragonfly-0.8.2-cmd-inj.html\n",
+				"description": "## Overview\n[`fog-dragonfly`](https://rubygems.org/gems/fog-dragonfly) is an on-the-fly Rack-based image handling framework.\nThis gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker executing arbitrary commands, due to a failure to properly sanitize input passed via the `imagemagickutils.rb` script.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20109](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20109)\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-96798\n- http://seclists.org/fulldisclosure/2013/Sep/18\n- http://www.vapid.dhs.org/advisories/fog-dragonfly-0.8.2-cmd-inj.html\n",
 				"moduleName": "fog-dragonfly",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11824,7 +11893,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`fog-dragonfly`](https://rubygems.org/gems/fog-dragonfly) is an on-the-fly Rack-based image handling framework.\nThis gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker gaining read/write access to the filesystem, and executing arbitrary commands via a flaw in uploading & processing. This is that is due to the gem failing to restrict arbitrary commands to imagemagicks convert.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20193](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20193)\n\n## Remediation\nUpgrade to version `>= 0.8.4` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-110439\n- http://osvdb.org/show/osvdb/110439\n",
+				"description": "## Overview\n[`fog-dragonfly`](https://rubygems.org/gems/fog-dragonfly) is an on-the-fly Rack-based image handling framework.\nThis gem was renamed from `fog-dragonfly` to `dragonfly`.\n\nAffected versions of this gem are vulnerable to a remote attacker gaining read/write access to the filesystem, and executing arbitrary commands via a flaw in uploading & processing. This is that is due to the gem failing to restrict arbitrary commands to imagemagicks convert.\n\nRelated to [SNYK-RUBY-DRAGONFLY-20193](https://snyk.io/vuln/SNYK-RUBY-DRAGONFLY-20193)\n\n## References\n- http://rubysec.com/advisories/OSVDB-110439\n- http://osvdb.org/show/osvdb/110439\n",
 				"moduleName": "fog-dragonfly",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11857,7 +11926,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`ftpd`](https://rubygems.org/gems/ftpd) is a pure Ruby FTP server library.\nAffected versions of this gem are vulnerable to arbitrary command injection.\nThe flaw is triggered when handling a specially crafted option or filename that contains a shell character.\n\n## Remediation\nUpgrade to version `>= 0.2.2` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2512\n",
+				"description": "## Overview\n[`ftpd`](https://rubygems.org/gems/ftpd) is a pure Ruby FTP server library.\nAffected versions of this gem are vulnerable to arbitrary command injection.\nThe flaw is triggered when handling a specially crafted option or filename that contains a shell character.\n\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2512\n",
 				"moduleName": "ftpd",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11959,7 +12028,7 @@
 				"credit": [
 					"Bart Kamphorst"
 				],
-				"description": "## Overview\n[`gollum`](https://rubygems.org/gems/gollum) is a simple, Git-powered wiki with an API and local frontend.\nAffected versions of this gem are vulnerable to arbitrary file access via its upload file functionality lacking validation when handling temporary files during the upload process.\n\n## Remediation\nUpgrade to version `>= 4.0.1` or greater.\n\n## References\n- [Rubysec](http://rubysec.com/advisories/CVE-2015-7314)\n- [Github commit]( https://github.com/gollum/gollum/commit/ce68a88293ce3b18c261312392ad33a88bb69ea1)\n",
+				"description": "## Overview\n[`gollum`](https://rubygems.org/gems/gollum) is a simple, Git-powered wiki with an API and local frontend.\nAffected versions of this gem are vulnerable to arbitrary file access via its upload file functionality lacking validation when handling temporary files during the upload process.\n\n\n## References\n- [Rubysec](http://rubysec.com/advisories/CVE-2015-7314)\n- [Github commit]( https://github.com/gollum/gollum/commit/ce68a88293ce3b18c261312392ad33a88bb69ea1)\n",
 				"moduleName": "gollum",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -11992,7 +12061,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`gollum-grit_adapter`](https://rubygems.org/gems/gollum-grit_adapter) is an adapter for Gollum to use Grit at the backend.\nAffected versions of this gem are vulnerable to arbitrary command execution.\n\nGrit implements its search functionality by shelling out to `git grep`. In\nturn, `git grep` takes a `-O` or `--open-files-in-pages` option that will\npipe the results of `grep` to an arbitrary process. By failing to properly\nsanitize user input search parameters, an attacker can thus perform command\nexecution.\n\nNote that the grep result must find the string `master` (or\nwhatever is the default branch that gollum uses) in any of the wiki's\ndocuments for this to succeed.\n\n## Remediation\nUpgrade to version `>= 0.1.1` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-9489\n- https://github.com/gollum/gollum/issues/913\n",
+				"description": "## Overview\n[`gollum-grit_adapter`](https://rubygems.org/gems/gollum-grit_adapter) is an adapter for Gollum to use Grit at the backend.\nAffected versions of this gem are vulnerable to arbitrary command execution.\n\nGrit implements its search functionality by shelling out to `git grep`. In\nturn, `git grep` takes a `-O` or `--open-files-in-pages` option that will\npipe the results of `grep` to an arbitrary process. By failing to properly\nsanitize user input search parameters, an attacker can thus perform command\nexecution.\n\nNote that the grep result must find the string `master` (or\nwhatever is the default branch that gollum uses) in any of the wiki's\ndocuments for this to succeed.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-9489\n- https://github.com/gollum/gollum/issues/913\n",
 				"moduleName": "gollum-grit_adapter",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12025,7 +12094,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`GTK2`](https://rubygems.org/gems/gtk2) is a Ruby binding of GTK+-2.x.\nAffected versions of this gem are vulnerable to arbitrary command execution via format string specifiers in the message parameter (the `mdiag_initialize` function in `gtk/src/rbgtkmessagedialog.c`)\n\n## Remediation\nUpgrade to version `0.16.0` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2007-6183\n",
+				"description": "## Overview\n[`GTK2`](https://rubygems.org/gems/gtk2) is a Ruby binding of GTK+-2.x.\nAffected versions of this gem are vulnerable to arbitrary command execution via format string specifiers in the message parameter (the `mdiag_initialize` function in `gtk/src/rbgtkmessagedialog.c`)\n\n## References\n- http://rubysec.com/advisories/CVE-2007-6183\n",
 				"moduleName": "gtk2",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12061,7 +12130,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`gyazo`](https://rubygems.org/gems/gyazo) is an API wrapper for gyazo.com.\nAffected versions of this gem are vulnerable to arbitrary command execution via the `client.rb` script mishandling metacharacters.\n\n## Remediation\nUpgrade to version `>= 2.0.0` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4994\n",
+				"description": "## Overview\n[`gyazo`](https://rubygems.org/gems/gyazo) is an API wrapper for gyazo.com.\nAffected versions of this gem are vulnerable to arbitrary command execution via the `client.rb` script mishandling metacharacters.\n\n\n## References\n- http://rubysec.com/advisories/CVE-2014-4994\n",
 				"moduleName": "gyazo",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12167,7 +12236,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`httparty`](https://rubygems.org/gems/httparty) makes consuming restful web services easy.\nAffected versions of this gem contains a flaw that is triggered when a type casting error occurs during the parsing of parameters. This may allow a context-dependent attacker to potentially execute arbitrary code.\n\n## Remediation\nUpgrade to version `>= 0.10.0` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-1801\n",
+				"description": "## Overview\n[`httparty`](https://rubygems.org/gems/httparty) makes consuming restful web services easy.\nAffected versions of this gem contains a flaw that is triggered when a type casting error occurs during the parsing of parameters. This may allow a context-dependent attacker to potentially execute arbitrary code.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-1801\n",
 				"moduleName": "httparty",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12311,7 +12380,7 @@
 				"credit": [
 					"Hiroshi Nakamura"
 				],
-				"description": "## Overview\n[`JRuby-OpenSSL`](https://rubygems.org/gems/jruby-openssl) is an add-on gem for JRuby that emulates the Ruby OpenSSL native library.\nA security problem involving peer certificate verification was found where\nfailed verification silently did nothing, making affected applications\nvulnerable to attackers. Attackers could lead a client application to believe\nthat a secure connection to a rogue SSL server is legitimate. Attackers could\nalso penetrate client-validated SSL server applications with a dummy\ncertificate.\n\n## Remediation\nUpgrade to version `>= 0.6` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2009-4123\n- http://jruby.org/2009/12/07/vulnerability-in-jruby-openssl\n",
+				"description": "## Overview\n[`JRuby-OpenSSL`](https://rubygems.org/gems/jruby-openssl) is an add-on gem for JRuby that emulates the Ruby OpenSSL native library.\nA security problem involving peer certificate verification was found where\nfailed verification silently did nothing, making affected applications\nvulnerable to attackers. Attackers could lead a client application to believe\nthat a secure connection to a rogue SSL server is legitimate. Attackers could\nalso penetrate client-validated SSL server applications with a dummy\ncertificate.\n\n## References\n- http://rubysec.com/advisories/CVE-2009-4123\n- http://jruby.org/2009/12/07/vulnerability-in-jruby-openssl\n",
 				"moduleName": "jruby-openssl",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12344,7 +12413,7 @@
 				"credit": [
 					"joernchen"
 				],
-				"description": "## Overview\n[`jruby_sandbox`](https://rubygems.org/gems/jruby_sandbox) is a version of `_why's Freaky Freaky Sandbox` for JRuby.\nAffected versions of this gem are vulnerable to sandbox bypassing for arbitrary code execution while importing Java classes.\n\n## Details\n`jruby_sandbox` aims to allow safe execution of user given Ruby code within a JRuby [0] runtime. However via import of Java classes it is possible to circumvent those protections and execute arbitrary code outside the sandboxed environment.\n\n**Example:**\n```ruby\nrequire 'sandbox'\nsand = Sandbox.safe\nsand.activate!\n\nbegin\n  sand.eval(\"print `id`\")\nrescue Exception => e\n  puts \"fail via Ruby ;)\"\nend\nputs \"Now for some Java\"\n\nsand.eval(\"Kernel.send :java_import, 'java.lang.ProcessBuilder'\")\nsand.eval(\"Kernel.send :java_import, 'java.util.Scanner'\")\nsand.eval(\"s = Java::java.util.Scanner.new( \" +\n          \"Java::java.lang.ProcessBuilder.new('sh','-c','id')\" +\n          \".start.getInputStream  ).useDelimiter(\\\"\\x00\\\").next\")\nsand.eval(\"print s\")\n```\n\n## Remediation\nUpgrade to version `>= 0.2.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-106279\n- http://www.phenoelit.org/stuff/jruby-sandbox.txt\n",
+				"description": "## Overview\n[`jruby_sandbox`](https://rubygems.org/gems/jruby_sandbox) is a version of `_why's Freaky Freaky Sandbox` for JRuby.\nAffected versions of this gem are vulnerable to sandbox bypassing for arbitrary code execution while importing Java classes.\n\n## Details\n`jruby_sandbox` aims to allow safe execution of user given Ruby code within a JRuby [0] runtime. However via import of Java classes it is possible to circumvent those protections and execute arbitrary code outside the sandboxed environment.\n\n**Example:**\n```ruby\nrequire 'sandbox'\nsand = Sandbox.safe\nsand.activate!\n\nbegin\n  sand.eval(\"print `id`\")\nrescue Exception => e\n  puts \"fail via Ruby ;)\"\nend\nputs \"Now for some Java\"\n\nsand.eval(\"Kernel.send :java_import, 'java.lang.ProcessBuilder'\")\nsand.eval(\"Kernel.send :java_import, 'java.util.Scanner'\")\nsand.eval(\"s = Java::java.util.Scanner.new( \" +\n          \"Java::java.lang.ProcessBuilder.new('sh','-c','id')\" +\n          \".start.getInputStream  ).useDelimiter(\\\"\\x00\\\").next\")\nsand.eval(\"print s\")\n```\n\n## References\n- http://rubysec.com/advisories/OSVDB-106279\n- http://www.phenoelit.org/stuff/jruby-sandbox.txt\n",
 				"moduleName": "jruby_sandbox",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12843,7 +12912,7 @@
 				"credit": [
 					"Og Maciel"
 				],
-				"description": "## Overview\n[`ldap_fluff`](https://rubygems.org/gems/ldap_fluff) is a simple library for binding & group querying on top of various LDAP implementations.\nAffected versions of the gem are vulnerable to authentication bypass. When using Microsoft Active Directory server as the authentication back-end, authentication is no longer being enforced, allowing a remote attacker to trivially bypass it.\n\n## Remediation\nUpgrade to version `>= 0.1.3` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90579\n- https://access.redhat.com/security/cve/cve-2012-5604\n",
+				"description": "## Overview\n[`ldap_fluff`](https://rubygems.org/gems/ldap_fluff) is a simple library for binding & group querying on top of various LDAP implementations.\nAffected versions of the gem are vulnerable to authentication bypass. When using Microsoft Active Directory server as the authentication back-end, authentication is no longer being enforced, allowing a remote attacker to trivially bypass it.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90579\n- https://access.redhat.com/security/cve/cve-2012-5604\n",
 				"moduleName": "ldap_fluff",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12973,11 +13042,11 @@
 		],
 		"loofah": [
 			{
-				"title": "Loofah HTML and XSS injection vulnerability",
+				"title": "Cross-site Scripting (XSS)",
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\nLoofah Gem for Ruby contains a flaw that allows a remote cross-site\nscripting (XSS) attack. This flaw exists because the\nLoofah::HTML::Document\\#text function passes properly sanitized\nuser-supplied input to the Loofah::XssFoliate and\nLoofah::Helpers\\#strip_tags functions which convert input back to\ntext. This may allow an attacker to create a specially crafted\nrequest that would execute arbitrary script code in a user's browser\nwithin the trust relationship between their browser and the server.\n\n\n## Remediation\nUpgrade to version `>=  0.4.6` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90945\n- http://www.osvdb.org/show/osvdb/90945\n",
+				"description": "## Overview\n[`loofah`](https://rubygems.org/gems/loofah) is a library for manipulating and transforming HTML/XML documents and fragments. It's built on top of Nokogiri and libxml2.\n\nAffected versions of this gem allow a remote cross-site scripting (XSS) attack. This is due to the `Loofah::HTML::Document\\#text` function passing properly sanitized user-supplied input to the `Loofah::XssFoliate` and `Loofah::Helpers\\#strip_tags` functions which convert input back to text.\n\n## References\n- http://rubysec.com/advisories/OSVDB-90945\n",
 				"moduleName": "loofah",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -12997,7 +13066,7 @@
 						"OSVDB-90945"
 					]
 				},
-				"CVSSv2": 5,
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:36:57.000Z",
 				"modificationTime": "2016-09-21T12:36:57.000Z",
@@ -13206,11 +13275,11 @@
 		],
 		"mapbox-rails": [
 			{
-				"title": "mapbox-rails Content Injection via TileJSON attribute",
+				"title": "Content Injection via TileJSON attribute",
 				"credit": [
-					"Unknown"
+					"Juan Broullón"
 				],
-				"description": "## Overview\nMapbox.js versions 1.x prior to 1.6.5 and 2.x prior to 2.1.7 are vulnerable\nto a cross-site-scripting attack in certain uncommon usage scenarios.\n\nIf you use L.mapbox.map or L.mapbox.tileLayer to load untrusted TileJSON\ncontent from a non-Mapbox URL, it is possible for a malicious user with\ncontrol over the TileJSON content to inject script content into the\n\"attribution\" value of the TileJSON which will be executed in the context of\nthe page using Mapbox.js.\n\nSuch usage is uncommon. The following usage scenarios are not vulnerable:\n\n* only trusted TileJSON content is loaded\n* TileJSON content comes only from mapbox.com URLs\n* a Mapbox map ID is supplied, rather than a TileJSON URL\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-129854\n- https://nodesecurity.io/advisories/49\n",
+				"description": "## Overview\n[mapbox-rails](https://rubygems.org/gems/mapbox-rails) integrates [mapbox.js](https://www.npmjs.com/package/mapbox.js) with the Rails asset pipeline.\n\n[mapbox.js](https://snyk.io/vuln/npm:mapbox.js:20151024) is vulnerable to script content injection when `L.mapbox.map` or `L.mapbox.tileLayer` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- only trusted TileJSON content is loaded\n- TileJSON content comes only from mapbox.com URLs\n- a Mapbox map ID is supplied, rather than a TileJSON URL\n\n## References\n- [Rubysec](http://rubysec.com/advisories/OSVDB-129854/)\n- [Hackerone](https://hackerone.com/reports/54327)\n- [Github commit](https://github.com/mapbox/mapbox.js/commit/538d229ab6767bb4c3f3969c417f9884189c1512)\n",
 				"moduleName": "mapbox-rails",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13220,12 +13289,15 @@
 					]
 				},
 				"identifiers": {
-					"CWE": [],
+					"CWE": [
+						"CWE-74"
+					],
 					"OSVDB": [
 						"OSVDB-129854"
 					]
 				},
-				"severity": "high",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+				"severity": "low",
 				"creationTime": "2016-09-21T12:36:58.000Z",
 				"modificationTime": "2016-09-21T12:36:58.000Z",
 				"publicationTime": "2015-10-23T21:00:00.000Z",
@@ -13233,11 +13305,11 @@
 				"id": "SNYK-RUBY-MAPBOXRAILS-20241"
 			},
 			{
-				"title": "mapbox-rails Content Injection via TileJSON Name",
+				"title": "Content Injection via TileJSON Name",
 				"credit": [
-					"Unknown"
+					"Abdullah (enderun07)"
 				],
-				"description": "## Overview\nMapbox.js versions 1.x prior to 1.6.6 and 2.x prior to 2.2.4 are vulnerable\nto a cross-site-scripting attack in certain uncommon usage scenarios.\n\nIf you use L.mapbox.map and L.mapbox.shareControl it is possible for a\nmalicious user with control over the TileJSON content to inject script\ncontent into the name value of the TileJSON. After clicking on the share\ncontrol, the malicious code will execute in the context of the page using\nMapbox.js.\n\nSuch usage is uncommon. L.mapbox.shareControl is not automatically added to\nMapbox.js maps and must be explicitly added. The following usage scenarios\nare not vulnerable:\n\n* the map does not use a share control (L.mapbox.sharecontrol)\n* only trusted TileJSON content is loaded\n\n\n## References\n- http://rubysec.com/advisories/OSVDB-132871\n- https://nodesecurity.io/advisories/74\n",
+				"description": "## Overview\n[mapbox-rails](https://rubygems.org/gems/mapbox-rails) integrates [mapbox.js](https://www.npmjs.com/package/mapbox.js) with the Rails asset pipeline.\n\n[mapbox.js](https://snyk.io/vuln/npm:mapbox.js:20160112) is vulnerable to script content injection when `L.mapbox.map` and `L.mapbox.shareControl` is used to load untrusted TileJSON content from a non-Mapbox URL.\n\n## Details\nSuch usage is uncommon. The following usage scenarios are **not vulnerable**: [1]\n- the map does not use a share control (L.mapbox.sharecontrol)\n- only trusted TileJSON content is loaded\n\nRelated vulnerability:\n\n## References\n- [Rubysec](http://rubysec.com/advisories/OSVDB-132871/)\n- [Hackerone](https://hackerone.com/reports/99245)\n- [Github Issue](https://github.com/mapbox/mapbox.js/pull/1102)\n",
 				"moduleName": "mapbox-rails",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13247,12 +13319,15 @@
 					]
 				},
 				"identifiers": {
-					"CWE": [],
+					"CWE": [
+						"CWE-74"
+					],
 					"OSVDB": [
 						"OSVDB-132871"
 					]
 				},
-				"severity": "high",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+				"severity": "low",
 				"creationTime": "2016-09-21T12:36:58.000Z",
 				"modificationTime": "2016-09-21T12:36:58.000Z",
 				"publicationTime": "2016-01-11T22:00:00.000Z",
@@ -13403,7 +13478,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`multi_xml`](https://rubygems.org/gems/multi_xml) provides swappable XML backends utilizing LibXML, Nokogiri, Ox, or REXML.\nAffected versions of this gem are vulnerable to arbitrart command executions by a remote attacker via a specially crafted requests containing arbitrary symbol and yaml types. This is due to mishandling the parsing of the `XML` parameter.\n\n## Remediation\nUpgrade to version `>= 0.5.2` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-0175\n",
+				"description": "## Overview\n[`multi_xml`](https://rubygems.org/gems/multi_xml) provides swappable XML backends utilizing LibXML, Nokogiri, Ox, or REXML.\nAffected versions of this gem are vulnerable to arbitrart command executions by a remote attacker via a specially crafted requests containing arbitrary symbol and yaml types. This is due to mishandling the parsing of the `XML` parameter.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-0175\n",
 				"moduleName": "multi_xml",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13474,7 +13549,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`net-ldap`](https://rubygems.org/gems/net-ldap) implements client access for the Lightweight Directory Access Protocol (LDAP), an IETF standard protocol for accessing distributed directory services.\nAffected versions of this gem generate SSHA passwords with a weak salt value that is between 0 and 999. This may allow a local attacker to more easily gain access to password information.\n\n## Remediation\nUpgrade to version `>= 0.6.0` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-106108\n- http://osvdb.org/show/osvdb/106108\n",
+				"description": "## Overview\n[`net-ldap`](https://rubygems.org/gems/net-ldap) implements client access for the Lightweight Directory Access Protocol (LDAP), an IETF standard protocol for accessing distributed directory services.\nAffected versions of this gem generate SSHA passwords with a weak salt value that is between 0 and 999. This may allow a local attacker to more easily gain access to password information.\n\n## References\n- http://rubysec.com/advisories/OSVDB-106108\n- http://osvdb.org/show/osvdb/106108\n",
 				"moduleName": "net-ldap",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13510,7 +13585,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[newrelic_rpm](https://rubygems.org/gems/newrelic_rpm) is a performance management system, developed by [New Relic, Inc](https://www.newrelic.com).\n\nA bug in the Ruby agent causes database connection information and raw SQL\nstatements to be transmitted to New Relic servers. The database connection\ninformation includes the database IP address, username, and password.\n\n## Remediation\nUpgrade to version `>= 3.5.3.25` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-0284\n",
+				"description": "## Overview\n[newrelic_rpm](https://rubygems.org/gems/newrelic_rpm) is a performance management system, developed by [New Relic, Inc](https://www.newrelic.com).\n\nA bug in the Ruby agent causes database connection information and raw SQL\nstatements to be transmitted to New Relic servers. The database connection\ninformation includes the database IP address, username, and password.\n\n\n## References\n- http://rubysec.com/advisories/CVE-2013-0284\n",
 				"moduleName": "newrelic_rpm",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -13578,10 +13653,9 @@
 				"id": "SNYK-RUBY-NOKOGIRI-20032"
 			},
 			{
-				"title": "Denial of Service (DoS) via Uncontrolled Resource Consumption",
+				"title": "Denial of Service (DoS) via External Entity (XXE) Expansion",
 				"credit": [
-					"Yoko Harada",
-					"John Shahid"
+					"Jonas Nicklas"
 				],
 				"description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to Denial of Service (DoS) attacks.\n\n## Details\nNokogiri gem for Ruby contains an flaw that is triggered during the parsing of XML data. The issue is due to an incorrectly configured XML parser accepting XML external entities from an untrusted source. By sending specially crafted XML data, a remote attacker can cause an infinite loop and crash the program.\n\n\n## References\n- http://rubysec.com/advisories/CVE-2013-6461/\n- https://groups.google.com/forum/#!topic/ruby-security-ann/DeJpjTAg1FA\n",
 				"moduleName": "nokogiri",
@@ -13617,11 +13691,12 @@
 				"id": "SNYK-RUBY-NOKOGIRI-20127"
 			},
 			{
-				"title": "Denial of Service (DoS) via Uncontrolled Resource Consumption",
+				"title": "Denial of Service (DoS) via XML Document handling",
 				"credit": [
-					"Unknown"
+					"Yoko Harada",
+					"John Shahid"
 				],
-				"description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to Denial of Service attacks.\n\n## Details\nNokogiri Gem for JRuby contains a flaw that may allow a remote denial of\nservice. The issue is triggered when handling a specially crafted XML\ndocument, which can result in an infinite loop. This may allow a\ncontext-dependent attacker to crash the server.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-6460\n",
+				"description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to Denial of Service attacks.\n\n## Details\nNokogiri Gem for JRuby contains a flaw that may allow a remote denial of service. The issue is triggered when handling a specially crafted XML document, which can result in an infinite loop. This may allow a context-dependent attacker to crash the server.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-6460\n- https://groups.google.com/forum/#!topic/ruby-security-ann/DeJpjTAg1FA\n",
 				"moduleName": "nokogiri",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14736,7 +14811,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`rack`](https://rubygems.org/gems/rack) is a minimal, modular and adaptable interface for developing web applications in Ruby.\nAffected versions of this Gem are vulnerable to Remote Code Execution.\n\n## Details\nRack contains a flaw that is due to an error in the `Rack::Session::Cookie` function allowing a remote attackers to guess the session cookie, gain privileges, and execute arbitrary code via a timing attack involving an HMAC comparison function that does not run in constant time.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-0263\n",
+				"description": "## Overview\n[`rack`](https://rubygems.org/gems/rack) is a minimal, modular and adaptable interface for developing web applications in Ruby.\nAffected versions of this Gem are vulnerable to Remote Code Execution.\n\n## Details\nRack contains a flaw that is due to an error in the `Rack::Session::Cookie` function allowing a remote attackers to guess the session cookie, gain privileges, and execute arbitrary code via a timing attack involving an HMAC comparison function that does not run in constant time.\n\n## References\n- https://bugzilla.redhat.com/show_bug.cgi?id=909071\n- https://github.com/rack/rack/commit/9a81b961457805f6d1a5c275d053068440421e11\n",
 				"moduleName": "rack",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -14768,7 +14843,7 @@
 				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
 				"severity": "medium",
 				"creationTime": "2016-09-21T12:37:03.000Z",
-				"modificationTime": "2016-09-21T12:37:03.000Z",
+				"modificationTime": "2016-11-13T12:37:03.000Z",
 				"publicationTime": "2013-02-06T22:00:00.000Z",
 				"disclosureTime": "2013-02-06T22:00:00.000Z",
 				"id": "SNYK-RUBY-RACK-20059"
@@ -15065,7 +15140,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`rbovirt`](https://rubygems.org/gems/rbovirt) is a Ruby client for oVirt REST API.\nAffected versions of this gem are vulnerable to authentication bypass due to failing to validate SSL certificates. This may allow an attacker with access to network traffic (e.g. MiTM, DNS cache poisoning) to spoof the SSL server via an arbitrary certificate that appears valid. Such an attack would allow for the interception of sensitive traffic, and potentially allow for the injection of content into the SSL stream.\n\n## Remediation\nUpgrade to version `>= 0.0.24` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-0036\n",
+				"description": "## Overview\n[`rbovirt`](https://rubygems.org/gems/rbovirt) is a Ruby client for oVirt REST API.\nAffected versions of this gem are vulnerable to authentication bypass due to failing to validate SSL certificates. This may allow an attacker with access to network traffic (e.g. MiTM, DNS cache poisoning) to spoof the SSL server via an arbitrary certificate that appears valid. Such an attack would allow for the interception of sensitive traffic, and potentially allow for the injection of content into the SSL stream.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-0036\n",
 				"moduleName": "rbovirt",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15251,7 +15326,7 @@
 				"credit": [
 					"Ted Johansson"
 				],
-				"description": "## Overview\n[`refile`](https://rubygems.org/gems/refile) is a file upload library.\nAffected versions of this gem do not sanitize input when handling the `remote_image_url` field in a form, where `image` is the name of the attachment. This may allow a remote attacker to execute arbitrary shell commands.\n\n## Remediation\nUpgrade to version `>= 0.5.4` or greater.\n\n## References\n- http://rubysec.com/advisories/OSVDB-120857\n- https://groups.google.com/forum/#!topic/ruby-security-ann/VIfMO2LvzNs\n",
+				"description": "## Overview\n[`refile`](https://rubygems.org/gems/refile) is a file upload library.\nAffected versions of this gem do not sanitize input when handling the `remote_image_url` field in a form, where `image` is the name of the attachment. This may allow a remote attacker to execute arbitrary shell commands.\n\n## References\n- http://rubysec.com/advisories/OSVDB-120857\n- https://groups.google.com/forum/#!topic/ruby-security-ann/VIfMO2LvzNs\n",
 				"moduleName": "refile",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15355,7 +15430,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`rgpg`](https://rubygems.org/gems/rgpg) is a wrapper around \"gpg\" command for file encryption.\nAffected versions of this gem are vulnerable to Arbitrary command execution via `GpgHelper` module (lib/rgpg/gpg_helper.rb). The program fails to properly sanitize user-supplied input before being used in the `system()` function for execution. This may allow a remote attacker to execute arbitrary commands.\n\n## Remediation\nUpgrade to version `>= 0.2.3` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-4203\n",
+				"description": "## Overview\n[`rgpg`](https://rubygems.org/gems/rgpg) is a wrapper around \"gpg\" command for file encryption.\nAffected versions of this gem are vulnerable to Arbitrary command execution via `GpgHelper` module (lib/rgpg/gpg_helper.rb). The program fails to properly sanitize user-supplied input before being used in the `system()` function for execution. This may allow a remote attacker to execute arbitrary commands.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-4203\n",
 				"moduleName": "rgpg",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15553,7 +15628,7 @@
 				"credit": [
 					"Ivan Necas"
 				],
-				"description": "## Overview\n[`Safemode`](https://rubygems.org/gems/safemode) is a library for safe evaluation of Ruby code based on RubyParser and Ruby2Ruby.\nThis gem is initialized with an optional `delegate` object. If the delegated object is a Rails controller, `inspect` could be called which then exposes all informations about the App, including routes, secret tokens, caches and so on.\n\n## Remediation\nUpgrade to version `>= 1.2.4` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-3693\n- http://seclists.org/oss-sec/2016/q2/119\n",
+				"description": "## Overview\n[`Safemode`](https://rubygems.org/gems/safemode) is a library for safe evaluation of Ruby code based on RubyParser and Ruby2Ruby.\nThis gem is initialized with an optional `delegate` object. If the delegated object is a Rails controller, `inspect` could be called which then exposes all informations about the App, including routes, secret tokens, caches and so on.\n\n## References\n- http://rubysec.com/advisories/CVE-2016-3693\n- http://seclists.org/oss-sec/2016/q2/119\n",
 				"moduleName": "safemode",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15656,7 +15731,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`sfpagent`](https://rubygems.org/gems/sfpagent) is a ruby implementation of SFP agent. Affected versions of this gem are vulnerable to context-dependent attackers to execute arbitrary commands, due to no proper sanitization in the `JSON[body]` when handling module names with shell metacharacters.\n\n## Remediation\nUpgrade to version `>= 0.4.15` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-2888\n",
+				"description": "## Overview\n[`sfpagent`](https://rubygems.org/gems/sfpagent) is a ruby implementation of SFP agent. Affected versions of this gem are vulnerable to context-dependent attackers to execute arbitrary commands, due to no proper sanitization in the `JSON[body]` when handling module names with shell metacharacters.\n\n## References\n- http://rubysec.com/advisories/CVE-2014-2888\n",
 				"moduleName": "sfpagent",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15684,6 +15759,38 @@
 				"publicationTime": "2014-04-15T21:00:00.000Z",
 				"disclosureTime": "2014-04-15T21:00:00.000Z",
 				"id": "SNYK-RUBY-SFPAGENT-20155"
+			}
+		],
+		"shipit-engine": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"Lalith Rallabhandi"
+				],
+				"description": "## Overview\n[`shipit-engine`](https://rubygems.org/gems/shipit-engine) is an application deployment software.\nAffected versions of this gem are vulnerable to Cross-site Scripting (XSS) attacks via the `deploy_url`, which didn't sanitize the website view and validate the link in the module.\n\n## Remediation\nUpgrade `shipit-engine` to version `0.12.0` or later\n\n## References\n- [Github issue](https://github.com/Shopify/shipit-engine/pull/604)\n- [Github Commit](https://github.com/Shopify/shipit-engine/commit/23c868ce2a177ff411b5506ae2a7be8c3e791f36)\n",
+				"moduleName": "shipit-engine",
+				"language": "ruby",
+				"packageManager": "rubygems",
+				"semver": {
+					"patched": [
+						">= 0.12.0"
+					],
+					"vulnerable": [
+						"< 0.12.0"
+					]
+				},
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					]
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"severity": "medium",
+				"creationTime": "2016-10-26T00:00:00.000Z",
+				"modificationTime": "2016-10-26T00:00:00.000Z",
+				"publicationTime": "2016-10-26T00:00:00.000Z",
+				"disclosureTime": "2016-09-19T21:00:00.000Z",
+				"id": "SNYK-RUBY-SHIPITENGINE-20295"
 			}
 		],
 		"show_in_browser": [
@@ -15923,7 +16030,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`Sounder`](https://rubygems.org/gems/sounder) plays sounds on macOS.\nAffected versions of this gem are vulnerable to arbitrary command execution by a context-dependent attacker due to mishandling of file names.\n\n## Remediation\nUpgrade to version `>= 1.0.2` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-5647\n",
+				"description": "## Overview\n[`Sounder`](https://rubygems.org/gems/sounder) plays sounds on macOS.\nAffected versions of this gem are vulnerable to arbitrary command execution by a context-dependent attacker due to mishandling of file names.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-5647\n",
 				"moduleName": "sounder",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -15959,7 +16066,7 @@
 				"credit": [
 					"Tomek Rabczak"
 				],
-				"description": "## Overview\n[`spina`](https://rubygems.org/gems/spina) is a content management system.\n`Spina::ApplicationController` actions didn't have CSRF protection. This causes a CSRF vulnerability across the entire engine which includes administrative functionality such as creating users, changing passwords, and media management.\n\n## Remediation\nUpgrade to version `>= 0.6.29` or greater.\n\n## References\n- [Rubysec](http://rubysec.com/advisories/CVE-2015-4619)\n- [Openwall](http://www.openwall.com/lists/oss-security/2015/06/16/11)\n- [Github Commit](https://github.com/denkGroot/Spina/commit/bfe44f289e336f80b6593032679300c493735e75)\n",
+				"description": "## Overview\n[`spina`](https://rubygems.org/gems/spina) is a content management system.\n`Spina::ApplicationController` actions didn't have CSRF protection. This causes a CSRF vulnerability across the entire engine which includes administrative functionality such as creating users, changing passwords, and media management.\n\n## References\n- [Rubysec](http://rubysec.com/advisories/CVE-2015-4619)\n- [Openwall](http://www.openwall.com/lists/oss-security/2015/06/16/11)\n- [Github Commit](https://github.com/denkGroot/Spina/commit/bfe44f289e336f80b6593032679300c493735e75)\n",
 				"moduleName": "spina",
 				"language": "ruby",
 				"packageManager": "rubygems",
@@ -16564,7 +16671,7 @@
 				"credit": [
 					"Unknown"
 				],
-				"description": "## Overview\n[`spree_auth_devise`](https://rubygems.org/gems/spree_auth_devise) provides authentication and authorization services for use with [`spree`](https://rubygems.org/gems/spree) by using Devise and CanCan.\n\nAffected versions of this gem are vulnerable to unauthorized privileges being gained. The issue is triggered as certain input related to mass role assignment in `app/models/spree/user.rb` is not properly verified before being used to update a user. This may allow a remote attacker to assign arbitrary roles and gain elevated administrative privileges.\n\nThis vulnerability is related to [spree_auth](https://snyk.io/vuln/SNYK-RUBY-SPREEAUTH-20072).\n\n## Remediation\nUpgrade to version `~> 1.1.6` or greater.\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2506\n- https://spreecommerce.com/blog/multiple-security-vulnerabilities-fixed\n",
+				"description": "## Overview\n[`spree_auth_devise`](https://rubygems.org/gems/spree_auth_devise) provides authentication and authorization services for use with [`spree`](https://rubygems.org/gems/spree) by using Devise and CanCan.\n\nAffected versions of this gem are vulnerable to unauthorized privileges being gained. The issue is triggered as certain input related to mass role assignment in `app/models/spree/user.rb` is not properly verified before being used to update a user. This may allow a remote attacker to assign arbitrary roles and gain elevated administrative privileges.\n\nThis vulnerability is related to [spree_auth](https://snyk.io/vuln/SNYK-RUBY-SPREEAUTH-20072).\n\n## References\n- http://rubysec.com/advisories/CVE-2013-2506\n- https://spreecommerce.com/blog/multiple-security-vulnerabilities-fixed\n",
 				"moduleName": "spree_auth_devise",
 				"language": "ruby",
 				"packageManager": "rubygems",
