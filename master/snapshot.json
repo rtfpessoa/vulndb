@@ -1734,13 +1734,13 @@
 		],
 		"express": [
 			{
-				"title": "Cross-Site Scripting",
+				"title": "Cross-Site Scripting (XSS)",
 				"credit": [
 					"Paweł Hałdrzyński"
 				],
-				"description": "## Overview\nVulnerable versions of express do not specify a charset field in the content-type header while displaying 400 level response messages. The lack of enforcing the user's browser to set correct charset could be leveraged by an attacker to perform a cross-site scripting attack, using non-standard encodings like UTF-7.\n\n_Source: [Node Security Project](https://nodesecurity.io/advisories/8)_\n\n## Recommendations\nUpdate express to a patched version.\n\n",
+				"description": "## Overview\n[`express`](https://www.npmjs.com/package/express) is a minimalist web framework.\n\nVulnerable versions of this package do not enforce the user's browser to set a specific charset in the content-type header content-type header while displaying 400 level response messages. This could be used by remote attackers to perform a cross-site scripting attack, by using non-standard encodings like UTF-7.\n\n## Recommendations\nUpdate express to `3.11.0` or higher for the 3.x versions or `4.5.0` or higher for the 4.x versions.\n\n## References\n- [Github release 3.11.0](https://github.com/expressjs/express/releases/tag/3.11.0)\n- [Github release 4.5.0](https://github.com/expressjs/express/releases/tag/4.5.0)\n",
 				"semver": {
-					"vulnerable": "<3.11 || >= 4 <4.5",
+					"vulnerable": "<3.11 || >=4 <4.5",
 					"unaffected": ">=3.11 <4 || >=4.5"
 				},
 				"CVSSv3": "",
@@ -1882,6 +1882,42 @@
 				"id": "npm:fancy-server:20141114",
 				"alternativeIds": [
 					"SNYK-JS-FANCYSERVER-10029"
+				]
+			}
+		],
+		"fernet": [
+			{
+				"title": "Timing Attack via Non-constant Comparison",
+				"moduleName": "fernet",
+				"description": "## Overview\n[`fernet`](https://www.npmjs.com/package/fernet) is Javascript implementation of [Fernet symmetric encryption](https://github.com/kr/fernet-spec).\nAffected versions of the package are vulnerable to a timing attack.\nThe library implemented a character to character comparison, similar to the built-in string comparison mechanism, `===`, and not a time constant string comparison. As a result, the comparison will fail faster when the first characters in the HMAC are incorrect.\nAn attacker can use this difference to perform a timing attack, essentially allowing them to guess the HMAC one character at a time.\n\nYou can read more about timing attacks in Node.js on the Snyk blog: https://snyk.io/blog/node-js-timing-attack-ccc-ctf/\n\n## Remediation\nUpgrade `fernet` to version 0.1.0 or higher.\n\n## References\n- [Github PR](https://github.com/csquared/fernet.js/pull/7)\n- [Github Commit](https://github.com/csquared/fernet.js/commit/29c456543c69604289931b4e8979ec17bbeeff33)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-208"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-FERNET-10206"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=0.1.0",
+					"vulnerable": "<0.1.0 >=0.0.1"
+				},
+				"credit": [
+					"Chris Continanza"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+				"disclosureTime": "2014-03-06T08:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-11-22T17:50:33.951Z",
+				"modificationTime": "2016-11-15T00:50:33.951Z",
+				"creationTime": "2016-10-14T22:50:33.951Z",
+				"id": "npm:fernet:20140306",
+				"alternativeIds": [
+					"SNYK-JS-FERNET-10206"
 				]
 			}
 		],
@@ -2244,6 +2280,40 @@
 			}
 		],
 		"hapi": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"moduleName": "hapi",
+				"description": "## Overview\n[`hapi`](https://www.npmjs.com/package/hapi) is an HTTP Server framework.\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS). They do not handle invalid payloads, allowing attackers craft malicious links or create a third party web page to inject code into the browser.\nThe fix was introduced in version 0.16.0 by parsing the payload and verifying its validity.\n\n## Remediation\nUpgrade `hapi` to version 0.16.0 or higher, although later versions are also susceptible to vulnerabilities. Last known safe version is 11.1.4.\n\n## References\n- https://github.com/hapijs/hapi/pull/700\n- https://github.com/hapijs/hapi/commit/41eadf911fb4d9ca765891474e7d0edefd883402\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-HAPI-10207"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=0.16.0",
+					"vulnerable": "<0.16.0"
+				},
+				"credit": [
+					"Wyatt Preul"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"disclosureTime": "2013-03-19T22:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-11-22T11:04:19.911Z",
+				"modificationTime": "2016-09-22T11:04:19.911Z",
+				"creationTime": "2016-09-22T11:04:19.911Z",
+				"id": "npm:hapi:20130320",
+				"alternativeIds": [
+					"SNYK-JS-HAPI-10207"
+				]
+			},
 			{
 				"title": "Denial of Service due to file descriptor leak",
 				"credit": [
@@ -3798,10 +3868,10 @@
 				"creationTime": "2016-04-20T14:45:19.556Z",
 				"modificationTime": "2016-09-28T14:45:19.556Z",
 				"publicationTime": "2016-04-20T14:45:19.556Z",
-				"description": "## Overview\n[marked](https://www.npmjs.com/package/marked) is a markdown parser and compiler used for rendering markdown content to html. It is vulnerable to content injection attack allowing the attacker to bypass its output sanitization (`sanitize: true`) protection. Using the [HTML Coded Character Set](https://www.w3.org/MarkUp/html-spec/html-spec_13.html#SEC13), attackers can inject `javascript:` code snippets into the output. For example, the following input `javascript&#x58document;alert&#40;1&#41;`  will result in `alert(1)` being executed when the user clicks on the link.\n\n## Remediation\nUpgrade `marked` to version 0.3.6 or higher.\nAlso, you can patch the vulnerability using [Snyk wizard](https://snyk.io/docs/using-snyk/#wizard). Alternatively you can use `remarkable` or other markdown libraries.\n\n## References\n- https://github.com/chjj/marked/pull/592\n- https://github.com/chjj/marked/pull/592/commits/2cff85979be8e7a026a9aca35542c470cf5da523\n",
+				"description": "## Overview\n[`marked`](https://www.npmjs.com/package/marked) is a markdown parser and compiler used for rendering markdown content to html. It is vulnerable to content injection attack allowing the attacker to bypass its output sanitization (`sanitize: true`) protection. Using the [HTML Coded Character Set](https://www.w3.org/MarkUp/html-spec/html-spec_13.html#SEC13), attackers can inject `javascript:` code snippets into the output. For example, the following input `javascript&#x58document;alert&#40;1&#41;`  will result in `alert(1)` being executed when the user clicks on the link.\n\n## Remediation\nUpgrade `marked` to version 0.3.6 or higher.\nAlso, you can patch the vulnerability using [Snyk wizard](https://snyk.io/docs/using-snyk/#wizard). Alternatively you can use `remarkable` or other markdown libraries.\n\n## References\n- [Github PR](https://github.com/chjj/marked/pull/592)\n- [Github Commit](https://github.com/chjj/marked/pull/592/commits/2cff85979be8e7a026a9aca35542c470cf5da523)\n",
 				"semver": {
-					"vulnerable": "<=0.3.5",
-					"unaffected": ">0.3.6"
+					"vulnerable": "<0.3.6",
+					"unaffected": ">=0.3.6"
 				},
 				"CVSSv3": "",
 				"severity": "high",
@@ -4108,10 +4178,10 @@
 				"creationTime": "2016-01-23T12:00:05.158Z",
 				"modificationTime": "2016-01-23T12:00:05.158Z",
 				"publicationTime": "2016-01-23T12:00:05.158Z",
-				"description": "## Overview\nA potential memory disclosure vulnerability exists in mongoose.\nA `Buffer` field in a MongoDB document can be used to expose sensitive\ninformation such as code, runtime memory and user data into MongoDB.\n\n### Details\nInitializing a `Buffer` field in a document with integer `N` creates a `Buffer`\nof length `N` with non zero-ed out memory.\n**Example:**\n```\nvar x = new Buffer(100); // uninitialized Buffer of length 100\n// vs\nvar x = new Buffer('100'); // initialized Buffer with value of '100'\n```\nInitializing a MongoDB document field in such manner will dump uninitialized\nmemory into MongoDB.\nThe patch wraps `Buffer` field initialization in mongoose by converting a\n`number` value `N` to array `[N]`, initializing the `Buffer` with `N` in its\nbinary form.\n\n#### Proof of concept\n```javascript\nvar mongoose = require('mongoose');\nmongoose.connect('mongodb://localhost/bufftest');\n\n// data: Buffer is not uncommon, taken straight from the docs: http://mongoosejs.com/docs/schematypes.html\nmongoose.model('Item', new mongoose.Schema({id: String, data: Buffer}));\n\nvar Item = mongoose.model('Item');\n\nvar sample = new Item();\nsample.id = 'item1';\n\n// This will create an uninitialized buffer of size 100\nsample.data = 100;\nsample.save(function () {\n    Item.findOne(function (err, result) {\n        // Print out the data (exposed memory)\n        console.log(result.data.toString('ascii'))\n        mongoose.connection.db.dropDatabase(); // Clean up everything\n        process.exit();\n    });\n});\n```\n\n## Remediation\nUpgrade `mongoose` to version >= 3.8.39 or >= 4.3.6.\n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/docs/using-snyk#wizard) to patch this vulnerability.\n\n## References\n- https://github.com/Automattic/mongoose/issues/3764\n- https://github.com/ChALkeR/notes/blob/master/Lets-fix-Buffer-API.md#previous-materials\n- https://github.com/ChALkeR/notes/blob/master/Buffer-knows-everything.md\n",
+				"description": "## Overview\nA potential memory disclosure vulnerability exists in mongoose.\nA `Buffer` field in a MongoDB document can be used to expose sensitive\ninformation such as code, runtime memory and user data into MongoDB.\n\n### Details\nInitializing a `Buffer` field in a document with integer `N` creates a `Buffer`\nof length `N` with non zero-ed out memory.\n**Example:**\n```\nvar x = new Buffer(100); // uninitialized Buffer of length 100\n// vs\nvar x = new Buffer('100'); // initialized Buffer with value of '100'\n```\nInitializing a MongoDB document field in such manner will dump uninitialized\nmemory into MongoDB.\nThe patch wraps `Buffer` field initialization in mongoose by converting a\n`number` value `N` to array `[N]`, initializing the `Buffer` with `N` in its\nbinary form.\n\n#### Proof of concept\n```javascript\nvar mongoose = require('mongoose');\nmongoose.connect('mongodb://localhost/bufftest');\n\n// data: Buffer is not uncommon, taken straight from the docs: http://mongoosejs.com/docs/schematypes.html\nmongoose.model('Item', new mongoose.Schema({id: String, data: Buffer}));\n\nvar Item = mongoose.model('Item');\n\nvar sample = new Item();\nsample.id = 'item1';\n\n// This will create an uninitialized buffer of size 100\nsample.data = 100;\nsample.save(function () {\n    Item.findOne(function (err, result) {\n        // Print out the data (exposed memory)\n        console.log(result.data.toString('ascii'))\n        mongoose.connection.db.dropDatabase(); // Clean up everything\n        process.exit();\n    });\n});\n```\n\n## Remediation\nUpgrade `mongoose` to version >= 3.8.39 or >= 4.3.6.\n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/docs/using-snyk#wizard) to patch this vulnerability.\n\n## References\n- [Github Issue](https://github.com/Automattic/mongoose/issues/3764)\n- [Blog: Node Buffer API fix](https://github.com/ChALkeR/notes/blob/master/Lets-fix-Buffer-API.md#previous-materials)\n- [Blog: Information about Buffer](https://github.com/ChALkeR/notes/blob/master/Buffer-knows-everything.md)\n",
 				"semver": {
 					"vulnerable": "<3.8.39 >=3.5.5 || <4.3.6 >=4.0.0",
-					"unaffected": "<3.5.5"
+					"unaffected": "<3.5.5 || >=4.3.6"
 				},
 				"CVSSv3": "",
 				"severity": "medium",
@@ -5151,6 +5221,40 @@
 		],
 		"rendr": [
 			{
+				"title": "Cross-site Scripting (XSS)",
+				"moduleName": "rendr",
+				"description": "## Overview\n[`rendr`](https://www.npmjs.com/package/rendr) is a module that allows you to render your Backbone.js apps on the client and the server.\nAffected versions of the package do not sanitize the key value in the server router and are vulnerable to Cross-site Scripting (XSS) attacks.\n\n## Remediation\nUpgrade `rendr` to version 0.4.8-2 or higher.\n\n## References\n- https://github.com/rendrjs/rendr/commit/db392b94128ebf41d86d85b42d99ea053d83dbfd\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-RENDR-10205"
+					]
+				},
+				"severity": "high",
+				"semver": {
+					"unaffected": ">=0.4.8-2",
+					"vulnerable": "<0.4.8-2"
+				},
+				"credit": [
+					"Spike Brehm"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+				"disclosureTime": "2013-07-08T21:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-11-22T15:21:57.930Z",
+				"modificationTime": "2016-11-15T15:21:57.930Z",
+				"creationTime": "2016-10-05T15:21:57.930Z",
+				"id": "npm:rendr:20130709",
+				"alternativeIds": [
+					"SNYK-JS-RENDR-10205"
+				]
+			},
+			{
 				"title": "XSS in client rendered block templates",
 				"credit": [
 					"Jon Merrifield"
@@ -5195,10 +5299,10 @@
 				"creationTime": "2016-03-22T12:00:05.158Z",
 				"modificationTime": "2016-03-22T12:00:05.158Z",
 				"publicationTime": "2016-03-22T12:00:05.158Z",
-				"description": "## Overview\nA potential remote memory exposure vulnerability exists in `request`. If a `request` uses a multipart attachment and the _body type_ option is `number` with value X, then X bytes of uninitialized memory will be sent in the body of the request.\n\nNote that while the impact of this vulnerability is high (memory exposure), exploiting it is likely difficult, as the attacker needs to somehow control the body type of the request. One potential exploit scenario is when a request is composed based on JSON input, including the body type, allowing a malicious JSON to trigger the memory leak.\n\n### Details\nConstructing a `Buffer` class with integer `N` creates a `Buffer`\nof length `N` with non zero-ed out memory.\n**Example:**\n```\nvar x = new Buffer(100); // uninitialized Buffer of length 100\n// vs\nvar x = new Buffer('100'); // initialized Buffer with value of '100'\n```\n\nInitializing a multipart body in such manner will cause uninitialized memory to be sent in the body of the request.\n\n#### Proof of concept\n```javascript\nvar http = require('http')\nvar request = require('request')\n\nhttp.createServer(function (req, res) {\n  var data = ''\n  req.setEncoding('utf8')\n  req.on('data', function (chunk) {\n    console.log('data')\n    data += chunk\n  })\n  req.on('end', function () {\n    // this will print uninitialized memory from the client\n    console.log('Client sent:\\n', data)\n  })\n  res.end()\n}).listen(8000)\n\nrequest({\n  method: 'POST',\n  uri: 'http://localhost:8000',\n  multipart: [{ body: 1000 }]\n},\nfunction (err, res, body) {\n  if (err) return console.error('upload failed:', err)\n  console.log('sent')\n})\n```\n\n## Remediation\nUpgrade `request` to version 2.68.0 or higher.\n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/documentation/#wizard) to patch this vulnerability.\n\n## References\n- https://github.com/request/request/pull/2018\n- https://github.com/ChALkeR/notes/blob/master/Lets-fix-Buffer-API.md#previous-materials\n- https://github.com/ChALkeR/notes/blob/master/Buffer-knows-everything.md\n",
+				"description": "## Overview\n[`request`][https://www.npmjs.com/package/request] is a simplified http request client.\nA potential remote memory exposure vulnerability exists in `request`. If a `request` uses a multipart attachment and the _body type_ option is `number` with value X, then X bytes of uninitialized memory will be sent in the body of the request.\n\nNote that while the impact of this vulnerability is high (memory exposure), exploiting it is likely difficult, as the attacker needs to somehow control the body type of the request. One potential exploit scenario is when a request is composed based on JSON input, including the body type, allowing a malicious JSON to trigger the memory leak.\n\n### Details\nConstructing a `Buffer` class with integer `N` creates a `Buffer`\nof length `N` with non zero-ed out memory.\n**Example:**\n```\nvar x = new Buffer(100); // uninitialized Buffer of length 100\n// vs\nvar x = new Buffer('100'); // initialized Buffer with value of '100'\n```\n\nInitializing a multipart body in such manner will cause uninitialized memory to be sent in the body of the request.\n\n#### Proof of concept\n```javascript\nvar http = require('http')\nvar request = require('request')\n\nhttp.createServer(function (req, res) {\n  var data = ''\n  req.setEncoding('utf8')\n  req.on('data', function (chunk) {\n    console.log('data')\n    data += chunk\n  })\n  req.on('end', function () {\n    // this will print uninitialized memory from the client\n    console.log('Client sent:\\n', data)\n  })\n  res.end()\n}).listen(8000)\n\nrequest({\n  method: 'POST',\n  uri: 'http://localhost:8000',\n  multipart: [{ body: 1000 }]\n},\nfunction (err, res, body) {\n  if (err) return console.error('upload failed:', err)\n  console.log('sent')\n})\n```\n\n## Remediation\nUpgrade `request` to version 2.68.0 or higher.\n\nIf a direct dependency update is not possible, use [`snyk wizard`](https://snyk.io/documentation/#wizard) to patch this vulnerability.\n\n## References\n- [Github PR](https://github.com/request/request/pull/2018)\n- [Blog: Node Buffer API fix](https://github.com/ChALkeR/notes/blob/master/Lets-fix-Buffer-API.md#previous-materials)\n- [Blog: Information about Buffer](https://github.com/ChALkeR/notes/blob/master/Buffer-knows-everything.md)\n",
 				"semver": {
 					"vulnerable": "<2.68.0 >2.2.5",
-					"unaffected": ">=2.68.0 <=2.2.6"
+					"unaffected": ">=2.68.0 <=2.2.5"
 				},
 				"CVSSv3": "",
 				"severity": "medium",
