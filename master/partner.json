@@ -2864,6 +2864,143 @@
         ]
       }
     ],
+    "jquery": [
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "moduleName": "jquery",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [
+            "CVE-2011-4969"
+          ],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERY-10183"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.6.3",
+          "vulnerable": "<1.6.3"
+        },
+        "credit": [
+          "Dave Methvin"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "disclosureTime": "2011-06-05T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-10-20T14:16:53.138Z",
+        "modificationTime": "2016-11-06T15:25:26.117Z",
+        "creationTime": "2016-11-06T15:25:26.117Z",
+        "id": "npm:jquery:20110606",
+        "alternativeIds": [
+          "SNYK-JS-JQUERY-10183"
+        ]
+      },
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "moduleName": "jquery",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERY-10184"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.9.0",
+          "vulnerable": "<1.9.0 >=1.7.1"
+        },
+        "credit": [
+          "Richard Gibson"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "disclosureTime": "2012-06-19T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-10-20T14:16:53.138Z",
+        "modificationTime": "2016-11-06T13:53:57.686Z",
+        "creationTime": "2016-11-06T13:53:57.686Z",
+        "id": "npm:jquery:20120206",
+        "alternativeIds": [
+          "SNYK-JS-JQUERY-10184"
+        ]
+      },
+      {
+        "title": "DOM Based Cross-site Scripting (XSS)",
+        "moduleName": "jquery",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [
+            "CVE-2014-6071"
+          ],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERY-10185"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.6.2",
+          "vulnerable": "<=1.5.1 >=1.4.2"
+        },
+        "credit": [
+          "Mauro Risonho de Paula Assumpção"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "disclosureTime": "2014-09-01T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-10-20T14:16:53.138Z",
+        "modificationTime": "2016-10-06T14:16:53.138Z",
+        "creationTime": "2016-11-06T14:16:53.138Z",
+        "id": "npm:jquery:20140902",
+        "alternativeIds": [
+          "SNYK-JS-JQUERY-10185"
+        ]
+      },
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "moduleName": "jquery",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERY-10186"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=3.0.0-beta1 || >=1.12.0 <1.12.3 || 2.2.0",
+          "vulnerable": "<3.0.0-beta1 >2.2.0 || <2.2.0 >1.12.3 || <1.12.0 >=1.4.0"
+        },
+        "credit": [
+          "Egor Homakov"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "disclosureTime": "2015-06-26T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-11-27T00:00:00.000Z",
+        "modificationTime": "2016-11-06T15:12:44.538Z",
+        "creationTime": "2016-11-06T15:12:44.538Z",
+        "id": "npm:jquery:20150627",
+        "alternativeIds": [
+          "SNYK-JS-JQUERY-10186"
+        ]
+      }
+    ],
     "jquery-ui": [
       {
         "title": "XSS in dialog closeText",

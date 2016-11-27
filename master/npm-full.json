@@ -2937,6 +2937,147 @@
         ]
       }
     ],
+    "jquery": [
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "moduleName": "jquery",
+        "description": "## Overview\n[`jquery`](https://www.npmjs.com/package/jquery) is JavaScript library for DOM operations.\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS). The `location.hash()` function was used to select elements, but also allows remote attackers to inject script into the page.\n\nRelated to [this vulnerability](https://snyk.io/vuln/npm:jquery-migrate:20130419) in the jQuery-migrate package\n\n## Remediation\nUpgrade `jquery` to version 1.6.3 or higher.\n\n## References\n- [JQuery Ticket](https://bugs.jquery.com/ticket/9521)\n- [Jquery Release Note](http://blog.jquery.com/2011/09/01/jquery-1-6-3-released/)\n- [Openwall](http://www.openwall.com/lists/oss-security/2013/01/31/3)\n",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [
+            "CVE-2011-4969"
+          ],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERY-10183"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.6.3",
+          "vulnerable": "<1.6.3"
+        },
+        "credit": [
+          "Dave Methvin"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "disclosureTime": "2011-06-05T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-10-20T14:16:53.138Z",
+        "modificationTime": "2016-11-06T15:25:26.117Z",
+        "creationTime": "2016-11-06T15:25:26.117Z",
+        "id": "npm:jquery:20110606",
+        "alternativeIds": [
+          "SNYK-JS-JQUERY-10183"
+        ]
+      },
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "moduleName": "jquery",
+        "description": "## Overview\n[`jquery`](https://www.npmjs.com/package/jquery) is JavaScript library for DOM operations.\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS), `jQuery(strInput)` cannot reliably differentiate selectors from HTML.\n`quickExpr` was abandoned in favor of a simpler \"parse as HTML if and only if there is a leading less-than\" rule, with intentional parsing handled by the `jQuery( \"<div/>\" ).html( strHtml ).contents()` pattern.\n\n## Remediation\nUpgrade `jquery` to version 1.9.0 or higher.\n\n## References\n- [JQuery Issue tracker](https://bugs.jquery.com/ticket/11290)\n- [Github Commit](https://github.com/jquery/jquery/commit/05531fc4080ae24070930d15ae0cea7ae056457d)\n- [jsfiddle](http://jsfiddle.net/C8dgG/)\n",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERY-10184"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.9.0",
+          "vulnerable": "<1.9.0 >=1.7.1"
+        },
+        "credit": [
+          "Richard Gibson"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "disclosureTime": "2012-06-19T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-10-20T14:16:53.138Z",
+        "modificationTime": "2016-11-06T13:53:57.686Z",
+        "creationTime": "2016-11-06T13:53:57.686Z",
+        "id": "npm:jquery:20120206",
+        "alternativeIds": [
+          "SNYK-JS-JQUERY-10184"
+        ]
+      },
+      {
+        "title": "DOM Based Cross-site Scripting (XSS)",
+        "moduleName": "jquery",
+        "description": "## Overview\n[`jquery`](https://www.npmjs.com/package/jquery) is JavaScript library for DOM operations.\nAffected versions of the package are vulnerable to a DOM based Cross-site Scripting (XSS) attack due to using the `text()` function inside the `after()` function.\n\n## Remediation\nUpgrade `jquery` to version 1.6.2 or higher.\n\n## References\n- http://seclists.org/fulldisclosure/2014/Sep/10\n- https://bugzilla.redhat.com/show_bug.cgi?id&#x3D;1136683\n",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [
+            "CVE-2014-6071"
+          ],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERY-10185"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.6.2",
+          "vulnerable": "<=1.5.1 >=1.4.2"
+        },
+        "credit": [
+          "Mauro Risonho de Paula Assumpção"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "disclosureTime": "2014-09-01T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-10-20T14:16:53.138Z",
+        "modificationTime": "2016-10-06T14:16:53.138Z",
+        "creationTime": "2016-11-06T14:16:53.138Z",
+        "id": "npm:jquery:20140902",
+        "alternativeIds": [
+          "SNYK-JS-JQUERY-10185"
+        ]
+      },
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "moduleName": "jquery",
+        "description": "## Overview\n[`jquery`](https://www.npmjs.com/package/jquery) is JavaScript library for DOM operations.\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS) due to [this code](https://github.com/jquery/jquery/blob/250a1990baa571de60325ab2c52eabb399c4cf9e/src/ajax/script.js#L18) causing every text/javascript response to be executed.\n\n## Remediation\nUpgrade `jquery` to version 3.0.0-beta1 or higher.\n\n## References\n- [Github Issue](https://github.com/jquery/jquery/issues/2432)\n- [Github PR](https://github.com/jquery/jquery/pull/2588)\n- [Github Commit](https://github.com/jquery/jquery/commit/b078a62013782c7424a4a61a240c23c4c0b42614)\n",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERY-10186"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=3.0.0-beta1 || >=1.12.0 <1.12.3 || 2.2.0",
+          "vulnerable": "<3.0.0-beta1 >2.2.0 || <2.2.0 >1.12.3 || <1.12.0 >=1.4.0"
+        },
+        "credit": [
+          "Egor Homakov"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "disclosureTime": "2015-06-26T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-11-27T00:00:00.000Z",
+        "modificationTime": "2016-11-06T15:12:44.538Z",
+        "creationTime": "2016-11-06T15:12:44.538Z",
+        "id": "npm:jquery:20150627",
+        "alternativeIds": [
+          "SNYK-JS-JQUERY-10186"
+        ]
+      }
+    ],
     "jquery-ui": [
       {
         "title": "XSS in dialog closeText",
