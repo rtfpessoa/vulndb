@@ -3046,7 +3046,7 @@
       {
         "title": "Cross-site Scripting (XSS)",
         "moduleName": "jquery",
-        "description": "## Overview\n[`jquery`](https://www.npmjs.com/package/jquery) is JavaScript library for DOM operations.\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS) due to [this code](https://github.com/jquery/jquery/blob/250a1990baa571de60325ab2c52eabb399c4cf9e/src/ajax/script.js#L18) causing every text/javascript response to be executed.\n\n## Remediation\nUpgrade `jquery` to version 3.0.0-beta1 or higher.\n\n## References\n- [Github Issue](https://github.com/jquery/jquery/issues/2432)\n- [Github PR](https://github.com/jquery/jquery/pull/2588)\n- [Github Commit](https://github.com/jquery/jquery/commit/b078a62013782c7424a4a61a240c23c4c0b42614)\n",
+        "description": "## Overview\n[`jquery`](https://www.npmjs.com/package/jquery) is JavaScript library for DOM operations.\n\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS) attacks when a cross-domain ajax request is performed without the `dataType` option causing `text/javascript` responses to be executed.\n\n## Remediation\nUpgrade `jquery` to version `3.0.0` or higher.\n\n## References\n- [Github Issue](https://github.com/jquery/jquery/issues/2432)\n- [Github PR](https://github.com/jquery/jquery/pull/2588)\n- [Github Commit](https://github.com/jquery/jquery/commit/b078a62013782c7424a4a61a240c23c4c0b42614)\n- [Vulnerable code](https://github.com/jquery/jquery/blob/250a1990baa571de60325ab2c52eabb399c4cf9e/src/ajax/script.js#L18)\n",
         "language": "js",
         "packageManager": "npm",
         "identifiers": {
