@@ -1341,6 +1341,41 @@
         ]
       }
     ],
+    "ejs": [
+      {
+        "title": "Remote Code Execution",
+        "moduleName": "ejs",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-94"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-EJS-10218"
+          ]
+        },
+        "severity": "high",
+        "semver": {
+          "unaffected": ">=2.5.3",
+          "vulnerable": "<2.5.3"
+        },
+        "credit": [
+          "Snyk Security Research"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "disclosureTime": "2016-11-27T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-11-28T18:44:12.405Z",
+        "modificationTime": "2016-11-28T18:44:12.405Z",
+        "creationTime": "2016-11-28T18:44:12.405Z",
+        "id": "npm:ejs:20161128",
+        "alternativeIds": [
+          "SNYK-JS-EJS-10218"
+        ]
+      }
+    ],
     "electron-packager": [
       {
         "title": "SSL Validation disabled by default",
