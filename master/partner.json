@@ -1,5 +1,39 @@
 {
   "npm": {
+    "aerospike": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "moduleName": "aerospike",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 167,
+          "ALTERNATIVE": [
+            "SNYK-JS-AEROSPIKE-10224"
+          ]
+        },
+        "severity": "high",
+        "semver": {
+          "unaffected": ">=2.4.2",
+          "vulnerable": "<2.4.2"
+        },
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "disclosureTime": "2016-11-01T00:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-06T11:52:05.268Z",
+        "modificationTime": "2016-12-06T11:52:05.268Z",
+        "creationTime": "2016-12-06T11:52:05.268Z",
+        "id": "npm:aerospike:20161101",
+        "alternativeIds": [
+          "SNYK-JS-AEROSPIKE-10224"
+        ]
+      }
+    ],
     "airbrake": [
       {
         "title": "Sensitive Information Exposure",
@@ -102,6 +136,40 @@
         "id": "npm:ansi2html:20151025",
         "alternativeIds": [
           "SNYK-JS-ANSI2HTML-10058"
+        ]
+      }
+    ],
+    "appium-chromedriver": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "moduleName": "appium-chromedriver",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 162,
+          "ALTERNATIVE": [
+            "SNYK-JS-APPIUMCHROMEDRIVER-10221"
+          ]
+        },
+        "severity": "high",
+        "semver": {
+          "vulnerable": "<2.9.4",
+          "unaffected": ">=2.9.4"
+        },
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "disclosureTime": "2016-11-03T00:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-06T11:57:39.924Z",
+        "modificationTime": "2016-12-06T11:57:39.924Z",
+        "creationTime": "2016-12-06T11:57:39.924Z",
+        "id": "npm:appium-chromedriver:20161103",
+        "alternativeIds": [
+          "SNYK-JS-APPIUMCHROMEDRIVER-10221"
         ]
       }
     ],
@@ -1358,21 +1426,97 @@
         },
         "severity": "high",
         "semver": {
-          "unaffected": ">=2.5.3",
-          "vulnerable": "<2.5.3"
+          "vulnerable": "<2.5.3",
+          "unaffected": ">=2.5.3"
         },
         "credit": [
           "Snyk Security Research"
         ],
         "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
         "disclosureTime": "2016-11-27T22:00:00.000Z",
-        "patches": [],
+        "patches": [
+          {
+            "urls": [
+              "https://raw.githubusercontent.com/Snyk/vulndb/snapshots/master/patches/npm/ejs/20161128/ejs_20161128_0_0_3d447c5a335844b25faec04b1132dbc721f9c8f6.patch"
+            ],
+            "version": "<2.5.3 >=2.2.4",
+            "modificationTime": "2016-12-04T20:12:18.990Z",
+            "comments": [],
+            "id": "patch:npm:ejs:20161128:0"
+          }
+        ],
         "publicationTime": "2016-11-28T18:44:12.405Z",
         "modificationTime": "2016-12-01T18:44:12.405Z",
         "creationTime": "2016-11-28T18:44:12.405Z",
         "id": "npm:ejs:20161128",
         "alternativeIds": [
           "SNYK-JS-EJS-10218"
+        ]
+      },
+      {
+        "title": "Cross-Site Scripting",
+        "moduleName": "ejs",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-TODO"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-EJS-10225"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "vulnerable": "<2.5.5",
+          "unaffected": ">=2.5.5"
+        },
+        "credit": [
+          "Snyk Security Research"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "disclosureTime": "2016-11-27T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-06T15:00:00.000Z",
+        "modificationTime": "2016-12-06T00:00:00.000Z",
+        "creationTime": "2016-11-28T18:44:12.405Z",
+        "id": "npm:ejs:20161130",
+        "alternativeIds": [
+          "SNYK-JS-EJS-10225"
+        ]
+      },
+      {
+        "title": "Denial of Service",
+        "moduleName": "ejs",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-TODO"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-EJS-10226"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "vulnerable": "<2.5.5",
+          "unaffected": ">=2.5.5"
+        },
+        "credit": [
+          "Snyk Security Research"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "disclosureTime": "2016-11-27T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-06T15:00:00.000Z",
+        "modificationTime": "2016-12-06T00:00:00.000Z",
+        "creationTime": "2016-11-28T18:44:12.405Z",
+        "id": "npm:ejs:20161130-1",
+        "alternativeIds": [
+          "SNYK-JS-EJS-10226"
         ]
       }
     ],
@@ -1940,6 +2084,40 @@
         "id": "npm:fuelux:20160725",
         "alternativeIds": [
           "SNYK-JS-FUELUX-10124"
+        ]
+      }
+    ],
+    "galenframework-cli": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "moduleName": "galenframework-cli",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 170,
+          "ALTERNATIVE": [
+            "SNYK-JS-GALENFRAMEWORKCLI-10222"
+          ]
+        },
+        "severity": "high",
+        "semver": {
+          "unaffected": ">=2.3.1",
+          "vulnerable": "<2.3.1"
+        },
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "disclosureTime": "2016-11-01T00:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-06T11:33:44.856Z",
+        "modificationTime": "2016-12-06T11:33:44.856Z",
+        "creationTime": "2016-12-06T11:33:44.856Z",
+        "id": "npm:galenframework-cli:20161101",
+        "alternativeIds": [
+          "SNYK-JS-GALENFRAMEWORKCLI-10222"
         ]
       }
     ],
@@ -4897,6 +5075,44 @@
         ]
       }
     ],
+    "passport-azure-ad": [
+      {
+        "title": "Authentication Bypass",
+        "moduleName": "passport-azure-ad",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CVE-2016-7191"
+          ],
+          "CVE": [
+            "CVE-2016-7191"
+          ],
+          "NSP": 151,
+          "ALTERNATIVE": [
+            "SNYK-JS-PASSPORTAZUREAD-10220"
+          ]
+        },
+        "severity": "high",
+        "semver": {
+          "unaffected": " <1.0.0 || >=1.4.6 <2.0.0 || >=2.0.1",
+          "vulnerable": "<1.4.6 >=1.0.0 || =2.0.0"
+        },
+        "credit": [
+          "Microsoft Azure AD Team"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+        "disclosureTime": "2016-08-23T23:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-06T10:53:36.115Z",
+        "modificationTime": "2016-12-06T10:53:36.115Z",
+        "creationTime": "2016-12-06T10:53:36.115Z",
+        "id": "npm:passport-azure-ad:20160824",
+        "alternativeIds": [
+          "SNYK-JS-PASSPORTAZUREAD-10220"
+        ]
+      }
+    ],
     "paypal-ipn": [
       {
         "title": "Validation Bypass",
@@ -5702,6 +5918,40 @@
         "id": "npm:secure-compare:20151024",
         "alternativeIds": [
           "SNYK-JS-SECURECOMPARE-10060"
+        ]
+      }
+    ],
+    "selenium-download": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "moduleName": "selenium-download",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 164,
+          "ALTERNATIVE": [
+            "SNYK-JS-SELENIUMDOWNLOAD-10223"
+          ]
+        },
+        "severity": "high",
+        "semver": {
+          "unaffected": ">=2.0.7",
+          "vulnerable": "<2.0.7"
+        },
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "disclosureTime": "2016-11-02T00:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-06T11:42:59.013Z",
+        "modificationTime": "2016-12-06T11:42:59.013Z",
+        "creationTime": "2016-12-06T11:42:59.013Z",
+        "id": "npm:selenium-download:20161102",
+        "alternativeIds": [
+          "SNYK-JS-SELENIUMDOWNLOAD-10223"
         ]
       }
     ],
