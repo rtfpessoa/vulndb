@@ -347,6 +347,41 @@
         ]
       }
     ],
+    "bitty": [
+      {
+        "title": "Directory Traversal",
+        "moduleName": "bitty",
+        "description": "## Overview\n[`bitty`](https://www.npmjs.com/package/bitty) is a live editing server.\nAll versions of the package do not properly prevent path traversal. A request like `/../../../../../../etc/passwd` would leak sensitive files and data from the server.\n\n## Remediation\nThere is no fix version for `bitty`. The maintainer of the package plans to unpublish it from the npm registry.\n\n## References\n- [Github Issue](https://github.com/nodesecurity/nsp/issues/137)\n",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 150,
+          "ALTERNATIVE": [
+            "SNYK-JS-BITTY-10227"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "credit": [
+          "Liang Gong"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "disclosureTime": "2016-10-13T23:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-13T00:00:00.000Z",
+        "modificationTime": "2016-12-06T00:00:00.000Z",
+        "creationTime": "2016-12-06T00:00:00.000Z",
+        "id": "npm:bitty:20161014",
+        "alternativeIds": [
+          "SNYK-JS-BITTY-10227"
+        ]
+      }
+    ],
     "bl": [
       {
         "title": "Uninitialized Memory Exposure",
@@ -4530,6 +4565,38 @@
       }
     ],
     "mongoose": [
+      {
+        "title": "Denial of Service (DoS) via Infinite Loop",
+        "moduleName": "mongoose",
+        "description": "## Overview\n[`mongoose`](https://www.npmjs.com/package/mongoose) is a MongoDB ODM.\nAffected versions of the package are vulnerable to Denial of Service (DoS) via Infinite Loop when calculating a corrupt array. An attacker can use this to his advantage to crash the servers.\n\n## Remediation\nUpgrade `mongoose` to version 4.1.10 or higher.\n\n\n## References\n- [Github Issue](https://github.com/Automattic/mongoose/issues/3405)\n- [Github Commit](https://github.com/Automattic/mongoose/commit/d4d57176848bcaaae20d466273f124355c0d262f)\n",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-MONGOOSE-10216"
+          ]
+        },
+        "severity": "high",
+        "semver": {
+          "unaffected": ">=4.1.10",
+          "vulnerable": "<4.1.10 >=4.0.0"
+        },
+        "credit": [
+          "andiris29"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "disclosureTime": "2015-09-24T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-13T08:55:28.055Z",
+        "modificationTime": "2016-11-24T08:55:28.055Z",
+        "creationTime": "2016-11-24T08:55:28.055Z",
+        "id": "npm:mongoose:20150925",
+        "alternativeIds": [
+          "SNYK-JS-MONGOOSE-10216"
+        ]
+      },
       {
         "title": "Remote Memory Exposure",
         "credit": [
