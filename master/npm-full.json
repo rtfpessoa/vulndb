@@ -143,6 +143,78 @@
         ]
       }
     ],
+    "apk-parser": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-20T10:25:00.000Z",
+        "publicationTime": "2016-12-20T17:28:19.000Z",
+        "disclosureTime": "2016-12-19T17:28:19.000Z",
+        "description": "## Overview\n[`apk-parser`](https://www.npmjs.com/package/apk-parser) extracts Android Manifest info from an APK file.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade `apk-parser` to version `0.1.6` or higher.\n",
+        "semver": {
+          "vulnerable": "<0.1.6",
+          "unaffected": ">=0.1.6"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-APKPARSER-10230"
+          ],
+          "NSP": 195
+        },
+        "patches": [],
+        "moduleName": "apk-parser",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:apk-parser:20161219",
+        "alternativeIds": [
+          "SNYK-JS-APKPARSER-10230"
+        ]
+      }
+    ],
+    "apk-parser3": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-20T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-11-06T10:25:00.000Z",
+        "description": "## Overview\n[`apk-parser3`](https://www.npmjs.com/package/apk-parser3) extracts Android Manifest info from an APK file.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to version `0.1.3` or later\n\n## References\n- [Github Commit](https://github.com/zhao0/node-apk-parser3/commit/ba1ade7f677dc5c80fe3f7355794d501b61a7917)\n",
+        "semver": {
+          "vulnerable": "<0.1.3",
+          "unaffected": ">=0.1.3"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-APKPARSER3-10231"
+          ],
+          "NSP": 245
+        },
+        "patches": [],
+        "moduleName": "apk-parser3",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:apk-parser3:20161106",
+        "alternativeIds": [
+          "SNYK-JS-APKPARSER3-10231"
+        ]
+      }
+    ],
     "appium-chromedriver": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -255,6 +327,43 @@
         "id": "npm:backbone:20160523",
         "alternativeIds": [
           "SNYK-JS-BACKBONE-10110"
+        ]
+      }
+    ],
+    "baryton-saxophone": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-20T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`baryton-saxophone`](https://www.npmjs.com/package/baryton-saxophone) assists installing and launching Selenium Server for Mac, Linux and Windows.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to version `3.0.1` or later.\n\n## References\n- [Github Commit](https://github.com/tobli/baryton-saxophone/commit/a5e943c46779e5372cdd13bfe2a69ec2530045be)\n",
+        "semver": {
+          "vulnerable": "<3.0.1",
+          "unaffected": ">=3.0.1"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-BARYTONSAXOPHONE-10232"
+          ],
+          "NSP": 240
+        },
+        "patches": [],
+        "moduleName": "baryton-saxophone",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:baryton-saxophone:20161104",
+        "alternativeIds": [
+          "SNYK-JS-BARYTONSAXOPHONE-10232"
         ]
       }
     ],
@@ -379,6 +488,43 @@
         "id": "npm:bitty:20161014",
         "alternativeIds": [
           "SNYK-JS-BITTY-10227"
+        ]
+      }
+    ],
+    "bkjs-wand": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-11-01T10:25:00.000Z",
+        "description": "## Overview\n[`bkjs-wand`](https://www.npmjs.com/package/bkjs-wand) gives Imagemagick wand support for node.js and backendjs.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to version `0.3.2` or later.\n\n## References\n- [Github Commit](https://github.com/vseryakov/bkjs-wand/commit/3b8d854dd765546ecb77282a6f87406746378dcf)\n",
+        "semver": {
+          "vulnerable": "<0.3.2",
+          "unaffected": ">=0.3.2"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-BKJSWAND-10233"
+          ],
+          "NSP": 220
+        },
+        "patches": [],
+        "moduleName": "bkjs-wand",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:bkjs-wand:20161101",
+        "alternativeIds": [
+          "SNYK-JS-BKJSWAND-10233"
         ]
       }
     ],
@@ -706,6 +852,43 @@
         ]
       }
     ],
+    "chromedriver": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-08T10:25:00.000Z",
+        "description": "## Overview\n[`chromedriver`](https://www.npmjs.com/package/chromedriver) is a ChromeDriver for Selenium.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to version `2.25.2` or higher.\n\n## References\n- [Github Commit](https://github.com/giggio/node-chromedriver/commit/71981099216b7c15ec01e50baaacb15fe1b85e56)\n",
+        "semver": {
+          "vulnerable": "<2.25.2",
+          "unaffected": ">=2.25.2"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-CHROMEDRIVER-10234"
+          ],
+          "NSP": 160
+        },
+        "patches": [],
+        "moduleName": "chromedriver",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:chromedriver:20161208",
+        "alternativeIds": [
+          "SNYK-JS-CHROMEDRIVER-10234"
+        ]
+      }
+    ],
     "ckeditor-dev": [
       {
         "title": "Cross-site Scripting (XSS)",
@@ -878,6 +1061,78 @@
         "id": "npm:cli:20160615",
         "alternativeIds": [
           "SNYK-JS-CLI-10133"
+        ]
+      }
+    ],
+    "closure-util": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`closure-util`](https://www.npmjs.com/package/closure-util) contains Utilities for Closure Library based projects.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nThere is no fix version for `closure-util`.\n\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-CLOSUREUTIL-10235"
+          ],
+          "NSP": 165
+        },
+        "patches": [],
+        "moduleName": "closure-util",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:closure-util:20161219",
+        "alternativeIds": [
+          "SNYK-JS-CLOSUREUTIL-10235"
+        ]
+      }
+    ],
+    "closurecompiler": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-08-31T10:25:00.000Z",
+        "description": "## Overview\n[`closurecompiler`](https://www.npmjs.com/package/closurecompiler) is Closure Compiler for node.js. The all-round carefree package.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to version `1.6.1` or higher.\n\n## References\n- [Github Issue](https://github.com/dcodeIO/ClosureCompiler.js/pull/49)\n- [Github Commit](https://github.com/dcodeIO/ClosureCompiler.js/commit/c01efe9d86dc8d07e14c5a6ba1586244ce53a698)\n",
+        "semver": {
+          "vulnerable": "<1.6.1",
+          "unaffected": ">=1.6.1"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-CLOSURECOMPILER-10236"
+          ],
+          "NSP": 169
+        },
+        "patches": [],
+        "moduleName": "closurecompiler",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:closurecompiler:20160831",
+        "alternativeIds": [
+          "SNYK-JS-CLOSURECOMPILER-10236"
         ]
       }
     ],
@@ -1138,6 +1393,43 @@
         "id": "npm:csrf-lite:20160423",
         "alternativeIds": [
           "SNYK-JS-CSRFLITE-10107"
+        ]
+      }
+    ],
+    "dalek-browser-chrome-canary": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`dalek-browser-chrome-canary`](https://www.npmjs.com/package/dalek-browser-chrome-canary) is a DalekJS browser plugin for Google Chrome.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nThere is no fix version for `dalek-browser-chrome-canary`.\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-DALEKBROWSERCHROMECANARY-10237"
+          ],
+          "NSP": 181
+        },
+        "patches": [],
+        "moduleName": "dalek-browser-chrome-canary",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:dalek-browser-chrome-canary:20161219",
+        "alternativeIds": [
+          "SNYK-JS-DALEKBROWSERCHROMECANARY-10237"
         ]
       }
     ],
@@ -1640,6 +1932,43 @@
         "id": "npm:electron-packager:20160422",
         "alternativeIds": [
           "SNYK-JS-ELECTRONPACKAGER-10101"
+        ]
+      }
+    ],
+    "embedza": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-11-02T10:25:00.000Z",
+        "description": "## Overview\n[`embedza`](https://www.npmjs.com/package/embedza) helps create HTML snippets/embeds from URLs using info from oEmbed, Open Graph, meta tags.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to version `1.2.5` or higher.\n\n## References\n- [Github Commit](https://github.com/nodeca/embedza/commit/19ab5ed72c37a311ba2685f4ef4ed08b3b5c95c3)\n",
+        "semver": {
+          "vulnerable": "<1.2.4",
+          "unaffected": ">=1.2.4"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-EMBEDZA-10238"
+          ],
+          "NSP": 187
+        },
+        "patches": [],
+        "moduleName": "embedza",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:embedza:20161102",
+        "alternativeIds": [
+          "SNYK-JS-EMBEDZA-10238"
         ]
       }
     ],
@@ -2402,6 +2731,42 @@
         ]
       }
     ],
+    "go-ipfs-dep": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Scott Hardy",
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-19T17:28:19.000Z",
+        "disclosureTime": "2016-12-19T17:28:19.000Z",
+        "description": "## Overview\n[`go-ipfs-dep`](https://www.npmjs.com/package/go-ipfs-dep) installs the latest go-ipfs binary.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to v0.4.4 or later.\n\n## References\n- https://github.com/diasdavid/go-ipfs-dep/pull/12\n",
+        "semver": {
+          "vulnerable": "<0.4.4",
+          "unaffected": ">=0.4.4"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-GOIPFSDEP-10229"
+          ],
+          "NSP": 156
+        },
+        "patches": [],
+        "moduleName": "go-ipfs-dep",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:go-ipfs-dep:20161219",
+        "alternativeIds": [
+          "SNYK-JS-GOIPFSDEP-10229"
+        ]
+      }
+    ],
     "grunt-gh-pages": [
       {
         "title": "Credentials saved as clear-text in log",
@@ -2899,6 +3264,42 @@
         ]
       }
     ],
+    "hostr": [
+      {
+        "title": "Directory Traversal",
+        "moduleName": "hostr",
+        "description": "## Overview\n[`hostr`](https://www.npmjs.com/package/hostr) is a simple web server for the current working directory.  Used for hello world style web sites hosting only files in current directory structure.  Watches files and integrates with LiveReload.\nAffected versions of the package do not filter http GET requests in javascript code, allowing an attacker to retrieve confidential files over the network by requesting urls like:  `http://localhost:3000/../../../etc/passwd`. CURLing the same request will not succeed.\n\nMany thanks to [Liang Gong](https://github.com/JacksonGL) for disclosing this vulnerability.\n\n## Remediation\nUpgrade `hostr` to version 2.3.6 or higher.\n\n## References\n- [Github Issue](https://github.com/henrytseng/hostr/issues/8)\n- [Github Commit](https://github.com/henrytseng/hostr/commit/789a00047459fd80b6f0a9701a1378a47fb73ba8)\n",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-22"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-HOSTR-10251"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=2.3.6",
+          "vulnerable": "<2.3.6"
+        },
+        "credit": [
+          "Liang Gong"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "disclosureTime": "2016-12-10T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-20T17:34:26.727Z",
+        "modificationTime": "2016-12-20T12:34:26.727Z",
+        "creationTime": "2016-12-20T12:34:26.727Z",
+        "id": "npm:hostr:20161211",
+        "alternativeIds": [
+          "SNYK-JS-HOSTR-10251"
+        ]
+      }
+    ],
     "hubot-scripts": [
       {
         "title": "Command Injection in email.coffee",
@@ -2978,6 +3379,41 @@
         "id": "npm:i18n-node-angular:20160125",
         "alternativeIds": [
           "SNYK-JS-I18NNODEANGULAR-10082"
+        ]
+      }
+    ],
+    "ibm_db": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`ibm_db`](https://www.npmjs.com/package/ibm_db) is a package for IBM DB2 and IBM Informix bindings for node.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nThere is no fix version for `ibm_db`.\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-IBMDB-10240"
+          ],
+          "NSP": 163
+        },
+        "patches": [],
+        "moduleName": "ibm_db",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:ibm_db:20161219",
+        "alternativeIds": [
+          "SNYK-JS-IBMDB-10240"
         ]
       }
     ],
@@ -3725,6 +4161,79 @@
         ]
       }
     ],
+    "kindlegen": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-11-03T10:25:00.000Z",
+        "description": "## Overview\n[`kindlegen`](https://www.npmjs.com/package/kindlegen) is a simple Node.js wrapper of the official kindlegen program.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to version `1.1.0` or later\n\n## References\n- [Github Commit](https://github.com/hakatashi/kindlegen/commit/9a67ba62890ab78597f4c3af36b97e19ea410fa4)\n",
+        "semver": {
+          "vulnerable": "<1.1.0",
+          "unaffected": ">=1.1.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-KINDLEGEN-10239"
+          ],
+          "NSP": 251
+        },
+        "patches": [],
+        "moduleName": "kindlegen",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:kindlegen:20161103",
+        "alternativeIds": [
+          "SNYK-JS-KINDLEGEN-10239"
+        ]
+      }
+    ],
+    "knex": [
+      {
+        "title": "SQL Injection",
+        "moduleName": "knex",
+        "description": "## Overview\n[`knex`](https://www.npmjs.com/package/knex) is a batteries-included SQL query & schema builder for Postgres, MySQL and SQLite3 and the Browser.\n\nColumn names are not properly escaped in the postgreSQL dialect. This may allow attackers to craft a query to the host DB and access private information.\nWriting the following code:\n```js\nvar query = knex.select('id\",\"name').from('test')\nconsole.log(query.toSQL())\n```\nHas the following result:\n```\n{ method: 'select',\n  options: undefined,\n  bindings: [],\n  sql: 'select \"id\",\"name\" from \"test\"' }\n```\n\n## Remediation\nUpgrade `knex` to versions `0.6.23`, `0.7.6` or higher.\n\n\n## References\n- [Github Issue](https://github.com/tgriesser/knex/issues/737)\n- [Github Commit](https://github.com/tgriesser/knex/commit/13995d6936208fe0a968b9ae0f46a2f19faacffc)\n",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-89"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-KNEX-10228"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=0.6.23 <0.7.0 || >= 0.7.6",
+          "vulnerable": "<0.6.23 || >=0.7.0 <0.7.6"
+        },
+        "credit": [
+          "Jorge Godoy"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+        "disclosureTime": "2015-04-12T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-20T16:43:39.695Z",
+        "modificationTime": "2016-12-14T14:43:39.695Z",
+        "creationTime": "2016-12-14T14:43:39.695Z",
+        "id": "npm:knex:20150413",
+        "alternativeIds": [
+          "SNYK-JS-KNEX-10228"
+        ]
+      }
+    ],
     "ldapauth": [
       {
         "title": "LDAP Injection",
@@ -3863,6 +4372,43 @@
         ]
       }
     ],
+    "libxl": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`libxl`](https://www.npmjs.com/package/libxl) contains node bindings for the libxl library for reading and writing excel (XLS and XLSX) spreadsheets.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nThere is no fix version for `libxl`. Versions before `0.2.20` are not affected.\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-LIBXL-10241"
+          ],
+          "NSP": 178
+        },
+        "patches": [],
+        "moduleName": "libxl",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:libxl:20161219",
+        "alternativeIds": [
+          "SNYK-JS-LIBXL-10241"
+        ]
+      }
+    ],
     "libxmljs": [
       {
         "title": "Multiple vulnerabilities in embedded binary version of libxml2",
@@ -3986,6 +4532,43 @@
         "id": "npm:life_star:20160212",
         "alternativeIds": [
           "SNYK-JS-LIFESTAR-10172"
+        ]
+      }
+    ],
+    "macaca-chromedriver": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-11-02T10:25:00.000Z",
+        "description": "## Overview\n[`macaca-chromedriver`](https://www.npmjs.com/package/macaca-chromedriver) is a Node.js wrapper for the selenium chromedriver.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpdate `macaca-chromedriver` to version `1.0.27` or higher.\n\n## References\n- [Github Commit](https://github.com/macacajs/macaca-chromedriver/commit/03cb4a186b83122383bc2292761d418f519bf3b9)\n",
+        "semver": {
+          "vulnerable": "<1.0.27",
+          "unaffected": ">=1.0.27"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-MACACACHROMEDRIVER-10242"
+          ],
+          "NSP": 180
+        },
+        "patches": [],
+        "moduleName": "macaca-chromedriver",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:macaca-chromedriver:20161102",
+        "alternativeIds": [
+          "SNYK-JS-MACACACHROMEDRIVER-10242"
         ]
       }
     ],
@@ -5189,6 +5772,43 @@
         ]
       }
     ],
+    "nodewebkit": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`nodewebkit`](https://www.npmjs.com/package/nodewebkit) an installer for node-webkit\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nThere is no fix version for `nodewebkit`.\n\n## References\n- [Vulnerable Code](https://github.com/shama/nodewebkit/blob/master/scripts/install.js#L20)\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-NODEWEBKIT-10243"
+          ],
+          "NSP": 173
+        },
+        "patches": [],
+        "moduleName": "nodewebkit",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:nodewebkit:20161219",
+        "alternativeIds": [
+          "SNYK-JS-NODEWEBKIT-10243"
+        ]
+      }
+    ],
     "npm": [
       {
         "title": "npm Token Leak",
@@ -5263,6 +5883,80 @@
         "id": "npm:nunjucks:20160906",
         "alternativeIds": [
           "SNYK-JS-NUNJUCKS-10135"
+        ]
+      }
+    ],
+    "nw": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`nw`](https://www.npmjs.com/package/nw) is an installer for nw.js.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nThere is no fix version for `nw`.\n\n## References\n- [Vulnerable Code](https://github.com/nwjs/npm-installer/blob/v0.13.0/scripts/install.js#L30)\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-NW-10252"
+          ],
+          "NSP": 166
+        },
+        "patches": [],
+        "moduleName": "nw",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:nw:20161219",
+        "alternativeIds": [
+          "SNYK-JS-NW-10252"
+        ]
+      }
+    ],
+    "operadriver": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:24:00.000Z",
+        "disclosureTime": "2016-11-04T10:25:00.000Z",
+        "description": "## Overview\n[`operadriver`](https://www.npmjs.com/package/operadriver) is an OperaDriver for Selenium.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to version `0.2.3` or later.\n\n## References\n- [Github Commit](https://github.com/cnpm/node-operadriver/commit/190f09f0da4780f9d68a0a3e6466b871e090b1e1)\n",
+        "semver": {
+          "vulnerable": "<0.2.3",
+          "unaffected": ">=0.2.3"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-OPERADRIVER-10244"
+          ],
+          "NSP": 196
+        },
+        "patches": [],
+        "moduleName": "operadriver",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:operadriver:20161104",
+        "alternativeIds": [
+          "SNYK-JS-OPERADRIVER-10244"
         ]
       }
     ],
@@ -5446,6 +6140,77 @@
         ]
       }
     ],
+    "pngcrush-installer": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-11-04T10:25:00.000Z",
+        "description": "## Overview\n[`pngcrush-installer`](https://www.npmjs.com/package/pngcrush-installer) is an installer for Pngcrush.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to version `1.8.10` or later.\n\n## References\n- [Github Commit](https://github.com/jefflembeck/pngcrush-installer/commit/d56bc439fc6ed0654b30b345906f77bd000368f3)\n",
+        "semver": {
+          "vulnerable": "<1.8.10",
+          "unaffected": ">=1.8.10"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-PNGCRUSHINSTALLER-10245"
+          ],
+          "NSP": 189
+        },
+        "patches": [],
+        "moduleName": "pngcrush-installer",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:pngcrush-installer:20161104",
+        "alternativeIds": [
+          "SNYK-JS-PNGCRUSHINSTALLER-10245"
+        ]
+      }
+    ],
+    "podium": [
+      {
+        "title": "Denial of Service (DoS)",
+        "moduleName": "podium",
+        "description": "## Overview\n[`podium`](https://www.npmjs.com/package/podium) is Node compatible event emitter with extra features.\nAffected versions of the package are vulnerable to Denial of Service (DoS). \nWhen calling the `setImmediate()` multiple times, the callbacks are queued for execution and is processed every event loop iteration. This makes it possible for attacker to manipulate calls to the server and cause it consume a high amount of CPU, before crashing.\n\n## Remediation\nUpgrade `podium` to version 1.2.5 or higher.\n\n## References\n- [Github Issue](https://github.com/hapijs/hapi/issues/3347)\n- [Github PR](https://github.com/hapijs/podium/pull/17)\n- [Github Commit](https://github.com/hapijs/podium/pull/17/commits/47f9ea3f9ab5a5664528722f570eeed11a446c90)\n",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-PODIUM-10219"
+          ]
+        },
+        "severity": "high",
+        "semver": {
+          "unaffected": ">=1.2.5",
+          "vulnerable": "<1.2.5 >=1.2.2"
+        },
+        "credit": [
+          "Mark Reynolds"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "disclosureTime": "2016-09-12T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-20T15:04:57.337Z",
+        "modificationTime": "2016-11-30T13:48:57.337Z",
+        "creationTime": "2016-11-30T13:48:57.337Z",
+        "id": "npm:podium:20160913",
+        "alternativeIds": [
+          "SNYK-JS-PODIUM-10219"
+        ]
+      }
+    ],
     "pouchdb": [
       {
         "title": "Arbitrary Code Injection",
@@ -5529,6 +6294,43 @@
         "id": "npm:printer:20140306",
         "alternativeIds": [
           "SNYK-JS-PRINTER-10013"
+        ]
+      }
+    ],
+    "product-monitor": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-11-04T10:25:00.000Z",
+        "description": "## Overview\n[`product-monitor`](https://www.npmjs.com/package/product-monitor) is an HTML/JavaScript template for monitoring a product by encouraging product developers to gather all the information about the status of a product, including live monitoring, statistics, endpoints, and test results into one place.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nUpgrade to version `2.2.5` or later.\n\n## References\n- [Github Issue](https://github.com/connected-web/product-monitor/issues/53)\n- [Github Commit](https://github.com/connected-web/product-monitor/commit/122122c605a235d5897590c0ef9d3682961707de)\n",
+        "semver": {
+          "vulnerable": "<2.2.5",
+          "unaffected": ">=2.2.5"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-PRODUCTMONITOR-10246"
+          ],
+          "NSP": 171
+        },
+        "patches": [],
+        "moduleName": "product-monitor",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:product-monitor:20161104",
+        "alternativeIds": [
+          "SNYK-JS-PRODUCTMONITOR-10246"
         ]
       }
     ],
@@ -6129,6 +6931,43 @@
         "id": "npm:secure-compare:20151024",
         "alternativeIds": [
           "SNYK-JS-SECURECOMPARE-10060"
+        ]
+      }
+    ],
+    "selenium-binaries": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`selenium-binaries`](https://www.npmjs.com/package/selenium-binaries) assists downloading Selenium related binaries for your OS.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nThere is no fix version for `selenium-binaries`.\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-SELENIUMBINARIES-10247"
+          ],
+          "NSP": 175
+        },
+        "patches": [],
+        "moduleName": "selenium-binaries",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:selenium-binaries:20161219",
+        "alternativeIds": [
+          "SNYK-JS-SELENIUMBINARIES-10247"
         ]
       }
     ],
@@ -6939,6 +7778,43 @@
         ]
       }
     ],
+    "steroids": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-19T10:25:00.000Z",
+        "publicationTime": "2016-12-20T12:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`steroids`](https://www.npmjs.com/package/steroids) is an AppGyver Steroids Command Line Interface.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nThere is no fix version for `steroids`.\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-STEROIDS-10248"
+          ],
+          "NSP": 168
+        },
+        "patches": [],
+        "moduleName": "steroids",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:steroids:20161219",
+        "alternativeIds": [
+          "SNYK-JS-STEROIDS-10248"
+        ]
+      }
+    ],
     "swagger-ui": [
       {
         "title": "XSS in Consumes/Produces Parameter",
@@ -7491,6 +8367,43 @@
         ]
       }
     ],
+    "unicode": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-20T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`unicode`](https://www.npmjs.com/package/unicode) is a unicode lookup table.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nThere is no fix version for `unicode`.\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-UNICODE-10249"
+          ],
+          "NSP": 161
+        },
+        "patches": [],
+        "moduleName": "unicode",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:unicode:20161219",
+        "alternativeIds": [
+          "SNYK-JS-UNICODE-10249"
+        ]
+      }
+    ],
     "uws": [
       {
         "title": "Denial of Service",
@@ -7645,6 +8558,43 @@
         "id": "npm:validator:20130705-2",
         "alternativeIds": [
           "SNYK-JS-VALIDATOR-10006"
+        ]
+      }
+    ],
+    "wasdk": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-19T10:25:00.000Z",
+        "modificationTime": "2016-12-20T10:25:00.000Z",
+        "publicationTime": "2016-12-20T10:25:00.000Z",
+        "disclosureTime": "2016-12-19T10:25:00.000Z",
+        "description": "## Overview\n[`wasdk`](https://www.npmjs.com/package/wasdk) is a WebAssembly SDK.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol.\n\n## Remediation\nThere is no fix version for `wasdk`.\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-WASDK-10250"
+          ],
+          "NSP": 179
+        },
+        "patches": [],
+        "moduleName": "wasdk",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:wasdk:20161219",
+        "alternativeIds": [
+          "SNYK-JS-WASDK-10250"
         ]
       }
     ],
