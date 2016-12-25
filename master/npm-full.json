@@ -1396,6 +1396,43 @@
         ]
       }
     ],
+    "cue-sdk-node": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-21T00:23:01.000Z",
+        "modificationTime": "2016-12-25T00:23:01.000Z",
+        "publicationTime": "2016-12-25T23:44:26.000Z",
+        "disclosureTime": "2016-12-01T23:44:26.000Z",
+        "description": "## Overview\n[`cue-sdk-node`](https://www.npmjs.com/package/cue-sdk-node) is a Corsair Cue SDK wrapper for node.js.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. The vulnerability is in the `/getdll.js` file, where it downloads a zip file over http. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `cue-sdk-node`.\n\n## References\n- [Vulnerable Code](https://github.com/Yannicked/node-cue-sdk/blob/master/getdll.js#L6)\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "NSP": 190,
+          "ALTERNATIVE": [
+            "SNYK-JS-CUESDKNODE-10253"
+          ]
+        },
+        "patches": [],
+        "moduleName": "cue-sdk-node",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:cue-sdk-node:20161201",
+        "alternativeIds": [
+          "SNYK-JS-CUESDKNODE-10253"
+        ]
+      }
+    ],
     "dalek-browser-chrome-canary": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -3382,6 +3419,43 @@
         ]
       }
     ],
+    "ibapi": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-21T22:44:26.000Z",
+        "modificationTime": "2016-12-25T22:44:26.000Z",
+        "publicationTime": "2016-12-25T23:49:49.000Z",
+        "disclosureTime": "2016-11-30T23:49:49.000Z",
+        "description": "## Overview\n[`ibapi`](https://www.npmjs.com/package/ibapi) is an Interactive Brokers API addon for NodeJS.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `ibapi`.\n\n## References\n- [Gitlord Code](https://gitlord.com/summary/~dchem%2Fnode-ibapi-addon.git)\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "NSP": 182,
+          "ALTERNATIVE": [
+            "SNYK-JS-IBAPI-10257"
+          ]
+        },
+        "patches": [],
+        "moduleName": "ibapi",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:ibapi:20161130",
+        "alternativeIds": [
+          "SNYK-JS-IBAPI-10257"
+        ]
+      }
+    ],
     "ibm_db": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -3494,6 +3568,43 @@
         "id": "npm:inert:20141215",
         "alternativeIds": [
           "SNYK-JS-INERT-10031"
+        ]
+      }
+    ],
+    "ipip": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-21T22:44:26.000Z",
+        "modificationTime": "2016-12-25T22:44:26.000Z",
+        "publicationTime": "2016-12-25T23:49:49.000Z",
+        "disclosureTime": "2016-11-30T23:50:49.000Z",
+        "description": "## Overview\n[`ipip`](https://www.npmjs.com/package/ipip) queries geolocation information based on IP.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. The vulnerability is in the `/install.js` file, where it downloads a zip file over http. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `ipip`. This package is unmaintained and the author recommends using the [official package](https://github.com/17mon/nodejs).\n\n## References\n- [Vulnerable Code](https://github.com/ChiChou/node-ipip/blob/temp/install.js#L10)\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "NSP": 184,
+          "ALTERNATIVE": [
+            "SNYK-JS-IPIP-10254"
+          ]
+        },
+        "patches": [],
+        "moduleName": "ipip",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:ipip:20161130",
+        "alternativeIds": [
+          "SNYK-JS-IPIP-10254"
         ]
       }
     ],
@@ -3880,6 +3991,45 @@
         "id": "npm:js-yaml:20130623",
         "alternativeIds": [
           "SNYK-JS-JSYAML-10004"
+        ]
+      }
+    ],
+    "jser-stat": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-21T22:44:26.000Z",
+        "modificationTime": "2016-12-25T22:44:26.000Z",
+        "publicationTime": "2016-12-25T23:49:49.000Z",
+        "disclosureTime": "2016-12-01T23:49:12.000Z",
+        "description": "## Overview\n[`jser-stat`](https://www.npmjs.com/package/jser-stat) is a JSer.info stat library.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received.\n\n## Remediation\nThere is no fix version for `jser-stat`.\n\n## References\n- [Vulnerable Code](https://github.com/jser/stat-js/blob/master/data/url-mapping.js)\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:L",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "NSP": [
+            "188"
+          ],
+          "ALTERNATIVE": [
+            "SNYK-JS-JSERSTAT-10255"
+          ]
+        },
+        "patches": [],
+        "moduleName": "jser-stat",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:jser-stat:20161201",
+        "alternativeIds": [
+          "SNYK-JS-JSERSTAT-10255"
         ]
       }
     ],
@@ -6245,6 +6395,43 @@
         "id": "npm:pouchdb:20160830",
         "alternativeIds": [
           "SNYK-JS-POUCHDB-10153"
+        ]
+      }
+    ],
+    "prince": [
+      {
+        "title": "Resources downloaded over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-21T22:44:26.000Z",
+        "modificationTime": "2016-12-25T22:44:26.000Z",
+        "publicationTime": "2016-12-25T23:49:49.000Z",
+        "disclosureTime": "2016-12-01T23:46:48.000Z",
+        "description": "## Overview\n[`prince`](https://www.npmjs.com/package/prince) is a Node API for executing XML/HTML to PDF renderer PrinceXML via prince CLI.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. The vulnerability is in the `/prince-npm.js` file, where it downloads a zip file over http. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `prince`.\n\n## References\n- [Vulnerable Code](https://github.com/rse/node-prince/blob/master/prince-npm.js)\n",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [
+            "CWE-319"
+          ],
+          "CVE": [],
+          "NSP": 185,
+          "ALTERNATIVE": [
+            "SNYK-JS-PRINCE-10256"
+          ]
+        },
+        "patches": [],
+        "moduleName": "prince",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:prince:20161201",
+        "alternativeIds": [
+          "SNYK-JS-PRINCE-10256"
         ]
       }
     ],
