@@ -1136,6 +1136,42 @@
 				]
 			}
 		],
+		"clusterize.js": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"moduleName": "clusterize.js",
+				"description": "## Overview\n[`clusterize.js`](https://www.npmjs.com/package/clusterize.js) is Tiny vanilla JS plugin to display large data sets easily.\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS), as there is no validation to which tag is used to create an empty row.\n```js\nvar empty_row = '<' + opts.tag + ' class=\"' + opts.no_data_class + '\">';\n```\nAttackers can use this to their advantage and use specially crafted scripts to exploit the program. This was fixed by DOM methods like `document.createElement`.\n\n## Remediation\nUpgrade `clusterize.js` to version 0.3.1 or higher.\n\n\n## References\n- https://github.com/NeXTs/Clusterize.js/issues/4\n- https://github.com/NeXTs/Clusterize.js/pull/5/commits/0c3d6486d6dac4c7dd04aa5525d4f705ec3351fc\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-CLUSTERIZEJS-10211"
+					]
+				},
+				"severity": "high",
+				"semver": {
+					"unaffected": ">=0.3.1",
+					"vulnerable": "<0.3.1"
+				},
+				"credit": [
+					"Daniel Lo Nigro"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+				"disclosureTime": "2015-04-28T21:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-12-26T00:00:00.000Z",
+				"modificationTime": "2016-12-26T14:34:10.566Z",
+				"creationTime": "2016-09-28T14:34:10.566Z",
+				"id": "npm:clusterize.js:20150429",
+				"alternativeIds": [
+					"SNYK-JS-CLUSTERIZEJS-10211"
+				]
+			}
+		],
 		"codem-transcode": [
 			{
 				"title": "Command Injection in ffprobe",
@@ -3877,9 +3913,149 @@
 				"alternativeIds": [
 					"SNYK-JS-JQUERY-10186"
 				]
+			},
+			{
+				"title": "Denial of Service (DoS)",
+				"moduleName": "jquery",
+				"description": "## Overview\n[`jquery`](https://www.npmjs.com/package/jquery) is JavaScript library for DOM operations.\nAffected versions of the package are vulnerable to Denial of Service (DoS) due to removing a logic that lowercased attribute names. Any attribute getter using a mixed-cased name for boolean attributes goes into an infinite recursion, exceeding the stack call limit.\n\n## Remediation\nUpgrade `jquery` to version 3.0.0 or higher.\n\n## References\n- [Github Issue](https://github.com/jquery/jquery/issues/3133)\n- [Github Commit](https://github.com/jquery/jquery/pull/3134)\n- [jsfiddle](https://jsfiddle.net/shnann6y/2/)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-JQUERY-10187"
+					]
+				},
+				"severity": "low",
+				"semver": {
+					"unaffected": ">=3.0.0",
+					"vulnerable": "<3.0.0 >=2.1.0-beta1"
+				},
+				"credit": [
+					"Michał Gołębiowski"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+				"disclosureTime": "2016-05-28T21:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-12-26T15:37:35.224Z",
+				"modificationTime": "2016-12-26T15:37:35.224Z",
+				"creationTime": "2016-11-06T15:37:35.224Z",
+				"id": "npm:jquery:20160529",
+				"alternativeIds": [
+					"SNYK-JS-JQUERY-10187"
+				]
+			}
+		],
+		"jquery-migrate": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"moduleName": "jquery-migrate",
+				"description": "## Overview\n[`jquery-migrate`](https://www.npmjs.com/package/jquery-migrate) is package that helps migrate older jQuery code to jQuery 3.0+. It is an official plugin to jQuery.\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS). The `jquery-migrate` package used code from an older jquery library that contained the vulnerable `location.hash()` function. It was used to select elements, but also allows remote attackers to inject script into the page.\n\nRelated to [this vulnerability](https://snyk.io/vuln/npm:jquery:20110606) in the jQuery package.\n\n## Remediation\nUpgrade `jquery-migrate` to version 1.2.1 or higher.\n\n## References\n- [Minded Security Blog](http://blog.mindedsecurity.com/2013/04/jquery-migrate-is-sink-too.html)\n- [Github Issue](https://github.com/jquery/jquery-migrate/issues/36)\n- [Github Commit](https://github.com/jquery/jquery-migrate/commit/91d55f51fd28908d98d5c5fba6b63c3475213556)\n- [JSFiddle](http://jsfiddle.net/GFdJD/3/)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-JQUERYMIGRATE-10197"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=1.2.1",
+					"vulnerable": "<1.2.1"
+				},
+				"credit": [
+					"Mario Heiderich"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+				"disclosureTime": "2013-04-18T21:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-12-26T09:46:52.647Z",
+				"modificationTime": "2016-12-26T09:46:52.647Z",
+				"creationTime": "2016-12-26T09:46:52.647Z",
+				"id": "npm:jquery-migrate:20130419",
+				"alternativeIds": [
+					"SNYK-JS-JQUERYMIGRATE-10197"
+				]
+			}
+		],
+		"jquery-mobile": [
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"moduleName": "jquery-mobile",
+				"description": "## Overview\n[`jquery-mobile`](https://www.npmjs.com/package/jquery-mobile) is a touch-optimized web framework for smartphones and Tablets.\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS) via the `location.href` decoding the `user:password@` part of the url.\n\n\n## Remediation\nUpgrade `jquery-mobile` to version 1.2.0 or higher.\n\n\n## References\n- [JQuery mobile changelog](http://jquerymobile.com/changelog/1.2.0/)\n- [Github Issue](https://github.com/jquery/jquery-mobile/issues/4787)\n- [Github Commit](https://github.com/jquery/jquery-mobile/commit/370413072db4fd8ee0da4455d9a08abc9ef5ba24)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-JQUERYMOBILE-10199"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=1.2.0",
+					"vulnerable": "<1.2.0"
+				},
+				"credit": [
+					"Masato Kinugawa"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+				"disclosureTime": "2012-08-01T21:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-12-26T11:28:34.624Z",
+				"modificationTime": "2016-12-26T11:28:34.624Z",
+				"creationTime": "2016-11-09T11:28:34.624Z",
+				"id": "npm:jquery-mobile:20120802",
+				"alternativeIds": [
+					"SNYK-JS-JQUERYMOBILE-10199"
+				]
 			}
 		],
 		"jquery-ui": [
+			{
+				"title": "Cross-site Scripting (XSS) via Tooltip",
+				"moduleName": "jquery-ui",
+				"description": "## Overview\n[`jquery-ui`](https://www.npmjs.com/package/jquery-ui) is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library..\nAffected versions of the package are vulnerable to Cross-site Scripting (XSS) via the tooltip title attribute not being escaped and was treated as html and not text.\n\n## Remediation\nUpgrade `jquery-ui` to version 1.10.0 or higher.\n\n## References\n- [JQuery UI Ticket](https://bugs.jqueryui.com/ticket/8861)\n- [Github Commit](https://github.com/jquery/jquery-ui/commit/f2854408cce7e4b7fc6bf8676761904af9c96bde)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [
+						"CVE-2012-6662"
+					],
+					"ALTERNATIVE": [
+						"SNYK-JS-JQUERYUI-10189"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=1.10.0",
+					"vulnerable": "<1.10.0"
+				},
+				"credit": [
+					"Scott González"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+				"disclosureTime": "2012-11-26T22:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-12-26T15:04:27.065Z",
+				"modificationTime": "2016-12-26T15:04:27.065Z",
+				"creationTime": "2016-11-06T15:04:27.065Z",
+				"id": "npm:jquery-ui:20121127",
+				"alternativeIds": [
+					"SNYK-JS-JQUERYUI-10189"
+				]
+			},
 			{
 				"title": "XSS in dialog closeText",
 				"credit": [
@@ -5803,6 +5979,40 @@
 				"id": "npm:nhouston:20141114",
 				"alternativeIds": [
 					"SNYK-JS-NHOUSTON-10028"
+				]
+			}
+		],
+		"node-forge": [
+			{
+				"title": "Timing Attack due to unsafe HMAC comparison",
+				"moduleName": "node-forge",
+				"description": "## Overview\n[`node-forge`](https://www.npmjs.com/package/node-forge) is a JavaScript implementation of network transports, cryptography, ciphers, PKI, message digests, and various utilities.\nAffected versions of the package are vulnerable to a Timing Attack due to unsafe HMAC comparison.\nThe HMAC algorithm produces a keyed message by pairing a hash function with a cryptographic key. Both the key and a message serve as input to this algorithm, while it outputs a fixed-length digest output which can be sent with the message. Anyone who knows the key can repeat the algorithm and compare their calculated HMAC with one they have received, to verify a message originated from someone with knowledge of the key and has not been tampered with.\n\nThe problem begins when trying to compare two HMACs.\nThis is the part of code that handles the comparison:\n\n```js\nif(byteArrayA.length != byteArrayB.length) { return false; }\nfor(int i = 0; i < byteArrayA.length; i++) {\n  if(byteArrayA[i] != byteArrayB[i]) { return false; }\n}\nreturn true;\n```\nThe issue is that the more bytes match in the two arrays, the more comparisons are formed and the longer it'll take to return a result. This may allow attackers to brute force their way into the servers.\n\n\n## Remediation\nUpgrade `node-forge` to version 0.6.33 or higher.\n\n## References\n- [Github Commit](https://github.com/digitalbazaar/forge/commit/17c6aaf2fa3bb0fc8756c561c541dd8e8127e1dd)\n- [NCCGroup Blog](https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2011/february/double-hmac-verification/)\n- [Nate Lawson's Blog](https://rdist.root.org/2010/07/19/exploiting-remote-timing-attacks/)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-NODEFORGE-10217"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=0.6.33",
+					"vulnerable": "<0.6.33"
+				},
+				"credit": [
+					"Dave Longley"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+				"disclosureTime": "2015-06-25T21:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2016-12-26T14:45:40.050Z",
+				"modificationTime": "2016-12-26T14:45:40.050Z",
+				"creationTime": "2016-11-28T14:45:40.050Z",
+				"id": "npm:node-forge:20150626",
+				"alternativeIds": [
+					"SNYK-JS-NODEFORGE-10217"
 				]
 			}
 		],
@@ -10099,6 +10309,43 @@
 				"publicationTime": "2016-02-28T22:00:00.000Z",
 				"disclosureTime": "2016-02-28T22:00:00.000Z",
 				"id": "SNYK-RUBY-ACTIONPACK-20264"
+			},
+			{
+				"title": "Cross-site Scripting (XSS)",
+				"credit": [
+					"Sascha Depold"
+				],
+				"description": "## Overview\n[`actionpack`](https://rubygems.org/gems/actionpack) is a web app builder and tester on Rails.\nAffected versions of this Gem are vulnerable to Cross-site Scripting (XSS) attacks.\n\n## Details\nThe `strip_tags` helper method does not validate input passed before returning it to the user. This may allow an attacker to create a specially crafted request that would manipulate the parser and cause HTML tags to be injected into the response.  This can be exploited to inject arbitrary javascript into the rendered page.\n\n## References\n- [Ruby Security forum](https://groups.google.com/forum/#!topic/rubyonrails-security/K5EwdJt06hI)\n- [Redhat](https://bugzilla.redhat.com/show_bug.cgi?id=731436)\n- [Github Commit](https://github.com/rails/rails/commit/586a944ddd4d03e66dea1093306147594748037a)\n",
+				"moduleName": "actionpack",
+				"language": "ruby",
+				"packageManager": "rubygems",
+				"semver": {
+					"patched": [
+						"~> 3.0.10",
+						"~> 2.3.13",
+						"~> 3.1.0.rc5"
+					],
+					"vulnerable": [
+						"< 3.0.10",
+						">= 2.3.0, < 2.3.13",
+						">=3.1.0.rc1, <3.1.0.rc5"
+					]
+				},
+				"identifiers": {
+					"CWE": [
+						"CWE-79"
+					],
+					"CVE": [
+						"CVE-2011-2931"
+					]
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+				"severity": "medium",
+				"creationTime": "2016-09-21T12:36:41.000Z",
+				"modificationTime": "2016-12-26T12:36:41.000Z",
+				"publicationTime": "2016-12-26T21:00:00.000Z",
+				"disclosureTime": "2012-08-08T21:00:00.000Z",
+				"id": "SNYK-RUBY-ACTIONPACK-20281"
 			}
 		],
 		"actionview": [
@@ -11972,6 +12219,38 @@
 				"publicationTime": "2014-06-29T21:00:00.000Z",
 				"disclosureTime": "2014-06-29T21:00:00.000Z",
 				"id": "SNYK-RUBY-CAPSTRAP-20169"
+			}
+		],
+		"chargify2": [
+			{
+				"title": "Cross site Scripting (XSS)",
+				"credit": [
+					"David Cole"
+				],
+				"description": "## Overview\n[`chargify2`](https://rubygems.org/gems/bundler) is am API V2 wrapper for chargify.\nAffected versions of this gem do not sanitize user input, allowing the attacker to inject `javascript:` code snippets into the output. For example, the following input `javascript&#x58document;alert&#40;1&#41;`  will result in `alert(1)` being executed when the user clicks on the link.\n\n## Remediation\nThere is no fixed version for this vulnerability, but a fix was merged to the [`api_v2`](https://github.com/chargify/chargify2/tree/api_v2) branch.\n\n## References\n\n- [Github PR](https://github.com/chargify/chargify2/pull/31)\n- [Github Commit](https://github.com/chargify/chargify2/commit/9163a9f82fe4b8dea2378210ffc7f06bf9c697a2)\n",
+				"moduleName": "chargify2",
+				"language": "ruby",
+				"packageManager": "rubygems",
+				"semver": {
+					"patched": [
+						"< 0.0.0"
+					],
+					"vulnerable": [
+						">= 0.0.0"
+					]
+				},
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"OSVDB": []
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+				"severity": "medium",
+				"creationTime": "2016-12-11T12:36:47.000Z",
+				"modificationTime": "2016-12-26T12:36:47.000Z",
+				"publicationTime": "2016-12-26T21:00:00.000Z",
+				"disclosureTime": "2014-09-01T21:00:00.000Z",
+				"id": "SNYK-RUBY-CHARGIFY2-20273"
 			}
 		],
 		"ciborg": [

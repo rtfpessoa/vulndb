@@ -1106,6 +1106,41 @@
         ]
       }
     ],
+    "clusterize.js": [
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "moduleName": "clusterize.js",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-CLUSTERIZEJS-10211"
+          ]
+        },
+        "severity": "high",
+        "semver": {
+          "unaffected": ">=0.3.1",
+          "vulnerable": "<0.3.1"
+        },
+        "credit": [
+          "Daniel Lo Nigro"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+        "disclosureTime": "2015-04-28T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-26T00:00:00.000Z",
+        "modificationTime": "2016-12-26T14:34:10.566Z",
+        "creationTime": "2016-09-28T14:34:10.566Z",
+        "id": "npm:clusterize.js:20150429",
+        "alternativeIds": [
+          "SNYK-JS-CLUSTERIZEJS-10211"
+        ]
+      }
+    ],
     "codem-transcode": [
       {
         "title": "Command Injection in ffprobe",
@@ -3778,9 +3813,145 @@
         "alternativeIds": [
           "SNYK-JS-JQUERY-10186"
         ]
+      },
+      {
+        "title": "Denial of Service (DoS)",
+        "moduleName": "jquery",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERY-10187"
+          ]
+        },
+        "severity": "low",
+        "semver": {
+          "unaffected": ">=3.0.0",
+          "vulnerable": "<3.0.0 >=2.1.0-beta1"
+        },
+        "credit": [
+          "Michał Gołębiowski"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "disclosureTime": "2016-05-28T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-26T15:37:35.224Z",
+        "modificationTime": "2016-12-26T15:37:35.224Z",
+        "creationTime": "2016-11-06T15:37:35.224Z",
+        "id": "npm:jquery:20160529",
+        "alternativeIds": [
+          "SNYK-JS-JQUERY-10187"
+        ]
+      }
+    ],
+    "jquery-migrate": [
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "moduleName": "jquery-migrate",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERYMIGRATE-10197"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.2.1",
+          "vulnerable": "<1.2.1"
+        },
+        "credit": [
+          "Mario Heiderich"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "disclosureTime": "2013-04-18T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-26T09:46:52.647Z",
+        "modificationTime": "2016-12-26T09:46:52.647Z",
+        "creationTime": "2016-12-26T09:46:52.647Z",
+        "id": "npm:jquery-migrate:20130419",
+        "alternativeIds": [
+          "SNYK-JS-JQUERYMIGRATE-10197"
+        ]
+      }
+    ],
+    "jquery-mobile": [
+      {
+        "title": "Cross-site Scripting (XSS)",
+        "moduleName": "jquery-mobile",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERYMOBILE-10199"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.2.0",
+          "vulnerable": "<1.2.0"
+        },
+        "credit": [
+          "Masato Kinugawa"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "disclosureTime": "2012-08-01T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-26T11:28:34.624Z",
+        "modificationTime": "2016-12-26T11:28:34.624Z",
+        "creationTime": "2016-11-09T11:28:34.624Z",
+        "id": "npm:jquery-mobile:20120802",
+        "alternativeIds": [
+          "SNYK-JS-JQUERYMOBILE-10199"
+        ]
       }
     ],
     "jquery-ui": [
+      {
+        "title": "Cross-site Scripting (XSS) via Tooltip",
+        "moduleName": "jquery-ui",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-79"
+          ],
+          "CVE": [
+            "CVE-2012-6662"
+          ],
+          "ALTERNATIVE": [
+            "SNYK-JS-JQUERYUI-10189"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.10.0",
+          "vulnerable": "<1.10.0"
+        },
+        "credit": [
+          "Scott González"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+        "disclosureTime": "2012-11-26T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-26T15:04:27.065Z",
+        "modificationTime": "2016-12-26T15:04:27.065Z",
+        "creationTime": "2016-11-06T15:04:27.065Z",
+        "id": "npm:jquery-ui:20121127",
+        "alternativeIds": [
+          "SNYK-JS-JQUERYUI-10189"
+        ]
+      },
       {
         "title": "XSS in dialog closeText",
         "credit": [
@@ -5662,6 +5833,39 @@
         "id": "npm:nhouston:20141114",
         "alternativeIds": [
           "SNYK-JS-NHOUSTON-10028"
+        ]
+      }
+    ],
+    "node-forge": [
+      {
+        "title": "Timing Attack due to unsafe HMAC comparison",
+        "moduleName": "node-forge",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-NODEFORGE-10217"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=0.6.33",
+          "vulnerable": "<0.6.33"
+        },
+        "credit": [
+          "Dave Longley"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "disclosureTime": "2015-06-25T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2016-12-26T14:45:40.050Z",
+        "modificationTime": "2016-12-26T14:45:40.050Z",
+        "creationTime": "2016-11-28T14:45:40.050Z",
+        "id": "npm:node-forge:20150626",
+        "alternativeIds": [
+          "SNYK-JS-NODEFORGE-10217"
         ]
       }
     ],
