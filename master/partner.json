@@ -1,5 +1,39 @@
 {
   "npm": {
+    "adamvr-geoip-lite": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-02T04:35:16.000Z",
+        "modificationTime": "2016-12-02T04:35:16.000Z",
+        "publicationTime": "2017-01-04T04:26:36.000Z",
+        "disclosureTime": "2016-12-02T04:35:16.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:L",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 283,
+          "ALTERNATIVE": [
+            "SNYK-JS-ADAMVRGEOIPLITE-10371"
+          ]
+        },
+        "patches": [],
+        "moduleName": "adamvr-geoip-lite",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:adamvr-geoip-lite:20170102",
+        "alternativeIds": [
+          "SNYK-JS-ADAMVRGEOIPLITE-10371"
+        ]
+      }
+    ],
     "aerospike": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -31,6 +65,40 @@
         "id": "npm:aerospike:20161101",
         "alternativeIds": [
           "SNYK-JS-AEROSPIKE-10224"
+        ]
+      }
+    ],
+    "air-sdk": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:02:29.000Z",
+        "modificationTime": "2017-01-01T15:02:29.000Z",
+        "publicationTime": "2017-01-04T01:47:48.000Z",
+        "disclosureTime": "2017-01-01T15:02:29.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 200,
+          "ALTERNATIVE": [
+            "SNYK-JS-AIRSDK-10278"
+          ]
+        },
+        "patches": [],
+        "moduleName": "air-sdk",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:air-sdk:20170101",
+        "alternativeIds": [
+          "SNYK-JS-AIRSDK-10278"
         ]
       }
     ],
@@ -100,6 +168,40 @@
         "id": "npm:airbrake:20160328",
         "alternativeIds": [
           "SNYK-JS-AIRBRAKE-10090"
+        ]
+      }
+    ],
+    "alto-saxophone": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T21:56:24.000Z",
+        "modificationTime": "2017-01-01T21:56:24.000Z",
+        "publicationTime": "2017-01-04T04:31:50.000Z",
+        "disclosureTime": "2016-10-21T21:56:24.000Z",
+        "semver": {
+          "vulnerable": "<2.25.1",
+          "unaffected": ">=2.25.1"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 172,
+          "ALTERNATIVE": [
+            "SNYK-JS-ALTOSAXOPHONE-10269"
+          ]
+        },
+        "patches": [],
+        "moduleName": "alto-saxophone",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:alto-saxophone:20161021",
+        "alternativeIds": [
+          "SNYK-JS-ALTOSAXOPHONE-10269"
         ]
       }
     ],
@@ -173,6 +275,40 @@
         ]
       }
     ],
+    "apk-parser2": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T16:15:25.000Z",
+        "modificationTime": "2017-01-01T16:15:25.000Z",
+        "publicationTime": "2017-01-04T04:05:59.000Z",
+        "disclosureTime": "2017-01-01T16:15:25.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 223,
+          "ALTERNATIVE": [
+            "SNYK-JS-APKPARSER2-10296"
+          ]
+        },
+        "patches": [],
+        "moduleName": "apk-parser2",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:apk-parser2:20170101",
+        "alternativeIds": [
+          "SNYK-JS-APKPARSER2-10296"
+        ]
+      }
+    ],
     "apk-parser3": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -243,6 +379,108 @@
         ]
       }
     ],
+    "arcanist": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:42:21.000Z",
+        "modificationTime": "2017-01-02T04:42:21.000Z",
+        "publicationTime": "2017-01-04T04:28:35.000Z",
+        "disclosureTime": "2017-01-02T04:42:21.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:L",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 286,
+          "ALTERNATIVE": [
+            "SNYK-JS-ARCANIST-10334"
+          ]
+        },
+        "patches": [],
+        "moduleName": "arcanist",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:arcanist:20170102",
+        "alternativeIds": [
+          "SNYK-JS-ARCANIST-10334"
+        ]
+      }
+    ],
+    "arrayfire-js": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T00:27:58.000Z",
+        "modificationTime": "2017-01-01T00:27:58.000Z",
+        "publicationTime": "2017-01-04T01:42:01.000Z",
+        "disclosureTime": "2017-01-01T00:27:58.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 192,
+          "ALTERNATIVE": [
+            "SNYK-JS-ARRAYFIREJS-10273"
+          ]
+        },
+        "patches": [],
+        "moduleName": "arrayfire-js",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:arrayfire-js:20170101",
+        "alternativeIds": [
+          "SNYK-JS-ARRAYFIREJS-10273"
+        ]
+      }
+    ],
+    "atom-node-module-installer": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:36:01.000Z",
+        "modificationTime": "2017-01-01T15:36:01.000Z",
+        "publicationTime": "2017-01-04T03:58:58.000Z",
+        "disclosureTime": "2017-01-01T15:36:01.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 216,
+          "ALTERNATIVE": [
+            "SNYK-JS-ATOMNODEMODULEINSTALLER-10292"
+          ]
+        },
+        "patches": [],
+        "moduleName": "atom-node-module-installer",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:atom-node-module-installer:20170101",
+        "alternativeIds": [
+          "SNYK-JS-ATOMNODEMODULEINSTALLER-10292"
+        ]
+      }
+    ],
     "backbone": [
       {
         "title": "Cross Site Scripting",
@@ -256,7 +494,6 @@
         "identifiers": {
           "CWE": [],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-BACKBONE-10054"
           ]
@@ -407,6 +644,40 @@
         ]
       }
     ],
+    "bionode-sra": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:27:26.000Z",
+        "modificationTime": "2017-01-01T15:27:26.000Z",
+        "publicationTime": "2017-01-04T02:29:22.000Z",
+        "disclosureTime": "2017-01-01T15:27:26.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 211,
+          "ALTERNATIVE": [
+            "SNYK-JS-BIONODESRA-10287"
+          ]
+        },
+        "patches": [],
+        "moduleName": "bionode-sra",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:bionode-sra:20170101",
+        "alternativeIds": [
+          "SNYK-JS-BIONODESRA-10287"
+        ]
+      }
+    ],
     "bittorrent-dht": [
       {
         "title": "Remote Memory Exposure",
@@ -535,7 +806,6 @@
             "CWE-201"
           ],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-BL-10138"
           ]
@@ -669,6 +939,40 @@
         ]
       }
     ],
+    "box2d-native": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:57:27.000Z",
+        "modificationTime": "2017-01-01T15:57:27.000Z",
+        "publicationTime": "2017-01-04T03:56:45.000Z",
+        "disclosureTime": "2017-01-01T15:57:27.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 219,
+          "ALTERNATIVE": [
+            "SNYK-JS-BOX2DNATIVE-10294"
+          ]
+        },
+        "patches": [],
+        "moduleName": "box2d-native",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:box2d-native:20170101",
+        "alternativeIds": [
+          "SNYK-JS-BOX2DNATIVE-10294"
+        ]
+      }
+    ],
     "brisket": [
       {
         "title": "Cross-site Scripting (XSS) via Bootstrapped data URL",
@@ -701,6 +1005,40 @@
         "id": "npm:brisket:20160913",
         "alternativeIds": [
           "SNYK-JS-BRISKET-10139"
+        ]
+      }
+    ],
+    "broccoli-closure": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T18:56:17.000Z",
+        "modificationTime": "2017-01-01T18:56:17.000Z",
+        "publicationTime": "2017-01-04T04:11:20.000Z",
+        "disclosureTime": "2016-11-01T18:56:17.000Z",
+        "semver": {
+          "vulnerable": "<1.3.1",
+          "unaffected": ">=1.3.1"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 242,
+          "ALTERNATIVE": [
+            "SNYK-JS-BROCCOLICLOSURE-10308"
+          ]
+        },
+        "patches": [],
+        "moduleName": "broccoli-closure",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:broccoli-closure:20161101",
+        "alternativeIds": [
+          "SNYK-JS-BROCCOLICLOSURE-10308"
         ]
       }
     ],
@@ -866,6 +1204,40 @@
         ]
       }
     ],
+    "chromedriver126": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:10:22.000Z",
+        "modificationTime": "2017-01-01T15:10:22.000Z",
+        "publicationTime": "2017-01-04T02:28:37.000Z",
+        "disclosureTime": "2017-01-01T15:10:22.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 203,
+          "ALTERNATIVE": [
+            "SNYK-JS-CHROMEDRIVER126-10281"
+          ]
+        },
+        "patches": [],
+        "moduleName": "chromedriver126",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:chromedriver126:20170101",
+        "alternativeIds": [
+          "SNYK-JS-CHROMEDRIVER126-10281"
+        ]
+      }
+    ],
     "ckeditor-dev": [
       {
         "title": "Cross-site Scripting (XSS)",
@@ -1000,6 +1372,40 @@
         ]
       }
     ],
+    "clang-extra": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T00:59:00.000Z",
+        "modificationTime": "2017-01-02T00:59:00.000Z",
+        "publicationTime": "2017-01-04T04:19:53.000Z",
+        "disclosureTime": "2017-01-02T00:59:00.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 265,
+          "ALTERNATIVE": [
+            "SNYK-JS-CLANGEXTRA-10323"
+          ]
+        },
+        "patches": [],
+        "moduleName": "clang-extra",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:clang-extra:20170102",
+        "alternativeIds": [
+          "SNYK-JS-CLANGEXTRA-10323"
+        ]
+      }
+    ],
     "cli": [
       {
         "title": "Insecure use of /tmp folder",
@@ -1106,6 +1512,40 @@
         ]
       }
     ],
+    "cloudpub-redis": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:32:52.000Z",
+        "modificationTime": "2017-01-02T04:32:52.000Z",
+        "publicationTime": "2017-01-04T04:25:51.000Z",
+        "disclosureTime": "2017-01-02T04:32:52.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 282,
+          "ALTERNATIVE": [
+            "SNYK-JS-CLOUDPUBREDIS-10346"
+          ]
+        },
+        "patches": [],
+        "moduleName": "cloudpub-redis",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:cloudpub-redis:20170102",
+        "alternativeIds": [
+          "SNYK-JS-CLOUDPUBREDIS-10346"
+        ]
+      }
+    ],
     "clusterize.js": [
       {
         "title": "Cross-site Scripting (XSS)",
@@ -1138,6 +1578,108 @@
         "id": "npm:clusterize.js:20150429",
         "alternativeIds": [
           "SNYK-JS-CLUSTERIZEJS-10211"
+        ]
+      }
+    ],
+    "cmake": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T17:18:50.000Z",
+        "modificationTime": "2017-01-01T17:18:50.000Z",
+        "publicationTime": "2017-01-04T04:13:46.000Z",
+        "disclosureTime": "2017-01-01T17:18:50.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 233,
+          "ALTERNATIVE": [
+            "SNYK-JS-CMAKE-10304"
+          ]
+        },
+        "patches": [],
+        "moduleName": "cmake",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:cmake:20170101",
+        "alternativeIds": [
+          "SNYK-JS-CMAKE-10304"
+        ]
+      }
+    ],
+    "co-cli-installer": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T01:22:40.000Z",
+        "modificationTime": "2017-01-02T01:22:40.000Z",
+        "publicationTime": "2017-01-04T04:21:17.000Z",
+        "disclosureTime": "2017-01-02T01:22:40.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 268,
+          "ALTERNATIVE": [
+            "SNYK-JS-COCLIINSTALLER-10350"
+          ]
+        },
+        "patches": [],
+        "moduleName": "co-cli-installer",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:co-cli-installer:20170102",
+        "alternativeIds": [
+          "SNYK-JS-COCLIINSTALLER-10350"
+        ]
+      }
+    ],
+    "cobalt-cli": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T00:44:36.000Z",
+        "modificationTime": "2017-01-01T00:44:36.000Z",
+        "publicationTime": "2017-01-04T01:40:41.000Z",
+        "disclosureTime": "2017-01-01T00:44:36.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 197,
+          "ALTERNATIVE": [
+            "SNYK-JS-COBALTCLI-10361"
+          ]
+        },
+        "patches": [],
+        "moduleName": "cobalt-cli",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:cobalt-cli:20170101",
+        "alternativeIds": [
+          "SNYK-JS-COBALTCLI-10361"
         ]
       }
     ],
@@ -1304,7 +1846,6 @@
             "CWE-95"
           ],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-CROSSBOWLANG-10137"
           ]
@@ -1430,6 +1971,74 @@
         ]
       }
     ],
+    "curses": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:34:37.000Z",
+        "modificationTime": "2017-01-01T15:34:37.000Z",
+        "publicationTime": "2017-01-04T03:56:03.000Z",
+        "disclosureTime": "2017-01-01T15:34:37.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 215,
+          "ALTERNATIVE": [
+            "SNYK-JS-CURSES-10291"
+          ]
+        },
+        "patches": [],
+        "moduleName": "curses",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:curses:20170101",
+        "alternativeIds": [
+          "SNYK-JS-CURSES-10291"
+        ]
+      }
+    ],
+    "dalek-browser-chrome": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:00:13.000Z",
+        "modificationTime": "2017-01-01T15:00:13.000Z",
+        "publicationTime": "2017-01-04T01:47:59.000Z",
+        "disclosureTime": "2017-01-01T15:00:13.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 199,
+          "ALTERNATIVE": [
+            "SNYK-JS-DALEKBROWSERCHROME-10277"
+          ]
+        },
+        "patches": [],
+        "moduleName": "dalek-browser-chrome",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:dalek-browser-chrome:20170101",
+        "alternativeIds": [
+          "SNYK-JS-DALEKBROWSERCHROME-10277"
+        ]
+      }
+    ],
     "dalek-browser-chrome-canary": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -1463,6 +2072,74 @@
         "id": "npm:dalek-browser-chrome-canary:20161219",
         "alternativeIds": [
           "SNYK-JS-DALEKBROWSERCHROMECANARY-10237"
+        ]
+      }
+    ],
+    "dalek-browser-ie": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:24:01.000Z",
+        "modificationTime": "2017-01-01T15:24:01.000Z",
+        "publicationTime": "2017-01-04T02:27:48.000Z",
+        "disclosureTime": "2017-01-01T15:24:01.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 209,
+          "ALTERNATIVE": [
+            "SNYK-JS-DALEKBROWSERIE-10285"
+          ]
+        },
+        "patches": [],
+        "moduleName": "dalek-browser-ie",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:dalek-browser-ie:20170101",
+        "alternativeIds": [
+          "SNYK-JS-DALEKBROWSERIE-10285"
+        ]
+      }
+    ],
+    "dalek-browser-ie-canary": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:16:32.000Z",
+        "modificationTime": "2017-01-01T15:16:32.000Z",
+        "publicationTime": "2017-01-04T02:29:11.000Z",
+        "disclosureTime": "2017-01-01T15:16:32.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 205,
+          "ALTERNATIVE": [
+            "SNYK-JS-DALEKBROWSERIECANARY-10282"
+          ]
+        },
+        "patches": [],
+        "moduleName": "dalek-browser-ie-canary",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:dalek-browser-ie-canary:20170101",
+        "alternativeIds": [
+          "SNYK-JS-DALEKBROWSERIECANARY-10282"
         ]
       }
     ],
@@ -1555,7 +2232,6 @@
           "CVE": [
             "CVE-2008-6681"
           ],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-DOJO-10051"
           ]
@@ -1598,8 +2274,7 @@
             "npm:dojo:20100614-4",
             "npm:dojo:20100614-5",
             "SNYK-JS-DOJO-10052"
-          ],
-          "NSP": ""
+          ]
         },
         "patches": [],
         "moduleName": "dojo",
@@ -1635,7 +2310,6 @@
           "CVE": [
             "CVE-2010-2275"
           ],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-DOJO-10053"
           ]
@@ -1747,7 +2421,6 @@
             "CWE-95"
           ],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-DUSTJSLINKEDIN-10136"
           ]
@@ -1759,6 +2432,40 @@
         "id": "npm:dustjs-linkedin:20160819",
         "alternativeIds": [
           "SNYK-JS-DUSTJSLINKEDIN-10136"
+        ]
+      }
+    ],
+    "dwebp-bin": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T17:17:27.000Z",
+        "modificationTime": "2017-01-01T17:17:27.000Z",
+        "publicationTime": "2017-01-04T04:08:35.000Z",
+        "disclosureTime": "2017-01-01T17:17:27.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 232,
+          "ALTERNATIVE": [
+            "SNYK-JS-DWEBPBIN-10303"
+          ]
+        },
+        "patches": [],
+        "moduleName": "dwebp-bin",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:dwebp-bin:20170101",
+        "alternativeIds": [
+          "SNYK-JS-DWEBPBIN-10303"
         ]
       }
     ],
@@ -2017,8 +2724,7 @@
             "npm:ember:20130105-4",
             "npm:ember:20130105-5",
             "SNYK-JS-EMBER-10045"
-          ],
-          "NSP": ""
+          ]
         },
         "patches": [],
         "moduleName": "ember",
@@ -2061,8 +2767,7 @@
             "npm:ember:20140114-3",
             "npm:ember:20140114-4",
             "SNYK-JS-EMBER-10050"
-          ],
-          "NSP": ""
+          ]
         },
         "patches": [],
         "moduleName": "ember",
@@ -2098,8 +2803,7 @@
           "ALTERNATIVE": [
             "npm:ember:20140214-1",
             "SNYK-JS-EMBER-10049"
-          ],
-          "NSP": ""
+          ]
         },
         "patches": [],
         "moduleName": "ember",
@@ -2476,6 +3180,142 @@
         ]
       }
     ],
+    "fibjs": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:37:37.000Z",
+        "modificationTime": "2017-01-01T15:37:37.000Z",
+        "publicationTime": "2017-01-04T03:59:19.000Z",
+        "disclosureTime": "2017-01-01T15:37:37.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 217,
+          "ALTERNATIVE": [
+            "SNYK-JS-FIBJS-10359"
+          ]
+        },
+        "patches": [],
+        "moduleName": "fibjs",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:fibjs:20170101",
+        "alternativeIds": [
+          "SNYK-JS-FIBJS-10359"
+        ]
+      }
+    ],
+    "fis-parser-sass-bin": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T01:26:30.000Z",
+        "modificationTime": "2017-01-02T01:26:30.000Z",
+        "publicationTime": "2017-01-04T04:23:14.000Z",
+        "disclosureTime": "2017-01-02T01:26:30.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 269,
+          "ALTERNATIVE": [
+            "SNYK-JS-FISPARSERSASSBIN-10324"
+          ]
+        },
+        "patches": [],
+        "moduleName": "fis-parser-sass-bin",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:fis-parser-sass-bin:20170102",
+        "alternativeIds": [
+          "SNYK-JS-FISPARSERSASSBIN-10324"
+        ]
+      }
+    ],
+    "fis-sass-all": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:43:44.000Z",
+        "modificationTime": "2017-01-02T04:43:44.000Z",
+        "publicationTime": "2017-01-04T04:28:49.000Z",
+        "disclosureTime": "2017-01-02T04:43:44.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 287,
+          "ALTERNATIVE": [
+            "SNYK-JS-FISSASSALL-10363"
+          ]
+        },
+        "patches": [],
+        "moduleName": "fis-sass-all",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:fis-sass-all:20161202",
+        "alternativeIds": [
+          "SNYK-JS-FISSASSALL-10363"
+        ]
+      }
+    ],
+    "frames-compiler": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:14:00.000Z",
+        "modificationTime": "2017-01-01T19:14:00.000Z",
+        "publicationTime": "2017-01-04T04:16:38.000Z",
+        "disclosureTime": "2017-01-01T19:14:00.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 247,
+          "ALTERNATIVE": [
+            "SNYK-JS-FRAMESCOMPILER-10354"
+          ]
+        },
+        "patches": [],
+        "moduleName": "frames-compiler",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:frames-compiler:20170101",
+        "alternativeIds": [
+          "SNYK-JS-FRAMESCOMPILER-10354"
+        ]
+      }
+    ],
     "fuelux": [
       {
         "title": "Cross-site Scripting (XSS) in Pillbox",
@@ -2509,6 +3349,40 @@
         "id": "npm:fuelux:20160725",
         "alternativeIds": [
           "SNYK-JS-FUELUX-10124"
+        ]
+      }
+    ],
+    "fuseki": [
+      {
+        "title": "Downloads Resources over Insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-29T04:14:00.000Z",
+        "modificationTime": "2016-12-29T04:14:00.000Z",
+        "publicationTime": "2017-01-04T00:27:09.000Z",
+        "disclosureTime": "2016-11-13T04:14:00.000Z",
+        "semver": {
+          "vulnerable": "<1.0.1",
+          "unaffected": ">=1.0.1"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 278,
+          "ALTERNATIVE": [
+            "SNYK-JS-FUSEKI-10265"
+          ]
+        },
+        "patches": [],
+        "moduleName": "fuseki",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:fuseki:20161113",
+        "alternativeIds": [
+          "SNYK-JS-FUSEKI-10265"
         ]
       }
     ],
@@ -2592,6 +3466,40 @@
         "id": "npm:geddy:20150727",
         "alternativeIds": [
           "SNYK-JS-GEDDY-10040"
+        ]
+      }
+    ],
+    "geoip-lite-country": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-29T22:46:49.000Z",
+        "modificationTime": "2016-12-29T22:46:49.000Z",
+        "publicationTime": "2017-01-04T00:23:22.000Z",
+        "disclosureTime": "2016-11-16T22:46:49.000Z",
+        "semver": {
+          "vulnerable": "<1.1.4",
+          "unaffected": ">=1.1.4"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 183,
+          "ALTERNATIVE": [
+            "SNYK-JS-GEOIPLITECOUNTRY-10266"
+          ]
+        },
+        "patches": [],
+        "moduleName": "geoip-lite-country",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:geoip-lite-country:20161116",
+        "alternativeIds": [
+          "SNYK-JS-GEOIPLITECOUNTRY-10266"
         ]
       }
     ],
@@ -2767,6 +3675,74 @@
         ]
       }
     ],
+    "google-closure-tools-latest": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T01:34:48.000Z",
+        "modificationTime": "2017-01-02T01:34:48.000Z",
+        "publicationTime": "2017-01-04T04:26:21.000Z",
+        "disclosureTime": "2017-01-02T01:34:48.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 274,
+          "ALTERNATIVE": [
+            "SNYK-JS-GOOGLECLOSURETOOLSLATEST-10326"
+          ]
+        },
+        "patches": [],
+        "moduleName": "google-closure-tools-latest",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:google-closure-tools-latest:20170102",
+        "alternativeIds": [
+          "SNYK-JS-GOOGLECLOSURETOOLSLATEST-10326"
+        ]
+      }
+    ],
+    "grunt-ccompiler": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T17:30:46.000Z",
+        "modificationTime": "2017-01-01T17:30:47.000Z",
+        "publicationTime": "2017-01-04T04:12:04.000Z",
+        "disclosureTime": "2017-01-01T17:30:46.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 239,
+          "ALTERNATIVE": [
+            "SNYK-JS-GRUNTCCOMPILER-10369"
+          ]
+        },
+        "patches": [],
+        "moduleName": "grunt-ccompiler",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:grunt-ccompiler:20170101",
+        "alternativeIds": [
+          "SNYK-JS-GRUNTCCOMPILER-10369"
+        ]
+      }
+    ],
     "grunt-gh-pages": [
       {
         "title": "Credentials saved as clear-text in log",
@@ -2803,6 +3779,74 @@
         ]
       }
     ],
+    "grunt-images": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:31:28.000Z",
+        "modificationTime": "2017-01-01T19:31:28.000Z",
+        "publicationTime": "2017-01-04T04:15:19.000Z",
+        "disclosureTime": "2017-01-01T19:31:28.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 255,
+          "ALTERNATIVE": [
+            "SNYK-JS-GRUNTIMAGES-10313"
+          ]
+        },
+        "patches": [],
+        "moduleName": "grunt-images",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:grunt-images:20170101",
+        "alternativeIds": [
+          "SNYK-JS-GRUNTIMAGES-10313"
+        ]
+      }
+    ],
+    "grunt-webdriver-qunit": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:20:48.000Z",
+        "modificationTime": "2017-01-01T15:20:48.000Z",
+        "publicationTime": "2017-01-04T02:27:58.000Z",
+        "disclosureTime": "2017-01-01T15:20:48.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 207,
+          "ALTERNATIVE": [
+            "SNYK-JS-GRUNTWEBDRIVERQUNIT-10284"
+          ]
+        },
+        "patches": [],
+        "moduleName": "grunt-webdriver-qunit",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:grunt-webdriver-qunit:20170101",
+        "alternativeIds": [
+          "SNYK-JS-GRUNTWEBDRIVERQUNIT-10284"
+        ]
+      }
+    ],
     "handlebars": [
       {
         "title": "Cross-Site Scripting",
@@ -2818,7 +3862,6 @@
             "CWE-79"
           ],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-HANDLEBARS-10047"
           ]
@@ -3217,6 +4260,210 @@
         ]
       }
     ],
+    "haxe": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T22:29:40.000Z",
+        "modificationTime": "2017-01-01T22:29:40.000Z",
+        "publicationTime": "2017-01-04T01:47:19.000Z",
+        "disclosureTime": "2017-01-01T22:29:40.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 177,
+          "ALTERNATIVE": [
+            "SNYK-JS-HAXE-10271"
+          ]
+        },
+        "patches": [],
+        "moduleName": "haxe",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:haxe:20170101",
+        "alternativeIds": [
+          "SNYK-JS-HAXE-10271"
+        ]
+      }
+    ],
+    "haxe3": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:54:33.000Z",
+        "modificationTime": "2017-01-02T04:54:33.000Z",
+        "publicationTime": "2017-01-04T04:28:58.000Z",
+        "disclosureTime": "2017-01-02T04:54:33.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 294,
+          "ALTERNATIVE": [
+            "SNYK-JS-HAXE3-10368"
+          ]
+        },
+        "patches": [],
+        "moduleName": "haxe3",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:haxe3:20161202",
+        "alternativeIds": [
+          "SNYK-JS-HAXE3-10368"
+        ]
+      }
+    ],
+    "haxeshim": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T05:02:51.000Z",
+        "modificationTime": "2017-01-02T05:02:51.000Z",
+        "publicationTime": "2017-01-04T04:30:46.000Z",
+        "disclosureTime": "2017-01-02T05:02:51.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 300,
+          "ALTERNATIVE": [
+            "SNYK-JS-HAXESHIM-10340"
+          ]
+        },
+        "patches": [],
+        "moduleName": "haxeshim",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:haxeshim:20170102",
+        "alternativeIds": [
+          "SNYK-JS-HAXESHIM-10340"
+        ]
+      }
+    ],
+    "headless-browser-lite": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T16:52:43.000Z",
+        "modificationTime": "2017-01-01T16:52:43.000Z",
+        "publicationTime": "2017-01-04T04:00:47.000Z",
+        "disclosureTime": "2017-01-01T16:52:43.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 230,
+          "ALTERNATIVE": [
+            "SNYK-JS-HEADLESSBROWSERLITE-10357"
+          ]
+        },
+        "patches": [],
+        "moduleName": "headless-browser-lite",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:headless-browser-lite:20170101",
+        "alternativeIds": [
+          "SNYK-JS-HEADLESSBROWSERLITE-10357"
+        ]
+      }
+    ],
+    "healthcenter": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:45:44.000Z",
+        "modificationTime": "2017-01-02T04:45:44.000Z",
+        "publicationTime": "2017-01-04T04:28:41.000Z",
+        "disclosureTime": "2017-01-02T04:45:44.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 288,
+          "ALTERNATIVE": [
+            "SNYK-JS-HEALTHCENTER-10345"
+          ]
+        },
+        "patches": [],
+        "moduleName": "healthcenter",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:healthcenter:20170102",
+        "alternativeIds": [
+          "SNYK-JS-HEALTHCENTER-10345"
+        ]
+      }
+    ],
+    "herbivore": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T22:06:12.000Z",
+        "modificationTime": "2017-01-01T22:06:12.000Z",
+        "publicationTime": "2017-01-04T04:23:42.000Z",
+        "disclosureTime": "2017-01-01T22:06:12.000Z",
+        "semver": {
+          "vulnerable": "<=0.0.3",
+          "unaffected": ">0.0.3"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 258,
+          "ALTERNATIVE": [
+            "SNYK-JS-HERBIVORE-10316"
+          ]
+        },
+        "patches": [],
+        "moduleName": "herbivore",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:herbivore:20161102",
+        "alternativeIds": [
+          "SNYK-JS-HERBIVORE-10316"
+        ]
+      }
+    ],
     "hoek": [
       {
         "title": "Cross-site Scripting (XSS)",
@@ -3284,6 +4531,40 @@
         "id": "npm:hostr:20161211",
         "alternativeIds": [
           "SNYK-JS-HOSTR-10251"
+        ]
+      }
+    ],
+    "httpsync": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:25:29.000Z",
+        "modificationTime": "2017-01-01T15:25:29.000Z",
+        "publicationTime": "2017-01-04T02:29:36.000Z",
+        "disclosureTime": "2017-01-01T15:25:29.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 210,
+          "ALTERNATIVE": [
+            "SNYK-JS-HTTPSYNC-10286"
+          ]
+        },
+        "patches": [],
+        "moduleName": "httpsync",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:httpsync:20170101",
+        "alternativeIds": [
+          "SNYK-JS-HTTPSYNC-10286"
         ]
       }
     ],
@@ -3437,6 +4718,40 @@
         ]
       }
     ],
+    "iedriver": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-29T22:03:04.000Z",
+        "modificationTime": "2016-12-29T22:03:04.000Z",
+        "publicationTime": "2017-01-04T00:19:37.000Z",
+        "disclosureTime": "2016-11-11T22:03:04.000Z",
+        "semver": {
+          "vulnerable": "<3.0.0",
+          "unaffected": ">=3.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 174,
+          "ALTERNATIVE": [
+            "SNYK-JS-IEDRIVER-10267"
+          ]
+        },
+        "patches": [],
+        "moduleName": "iedriver",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:iedriver:20161111",
+        "alternativeIds": [
+          "SNYK-JS-IEDRIVER-10267"
+        ]
+      }
+    ],
     "igniteui": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -3468,6 +4783,40 @@
         "id": "npm:igniteui:20160804",
         "alternativeIds": [
           "SNYK-JS-IGNITEUI-10167"
+        ]
+      }
+    ],
+    "imageoptim": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T00:31:44.000Z",
+        "modificationTime": "2017-01-01T00:31:44.000Z",
+        "publicationTime": "2017-01-04T01:40:25.000Z",
+        "disclosureTime": "2017-01-01T00:31:44.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 194,
+          "ALTERNATIVE": [
+            "SNYK-JS-IMAGEOPTIM-10275"
+          ]
+        },
+        "patches": [],
+        "moduleName": "imageoptim",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:imageoptim:20170101",
+        "alternativeIds": [
+          "SNYK-JS-IMAGEOPTIM-10275"
         ]
       }
     ],
@@ -3515,6 +4864,74 @@
         ]
       }
     ],
+    "install-g-test": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T16:48:35.000Z",
+        "modificationTime": "2017-01-01T16:48:35.000Z",
+        "publicationTime": "2017-01-04T04:05:18.000Z",
+        "disclosureTime": "2017-01-01T16:48:35.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 228,
+          "ALTERNATIVE": [
+            "SNYK-JS-INSTALLGTEST-10358"
+          ]
+        },
+        "patches": [],
+        "moduleName": "install-g-test",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:install-g-test:20170101",
+        "alternativeIds": [
+          "SNYK-JS-INSTALLGTEST-10358"
+        ]
+      }
+    ],
+    "install-nw": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-29T15:15:04.000Z",
+        "modificationTime": "2016-12-29T15:15:05.000Z",
+        "publicationTime": "2017-01-04T00:22:03.000Z",
+        "disclosureTime": "2016-11-04T15:15:04.000Z",
+        "semver": {
+          "vulnerable": "<1.1.5",
+          "unaffected": ">=1.1.5"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 204,
+          "ALTERNATIVE": [
+            "SNYK-JS-INSTALLNW-10373"
+          ]
+        },
+        "patches": [],
+        "moduleName": "install-nw",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:install-nw:20161104",
+        "alternativeIds": [
+          "SNYK-JS-INSTALLNW-10373"
+        ]
+      }
+    ],
     "ipip": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -3548,6 +4965,40 @@
         "id": "npm:ipip:20161130",
         "alternativeIds": [
           "SNYK-JS-IPIP-10254"
+        ]
+      }
+    ],
+    "ipip-coffee": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:28:01.000Z",
+        "modificationTime": "2017-01-02T04:28:01.000Z",
+        "publicationTime": "2017-01-04T04:25:56.000Z",
+        "disclosureTime": "2017-01-02T04:28:01.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:L",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 279,
+          "ALTERNATIVE": [
+            "SNYK-JS-IPIPCOFFEE-10330"
+          ]
+        },
+        "patches": [],
+        "moduleName": "ipip-coffee",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:ipip-coffee:20170102",
+        "alternativeIds": [
+          "SNYK-JS-IPIPCOFFEE-10330"
         ]
       }
     ],
@@ -3639,6 +5090,40 @@
         "id": "npm:jadedown:20160105",
         "alternativeIds": [
           "SNYK-JS-JADEDOWN-10076"
+        ]
+      }
+    ],
+    "jdf-sass": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T00:46:43.000Z",
+        "modificationTime": "2017-01-01T00:46:43.000Z",
+        "publicationTime": "2017-01-04T01:38:49.000Z",
+        "disclosureTime": "2017-01-01T00:46:43.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 198,
+          "ALTERNATIVE": [
+            "SNYK-JS-JDFSASS-1027"
+          ]
+        },
+        "patches": [],
+        "moduleName": "jdf-sass",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:jdf-sass:20170101",
+        "alternativeIds": [
+          "SNYK-JS-JDFSASS-1027"
         ]
       }
     ],
@@ -4024,6 +5509,40 @@
         ]
       }
     ],
+    "js-given": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T18:53:42.000Z",
+        "modificationTime": "2017-01-01T18:53:42.000Z",
+        "publicationTime": "2017-01-04T04:12:33.000Z",
+        "disclosureTime": "2017-01-01T18:53:42.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 241,
+          "ALTERNATIVE": [
+            "SNYK-JS-JSGIVEN-10307"
+          ]
+        },
+        "patches": [],
+        "moduleName": "js-given",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:js-given:20170101",
+        "alternativeIds": [
+          "SNYK-JS-JSGIVEN-10307"
+        ]
+      }
+    ],
     "js-yaml": [
       {
         "title": "Code Execution due to Deserialization",
@@ -4084,9 +5603,7 @@
             "CWE-319"
           ],
           "CVE": [],
-          "NSP": [
-            "188"
-          ],
+          "NSP": 188,
           "ALTERNATIVE": [
             "SNYK-JS-JSERSTAT-10255"
           ]
@@ -4251,6 +5768,74 @@
         "id": "npm:jsrender:20160330",
         "alternativeIds": [
           "SNYK-JS-JSRENDER-10093"
+        ]
+      }
+    ],
+    "jstestdriver": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:07:53.000Z",
+        "modificationTime": "2017-01-01T19:07:53.000Z",
+        "publicationTime": "2017-01-04T04:14:03.000Z",
+        "disclosureTime": "2017-01-01T19:07:53.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 244,
+          "ALTERNATIVE": [
+            "SNYK-JS-JSTESTDRIVER-10309"
+          ]
+        },
+        "patches": [],
+        "moduleName": "jstestdriver",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:jstestdriver:20170101",
+        "alternativeIds": [
+          "SNYK-JS-JSTESTDRIVER-10309"
+        ]
+      }
+    ],
+    "jvminstall": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T16:41:47.000Z",
+        "modificationTime": "2017-01-01T16:41:47.000Z",
+        "publicationTime": "2017-01-04T04:05:26.000Z",
+        "disclosureTime": "2017-01-01T16:41:47.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 225,
+          "ALTERNATIVE": [
+            "SNYK-JS-JVMINSTALL-10298"
+          ]
+        },
+        "patches": [],
+        "moduleName": "jvminstall",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:jvminstall:20170101",
+        "alternativeIds": [
+          "SNYK-JS-JVMINSTALL-10298"
         ]
       }
     ],
@@ -4578,6 +6163,74 @@
         ]
       }
     ],
+    "libsbml": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T01:31:26.000Z",
+        "modificationTime": "2017-01-02T01:31:26.000Z",
+        "publicationTime": "2017-01-04T04:24:00.000Z",
+        "disclosureTime": "2017-01-02T01:31:26.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 272,
+          "ALTERNATIVE": [
+            "SNYK-JS-LIBSBML-10325"
+          ]
+        },
+        "patches": [],
+        "moduleName": "libsbml",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:libsbml:20170102",
+        "alternativeIds": [
+          "SNYK-JS-LIBSBML-10325"
+        ]
+      }
+    ],
+    "libsbmlsim": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:08:13.000Z",
+        "modificationTime": "2017-01-02T04:08:13.000Z",
+        "publicationTime": "2017-01-04T04:26:11.000Z",
+        "disclosureTime": "2017-01-02T04:08:13.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 275,
+          "ALTERNATIVE": [
+            "SNYK-JS-LIBSBMLSIM-10327"
+          ]
+        },
+        "patches": [],
+        "moduleName": "libsbmlsim",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:libsbmlsim:20170102",
+        "alternativeIds": [
+          "SNYK-JS-LIBSBMLSIM-10327"
+        ]
+      }
+    ],
     "libxl": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -4647,7 +6300,6 @@
             "CVE-2013-0338",
             "CVE-2012-5134"
           ],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-LIBXMLJS-10085"
           ]
@@ -4737,6 +6389,180 @@
         ]
       }
     ],
+    "limbus-buildgen": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:10:08.000Z",
+        "modificationTime": "2017-01-02T04:10:08.000Z",
+        "publicationTime": "2017-01-04T04:26:05.000Z",
+        "disclosureTime": "2016-11-02T04:10:08.000Z",
+        "semver": {
+          "vulnerable": "<0.1.1",
+          "unaffected": ">=0.1.1"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 276,
+          "ALTERNATIVE": [
+            "SNYK-JS-LIMBUSBUILDGEN-10328"
+          ]
+        },
+        "patches": [],
+        "moduleName": "limbus-buildgen",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:limbus-buildgen:20161202",
+        "alternativeIds": [
+          "SNYK-JS-LIMBUSBUILDGEN-10328"
+        ]
+      }
+    ],
+    "loopback-connector-mssql": [
+      {
+        "title": "SQL Injection",
+        "moduleName": "loopback-connector-mssql",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-89"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-LOOPBACKCONNECTORMSSQL-10259"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.3.0",
+          "vulnerable": "<1.3.0"
+        },
+        "credit": [
+          "Raymond Feng"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "disclosureTime": "2015-01-07T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2017-01-04T18:22:12.631Z",
+        "modificationTime": "2016-12-27T12:22:12.631Z",
+        "creationTime": "2016-12-27T12:22:12.631Z",
+        "id": "npm:loopback-connector-mssql:20150108",
+        "alternativeIds": [
+          "SNYK-JS-LOOPBACKCONNECTORMSSQL-10259"
+        ]
+      }
+    ],
+    "loopback-connector-mysql": [
+      {
+        "title": "SQL Injection",
+        "moduleName": "loopback-connector-mysql",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-89"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-LOOPBACKCONNECTORMYSQL-10260"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.5.0",
+          "vulnerable": "<1.5.0"
+        },
+        "credit": [
+          "Raymond Feng"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "disclosureTime": "2015-01-07T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2017-01-04T18:22:12.631Z",
+        "modificationTime": "2016-12-27T12:22:12.631Z",
+        "creationTime": "2016-12-27T12:22:12.631Z",
+        "id": "npm:loopback-connector-mysql:20150108",
+        "alternativeIds": [
+          "SNYK-JS-LOOPBACKCONNECTORMYSQL-10260"
+        ]
+      }
+    ],
+    "loopback-connector-oracle": [
+      {
+        "title": "SQL Injection",
+        "moduleName": "loopback-connector-oracle",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-89"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-LOOPBACKCONNECTORORACLE-10261"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.5.0",
+          "vulnerable": "<1.5.0"
+        },
+        "credit": [
+          "Raymond Feng"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "disclosureTime": "2015-01-07T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2017-01-04T18:22:12.631Z",
+        "modificationTime": "2016-12-27T12:22:12.631Z",
+        "creationTime": "2016-12-27T12:22:12.631Z",
+        "id": "npm:loopback-connector-oracle:20150108",
+        "alternativeIds": [
+          "SNYK-JS-LOOPBACKCONNECTORORACLE-10261"
+        ]
+      }
+    ],
+    "loopback-connector-postgresql": [
+      {
+        "title": "SQL Injection",
+        "moduleName": "loopback-connector-postgresql",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-89"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-LOOPBACKCONNECTORPOSTGRESQL-10258"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=1.3.0",
+          "vulnerable": "<1.3.0"
+        },
+        "credit": [
+          "Raymond Feng"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "disclosureTime": "2015-01-07T22:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2017-01-04T18:22:12.631Z",
+        "modificationTime": "2016-12-27T12:22:12.631Z",
+        "creationTime": "2016-12-27T12:22:12.631Z",
+        "id": "npm:loopback-connector-postgresql:20150108",
+        "alternativeIds": [
+          "SNYK-JS-LOOPBACKCONNECTORPOSTGRESQL-10258"
+        ]
+      }
+    ],
     "macaca-chromedriver": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -4770,6 +6596,40 @@
         "id": "npm:macaca-chromedriver:20161102",
         "alternativeIds": [
           "SNYK-JS-MACACACHROMEDRIVER-10242"
+        ]
+      }
+    ],
+    "macaca-chromedriver-zxa": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T16:07:14.000Z",
+        "modificationTime": "2017-01-01T16:07:14.000Z",
+        "publicationTime": "2017-01-04T03:59:47.000Z",
+        "disclosureTime": "2017-01-01T16:07:14.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 221,
+          "ALTERNATIVE": [
+            "SNYK-JS-MACACACHROMEDRIVERZXA-10364"
+          ]
+        },
+        "patches": [],
+        "moduleName": "macaca-chromedriver-zxa",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:macaca-chromedriver-zxa:20170101",
+        "alternativeIds": [
+          "SNYK-JS-MACACACHROMEDRIVERZXA-10364"
         ]
       }
     ],
@@ -4852,6 +6712,40 @@
         "id": "npm:mapbox.js:20160112",
         "alternativeIds": [
           "SNYK-JS-MAPBOXJS-10077"
+        ]
+      }
+    ],
+    "marionette-socket-host": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:24:31.000Z",
+        "modificationTime": "2017-01-01T19:24:31.000Z",
+        "publicationTime": "2017-01-04T04:16:17.000Z",
+        "disclosureTime": "2017-01-01T19:24:31.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 252,
+          "ALTERNATIVE": [
+            "SNYK-JS-MARIONETTESOCKETHOST-10311"
+          ]
+        },
+        "patches": [],
+        "moduleName": "marionette-socket-host",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:marionette-socket-host:20170101",
+        "alternativeIds": [
+          "SNYK-JS-MARIONETTESOCKETHOST-10311"
         ]
       }
     ],
@@ -5100,6 +6994,40 @@
         ]
       }
     ],
+    "massif": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:48:24.000Z",
+        "modificationTime": "2017-01-02T04:48:24.000Z",
+        "publicationTime": "2017-01-04T04:28:30.000Z",
+        "disclosureTime": "2017-01-02T04:48:24.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 290,
+          "ALTERNATIVE": [
+            "SNYK-JS-MASSIF-10335"
+          ]
+        },
+        "patches": [],
+        "moduleName": "massif",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:massif:20170102",
+        "alternativeIds": [
+          "SNYK-JS-MASSIF-10335"
+        ]
+      }
+    ],
     "millisecond": [
       {
         "title": "Regular Expression Denial of Service",
@@ -5337,6 +7265,40 @@
         ]
       }
     ],
+    "mongodb-instance": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2016-12-29T17:23:19.000Z",
+        "modificationTime": "2016-12-29T17:23:19.000Z",
+        "publicationTime": "2017-01-04T00:24:46.000Z",
+        "disclosureTime": "2016-11-02T17:23:19.000Z",
+        "semver": {
+          "vulnerable": "<0.0.3",
+          "unaffected": ">=0.0.3"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 235,
+          "ALTERNATIVE": [
+            "SNYK-JS-MONGODBINSTANCE-10268"
+          ]
+        },
+        "patches": [],
+        "moduleName": "mongodb-instance",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:mongodb-instance:20161102",
+        "alternativeIds": [
+          "SNYK-JS-MONGODBINSTANCE-10268"
+        ]
+      }
+    ],
     "mongoose": [
       {
         "title": "Denial of Service (DoS) via Infinite Loop",
@@ -5388,7 +7350,6 @@
             "CWE-201"
           ],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-MONGOOSE-10081"
           ]
@@ -5626,7 +7587,6 @@
             "CWE-79"
           ],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-MUSTACHE-10046"
           ]
@@ -5693,19 +7653,52 @@
     ],
     "mysql": [
       {
+        "title": "Unauthorized SSL Connection to to lack of cert authentication",
+        "moduleName": "mysql",
+        "language": "js",
+        "packageManager": "npm",
+        "identifiers": {
+          "CWE": [
+            "CWE-285"
+          ],
+          "CVE": [],
+          "ALTERNATIVE": [
+            "SNYK-JS-MYSQL-10263"
+          ]
+        },
+        "severity": "medium",
+        "semver": {
+          "unaffected": ">=2.3.0",
+          "vulnerable": "<2.3.0 >=2.0.0"
+        },
+        "credit": [
+          "Douglas Wilson"
+        ],
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "disclosureTime": "2014-05-13T21:00:00.000Z",
+        "patches": [],
+        "publicationTime": "2017-01-04T18:36:45.767Z",
+        "modificationTime": "2016-12-28T11:36:45.767Z",
+        "creationTime": "2016-12-28T11:36:45.767Z",
+        "id": "npm:mysql:20140514",
+        "alternativeIds": [
+          "SNYK-JS-MYSQL-10263"
+        ]
+      },
+      {
         "title": "SQL Injection due to unescaped object keys",
         "credit": [
           "Sébastian Dejonghe"
         ],
         "creationTime": "2016-01-05T12:38:01.749Z",
-        "modificationTime": "2016-01-05T12:38:01.749Z",
+        "modificationTime": "2016-12-27T12:38:01.749Z",
         "publicationTime": "2016-01-05T12:38:01.749Z",
         "semver": {
-          "vulnerable": "<=v2.0.0-alpha7",
-          "unaffected": ">=v2.0.0-alpha8"
+          "vulnerable": ">=v2.0.0-alpha <v2.0.0-alpha8",
+          "unaffected": ">=v2.0.0-alpha8 || <v2.0.0-alpha"
         },
-        "CVSSv3": "",
-        "severity": "medium",
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "severity": "high",
         "identifiers": {
           "CWE": [
             "CWE-89"
@@ -5724,6 +7717,176 @@
         "id": "npm:mysql:20151228",
         "alternativeIds": [
           "SNYK-JS-MYSQL-10073"
+        ]
+      }
+    ],
+    "mystem": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T22:12:01.000Z",
+        "modificationTime": "2017-01-01T22:12:01.000Z",
+        "publicationTime": "2017-01-04T04:23:35.000Z",
+        "disclosureTime": "2017-01-01T22:12:01.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 259,
+          "ALTERNATIVE": [
+            "SNYK-JS-MYSTEM-10317"
+          ]
+        },
+        "patches": [],
+        "moduleName": "mystem",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:mystem:20170101",
+        "alternativeIds": [
+          "SNYK-JS-MYSTEM-10317"
+        ]
+      }
+    ],
+    "mystem-fix": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T05:04:06.000Z",
+        "modificationTime": "2017-01-02T05:04:06.000Z",
+        "publicationTime": "2017-01-04T04:33:32.000Z",
+        "disclosureTime": "2017-01-02T05:04:06.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 301,
+          "ALTERNATIVE": [
+            "SNYK-JS-MYSTEMFIX-10338"
+          ]
+        },
+        "patches": [],
+        "moduleName": "mystem-fix",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:mystem-fix:20170102",
+        "alternativeIds": [
+          "SNYK-JS-MYSTEMFIX-10338"
+        ]
+      }
+    ],
+    "mystem-wrapper": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:30:11.000Z",
+        "modificationTime": "2017-01-02T04:30:11.000Z",
+        "publicationTime": "2017-01-04T04:25:47.000Z",
+        "disclosureTime": "2017-01-02T04:30:11.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 280,
+          "ALTERNATIVE": [
+            "SNYK-JS-MYSTEMWRAPPER-10331"
+          ]
+        },
+        "patches": [],
+        "moduleName": "mystem-wrapper",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:mystem-wrapper:20170102",
+        "alternativeIds": [
+          "SNYK-JS-MYSTEMWRAPPER-10331"
+        ]
+      }
+    ],
+    "mystem3": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T16:51:16.000Z",
+        "modificationTime": "2017-01-01T16:51:16.000Z",
+        "publicationTime": "2017-01-04T04:01:11.000Z",
+        "disclosureTime": "2017-01-01T16:51:16.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 229,
+          "ALTERNATIVE": [
+            "SNYK-JS-MYSTEM3-10301"
+          ]
+        },
+        "patches": [],
+        "moduleName": "mystem3",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:mystem3:20170101",
+        "alternativeIds": [
+          "SNYK-JS-MYSTEM3-10301"
+        ]
+      }
+    ],
+    "native-opencv": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T22:50:01.000Z",
+        "modificationTime": "2017-01-01T22:50:01.000Z",
+        "publicationTime": "2017-01-04T04:21:37.000Z",
+        "disclosureTime": "2017-01-01T22:50:01.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 263,
+          "ALTERNATIVE": [
+            "SNYK-JS-NATIVEOPENCV-10321"
+          ]
+        },
+        "patches": [],
+        "moduleName": "native-opencv",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:native-opencv:20170101",
+        "alternativeIds": [
+          "SNYK-JS-NATIVEOPENCV-10321"
         ]
       }
     ],
@@ -5836,6 +7999,108 @@
         ]
       }
     ],
+    "node-air-sdk": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:20:23.000Z",
+        "modificationTime": "2017-01-01T19:20:23.000Z",
+        "publicationTime": "2017-01-04T04:15:51.000Z",
+        "disclosureTime": "2017-01-01T19:20:23.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 250,
+          "ALTERNATIVE": [
+            "SNYK-JS-NODEAIRSDK-10310"
+          ]
+        },
+        "patches": [],
+        "moduleName": "node-air-sdk",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:node-air-sdk:20170101",
+        "alternativeIds": [
+          "SNYK-JS-NODEAIRSDK-10310"
+        ]
+      }
+    ],
+    "node-browser": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:32:58.000Z",
+        "modificationTime": "2017-01-01T15:32:58.000Z",
+        "publicationTime": "2017-01-04T03:57:10.000Z",
+        "disclosureTime": "2017-01-01T15:32:58.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 214,
+          "ALTERNATIVE": [
+            "SNYK-JS-NODEBROWSER-10290"
+          ]
+        },
+        "patches": [],
+        "moduleName": "node-browser",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:node-browser:20170101",
+        "alternativeIds": [
+          "SNYK-JS-NODEBROWSER-10290"
+        ]
+      }
+    ],
+    "node-bsdiff-android": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T17:20:35.000Z",
+        "modificationTime": "2017-01-01T17:20:35.000Z",
+        "publicationTime": "2017-01-04T04:13:31.000Z",
+        "disclosureTime": "2017-01-01T17:20:35.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 234,
+          "ALTERNATIVE": [
+            "SNYK-JS-NODEBSDIFFANDROID-10305"
+          ]
+        },
+        "patches": [],
+        "moduleName": "node-bsdiff-android",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:node-bsdiff-android:20170101",
+        "alternativeIds": [
+          "SNYK-JS-NODEBSDIFFANDROID-10305"
+        ]
+      }
+    ],
     "node-forge": [
       {
         "title": "Timing Attack due to unsafe HMAC comparison",
@@ -5900,6 +8165,40 @@
         "id": "npm:node-krb5:20160804",
         "alternativeIds": [
           "SNYK-JS-NODEKRB5-10128"
+        ]
+      }
+    ],
+    "node-thulac": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T17:25:55.000Z",
+        "modificationTime": "2017-01-01T17:25:55.000Z",
+        "publicationTime": "2017-01-04T04:13:17.000Z",
+        "disclosureTime": "2017-01-01T17:25:55.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 236,
+          "ALTERNATIVE": [
+            "SNYK-JS-NODETHULAC-10356"
+          ]
+        },
+        "patches": [],
+        "moduleName": "node-thulac",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:node-thulac:20170101",
+        "alternativeIds": [
+          "SNYK-JS-NODETHULAC-10356"
         ]
       }
     ],
@@ -5982,6 +8281,40 @@
         ]
       }
     ],
+    "nodeschnaps": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:29:07.000Z",
+        "modificationTime": "2017-01-01T15:29:07.000Z",
+        "publicationTime": "2017-01-04T03:59:28.000Z",
+        "disclosureTime": "2017-01-01T15:29:07.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 212,
+          "ALTERNATIVE": [
+            "SNYK-JS-NODESCHNAPS-10288"
+          ]
+        },
+        "patches": [],
+        "moduleName": "nodeschnaps",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:nodeschnaps:20170101",
+        "alternativeIds": [
+          "SNYK-JS-NODESCHNAPS-10288"
+        ]
+      }
+    ],
     "nodewebkit": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -6057,6 +8390,74 @@
         ]
       }
     ],
+    "npm-test-sqlite3-trunk": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:58:08.000Z",
+        "modificationTime": "2017-01-02T04:58:08.000Z",
+        "publicationTime": "2017-01-04T04:32:09.000Z",
+        "disclosureTime": "2017-01-02T04:58:08.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 297,
+          "ALTERNATIVE": [
+            "SNYK-JS-NPMTESTSQLITE3TRUNK-10337"
+          ]
+        },
+        "patches": [],
+        "moduleName": "npm-test-sqlite3-trunk",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:npm-test-sqlite3-trunk:20170102",
+        "alternativeIds": [
+          "SNYK-JS-NPMTESTSQLITE3TRUNK-10337"
+        ]
+      }
+    ],
+    "ntfserver": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:26:09.000Z",
+        "modificationTime": "2017-01-01T19:26:09.000Z",
+        "publicationTime": "2017-01-04T04:16:54.000Z",
+        "disclosureTime": "2017-01-01T19:26:09.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 253,
+          "ALTERNATIVE": [
+            "SNYK-JS-NTFSERVER-10353"
+          ]
+        },
+        "patches": [],
+        "moduleName": "ntfserver",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:ntfserver:20170101",
+        "alternativeIds": [
+          "SNYK-JS-NTFSERVER-10353"
+        ]
+      }
+    ],
     "nunjucks": [
       {
         "title": "Content & Code Injection (XSS)",
@@ -6078,7 +8479,7 @@
             "CWE-79"
           ],
           "CVE": [],
-          "NSP": "",
+          "NSP": 147,
           "ALTERNATIVE": [
             "SNYK-JS-NUNJUCKS-10135"
           ]
@@ -6126,6 +8527,142 @@
         "id": "npm:nw:20161219",
         "alternativeIds": [
           "SNYK-JS-NW-10252"
+        ]
+      }
+    ],
+    "nw-with-arm": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T16:43:28.000Z",
+        "modificationTime": "2017-01-01T16:43:28.000Z",
+        "publicationTime": "2017-01-04T04:02:03.000Z",
+        "disclosureTime": "2017-01-01T16:43:28.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 226,
+          "ALTERNATIVE": [
+            "SNYK-JS-NWWITHARM-10299"
+          ]
+        },
+        "patches": [],
+        "moduleName": "nw-with-arm",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:nw-with-arm:20170101",
+        "alternativeIds": [
+          "SNYK-JS-NWWITHARM-10299"
+        ]
+      }
+    ],
+    "openframe-ascii-image": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:59:28.000Z",
+        "modificationTime": "2017-01-02T04:59:28.000Z",
+        "publicationTime": "2017-01-04T04:30:36.000Z",
+        "disclosureTime": "2017-01-02T04:59:28.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 298,
+          "ALTERNATIVE": [
+            "SNYK-JS-OPENFRAMEASCIIIMAGE-10342"
+          ]
+        },
+        "patches": [],
+        "moduleName": "openframe-ascii-image",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:openframe-ascii-image:20170102",
+        "alternativeIds": [
+          "SNYK-JS-OPENFRAMEASCIIIMAGE-10342"
+        ]
+      }
+    ],
+    "openframe-glslviewer": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:22:22.000Z",
+        "modificationTime": "2017-01-01T15:22:22.000Z",
+        "publicationTime": "2017-01-04T02:28:15.000Z",
+        "disclosureTime": "2017-01-01T15:22:22.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 208,
+          "ALTERNATIVE": [
+            "SNYK-JS-OPENFRAMEGLSLVIEWER-10362"
+          ]
+        },
+        "patches": [],
+        "moduleName": "openframe-glslviewer",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:openframe-glslviewer:20170101",
+        "alternativeIds": [
+          "SNYK-JS-OPENFRAMEGLSLVIEWER-10362"
+        ]
+      }
+    ],
+    "openframe-image": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:39:16.000Z",
+        "modificationTime": "2017-01-01T15:39:16.000Z",
+        "publicationTime": "2017-01-04T03:56:23.000Z",
+        "disclosureTime": "2017-01-01T15:39:16.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 218,
+          "ALTERNATIVE": [
+            "SNYK-JS-OPENFRAMEIMAGE-10293"
+          ]
+        },
+        "patches": [],
+        "moduleName": "openframe-image",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:openframe-image:20170101",
+        "alternativeIds": [
+          "SNYK-JS-OPENFRAMEIMAGE-10293"
         ]
       }
     ],
@@ -6237,6 +8774,74 @@
         ]
       }
     ],
+    "pennyworth": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:31:09.000Z",
+        "modificationTime": "2017-01-01T15:31:09.000Z",
+        "publicationTime": "2017-01-04T03:58:39.000Z",
+        "disclosureTime": "2017-01-01T15:31:09.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 213,
+          "ALTERNATIVE": [
+            "SNYK-JS-PENNYWORTH-10289"
+          ]
+        },
+        "patches": [],
+        "moduleName": "pennyworth",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:pennyworth:20170101",
+        "alternativeIds": [
+          "SNYK-JS-PENNYWORTH-10289"
+        ]
+      }
+    ],
+    "phantomjs-cheniu": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T22:47:13.000Z",
+        "modificationTime": "2017-01-01T22:47:13.000Z",
+        "publicationTime": "2017-01-04T04:23:20.000Z",
+        "disclosureTime": "2017-01-01T22:47:13.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 262,
+          "ALTERNATIVE": [
+            "SNYK-JS-PHANTOMJSCHENIU-10320"
+          ]
+        },
+        "patches": [],
+        "moduleName": "phantomjs-cheniu",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:phantomjs-cheniu:20170101",
+        "alternativeIds": [
+          "SNYK-JS-PHANTOMJSCHENIU-10320"
+        ]
+      }
+    ],
     "pivottable": [
       {
         "title": "Cross-site Scripting (XSS)",
@@ -6270,6 +8875,40 @@
         "id": "npm:pivottable:20160817",
         "alternativeIds": [
           "SNYK-JS-PIVOTTABLE-10132"
+        ]
+      }
+    ],
+    "pk-app-wonderbox": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:47:07.000Z",
+        "modificationTime": "2017-01-02T04:47:07.000Z",
+        "publicationTime": "2017-01-04T04:28:45.000Z",
+        "disclosureTime": "2017-01-02T04:47:07.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 289,
+          "ALTERNATIVE": [
+            "SNYK-JS-PKAPPWONDERBOX-10344"
+          ]
+        },
+        "patches": [],
+        "moduleName": "pk-app-wonderbox",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:pk-app-wonderbox:20170102",
+        "alternativeIds": [
+          "SNYK-JS-PKAPPWONDERBOX-10344"
         ]
       }
     ],
@@ -6340,6 +8979,40 @@
         ]
       }
     ],
+    "pm2-kafka": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T05:00:49.000Z",
+        "modificationTime": "2017-01-02T05:00:49.000Z",
+        "publicationTime": "2017-01-04T04:30:52.000Z",
+        "disclosureTime": "2017-01-02T05:00:49.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 299,
+          "ALTERNATIVE": [
+            "SNYK-JS-PM2KAFKA-10341"
+          ]
+        },
+        "patches": [],
+        "moduleName": "pm2-kafka",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:pm2-kafka:20170102",
+        "alternativeIds": [
+          "SNYK-JS-PM2KAFKA-10341"
+        ]
+      }
+    ],
     "pngcrush-installer": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -6373,6 +9046,40 @@
         "id": "npm:pngcrush-installer:20161104",
         "alternativeIds": [
           "SNYK-JS-PNGCRUSHINSTALLER-10245"
+        ]
+      }
+    ],
+    "poco": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T01:29:30.000Z",
+        "modificationTime": "2017-01-02T01:29:30.000Z",
+        "publicationTime": "2017-01-04T04:21:54.000Z",
+        "disclosureTime": "2017-01-02T01:29:30.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 271,
+          "ALTERNATIVE": [
+            "SNYK-JS-POCO-10348"
+          ]
+        },
+        "patches": [],
+        "moduleName": "poco",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:poco:20170102",
+        "alternativeIds": [
+          "SNYK-JS-POCO-10348"
         ]
       }
     ],
@@ -6442,6 +9149,40 @@
         "id": "npm:pouchdb:20160830",
         "alternativeIds": [
           "SNYK-JS-POUCHDB-10153"
+        ]
+      }
+    ],
+    "prebuild-lwip": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:16:27.000Z",
+        "modificationTime": "2017-01-01T19:16:27.000Z",
+        "publicationTime": "2017-01-04T04:17:35.000Z",
+        "disclosureTime": "2017-01-01T19:16:27.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 248,
+          "ALTERNATIVE": [
+            "SNYK-JS-PREBUILDLWIP-10370"
+          ]
+        },
+        "patches": [],
+        "moduleName": "prebuild-lwip",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:prebuild-lwip:20170101",
+        "alternativeIds": [
+          "SNYK-JS-PREBUILDLWIP-10370"
         ]
       }
     ],
@@ -6565,6 +9306,40 @@
         ]
       }
     ],
+    "qbs": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T01:03:04.000Z",
+        "modificationTime": "2017-01-02T01:03:04.000Z",
+        "publicationTime": "2017-01-04T04:20:31.000Z",
+        "disclosureTime": "2017-01-02T01:03:04.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 266,
+          "ALTERNATIVE": [
+            "SNYK-JS-QBS-10352"
+          ]
+        },
+        "patches": [],
+        "moduleName": "qbs",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:qbs:20170102",
+        "alternativeIds": [
+          "SNYK-JS-QBS-10352"
+        ]
+      }
+    ],
     "qs": [
       {
         "title": "Denial of Service (Memory Exhaustion)",
@@ -6673,6 +9448,74 @@
         "id": "npm:qs:20140806-1",
         "alternativeIds": [
           "SNYK-JS-QS-10020"
+        ]
+      }
+    ],
+    "react-native-baidu-voice-synthesizer": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T05:05:15.000Z",
+        "modificationTime": "2017-01-02T05:05:15.000Z",
+        "publicationTime": "2017-01-04T04:32:48.000Z",
+        "disclosureTime": "2017-01-02T05:05:15.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 302,
+          "ALTERNATIVE": [
+            "SNYK-JS-REACTNATIVEBAIDUVOICESYNTHESIZER-10339"
+          ]
+        },
+        "patches": [],
+        "moduleName": "react-native-baidu-voice-synthesizer",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:react-native-baidu-voice-synthesizer:20170102",
+        "alternativeIds": [
+          "SNYK-JS-REACTNATIVEBAIDUVOICESYNTHESIZER-10339"
+        ]
+      }
+    ],
+    "redis-srvr": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T17:29:08.000Z",
+        "modificationTime": "2017-01-01T17:29:08.000Z",
+        "publicationTime": "2017-01-04T04:13:00.000Z",
+        "disclosureTime": "2017-01-01T17:29:08.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 238,
+          "ALTERNATIVE": [
+            "SNYK-JS-REDISSRVR-10306"
+          ]
+        },
+        "patches": [],
+        "moduleName": "redis-srvr",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:redis-srvr:20170101",
+        "alternativeIds": [
+          "SNYK-JS-REDISSRVR-10306"
         ]
       }
     ],
@@ -6837,7 +9680,6 @@
             "CWE-201"
           ],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-REQUEST-10088"
           ]
@@ -6935,6 +9777,40 @@
         ]
       }
     ],
+    "resourcehacker": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:29:52.000Z",
+        "modificationTime": "2017-01-01T19:29:52.000Z",
+        "publicationTime": "2017-01-04T04:15:36.000Z",
+        "disclosureTime": "2017-01-01T19:29:52.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 254,
+          "ALTERNATIVE": [
+            "SNYK-JS-RESOURCEHACKER-10312"
+          ]
+        },
+        "patches": [],
+        "moduleName": "resourcehacker",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:resourcehacker:20170101",
+        "alternativeIds": [
+          "SNYK-JS-RESOURCEHACKER-10312"
+        ]
+      }
+    ],
     "restafary": [
       {
         "title": "Directory Traversal",
@@ -7007,6 +9883,108 @@
         ]
       }
     ],
+    "robot-js": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:06:06.000Z",
+        "modificationTime": "2017-01-01T15:06:06.000Z",
+        "publicationTime": "2017-01-04T02:28:23.000Z",
+        "disclosureTime": "2017-01-01T15:06:06.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 201,
+          "ALTERNATIVE": [
+            "SNYK-JS-ROBOTJS-10279"
+          ]
+        },
+        "patches": [],
+        "moduleName": "robot-js",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:robot-js:20170101",
+        "alternativeIds": [
+          "SNYK-JS-ROBOTJS-10279"
+        ]
+      }
+    ],
+    "roslib-socketio": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:51:20.000Z",
+        "modificationTime": "2017-01-02T04:51:20.000Z",
+        "publicationTime": "2017-01-04T04:28:25.000Z",
+        "disclosureTime": "2017-01-02T04:51:20.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 292,
+          "ALTERNATIVE": [
+            "SNYK-JS-ROSLIBSOCKETIO-10367"
+          ]
+        },
+        "patches": [],
+        "moduleName": "roslib-socketio",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:roslib-socketio:20170102",
+        "alternativeIds": [
+          "SNYK-JS-ROSLIBSOCKETIO-10367"
+        ]
+      }
+    ],
+    "rs-brightcove": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T01:33:26.000Z",
+        "modificationTime": "2017-01-02T01:33:26.000Z",
+        "publicationTime": "2017-01-04T04:26:16.000Z",
+        "disclosureTime": "2017-01-02T01:33:26.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 273,
+          "ALTERNATIVE": [
+            "SNYK-JS-RSBRIGHTCOVE-10347"
+          ]
+        },
+        "patches": [],
+        "moduleName": "rs-brightcove",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:rs-brightcove:20170102",
+        "alternativeIds": [
+          "SNYK-JS-RSBRIGHTCOVE-10347"
+        ]
+      }
+    ],
     "sails": [
       {
         "title": "Broken CORS",
@@ -7016,6 +9994,7 @@
         "identifiers": {
           "CWE": [],
           "CVE": [],
+          "NSP": 148,
           "ALTERNATIVE": [
             "SNYK-JS-SAILS-10159"
           ]
@@ -7053,7 +10032,6 @@
         "identifiers": {
           "CWE": [],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-SANITIZEHTML-10048"
           ]
@@ -7103,6 +10081,108 @@
         "id": "npm:sanitize-html:20160801",
         "alternativeIds": [
           "SNYK-JS-SANITIZEHTML-10127"
+        ]
+      }
+    ],
+    "sauce-connect": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T00:09:53.000Z",
+        "modificationTime": "2017-01-01T00:09:53.000Z",
+        "publicationTime": "2017-01-04T01:42:58.000Z",
+        "disclosureTime": "2017-01-01T00:09:53.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 186,
+          "ALTERNATIVE": [
+            "SNYK-JS-SAUCECONNECT-10272"
+          ]
+        },
+        "patches": [],
+        "moduleName": "sauce-connect",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:sauce-connect:20170101",
+        "alternativeIds": [
+          "SNYK-JS-SAUCECONNECT-10272"
+        ]
+      }
+    ],
+    "scala-bin": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T16:45:51.000Z",
+        "modificationTime": "2017-01-01T16:45:51.000Z",
+        "publicationTime": "2017-01-04T04:01:30.000Z",
+        "disclosureTime": "2017-01-01T16:45:51.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 227,
+          "ALTERNATIVE": [
+            "SNYK-JS-SCALABIN-10300"
+          ]
+        },
+        "patches": [],
+        "moduleName": "scala-bin",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:scala-bin:20170101",
+        "alternativeIds": [
+          "SNYK-JS-SCALABIN-10300"
+        ]
+      }
+    ],
+    "scalajs-standalone-bin": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T17:15:40.000Z",
+        "modificationTime": "2017-01-01T17:15:40.000Z",
+        "publicationTime": "2017-01-04T04:08:42.000Z",
+        "disclosureTime": "2017-01-01T17:15:40.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 231,
+          "ALTERNATIVE": [
+            "SNYK-JS-SCALAJSSTANDALONEBIN-10302"
+          ]
+        },
+        "patches": [],
+        "moduleName": "scalajs-standalone-bin",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:scalajs-standalone-bin:20170101",
+        "alternativeIds": [
+          "SNYK-JS-SCALAJSSTANDALONEBIN-10302"
         ]
       }
     ],
@@ -7188,6 +10268,40 @@
         ]
       }
     ],
+    "selenium-chromedriver": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T16:09:53.000Z",
+        "modificationTime": "2017-01-01T16:09:53.000Z",
+        "publicationTime": "2017-01-04T03:59:57.000Z",
+        "disclosureTime": "2017-01-01T16:09:53.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 222,
+          "ALTERNATIVE": [
+            "SNYK-JS-SELENIUMCHROMEDRIVER-10295"
+          ]
+        },
+        "patches": [],
+        "moduleName": "selenium-chromedriver",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:selenium-chromedriver:20170101",
+        "alternativeIds": [
+          "SNYK-JS-SELENIUMCHROMEDRIVER-10295"
+        ]
+      }
+    ],
     "selenium-download": [
       {
         "title": "Resources downloaded over insecure protocol",
@@ -7219,6 +10333,108 @@
         "id": "npm:selenium-download:20161102",
         "alternativeIds": [
           "SNYK-JS-SELENIUMDOWNLOAD-10223"
+        ]
+      }
+    ],
+    "selenium-portal": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T22:14:21.000Z",
+        "modificationTime": "2017-01-01T22:14:21.000Z",
+        "publicationTime": "2017-01-04T04:23:54.000Z",
+        "disclosureTime": "2017-01-01T22:14:21.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 260,
+          "ALTERNATIVE": [
+            "SNYK-JS-SELENIUMPORTAL-10318"
+          ]
+        },
+        "patches": [],
+        "moduleName": "selenium-portal",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:selenium-portal:20170101",
+        "alternativeIds": [
+          "SNYK-JS-SELENIUMPORTAL-10318"
+        ]
+      }
+    ],
+    "selenium-standalone-painful": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:36:49.000Z",
+        "modificationTime": "2017-01-02T04:36:49.000Z",
+        "publicationTime": "2017-01-04T04:26:31.000Z",
+        "disclosureTime": "2017-01-02T04:36:49.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 284,
+          "ALTERNATIVE": [
+            "SNYK-JS-SELENIUMSTANDALONEPAINFUL-10333"
+          ]
+        },
+        "patches": [],
+        "moduleName": "selenium-standalone-painful",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:selenium-standalone-painful:20170102",
+        "alternativeIds": [
+          "SNYK-JS-SELENIUMSTANDALONEPAINFUL-10333"
+        ]
+      }
+    ],
+    "selenium-wrapper": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T16:17:07.000Z",
+        "modificationTime": "2017-01-01T16:17:07.000Z",
+        "publicationTime": "2017-01-04T04:01:45.000Z",
+        "disclosureTime": "2017-01-01T16:17:07.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 224,
+          "ALTERNATIVE": [
+            "SNYK-JS-SELENIUMWRAPPER-10297"
+          ]
+        },
+        "patches": [],
+        "moduleName": "selenium-wrapper",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:selenium-wrapper:20170101",
+        "alternativeIds": [
+          "SNYK-JS-SELENIUMWRAPPER-10297"
         ]
       }
     ],
@@ -7498,7 +10714,6 @@
             "CWE-89"
           ],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-SEQUELIZE-10094"
           ]
@@ -7712,6 +10927,40 @@
         ]
       }
     ],
+    "serc.js": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:11:37.000Z",
+        "modificationTime": "2017-01-02T04:11:37.000Z",
+        "publicationTime": "2017-01-04T04:26:28.000Z",
+        "disclosureTime": "2017-01-02T04:11:37.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 277,
+          "ALTERNATIVE": [
+            "SNYK-JS-SERCJS-10329"
+          ]
+        },
+        "patches": [],
+        "moduleName": "serc.js",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:serc.js:20170102",
+        "alternativeIds": [
+          "SNYK-JS-SERCJS-10329"
+        ]
+      }
+    ],
     "serve-index": [
       {
         "title": "Cross-Site Scripting due to improper file and directory names escaping",
@@ -7819,7 +11068,6 @@
             "CWE-211"
           ],
           "CVE": [],
-          "NSP": "",
           "ALTERNATIVE": [
             "SNYK-JS-SERVESTATIC-10034"
           ]
@@ -7835,6 +11083,40 @@
         "id": "npm:serve-static:20150120",
         "alternativeIds": [
           "SNYK-JS-SERVESTATIC-10034"
+        ]
+      }
+    ],
+    "sfml": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:32:40.000Z",
+        "modificationTime": "2017-01-01T19:32:40.000Z",
+        "publicationTime": "2017-01-04T04:18:11.000Z",
+        "disclosureTime": "2017-01-01T19:32:40.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 256,
+          "ALTERNATIVE": [
+            "SNYK-JS-SFML-10314"
+          ]
+        },
+        "patches": [],
+        "moduleName": "sfml",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:sfml:20170101",
+        "alternativeIds": [
+          "SNYK-JS-SFML-10314"
         ]
       }
     ],
@@ -7930,6 +11212,74 @@
         ]
       }
     ],
+    "slimerjs-edge": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T18:58:24.000Z",
+        "modificationTime": "2017-01-01T18:58:24.000Z",
+        "publicationTime": "2017-01-04T04:14:35.000Z",
+        "disclosureTime": "2017-01-01T18:58:24.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 243,
+          "ALTERNATIVE": [
+            "SNYK-JS-SLIMERJSEDGE-10374"
+          ]
+        },
+        "patches": [],
+        "moduleName": "slimerjs-edge",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:slimerjs-edge:20170101",
+        "alternativeIds": [
+          "SNYK-JS-SLIMERJSEDGE-10374"
+        ]
+      }
+    ],
+    "soci": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T01:27:34.000Z",
+        "modificationTime": "2017-01-02T01:27:34.000Z",
+        "publicationTime": "2017-01-04T04:24:05.000Z",
+        "disclosureTime": "2017-01-02T01:27:34.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 270,
+          "ALTERNATIVE": [
+            "SNYK-JS-SOCI-10349"
+          ]
+        },
+        "patches": [],
+        "moduleName": "soci",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:soci:20170102",
+        "alternativeIds": [
+          "SNYK-JS-SOCI-10349"
+        ]
+      }
+    ],
     "st": [
       {
         "title": "Directory Traversal",
@@ -8011,6 +11361,40 @@
         "id": "npm:steroids:20161219",
         "alternativeIds": [
           "SNYK-JS-STEROIDS-10248"
+        ]
+      }
+    ],
+    "strider-sauce": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:08:28.000Z",
+        "modificationTime": "2017-01-01T15:08:28.000Z",
+        "publicationTime": "2017-01-04T02:29:00.000Z",
+        "disclosureTime": "2016-11-30T15:08:28.000Z",
+        "semver": {
+          "vulnerable": "<=0.6.3",
+          "unaffected": ">0.6.3"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 202,
+          "ALTERNATIVE": [
+            "SNYK-JS-STRIDERSAUCE-10280"
+          ]
+        },
+        "patches": [],
+        "moduleName": "strider-sauce",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:strider-sauce:20161130",
+        "alternativeIds": [
+          "SNYK-JS-STRIDERSAUCE-10280"
         ]
       }
     ],
@@ -8333,6 +11717,74 @@
         ]
       }
     ],
+    "tomita": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T01:04:33.000Z",
+        "modificationTime": "2017-01-02T01:04:33.000Z",
+        "publicationTime": "2017-01-04T04:23:24.000Z",
+        "disclosureTime": "2017-01-02T01:04:33.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 267,
+          "ALTERNATIVE": [
+            "SNYK-JS-TOMITA-10351"
+          ]
+        },
+        "patches": [],
+        "moduleName": "tomita",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:tomita:20170102",
+        "alternativeIds": [
+          "SNYK-JS-TOMITA-10351"
+        ]
+      }
+    ],
+    "tomita-parser": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T22:45:08.000Z",
+        "modificationTime": "2017-01-01T22:45:08.000Z",
+        "publicationTime": "2017-01-04T04:23:49.000Z",
+        "disclosureTime": "2017-01-01T22:45:08.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 261,
+          "ALTERNATIVE": [
+            "SNYK-JS-TOMITAPARSER-10319"
+          ]
+        },
+        "patches": [],
+        "moduleName": "tomita-parser",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:tomita-parser:20170101",
+        "alternativeIds": [
+          "SNYK-JS-TOMITAPARSER-10319"
+        ]
+      }
+    ],
     "tough-cookie": [
       {
         "title": "ReDoS via long string of semicolons",
@@ -8589,6 +12041,40 @@
         ]
       }
     ],
+    "unicode-json": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T15:18:25.000Z",
+        "modificationTime": "2017-01-01T15:18:25.000Z",
+        "publicationTime": "2017-01-04T02:28:49.000Z",
+        "disclosureTime": "2017-01-01T15:18:25.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:L",
+        "severity": "medium",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 206,
+          "ALTERNATIVE": [
+            "SNYK-JS-UNICODEJSON-10283"
+          ]
+        },
+        "patches": [],
+        "moduleName": "unicode-json",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:unicode-json:20170101",
+        "alternativeIds": [
+          "SNYK-JS-UNICODEJSON-10283"
+        ]
+      }
+    ],
     "uws": [
       {
         "title": "Denial of Service",
@@ -8600,6 +12086,7 @@
             "CWE-400"
           ],
           "CVE": [],
+          "NSP": 149,
           "ALTERNATIVE": [
             "SNYK-JS-UWS-10156"
           ]
@@ -8814,6 +12301,312 @@
         ]
       }
     ],
+    "webdriver-launcher": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:11:33.000Z",
+        "modificationTime": "2017-01-01T19:11:33.000Z",
+        "publicationTime": "2017-01-04T04:17:18.000Z",
+        "disclosureTime": "2017-01-01T19:11:33.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 246,
+          "ALTERNATIVE": [
+            "SNYK-JS-WEBDRIVERLAUNCHER-10355"
+          ]
+        },
+        "patches": [],
+        "moduleName": "webdriver-launcher",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:webdriver-launcher:20170101",
+        "alternativeIds": [
+          "SNYK-JS-WEBDRIVERLAUNCHER-10355"
+        ]
+      }
+    ],
+    "webdrvr": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T00:29:39.000Z",
+        "modificationTime": "2017-01-01T00:29:39.000Z",
+        "publicationTime": "2017-01-04T01:43:37.000Z",
+        "disclosureTime": "2017-01-01T00:29:39.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 193,
+          "ALTERNATIVE": [
+            "SNYK-JS-WEBDRVR-10274"
+          ]
+        },
+        "patches": [],
+        "moduleName": "webdrvr",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:webdrvr:20170101",
+        "alternativeIds": [
+          "SNYK-JS-WEBDRVR-10274"
+        ]
+      }
+    ],
+    "webrtc-native": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T22:26:03.000Z",
+        "modificationTime": "2017-01-01T22:26:03.000Z",
+        "publicationTime": "2017-01-04T01:43:16.000Z",
+        "disclosureTime": "2017-01-01T22:26:03.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 176,
+          "ALTERNATIVE": [
+            "SNYK-JS-WEBRTCNATIVE-10270"
+          ]
+        },
+        "patches": [],
+        "moduleName": "webrtc-native",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:webrtc-native:20170101",
+        "alternativeIds": [
+          "SNYK-JS-WEBRTCNATIVE-10270"
+        ]
+      }
+    ],
+    "windows-iedriver": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:52:48.000Z",
+        "modificationTime": "2017-01-02T04:52:48.000Z",
+        "publicationTime": "2017-01-04T04:29:03.000Z",
+        "disclosureTime": "2017-01-02T04:52:48.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 293,
+          "ALTERNATIVE": [
+            "SNYK-JS-WINDOWSIEDRIVER-10343"
+          ]
+        },
+        "patches": [],
+        "moduleName": "windows-iedriver",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:windows-iedriver:20170102",
+        "alternativeIds": [
+          "SNYK-JS-WINDOWSIEDRIVER-10343"
+        ]
+      }
+    ],
+    "windows-latestchromedriver": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:55:36.000Z",
+        "modificationTime": "2017-01-02T04:55:36.000Z",
+        "publicationTime": "2017-01-04T04:32:34.000Z",
+        "disclosureTime": "2017-01-02T04:55:36.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 295,
+          "ALTERNATIVE": [
+            "SNYK-JS-WINDOWSLATESTCHROMEDRIVER-10336"
+          ]
+        },
+        "patches": [],
+        "moduleName": "windows-latestchromedriver",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:windows-latestchromedriver:20170102",
+        "alternativeIds": [
+          "SNYK-JS-WINDOWSLATESTCHROMEDRIVER-10336"
+        ]
+      }
+    ],
+    "windows-selenium-chromedriver": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:40:04.000Z",
+        "modificationTime": "2017-01-02T04:40:04.000Z",
+        "publicationTime": "2017-01-04T04:28:55.000Z",
+        "disclosureTime": "2017-01-02T04:40:04.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 285,
+          "ALTERNATIVE": [
+            "SNYK-JS-WINDOWSSELENIUMCHROMEDRIVER-10366"
+          ]
+        },
+        "patches": [],
+        "moduleName": "windows-selenium-chromedriver",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:windows-selenium-chromedriver:20170102",
+        "alternativeIds": [
+          "SNYK-JS-WINDOWSSELENIUMCHROMEDRIVER-10366"
+        ]
+      }
+    ],
+    "windows-seleniumjar": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:56:41.000Z",
+        "modificationTime": "2017-01-02T04:56:41.000Z",
+        "publicationTime": "2017-01-04T04:30:42.000Z",
+        "disclosureTime": "2017-01-02T04:56:41.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 296,
+          "ALTERNATIVE": [
+            "SNYK-JS-WINDOWSSELENIUMJAR-10365"
+          ]
+        },
+        "patches": [],
+        "moduleName": "windows-seleniumjar",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:windows-seleniumjar:20170102",
+        "alternativeIds": [
+          "SNYK-JS-WINDOWSSELENIUMJAR-10365"
+        ]
+      }
+    ],
+    "windows-seleniumjar-mirror": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T04:31:28.000Z",
+        "modificationTime": "2017-01-02T04:31:28.000Z",
+        "publicationTime": "2017-01-04T04:24:49.000Z",
+        "disclosureTime": "2017-01-02T04:31:28.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 281,
+          "ALTERNATIVE": [
+            "SNYK-JS-WINDOWSSELENIUMJARMIRROR-10332"
+          ]
+        },
+        "patches": [],
+        "moduleName": "windows-seleniumjar-mirror",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:windows-seleniumjar-mirror:20170102",
+        "alternativeIds": [
+          "SNYK-JS-WINDOWSSELENIUMJARMIRROR-10332"
+        ]
+      }
+    ],
+    "wixtoolset": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-02T00:49:45.000Z",
+        "modificationTime": "2017-01-02T00:49:45.000Z",
+        "publicationTime": "2017-01-04T04:23:30.000Z",
+        "disclosureTime": "2017-01-02T00:49:45.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 264,
+          "ALTERNATIVE": [
+            "SNYK-JS-WIXTOOLSET-10322"
+          ]
+        },
+        "patches": [],
+        "moduleName": "wixtoolset",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:wixtoolset:20170102",
+        "alternativeIds": [
+          "SNYK-JS-WIXTOOLSET-10322"
+        ]
+      }
+    ],
     "ws": [
       {
         "title": "Remote Memory Exposure",
@@ -8946,6 +12739,40 @@
         "id": "npm:ws:20160624",
         "alternativeIds": [
           "SNYK-JS-WS-10111"
+        ]
+      }
+    ],
+    "xd-testing": [
+      {
+        "title": "Downloads Resources over insecure protocol",
+        "credit": [
+          "Adam Baldwin"
+        ],
+        "creationTime": "2017-01-01T19:33:59.000Z",
+        "modificationTime": "2017-01-01T19:33:59.000Z",
+        "publicationTime": "2017-01-04T04:17:53.000Z",
+        "disclosureTime": "2017-01-01T19:33:59.000Z",
+        "semver": {
+          "vulnerable": "*",
+          "unaffected": "<0.0.0"
+        },
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "severity": "high",
+        "identifiers": {
+          "CWE": [],
+          "CVE": [],
+          "NSP": 257,
+          "ALTERNATIVE": [
+            "SNYK-JS-XDTESTING-10315"
+          ]
+        },
+        "patches": [],
+        "moduleName": "xd-testing",
+        "language": "js",
+        "packageManager": "npm",
+        "id": "npm:xd-testing:20170101",
+        "alternativeIds": [
+          "SNYK-JS-XDTESTING-10315"
         ]
       }
     ],

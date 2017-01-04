@@ -1,5 +1,40 @@
 {
 	"npm": {
+		"adamvr-geoip-lite": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2016-12-02T04:35:16.000Z",
+				"modificationTime": "2016-12-02T04:35:16.000Z",
+				"publicationTime": "2017-01-04T04:26:36.000Z",
+				"disclosureTime": "2016-12-02T04:35:16.000Z",
+				"description": "## Overview\n[`adamvr-geoip-lite`](https://www.npmjs.com/package/adamvr-geoip-lite) is a light weight native JavaScript implementation of GeoIP API from MaxMind\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `adamvr-geoip-lite`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:L",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 283,
+					"ALTERNATIVE": [
+						"SNYK-JS-ADAMVRGEOIPLITE-10371"
+					]
+				},
+				"patches": [],
+				"moduleName": "adamvr-geoip-lite",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:adamvr-geoip-lite:20170102",
+				"alternativeIds": [
+					"SNYK-JS-ADAMVRGEOIPLITE-10371"
+				]
+			}
+		],
 		"aerospike": [
 			{
 				"title": "Resources downloaded over insecure protocol",
@@ -32,6 +67,41 @@
 				"id": "npm:aerospike:20161101",
 				"alternativeIds": [
 					"SNYK-JS-AEROSPIKE-10224"
+				]
+			}
+		],
+		"air-sdk": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:02:29.000Z",
+				"modificationTime": "2017-01-01T15:02:29.000Z",
+				"publicationTime": "2017-01-04T01:47:48.000Z",
+				"disclosureTime": "2017-01-01T15:02:29.000Z",
+				"description": "## Overview\n[`air-sdk`](https://www.npmjs.com/package/air-sdk) is a NPM wrapper for the Adobe AIR SDK.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `air-sdk`.\n\n## References\n- [Github Repo](https://github.com/dayvson/air-sdk)\n- [Vulnerable Code](https://github.com/dayvson/air-sdk/blob/5a8066059ad6fc00b6a0693901146530c7143898/package.json#L28)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 200,
+					"ALTERNATIVE": [
+						"SNYK-JS-AIRSDK-10278"
+					]
+				},
+				"patches": [],
+				"moduleName": "air-sdk",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:air-sdk:20170101",
+				"alternativeIds": [
+					"SNYK-JS-AIRSDK-10278"
 				]
 			}
 		],
@@ -103,6 +173,41 @@
 				"id": "npm:airbrake:20160328",
 				"alternativeIds": [
 					"SNYK-JS-AIRBRAKE-10090"
+				]
+			}
+		],
+		"alto-saxophone": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T21:56:24.000Z",
+				"modificationTime": "2017-01-01T21:56:24.000Z",
+				"publicationTime": "2017-01-04T04:31:50.000Z",
+				"disclosureTime": "2016-10-21T21:56:24.000Z",
+				"description": "## Overview\n[`alto-saxophone`](https://www.npmjs.com/package/alto-saxophone) is a module to install and launch Chromedriver for Mac, Linux or Windows.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nUpdate to version `2.25.1` or higher.\n\n## References\n- [Github Issue](https://github.com/tobli/alto-saxophone/issues/3)\n- [Github PR](https://github.com/tobli/alto-saxophone/pull/4)\n- [Github Commit](https://github.com/tobli/alto-saxophone/commit/8cb735e8194fa3aac47727cda5ba0a876adc4e45)\n",
+				"semver": {
+					"vulnerable": "<2.25.1",
+					"unaffected": ">=2.25.1"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 172,
+					"ALTERNATIVE": [
+						"SNYK-JS-ALTOSAXOPHONE-10269"
+					]
+				},
+				"patches": [],
+				"moduleName": "alto-saxophone",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:alto-saxophone:20161021",
+				"alternativeIds": [
+					"SNYK-JS-ALTOSAXOPHONE-10269"
 				]
 			}
 		],
@@ -178,6 +283,41 @@
 				]
 			}
 		],
+		"apk-parser2": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T16:15:25.000Z",
+				"modificationTime": "2017-01-01T16:15:25.000Z",
+				"publicationTime": "2017-01-04T04:05:59.000Z",
+				"disclosureTime": "2017-01-01T16:15:25.000Z",
+				"description": "## Overview\n[`apk-parser2`](https://www.npmjs.com/package/apk-parser2) is a module which extracts Android Manifest info from an APK file.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `apk-parser2`.\n\n## References\n- [Vulnerable Code](https://github.com/gergelyke/node-apk-parser2/blob/master/install.js#L23)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 223,
+					"ALTERNATIVE": [
+						"SNYK-JS-APKPARSER2-10296"
+					]
+				},
+				"patches": [],
+				"moduleName": "apk-parser2",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:apk-parser2:20170101",
+				"alternativeIds": [
+					"SNYK-JS-APKPARSER2-10296"
+				]
+			}
+		],
 		"apk-parser3": [
 			{
 				"title": "Resources downloaded over insecure protocol",
@@ -250,6 +390,111 @@
 				]
 			}
 		],
+		"arcanist": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:42:21.000Z",
+				"modificationTime": "2017-01-02T04:42:21.000Z",
+				"publicationTime": "2017-01-04T04:28:35.000Z",
+				"disclosureTime": "2017-01-02T04:42:21.000Z",
+				"description": "## Overview\n[`arcanist`](https://www.npmjs.com/package/arcanist) is phabricator arcanist in nodejs.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `arcanist`.\n\n## References\n- [Vulnerable Code](https://github.com/Hujiang-FE/arcanist/blob/master/install.js#L6)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:L",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 286,
+					"ALTERNATIVE": [
+						"SNYK-JS-ARCANIST-10334"
+					]
+				},
+				"patches": [],
+				"moduleName": "arcanist",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:arcanist:20170102",
+				"alternativeIds": [
+					"SNYK-JS-ARCANIST-10334"
+				]
+			}
+		],
+		"arrayfire-js": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T00:27:58.000Z",
+				"modificationTime": "2017-01-01T00:27:58.000Z",
+				"publicationTime": "2017-01-04T01:42:01.000Z",
+				"disclosureTime": "2017-01-01T00:27:58.000Z",
+				"description": "## Overview\n[`arrayfire-js`](https://www.npmjs.com/package/arrayfire-js) is a module for ArrayFire for the Node.js platform.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `arrayfire-js`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 192,
+					"ALTERNATIVE": [
+						"SNYK-JS-ARRAYFIREJS-10273"
+					]
+				},
+				"patches": [],
+				"moduleName": "arrayfire-js",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:arrayfire-js:20170101",
+				"alternativeIds": [
+					"SNYK-JS-ARRAYFIREJS-10273"
+				]
+			}
+		],
+		"atom-node-module-installer": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:36:01.000Z",
+				"modificationTime": "2017-01-01T15:36:01.000Z",
+				"publicationTime": "2017-01-04T03:58:58.000Z",
+				"disclosureTime": "2017-01-01T15:36:01.000Z",
+				"description": "## Overview\n[`atom-node-module-installer`](https://www.npmjs.com/package/atom-node-module-installer) installs node modules for atom-shell applications.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `atom-node-module-installer`.\n\n## References\n- [Vulnerable Code](https://github.com/probablycorey/atom-node-module-installer/blob/f6fc822c2d491e818646b7e8d0558a0215e8a2fa/src/download-node.coffee#L41)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 216,
+					"ALTERNATIVE": [
+						"SNYK-JS-ATOMNODEMODULEINSTALLER-10292"
+					]
+				},
+				"patches": [],
+				"moduleName": "atom-node-module-installer",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:atom-node-module-installer:20170101",
+				"alternativeIds": [
+					"SNYK-JS-ATOMNODEMODULEINSTALLER-10292"
+				]
+			}
+		],
 		"backbone": [
 			{
 				"title": "Cross Site Scripting",
@@ -264,7 +509,6 @@
 				"identifiers": {
 					"CWE": [],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-BACKBONE-10054"
 					]
@@ -418,6 +662,41 @@
 				]
 			}
 		],
+		"bionode-sra": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:27:26.000Z",
+				"modificationTime": "2017-01-01T15:27:26.000Z",
+				"publicationTime": "2017-01-04T02:29:22.000Z",
+				"disclosureTime": "2017-01-01T15:27:26.000Z",
+				"description": "## Overview\n[`bionode-sra`](https://www.npmjs.com/package/bionode-sra) is a Node.js wrapper for SRA Toolkit.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `bionode-sra`.\n\n## References\n- [Vulnerable Code](https://github.com/bionode/bionode-sra/blob/master/sra/Makefile#L24)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 211,
+					"ALTERNATIVE": [
+						"SNYK-JS-BIONODESRA-10287"
+					]
+				},
+				"patches": [],
+				"moduleName": "bionode-sra",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:bionode-sra:20170101",
+				"alternativeIds": [
+					"SNYK-JS-BIONODESRA-10287"
+				]
+			}
+		],
 		"bittorrent-dht": [
 			{
 				"title": "Remote Memory Exposure",
@@ -550,7 +829,6 @@
 						"CWE-201"
 					],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-BL-10138"
 					]
@@ -687,6 +965,41 @@
 				]
 			}
 		],
+		"box2d-native": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:57:27.000Z",
+				"modificationTime": "2017-01-01T15:57:27.000Z",
+				"publicationTime": "2017-01-04T03:56:45.000Z",
+				"disclosureTime": "2017-01-01T15:57:27.000Z",
+				"description": "## Overview\n[`box2d-native`](https://www.npmjs.com/package/box2d-native) is a native Node.js addon for Box2D v2.3.1.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `box2d-native`.\n\n## References\n- [Vulnerable Code](https://github.com/zuker/box2d-native/blob/0727a747c30d51ae00369281acf43e0933940bb1/package.json#L15)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 219,
+					"ALTERNATIVE": [
+						"SNYK-JS-BOX2DNATIVE-10294"
+					]
+				},
+				"patches": [],
+				"moduleName": "box2d-native",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:box2d-native:20170101",
+				"alternativeIds": [
+					"SNYK-JS-BOX2DNATIVE-10294"
+				]
+			}
+		],
 		"brisket": [
 			{
 				"title": "Cross-site Scripting (XSS) via Bootstrapped data URL",
@@ -720,6 +1033,41 @@
 				"id": "npm:brisket:20160913",
 				"alternativeIds": [
 					"SNYK-JS-BRISKET-10139"
+				]
+			}
+		],
+		"broccoli-closure": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T18:56:17.000Z",
+				"modificationTime": "2017-01-01T18:56:17.000Z",
+				"publicationTime": "2017-01-04T04:11:20.000Z",
+				"disclosureTime": "2016-11-01T18:56:17.000Z",
+				"description": "## Overview\n[`broccoli-closure`](https://www.npmjs.com/package/broccoli-closure)\nbroccoli-closure is a Closure compiler plugin for Broccoli.\n\nbroccoli-closure downloads binary resources over HTTP, which leaves it vulnerable to MITM attacks.  It may be possible to cause remote code execution (RCE) by swapping out the requested binary with an attacker controlled binary if the attacker is on the network or positioned in between the user and the remote server.\n\n## Remediation\nUpgrade to version `1.3.1` or greater.\n\n## References\n- [Github Commit](https://github.com/markuskobler/broccoli-closure-plugin/commit/94021ec4def22f28685e4f85a66a22176c115b16)\n",
+				"semver": {
+					"vulnerable": "<1.3.1",
+					"unaffected": ">=1.3.1"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 242,
+					"ALTERNATIVE": [
+						"SNYK-JS-BROCCOLICLOSURE-10308"
+					]
+				},
+				"patches": [],
+				"moduleName": "broccoli-closure",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:broccoli-closure:20161101",
+				"alternativeIds": [
+					"SNYK-JS-BROCCOLICLOSURE-10308"
 				]
 			}
 		],
@@ -889,6 +1237,41 @@
 				]
 			}
 		],
+		"chromedriver126": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:10:22.000Z",
+				"modificationTime": "2017-01-01T15:10:22.000Z",
+				"publicationTime": "2017-01-04T02:28:37.000Z",
+				"disclosureTime": "2017-01-01T15:10:22.000Z",
+				"description": "## Overview\n[`chromedriver126`](https://www.npmjs.com/package/chromedriver126) is chromedriver version 1.26 for linux OS.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `chromedriver126`.\n\n## References\n- [Vulnerable Code](https://github.com/swangful/chromedriver126/blob/master/install.js#L17)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 203,
+					"ALTERNATIVE": [
+						"SNYK-JS-CHROMEDRIVER126-10281"
+					]
+				},
+				"patches": [],
+				"moduleName": "chromedriver126",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:chromedriver126:20170101",
+				"alternativeIds": [
+					"SNYK-JS-CHROMEDRIVER126-10281"
+				]
+			}
+		],
 		"ckeditor-dev": [
 			{
 				"title": "Cross-site Scripting (XSS)",
@@ -1027,6 +1410,41 @@
 				]
 			}
 		],
+		"clang-extra": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T00:59:00.000Z",
+				"modificationTime": "2017-01-02T00:59:00.000Z",
+				"publicationTime": "2017-01-04T04:19:53.000Z",
+				"disclosureTime": "2017-01-02T00:59:00.000Z",
+				"description": "## Overview\n[`clang-extra`](https://www.npmjs.com/package/clang-extra) installs LLVM's clang-extra tools.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `clang-extra`.\n\n## References\n- [Vulnerable Code](https://github.com/Qix-/clang-extra-npm/blob/master/install-clang-extra.sh#L4)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 265,
+					"ALTERNATIVE": [
+						"SNYK-JS-CLANGEXTRA-10323"
+					]
+				},
+				"patches": [],
+				"moduleName": "clang-extra",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:clang-extra:20170102",
+				"alternativeIds": [
+					"SNYK-JS-CLANGEXTRA-10323"
+				]
+			}
+		],
 		"cli": [
 			{
 				"title": "Insecure use of /tmp folder",
@@ -1136,6 +1554,41 @@
 				]
 			}
 		],
+		"cloudpub-redis": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:32:52.000Z",
+				"modificationTime": "2017-01-02T04:32:52.000Z",
+				"publicationTime": "2017-01-04T04:25:51.000Z",
+				"disclosureTime": "2017-01-02T04:32:52.000Z",
+				"description": "## Overview\n[`cloudpub-redis`](https://www.npmjs.com/package/cloudpub-redis) is a module for CloudPub: Redis Backend\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `cloudpub-redis`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 282,
+					"ALTERNATIVE": [
+						"SNYK-JS-CLOUDPUBREDIS-10346"
+					]
+				},
+				"patches": [],
+				"moduleName": "cloudpub-redis",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:cloudpub-redis:20170102",
+				"alternativeIds": [
+					"SNYK-JS-CLOUDPUBREDIS-10346"
+				]
+			}
+		],
 		"clusterize.js": [
 			{
 				"title": "Cross-site Scripting (XSS)",
@@ -1169,6 +1622,111 @@
 				"id": "npm:clusterize.js:20150429",
 				"alternativeIds": [
 					"SNYK-JS-CLUSTERIZEJS-10211"
+				]
+			}
+		],
+		"cmake": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T17:18:50.000Z",
+				"modificationTime": "2017-01-01T17:18:50.000Z",
+				"publicationTime": "2017-01-04T04:13:46.000Z",
+				"disclosureTime": "2017-01-01T17:18:50.000Z",
+				"description": "## Overview\n[`cmake`](https://www.npmjs.com/package/cmake) installs the cmake x86 linux binaries.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `cmake`.\n\n## References\n- [Vulnerable Code](https://github.com/stanleygu/cmake/blob/master/Makefile#L2)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 233,
+					"ALTERNATIVE": [
+						"SNYK-JS-CMAKE-10304"
+					]
+				},
+				"patches": [],
+				"moduleName": "cmake",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:cmake:20170101",
+				"alternativeIds": [
+					"SNYK-JS-CMAKE-10304"
+				]
+			}
+		],
+		"co-cli-installer": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T01:22:40.000Z",
+				"modificationTime": "2017-01-02T01:22:40.000Z",
+				"publicationTime": "2017-01-04T04:21:17.000Z",
+				"disclosureTime": "2017-01-02T01:22:40.000Z",
+				"description": "## Overview\n[`co-cli-installer`](https://www.npmjs.com/package/co-cli-installer) is vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `co-cli-installer`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 268,
+					"ALTERNATIVE": [
+						"SNYK-JS-COCLIINSTALLER-10350"
+					]
+				},
+				"patches": [],
+				"moduleName": "co-cli-installer",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:co-cli-installer:20170102",
+				"alternativeIds": [
+					"SNYK-JS-COCLIINSTALLER-10350"
+				]
+			}
+		],
+		"cobalt-cli": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T00:44:36.000Z",
+				"modificationTime": "2017-01-01T00:44:36.000Z",
+				"publicationTime": "2017-01-04T01:40:41.000Z",
+				"disclosureTime": "2017-01-01T00:44:36.000Z",
+				"description": "## Overview\n[`cobalt-cli`](https://www.npmjs.com/package/cobalt-cli) is vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `cobalt-cli`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 197,
+					"ALTERNATIVE": [
+						"SNYK-JS-COBALTCLI-10361"
+					]
+				},
+				"patches": [],
+				"moduleName": "cobalt-cli",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:cobalt-cli:20170101",
+				"alternativeIds": [
+					"SNYK-JS-COBALTCLI-10361"
 				]
 			}
 		],
@@ -1340,7 +1898,6 @@
 						"CWE-95"
 					],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-CROSSBOWLANG-10137"
 					]
@@ -1469,6 +2026,76 @@
 				]
 			}
 		],
+		"curses": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:34:37.000Z",
+				"modificationTime": "2017-01-01T15:34:37.000Z",
+				"publicationTime": "2017-01-04T03:56:03.000Z",
+				"disclosureTime": "2017-01-01T15:34:37.000Z",
+				"description": "## Overview\n[`curses`](https://www.npmjs.com/package/curses) is bindings for the native curses library, a full featured console IO library.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `curses`.\n\n## References\n- [Vulnerable Code](https://github.com/fresc81/node-curses/blob/26fb6849ed858db17c2ef084d87d3365cc64f015/source-urls.json#L1)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 215,
+					"ALTERNATIVE": [
+						"SNYK-JS-CURSES-10291"
+					]
+				},
+				"patches": [],
+				"moduleName": "curses",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:curses:20170101",
+				"alternativeIds": [
+					"SNYK-JS-CURSES-10291"
+				]
+			}
+		],
+		"dalek-browser-chrome": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:00:13.000Z",
+				"modificationTime": "2017-01-01T15:00:13.000Z",
+				"publicationTime": "2017-01-04T01:47:59.000Z",
+				"disclosureTime": "2017-01-01T15:00:13.000Z",
+				"description": "## Overview\n[`dalek-browser-chrome`](https://www.npmjs.com/package/dalek-browser-chrome) is Google Chrome bindings for DalekJS.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `dalek-browser-chrome`.\n\n## References\n- [Vulnerable Code](https://github.com/dalekjs/dalek-browser-chrome/blob/master/install.js#L23)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 199,
+					"ALTERNATIVE": [
+						"SNYK-JS-DALEKBROWSERCHROME-10277"
+					]
+				},
+				"patches": [],
+				"moduleName": "dalek-browser-chrome",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:dalek-browser-chrome:20170101",
+				"alternativeIds": [
+					"SNYK-JS-DALEKBROWSERCHROME-10277"
+				]
+			}
+		],
 		"dalek-browser-chrome-canary": [
 			{
 				"title": "Resources downloaded over insecure protocol",
@@ -1503,6 +2130,76 @@
 				"id": "npm:dalek-browser-chrome-canary:20161219",
 				"alternativeIds": [
 					"SNYK-JS-DALEKBROWSERCHROMECANARY-10237"
+				]
+			}
+		],
+		"dalek-browser-ie": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:24:01.000Z",
+				"modificationTime": "2017-01-01T15:24:01.000Z",
+				"publicationTime": "2017-01-04T02:27:48.000Z",
+				"disclosureTime": "2017-01-01T15:24:01.000Z",
+				"description": "## Overview\n[`dalek-browser-ie`](https://www.npmjs.com/package/dalek-browser-ie) is Internet Explorer bindings for DalekJS.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `dalek-browser-ie`.\n\n## References\n- [Vulnerable Code](https://github.com/dalekjs/dalek-browser-ie/blob/master/install.js#L23)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 209,
+					"ALTERNATIVE": [
+						"SNYK-JS-DALEKBROWSERIE-10285"
+					]
+				},
+				"patches": [],
+				"moduleName": "dalek-browser-ie",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:dalek-browser-ie:20170101",
+				"alternativeIds": [
+					"SNYK-JS-DALEKBROWSERIE-10285"
+				]
+			}
+		],
+		"dalek-browser-ie-canary": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:16:32.000Z",
+				"modificationTime": "2017-01-01T15:16:32.000Z",
+				"publicationTime": "2017-01-04T02:29:11.000Z",
+				"disclosureTime": "2017-01-01T15:16:32.000Z",
+				"description": "## Overview\n[`dalek-browser-ie-canary`](https://www.npmjs.com/package/dalek-browser-ie-canary) is Internet Explorer bindings for DalekJS.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `dalek-browser-ie-canary`.\n\n## References\n- [Vulnerable Code](https://github.com/dalekjs/dalek-browser-ie/blob/master/install.js#L23)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 205,
+					"ALTERNATIVE": [
+						"SNYK-JS-DALEKBROWSERIECANARY-10282"
+					]
+				},
+				"patches": [],
+				"moduleName": "dalek-browser-ie-canary",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:dalek-browser-ie-canary:20170101",
+				"alternativeIds": [
+					"SNYK-JS-DALEKBROWSERIECANARY-10282"
 				]
 			}
 		],
@@ -1598,7 +2295,6 @@
 					"CVE": [
 						"CVE-2008-6681"
 					],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-DOJO-10051"
 					]
@@ -1642,8 +2338,7 @@
 						"npm:dojo:20100614-4",
 						"npm:dojo:20100614-5",
 						"SNYK-JS-DOJO-10052"
-					],
-					"NSP": ""
+					]
 				},
 				"patches": [],
 				"moduleName": "dojo",
@@ -1680,7 +2375,6 @@
 					"CVE": [
 						"CVE-2010-2275"
 					],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-DOJO-10053"
 					]
@@ -1795,7 +2489,6 @@
 						"CWE-95"
 					],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-DUSTJSLINKEDIN-10136"
 					]
@@ -1807,6 +2500,41 @@
 				"id": "npm:dustjs-linkedin:20160819",
 				"alternativeIds": [
 					"SNYK-JS-DUSTJSLINKEDIN-10136"
+				]
+			}
+		],
+		"dwebp-bin": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T17:17:27.000Z",
+				"modificationTime": "2017-01-01T17:17:27.000Z",
+				"publicationTime": "2017-01-04T04:08:35.000Z",
+				"disclosureTime": "2017-01-01T17:17:27.000Z",
+				"description": "## Overview\n[`dwebp-bin`](https://www.npmjs.com/package/dwebp-bin) is a dwebp node.js wrapper that convert WebP into PNG.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `dwebp-bin`.\n\n## References\n- [Vulnerable Code](https://github.com/1000ch/node-dwebp-bin/blob/8eb8698acb9b8962864ed0ec1629dfddc2ed8fcc/lib/install.js#L12)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 232,
+					"ALTERNATIVE": [
+						"SNYK-JS-DWEBPBIN-10303"
+					]
+				},
+				"patches": [],
+				"moduleName": "dwebp-bin",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:dwebp-bin:20170101",
+				"alternativeIds": [
+					"SNYK-JS-DWEBPBIN-10303"
 				]
 			}
 		],
@@ -2072,8 +2800,7 @@
 						"npm:ember:20130105-4",
 						"npm:ember:20130105-5",
 						"SNYK-JS-EMBER-10045"
-					],
-					"NSP": ""
+					]
 				},
 				"patches": [],
 				"moduleName": "ember",
@@ -2117,8 +2844,7 @@
 						"npm:ember:20140114-3",
 						"npm:ember:20140114-4",
 						"SNYK-JS-EMBER-10050"
-					],
-					"NSP": ""
+					]
 				},
 				"patches": [],
 				"moduleName": "ember",
@@ -2155,8 +2881,7 @@
 					"ALTERNATIVE": [
 						"npm:ember:20140214-1",
 						"SNYK-JS-EMBER-10049"
-					],
-					"NSP": ""
+					]
 				},
 				"patches": [],
 				"moduleName": "ember",
@@ -2542,6 +3267,146 @@
 				]
 			}
 		],
+		"fibjs": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:37:37.000Z",
+				"modificationTime": "2017-01-01T15:37:37.000Z",
+				"publicationTime": "2017-01-04T03:59:19.000Z",
+				"disclosureTime": "2017-01-01T15:37:37.000Z",
+				"description": "## Overview\n[`fibjs`](https://www.npmjs.com/package/fibjs) is a runtime for javascript applictions built on google v8 JS.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `fibjs`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 217,
+					"ALTERNATIVE": [
+						"SNYK-JS-FIBJS-10359"
+					]
+				},
+				"patches": [],
+				"moduleName": "fibjs",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:fibjs:20170101",
+				"alternativeIds": [
+					"SNYK-JS-FIBJS-10359"
+				]
+			}
+		],
+		"fis-parser-sass-bin": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T01:26:30.000Z",
+				"modificationTime": "2017-01-02T01:26:30.000Z",
+				"publicationTime": "2017-01-04T04:23:14.000Z",
+				"disclosureTime": "2017-01-02T01:26:30.000Z",
+				"description": "## Overview\n[`fis-parser-sass-bin`](https://www.npmjs.com/package/fis-parser-sass-bin) a plugin for fis to compile sass using node-sass-binaries.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `fis-parser-sass-bin`.\n\n## References\n- [Vulnerable Code](https://github.com/fis-stuff/fis-parser-sass-bin/blob/master/scripts/install.js#L53)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 269,
+					"ALTERNATIVE": [
+						"SNYK-JS-FISPARSERSASSBIN-10324"
+					]
+				},
+				"patches": [],
+				"moduleName": "fis-parser-sass-bin",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:fis-parser-sass-bin:20170102",
+				"alternativeIds": [
+					"SNYK-JS-FISPARSERSASSBIN-10324"
+				]
+			}
+		],
+		"fis-sass-all": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:43:44.000Z",
+				"modificationTime": "2017-01-02T04:43:44.000Z",
+				"publicationTime": "2017-01-04T04:28:49.000Z",
+				"disclosureTime": "2017-01-02T04:43:44.000Z",
+				"description": "## Overview\n[`fis-sass-all`](https://www.npmjs.com/package/fis-sass-all) is a libsass wrapper for node.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `fis-sass-all `.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 287,
+					"ALTERNATIVE": [
+						"SNYK-JS-FISSASSALL-10363"
+					]
+				},
+				"patches": [],
+				"moduleName": "fis-sass-all",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:fis-sass-all:20161202",
+				"alternativeIds": [
+					"SNYK-JS-FISSASSALL-10363"
+				]
+			}
+		],
+		"frames-compiler": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:14:00.000Z",
+				"modificationTime": "2017-01-01T19:14:00.000Z",
+				"publicationTime": "2017-01-04T04:16:38.000Z",
+				"disclosureTime": "2017-01-01T19:14:00.000Z",
+				"description": "## Overview\n[`frames-compiler`](https://www.npmjs.com/package/frames-compiler) is a Frames Compiler for NodeJS.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `frames-compiler`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 247,
+					"ALTERNATIVE": [
+						"SNYK-JS-FRAMESCOMPILER-10354"
+					]
+				},
+				"patches": [],
+				"moduleName": "frames-compiler",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:frames-compiler:20170101",
+				"alternativeIds": [
+					"SNYK-JS-FRAMESCOMPILER-10354"
+				]
+			}
+		],
 		"fuelux": [
 			{
 				"title": "Cross-site Scripting (XSS) in Pillbox",
@@ -2576,6 +3441,41 @@
 				"id": "npm:fuelux:20160725",
 				"alternativeIds": [
 					"SNYK-JS-FUELUX-10124"
+				]
+			}
+		],
+		"fuseki": [
+			{
+				"title": "Downloads Resources over Insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2016-12-29T04:14:00.000Z",
+				"modificationTime": "2016-12-29T04:14:00.000Z",
+				"publicationTime": "2017-01-04T00:27:09.000Z",
+				"disclosureTime": "2016-11-13T04:14:00.000Z",
+				"description": "## Overview\n[`fuseki`](https://www.npmjs.com/package/fuseki) is a server wrapper and management API for java fuseki.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nUpgrade to version `1.0.1` or higher.\n\n## References\n- [Github Commit](https://github.com/bergos/fuseki/commit/154c0f12c468a8af33562dff12b1bb0e5b659df9)]\n",
+				"semver": {
+					"vulnerable": "<1.0.1",
+					"unaffected": ">=1.0.1"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 278,
+					"ALTERNATIVE": [
+						"SNYK-JS-FUSEKI-10265"
+					]
+				},
+				"patches": [],
+				"moduleName": "fuseki",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:fuseki:20161113",
+				"alternativeIds": [
+					"SNYK-JS-FUSEKI-10265"
 				]
 			}
 		],
@@ -2661,6 +3561,41 @@
 				"id": "npm:geddy:20150727",
 				"alternativeIds": [
 					"SNYK-JS-GEDDY-10040"
+				]
+			}
+		],
+		"geoip-lite-country": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2016-12-29T22:46:49.000Z",
+				"modificationTime": "2016-12-29T22:46:49.000Z",
+				"publicationTime": "2017-01-04T00:23:22.000Z",
+				"disclosureTime": "2016-11-16T22:46:49.000Z",
+				"description": "## Overview\n[`geoip-lite-country`](https://www.npmjs.com/package/geoip-lite-country) is a stripped down version of geoip-lite, supporting only country lookup.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nUpdate to version `1.1.4` or greater.\n\n## References\n- [Github Commit](https://github.com/arve0/node-geoip-country/commit/9228f2096a882b251f917deba5ae7ffa1a9b4ccc)\n",
+				"semver": {
+					"vulnerable": "<1.1.4",
+					"unaffected": ">=1.1.4"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 183,
+					"ALTERNATIVE": [
+						"SNYK-JS-GEOIPLITECOUNTRY-10266"
+					]
+				},
+				"patches": [],
+				"moduleName": "geoip-lite-country",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:geoip-lite-country:20161116",
+				"alternativeIds": [
+					"SNYK-JS-GEOIPLITECOUNTRY-10266"
 				]
 			}
 		],
@@ -2840,6 +3775,76 @@
 				]
 			}
 		],
+		"google-closure-tools-latest": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T01:34:48.000Z",
+				"modificationTime": "2017-01-02T01:34:48.000Z",
+				"publicationTime": "2017-01-04T04:26:21.000Z",
+				"disclosureTime": "2017-01-02T01:34:48.000Z",
+				"description": "## Overview\n[`google-closure-tools-latest`](https://www.npmjs.com/package/google-closure-tools-latest) is a Node.js module wrapper for downloading the latest version of the Google Closure tools\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `google-closure-tools-latest`.\n\n## References\n- [Vulnerable Code](https://github.com/vsonix-bub/node-google-closure-tools-latest/blob/master/install.js#L6)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 274,
+					"ALTERNATIVE": [
+						"SNYK-JS-GOOGLECLOSURETOOLSLATEST-10326"
+					]
+				},
+				"patches": [],
+				"moduleName": "google-closure-tools-latest",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:google-closure-tools-latest:20170102",
+				"alternativeIds": [
+					"SNYK-JS-GOOGLECLOSURETOOLSLATEST-10326"
+				]
+			}
+		],
+		"grunt-ccompiler": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T17:30:46.000Z",
+				"modificationTime": "2017-01-01T17:30:47.000Z",
+				"publicationTime": "2017-01-04T04:12:04.000Z",
+				"disclosureTime": "2017-01-01T17:30:46.000Z",
+				"description": "## Overview\n[`grunt-ccompiler`](https://www.npmjs.com/package/grunt-ccompiler) is a Closure Compiler Grunt Plugin.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `grunt-ccompiler`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 239,
+					"ALTERNATIVE": [
+						"SNYK-JS-GRUNTCCOMPILER-10369"
+					]
+				},
+				"patches": [],
+				"moduleName": "grunt-ccompiler",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:grunt-ccompiler:20170101",
+				"alternativeIds": [
+					"SNYK-JS-GRUNTCCOMPILER-10369"
+				]
+			}
+		],
 		"grunt-gh-pages": [
 			{
 				"title": "Credentials saved as clear-text in log",
@@ -2877,6 +3882,76 @@
 				]
 			}
 		],
+		"grunt-images": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:31:28.000Z",
+				"modificationTime": "2017-01-01T19:31:28.000Z",
+				"publicationTime": "2017-01-04T04:15:19.000Z",
+				"disclosureTime": "2017-01-01T19:31:28.000Z",
+				"description": "## Overview\n[`grunt-images`](https://www.npmjs.com/package/grunt-images) is a grunt plugin for processing images.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `grunt-images`.\n\n## References\n- [Vulnerable Code](https://github.com/gcpantazis/grunt-images/blob/7652db9b272372d816925d7ff2a88c354e88c78c/scripts/install#L10)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 255,
+					"ALTERNATIVE": [
+						"SNYK-JS-GRUNTIMAGES-10313"
+					]
+				},
+				"patches": [],
+				"moduleName": "grunt-images",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:grunt-images:20170101",
+				"alternativeIds": [
+					"SNYK-JS-GRUNTIMAGES-10313"
+				]
+			}
+		],
+		"grunt-webdriver-qunit": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:20:48.000Z",
+				"modificationTime": "2017-01-01T15:20:48.000Z",
+				"publicationTime": "2017-01-04T02:27:58.000Z",
+				"disclosureTime": "2017-01-01T15:20:48.000Z",
+				"description": "## Overview\n[`grunt-webdriver-qunit`](https://www.npmjs.com/package/grunt-webdriver-qunit) is a grunt plugin to run qunit with webdriver in grunt\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `grunt-webdriver-qunit`.\n\n## References\n- [Vulnerable Code](https://github.com/bulain/grunt-webdriver-qunit/blob/master/install.js#L10)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 207,
+					"ALTERNATIVE": [
+						"SNYK-JS-GRUNTWEBDRIVERQUNIT-10284"
+					]
+				},
+				"patches": [],
+				"moduleName": "grunt-webdriver-qunit",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:grunt-webdriver-qunit:20170101",
+				"alternativeIds": [
+					"SNYK-JS-GRUNTWEBDRIVERQUNIT-10284"
+				]
+			}
+		],
 		"handlebars": [
 			{
 				"title": "Cross-Site Scripting",
@@ -2893,7 +3968,6 @@
 						"CWE-79"
 					],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-HANDLEBARS-10047"
 					]
@@ -3301,6 +4375,216 @@
 				]
 			}
 		],
+		"haxe": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T22:29:40.000Z",
+				"modificationTime": "2017-01-01T22:29:40.000Z",
+				"publicationTime": "2017-01-04T01:47:19.000Z",
+				"disclosureTime": "2017-01-01T22:29:40.000Z",
+				"description": "## Overview\n[`haxe`](https://www.npmjs.com/package/haxe)\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `haxe`.\n\n## References\n- [Vulnerable Code](https://github.com/HaxeFoundation/npm-haxe/blob/master/lib/haxe-url.js#L10)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 177,
+					"ALTERNATIVE": [
+						"SNYK-JS-HAXE-10271"
+					]
+				},
+				"patches": [],
+				"moduleName": "haxe",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:haxe:20170101",
+				"alternativeIds": [
+					"SNYK-JS-HAXE-10271"
+				]
+			}
+		],
+		"haxe3": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:54:33.000Z",
+				"modificationTime": "2017-01-02T04:54:33.000Z",
+				"publicationTime": "2017-01-04T04:28:58.000Z",
+				"disclosureTime": "2017-01-02T04:54:33.000Z",
+				"description": "## Overview\n[`haxe3`](https://www.npmjs.com/package/haxe3) is a Cross-Platform Toolkit (a fork from David Mouton's damoebius/haxe-npm)\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `haxe3`.\n\n## References\n- [Vulnerable Code](https://github.com/mebyz/haxe3/blob/master/bin/install.js#L21)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 294,
+					"ALTERNATIVE": [
+						"SNYK-JS-HAXE3-10368"
+					]
+				},
+				"patches": [],
+				"moduleName": "haxe3",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:haxe3:20161202",
+				"alternativeIds": [
+					"SNYK-JS-HAXE3-10368"
+				]
+			}
+		],
+		"haxeshim": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T05:02:51.000Z",
+				"modificationTime": "2017-01-02T05:02:51.000Z",
+				"publicationTime": "2017-01-04T04:30:46.000Z",
+				"disclosureTime": "2017-01-02T05:02:51.000Z",
+				"description": "## Overview\n[`haxeshim`](https://www.npmjs.com/package/haxeshim) Haxe shim to deal with cooexisting versions.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `haxeshim`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 300,
+					"ALTERNATIVE": [
+						"SNYK-JS-HAXESHIM-10340"
+					]
+				},
+				"patches": [],
+				"moduleName": "haxeshim",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:haxeshim:20170102",
+				"alternativeIds": [
+					"SNYK-JS-HAXESHIM-10340"
+				]
+			}
+		],
+		"headless-browser-lite": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T16:52:43.000Z",
+				"modificationTime": "2017-01-01T16:52:43.000Z",
+				"publicationTime": "2017-01-04T04:00:47.000Z",
+				"disclosureTime": "2017-01-01T16:52:43.000Z",
+				"description": "## Overview\n[`headless-browser-lite`](https://www.npmjs.com/package/headless-browser-lite) is a minimal npm installer for phantomjs and slimerjs with no external dependencies.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `headless-browser-lite`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 230,
+					"ALTERNATIVE": [
+						"SNYK-JS-HEADLESSBROWSERLITE-10357"
+					]
+				},
+				"patches": [],
+				"moduleName": "headless-browser-lite",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:headless-browser-lite:20170101",
+				"alternativeIds": [
+					"SNYK-JS-HEADLESSBROWSERLITE-10357"
+				]
+			}
+		],
+		"healthcenter": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:45:44.000Z",
+				"modificationTime": "2017-01-02T04:45:44.000Z",
+				"publicationTime": "2017-01-04T04:28:41.000Z",
+				"disclosureTime": "2017-01-02T04:45:44.000Z",
+				"description": "## Overview\n[`healthcenter`](https://www.npmjs.com/package/healthcenter) is an  IBM Monitoring and Diagnostic Tools - Health Center agent\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `healthcenter`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 288,
+					"ALTERNATIVE": [
+						"SNYK-JS-HEALTHCENTER-10345"
+					]
+				},
+				"patches": [],
+				"moduleName": "healthcenter",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:healthcenter:20170102",
+				"alternativeIds": [
+					"SNYK-JS-HEALTHCENTER-10345"
+				]
+			}
+		],
+		"herbivore": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T22:06:12.000Z",
+				"modificationTime": "2017-01-01T22:06:12.000Z",
+				"publicationTime": "2017-01-04T04:23:42.000Z",
+				"disclosureTime": "2017-01-01T22:06:12.000Z",
+				"description": "## Overview\n[`herbivore`](https://www.npmjs.com/package/herbivore) is a packet sniffing and crafting library. Built on libtins.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nUpdate to a version higher than `0.0.3` \n\n## References\n- [Github Commit](https://github.com/samatt/Herbivore/commit/0a041defc3463e99948e5d2064aef54b2128c5a3)\n",
+				"semver": {
+					"vulnerable": "<=0.0.3",
+					"unaffected": ">0.0.3"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 258,
+					"ALTERNATIVE": [
+						"SNYK-JS-HERBIVORE-10316"
+					]
+				},
+				"patches": [],
+				"moduleName": "herbivore",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:herbivore:20161102",
+				"alternativeIds": [
+					"SNYK-JS-HERBIVORE-10316"
+				]
+			}
+		],
 		"hoek": [
 			{
 				"title": "Cross-site Scripting (XSS)",
@@ -3370,6 +4654,41 @@
 				"id": "npm:hostr:20161211",
 				"alternativeIds": [
 					"SNYK-JS-HOSTR-10251"
+				]
+			}
+		],
+		"httpsync": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:25:29.000Z",
+				"modificationTime": "2017-01-01T15:25:29.000Z",
+				"publicationTime": "2017-01-04T02:29:36.000Z",
+				"disclosureTime": "2017-01-01T15:25:29.000Z",
+				"description": "## Overview\n[`httpsync`](https://www.npmjs.com/package/httpsync) is a port of libcurl to node.js.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `httpsync`. \n\n## References\n- [Vulnerable Code](https://github.com/fengmk2/node-curl/blob/0.0.8/build.sh#L4)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 210,
+					"ALTERNATIVE": [
+						"SNYK-JS-HTTPSYNC-10286"
+					]
+				},
+				"patches": [],
+				"moduleName": "httpsync",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:httpsync:20170101",
+				"alternativeIds": [
+					"SNYK-JS-HTTPSYNC-10286"
 				]
 			}
 		],
@@ -3527,6 +4846,41 @@
 				]
 			}
 		],
+		"iedriver": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2016-12-29T22:03:04.000Z",
+				"modificationTime": "2016-12-29T22:03:04.000Z",
+				"publicationTime": "2017-01-04T00:19:37.000Z",
+				"disclosureTime": "2016-11-11T22:03:04.000Z",
+				"description": "## Overview\n[`iedriver`](https://www.npmjs.com/package/iedriver) is an NPM wrapper for Selenium IEDriver.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nUpdate to iedriver version `3.0.0` or greater.\n\n## References\n- [Github Commit](https://github.com/barretts/node-iedriver/commit/32ca1602573618c8d76182c4f2a30aee379d6629)\n",
+				"semver": {
+					"vulnerable": "<3.0.0",
+					"unaffected": ">=3.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 174,
+					"ALTERNATIVE": [
+						"SNYK-JS-IEDRIVER-10267"
+					]
+				},
+				"patches": [],
+				"moduleName": "iedriver",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:iedriver:20161111",
+				"alternativeIds": [
+					"SNYK-JS-IEDRIVER-10267"
+				]
+			}
+		],
 		"igniteui": [
 			{
 				"title": "Resources downloaded over insecure protocol",
@@ -3559,6 +4913,41 @@
 				"id": "npm:igniteui:20160804",
 				"alternativeIds": [
 					"SNYK-JS-IGNITEUI-10167"
+				]
+			}
+		],
+		"imageoptim": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T00:31:44.000Z",
+				"modificationTime": "2017-01-01T00:31:44.000Z",
+				"publicationTime": "2017-01-04T01:40:25.000Z",
+				"disclosureTime": "2017-01-01T00:31:44.000Z",
+				"description": "## Overview\n[`imageoptim`](https://www.npmjs.com/package/imageoptim) is a Node.js wrapper for some images compression algorithms.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `imageoptim`.\n\n## References\n- [Vulnerable Code](https://github.com/bem-archive/image-optim/blob/aaac321cf4000495ac52214833a905fd4d7ee9e5/env/env-setup#L23)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 194,
+					"ALTERNATIVE": [
+						"SNYK-JS-IMAGEOPTIM-10275"
+					]
+				},
+				"patches": [],
+				"moduleName": "imageoptim",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:imageoptim:20170101",
+				"alternativeIds": [
+					"SNYK-JS-IMAGEOPTIM-10275"
 				]
 			}
 		],
@@ -3607,6 +4996,76 @@
 				]
 			}
 		],
+		"install-g-test": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T16:48:35.000Z",
+				"modificationTime": "2017-01-01T16:48:35.000Z",
+				"publicationTime": "2017-01-04T04:05:18.000Z",
+				"disclosureTime": "2017-01-01T16:48:35.000Z",
+				"description": "## Overview\n[`install-g-test`](https://www.npmjs.com/package/install-g-test) is vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `install-g-test`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 228,
+					"ALTERNATIVE": [
+						"SNYK-JS-INSTALLGTEST-10358"
+					]
+				},
+				"patches": [],
+				"moduleName": "install-g-test",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:install-g-test:20170101",
+				"alternativeIds": [
+					"SNYK-JS-INSTALLGTEST-10358"
+				]
+			}
+		],
+		"install-nw": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2016-12-29T15:15:04.000Z",
+				"modificationTime": "2016-12-29T15:15:05.000Z",
+				"publicationTime": "2017-01-04T00:22:03.000Z",
+				"disclosureTime": "2016-11-04T15:15:04.000Z",
+				"description": "## Overview\n[`install-nw`](https://www.npmjs.com/package/install-nw) is a module which quickly and robustly installs and caches NW.js.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nUpdate to version `1.1.5` or greater.\n\n## References\n- [Github Commit](https://github.com/davidmarkclements/install-nw/commit/5c64eff1ed116fceeba55a51867554f0fe4f6556)\n",
+				"semver": {
+					"vulnerable": "<1.1.5",
+					"unaffected": ">=1.1.5"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 204,
+					"ALTERNATIVE": [
+						"SNYK-JS-INSTALLNW-10373"
+					]
+				},
+				"patches": [],
+				"moduleName": "install-nw",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:install-nw:20161104",
+				"alternativeIds": [
+					"SNYK-JS-INSTALLNW-10373"
+				]
+			}
+		],
 		"ipip": [
 			{
 				"title": "Resources downloaded over insecure protocol",
@@ -3641,6 +5100,41 @@
 				"id": "npm:ipip:20161130",
 				"alternativeIds": [
 					"SNYK-JS-IPIP-10254"
+				]
+			}
+		],
+		"ipip-coffee": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:28:01.000Z",
+				"modificationTime": "2017-01-02T04:28:01.000Z",
+				"publicationTime": "2017-01-04T04:25:56.000Z",
+				"disclosureTime": "2017-01-02T04:28:01.000Z",
+				"description": "## Overview\n[`ipip-coffee`](https://www.npmjs.com/package/ipip-coffee) queries geolocation information from IP.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `ipip-coffee`.\n\n## References\n- [Vulnerable Code](https://github.com/ym/node-ipip/blob/master/package.json#L27)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:L",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 279,
+					"ALTERNATIVE": [
+						"SNYK-JS-IPIPCOFFEE-10330"
+					]
+				},
+				"patches": [],
+				"moduleName": "ipip-coffee",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:ipip-coffee:20170102",
+				"alternativeIds": [
+					"SNYK-JS-IPIPCOFFEE-10330"
 				]
 			}
 		],
@@ -3734,6 +5228,41 @@
 				"id": "npm:jadedown:20160105",
 				"alternativeIds": [
 					"SNYK-JS-JADEDOWN-10076"
+				]
+			}
+		],
+		"jdf-sass": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T00:46:43.000Z",
+				"modificationTime": "2017-01-01T00:46:43.000Z",
+				"publicationTime": "2017-01-04T01:38:49.000Z",
+				"disclosureTime": "2017-01-01T00:46:43.000Z",
+				"description": "## Overview\n[`jdf-sass`](https://www.npmjs.com/package/jdf-sass) is a fork from node-sass, jdf use only.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `jdf-sass`.\n\n## References\n- [Vulnerable Code](https://github.com/wshxbqq/jdf-sass/blob/master/scripts/install.js#L53)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 198,
+					"ALTERNATIVE": [
+						"SNYK-JS-JDFSASS-1027"
+					]
+				},
+				"patches": [],
+				"moduleName": "jdf-sass",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:jdf-sass:20170101",
+				"alternativeIds": [
+					"SNYK-JS-JDFSASS-1027"
 				]
 			}
 		],
@@ -4130,6 +5659,41 @@
 				]
 			}
 		],
+		"js-given": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T18:53:42.000Z",
+				"modificationTime": "2017-01-01T18:53:42.000Z",
+				"publicationTime": "2017-01-04T04:12:33.000Z",
+				"disclosureTime": "2017-01-01T18:53:42.000Z",
+				"description": "## Overview\n[`js-given`](https://www.npmjs.com/package/js-given) is a JavaScript frontend to jgiven.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `js-given`.\n\n## References\n- [Vulnerable Code](https://github.com/jsGiven/jsGiven/blob/eafa17168be50b7369facbfd468fae599318bccf/js-given/tools/installJGivenReport.js#L8)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 241,
+					"ALTERNATIVE": [
+						"SNYK-JS-JSGIVEN-10307"
+					]
+				},
+				"patches": [],
+				"moduleName": "js-given",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:js-given:20170101",
+				"alternativeIds": [
+					"SNYK-JS-JSGIVEN-10307"
+				]
+			}
+		],
 		"js-yaml": [
 			{
 				"title": "Code Execution due to Deserialization",
@@ -4192,9 +5756,7 @@
 						"CWE-319"
 					],
 					"CVE": [],
-					"NSP": [
-						"188"
-					],
+					"NSP": 188,
 					"ALTERNATIVE": [
 						"SNYK-JS-JSERSTAT-10255"
 					]
@@ -4363,6 +5925,76 @@
 				"id": "npm:jsrender:20160330",
 				"alternativeIds": [
 					"SNYK-JS-JSRENDER-10093"
+				]
+			}
+		],
+		"jstestdriver": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:07:53.000Z",
+				"modificationTime": "2017-01-01T19:07:53.000Z",
+				"publicationTime": "2017-01-04T04:14:03.000Z",
+				"disclosureTime": "2017-01-01T19:07:53.000Z",
+				"description": "## Overview\n[`jstestdriver`](https://www.npmjs.com/package/jstestdriver) is a wrapper for Google's jstestdriver.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `jstestdriver`.\n\n## References\n- [Vulnerable Code](https://github.com/rlayte/jstestdriver-wrapper/blob/master/package.json#L11)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 244,
+					"ALTERNATIVE": [
+						"SNYK-JS-JSTESTDRIVER-10309"
+					]
+				},
+				"patches": [],
+				"moduleName": "jstestdriver",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:jstestdriver:20170101",
+				"alternativeIds": [
+					"SNYK-JS-JSTESTDRIVER-10309"
+				]
+			}
+		],
+		"jvminstall": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T16:41:47.000Z",
+				"modificationTime": "2017-01-01T16:41:47.000Z",
+				"publicationTime": "2017-01-04T04:05:26.000Z",
+				"disclosureTime": "2017-01-01T16:41:47.000Z",
+				"description": "## Overview\n[`jvminstall`](https://www.npmjs.com/package/jvminstall) is a module for downloading and unpacking jvm to local system.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `jvminstall`.\n\n## References\n- [Vulnerable Code](http://git.javadeploy.net/Titan/jvmInstall/blob/420f4684e7d65d4a46b152fb7c0465e382cf77ba/app/downloadingPackage.js#L35)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 225,
+					"ALTERNATIVE": [
+						"SNYK-JS-JVMINSTALL-10298"
+					]
+				},
+				"patches": [],
+				"moduleName": "jvminstall",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:jvminstall:20170101",
+				"alternativeIds": [
+					"SNYK-JS-JVMINSTALL-10298"
 				]
 			}
 		],
@@ -4698,6 +6330,76 @@
 				]
 			}
 		],
+		"libsbml": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T01:31:26.000Z",
+				"modificationTime": "2017-01-02T01:31:26.000Z",
+				"publicationTime": "2017-01-04T04:24:00.000Z",
+				"disclosureTime": "2017-01-02T01:31:26.000Z",
+				"description": "## Overview\n[`libsbml`](https://www.npmjs.com/package/libsbml) is a module that installs Linux binaries for libSBML.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `libsbml`.\n\n## References\n- [Vulnerable Code](https://github.com/stanleygu/libsbml/blob/master/Makefile#L2)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 272,
+					"ALTERNATIVE": [
+						"SNYK-JS-LIBSBML-10325"
+					]
+				},
+				"patches": [],
+				"moduleName": "libsbml",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:libsbml:20170102",
+				"alternativeIds": [
+					"SNYK-JS-LIBSBML-10325"
+				]
+			}
+		],
+		"libsbmlsim": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:08:13.000Z",
+				"modificationTime": "2017-01-02T04:08:13.000Z",
+				"publicationTime": "2017-01-04T04:26:11.000Z",
+				"disclosureTime": "2017-01-02T04:08:13.000Z",
+				"description": "## Overview\n[`libsbmlsim`](https://www.npmjs.com/package/libsbmlsim) is a module that installs linux binaries for libsbmlsim.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `libsbmlsim`.\n\n## References\n- [Vulnerable Code](https://github.com/stanleygu/libsbmlsim/blob/master/Makefile#L2)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 275,
+					"ALTERNATIVE": [
+						"SNYK-JS-LIBSBMLSIM-10327"
+					]
+				},
+				"patches": [],
+				"moduleName": "libsbmlsim",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:libsbmlsim:20170102",
+				"alternativeIds": [
+					"SNYK-JS-LIBSBMLSIM-10327"
+				]
+			}
+		],
 		"libxl": [
 			{
 				"title": "Resources downloaded over insecure protocol",
@@ -4769,7 +6471,6 @@
 						"CVE-2013-0338",
 						"CVE-2012-5134"
 					],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-LIBXMLJS-10085"
 					]
@@ -4861,6 +6562,185 @@
 				]
 			}
 		],
+		"limbus-buildgen": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:10:08.000Z",
+				"modificationTime": "2017-01-02T04:10:08.000Z",
+				"publicationTime": "2017-01-04T04:26:05.000Z",
+				"disclosureTime": "2016-11-02T04:10:08.000Z",
+				"description": "## Overview\n[`limbus-buildgen`](https://www.npmjs.com/package/limbus-buildgen) is a \"build anywhere\" build system.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nUpdate to version `0.1.1` or greater.\n\n## References\n- [Github Commit](https://github.com/redien/limbus-buildgen/commit/dfdcf27117f7ed03560054952c90b9d78c121329)\n",
+				"semver": {
+					"vulnerable": "<0.1.1",
+					"unaffected": ">=0.1.1"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 276,
+					"ALTERNATIVE": [
+						"SNYK-JS-LIMBUSBUILDGEN-10328"
+					]
+				},
+				"patches": [],
+				"moduleName": "limbus-buildgen",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:limbus-buildgen:20161202",
+				"alternativeIds": [
+					"SNYK-JS-LIMBUSBUILDGEN-10328"
+				]
+			}
+		],
+		"loopback-connector-mssql": [
+			{
+				"title": "SQL Injection",
+				"moduleName": "loopback-connector-mssql",
+				"description": "## Overview\n[`loopback-connector-mssql`](https://www.npmjs.com/package/loopback-connector-mssql) is Loopback Microsoft SQL Server Connector.\nAffected versions of the package are vulnerable to SQL injection attacks. User-supplied inputs are not properly sanitized before using it in SQL queries. This may allow a remote attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## Remediation\nUpgrade `loopback-connector-mssql` to version 1.3.0 or higher.\n\n## References\n- [Github Issue](https://github.com/strongloop/loopback/issues/983)\n- [Github PR](https://github.com/strongloop/loopback-connector-mssql/pull/18)\n- [Github Commit](https://github.com/strongloop/loopback-connector-mssql/commit/1440f3d29ba0628bf6d7e508670fb0ab1c52cb7c)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-LOOPBACKCONNECTORMSSQL-10259"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=1.3.0",
+					"vulnerable": "<1.3.0"
+				},
+				"credit": [
+					"Raymond Feng"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"disclosureTime": "2015-01-07T22:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2017-01-04T18:22:12.631Z",
+				"modificationTime": "2016-12-27T12:22:12.631Z",
+				"creationTime": "2016-12-27T12:22:12.631Z",
+				"id": "npm:loopback-connector-mssql:20150108",
+				"alternativeIds": [
+					"SNYK-JS-LOOPBACKCONNECTORMSSQL-10259"
+				]
+			}
+		],
+		"loopback-connector-mysql": [
+			{
+				"title": "SQL Injection",
+				"moduleName": "loopback-connector-mysql",
+				"description": "## Overview\n[`loopback-connector-mysql`](https://www.npmjs.com/package/loopback-connector-mysql) is Loopback Oracle Connector.\nAffected versions of the package are vulnerable to SQL injection attacks. User-supplied inputs are not properly sanitized before using it in SQL queries. This may allow a remote attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## Remediation\nUpgrade `loopback-connector-mysql` to version 1.5.0 or higher.\n\n## References\n- [Github Issue](https://github.com/strongloop/loopback/issues/983)\n- [Github PR](https://github.com/strongloop/loopback-connector-mysql/pull/67)\n- [Github Commit](https://github.com/strongloop/loopback-connector-mysql/commit/8f1b5a3de23ef1b5ada5f40547b7a2f278d6ece6)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-LOOPBACKCONNECTORMYSQL-10260"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=1.5.0",
+					"vulnerable": "<1.5.0"
+				},
+				"credit": [
+					"Raymond Feng"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"disclosureTime": "2015-01-07T22:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2017-01-04T18:22:12.631Z",
+				"modificationTime": "2016-12-27T12:22:12.631Z",
+				"creationTime": "2016-12-27T12:22:12.631Z",
+				"id": "npm:loopback-connector-mysql:20150108",
+				"alternativeIds": [
+					"SNYK-JS-LOOPBACKCONNECTORMYSQL-10260"
+				]
+			}
+		],
+		"loopback-connector-oracle": [
+			{
+				"title": "SQL Injection",
+				"moduleName": "loopback-connector-oracle",
+				"description": "## Overview\n[`loopback-connector-oracle`](https://www.npmjs.com/package/loopback-connector-oracle) is Loopback Oracle Connector.\nAffected versions of the package are vulnerable to SQL injection attacks. User-supplied inputs are not properly sanitized before using it in SQL queries. This may allow a remote attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## Remediation\nUpgrade `loopback-connector-oracle` to version 1.5.0 or higher.\n\n## References\n- [Github Issue](https://github.com/strongloop/loopback/issues/983)\n- [Github PR](https://github.com/strongloop/loopback-connector-oracle/pull/28)\n- [Github Commit](https://github.com/strongloop/loopback-connector-oracle/commit/29128e79000382011fc30c2aec98a24b0668273e)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-LOOPBACKCONNECTORORACLE-10261"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=1.5.0",
+					"vulnerable": "<1.5.0"
+				},
+				"credit": [
+					"Raymond Feng"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"disclosureTime": "2015-01-07T22:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2017-01-04T18:22:12.631Z",
+				"modificationTime": "2016-12-27T12:22:12.631Z",
+				"creationTime": "2016-12-27T12:22:12.631Z",
+				"id": "npm:loopback-connector-oracle:20150108",
+				"alternativeIds": [
+					"SNYK-JS-LOOPBACKCONNECTORORACLE-10261"
+				]
+			}
+		],
+		"loopback-connector-postgresql": [
+			{
+				"title": "SQL Injection",
+				"moduleName": "loopback-connector-postgresql",
+				"description": "## Overview\n[`loopback-connector-postgresql`](https://www.npmjs.com/package/loopback-connector-postgresql) is Loopback PostgreSQL Connector.\nAffected versions of the package are vulnerable to SQL injection attacks. User-supplied inputs are not properly sanitized before using it in SQL queries. This may allow a remote attacker to inject or manipulate SQL queries in the back-end database, allowing for the manipulation or disclosure of arbitrary data.\n\n## Remediation\nUpgrade `loopback-connector-postgresql` to version 1.3.0 or higher.\n\n## References\n- [Github Issue](https://github.com/strongloop/loopback/issues/983)\n- [Github PR](https://github.com/strongloop/loopback-connector-postgresql/pull/49)\n- [Github Commit](https://github.com/strongloop/loopback-connector-postgresql/commit/384bbfc3aa0d74f6d0d92a76caf4bd3ca926d626)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-LOOPBACKCONNECTORPOSTGRESQL-10258"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=1.3.0",
+					"vulnerable": "<1.3.0"
+				},
+				"credit": [
+					"Raymond Feng"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"disclosureTime": "2015-01-07T22:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2017-01-04T18:22:12.631Z",
+				"modificationTime": "2016-12-27T12:22:12.631Z",
+				"creationTime": "2016-12-27T12:22:12.631Z",
+				"id": "npm:loopback-connector-postgresql:20150108",
+				"alternativeIds": [
+					"SNYK-JS-LOOPBACKCONNECTORPOSTGRESQL-10258"
+				]
+			}
+		],
 		"macaca-chromedriver": [
 			{
 				"title": "Resources downloaded over insecure protocol",
@@ -4895,6 +6775,41 @@
 				"id": "npm:macaca-chromedriver:20161102",
 				"alternativeIds": [
 					"SNYK-JS-MACACACHROMEDRIVER-10242"
+				]
+			}
+		],
+		"macaca-chromedriver-zxa": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T16:07:14.000Z",
+				"modificationTime": "2017-01-01T16:07:14.000Z",
+				"publicationTime": "2017-01-04T03:59:47.000Z",
+				"disclosureTime": "2017-01-01T16:07:14.000Z",
+				"description": "## Overview\n[`macaca-chromedriver-zxa`](https://www.npmjs.com/package/macaca-chromedriver-zxa) is a Node.js wrapper for the selenium chromedriver.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `macaca-chromedriver-zxa`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 221,
+					"ALTERNATIVE": [
+						"SNYK-JS-MACACACHROMEDRIVERZXA-10364"
+					]
+				},
+				"patches": [],
+				"moduleName": "macaca-chromedriver-zxa",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:macaca-chromedriver-zxa:20170101",
+				"alternativeIds": [
+					"SNYK-JS-MACACACHROMEDRIVERZXA-10364"
 				]
 			}
 		],
@@ -4979,6 +6894,41 @@
 				"id": "npm:mapbox.js:20160112",
 				"alternativeIds": [
 					"SNYK-JS-MAPBOXJS-10077"
+				]
+			}
+		],
+		"marionette-socket-host": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:24:31.000Z",
+				"modificationTime": "2017-01-01T19:24:31.000Z",
+				"publicationTime": "2017-01-04T04:16:17.000Z",
+				"disclosureTime": "2017-01-01T19:24:31.000Z",
+				"description": "## Overview\n[`marionette-socket-host`](https://www.npmjs.com/package/marionette-socket-host) is a marionette-js-runner host for sending actions over a socket.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `marionette-socket-host`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 252,
+					"ALTERNATIVE": [
+						"SNYK-JS-MARIONETTESOCKETHOST-10311"
+					]
+				},
+				"patches": [],
+				"moduleName": "marionette-socket-host",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:marionette-socket-host:20170101",
+				"alternativeIds": [
+					"SNYK-JS-MARIONETTESOCKETHOST-10311"
 				]
 			}
 		],
@@ -5232,6 +7182,41 @@
 				]
 			}
 		],
+		"massif": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:48:24.000Z",
+				"modificationTime": "2017-01-02T04:48:24.000Z",
+				"publicationTime": "2017-01-04T04:28:30.000Z",
+				"disclosureTime": "2017-01-02T04:48:24.000Z",
+				"description": "## Overview\n[`massif`](https://www.npmjs.com/package/massif) is a Phantomjs fork.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `massif`.\n\n## References\n- [Vulnerable Code](https://github.com/gaelb/massif/blob/master/install.js#L23)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 290,
+					"ALTERNATIVE": [
+						"SNYK-JS-MASSIF-10335"
+					]
+				},
+				"patches": [],
+				"moduleName": "massif",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:massif:20170102",
+				"alternativeIds": [
+					"SNYK-JS-MASSIF-10335"
+				]
+			}
+		],
 		"millisecond": [
 			{
 				"title": "Regular Expression Denial of Service",
@@ -5473,6 +7458,41 @@
 				]
 			}
 		],
+		"mongodb-instance": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2016-12-29T17:23:19.000Z",
+				"modificationTime": "2016-12-29T17:23:19.000Z",
+				"publicationTime": "2017-01-04T00:24:46.000Z",
+				"disclosureTime": "2016-11-02T17:23:19.000Z",
+				"description": "## Overview\n[`mongodb-instance`](https://www.npmjs.com/package/mongodb-instance) installs mongodb locally.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nUpdate to version `0.0.3` or later.\n\n## References\n- [Github Commit](https://github.com/Janpot/mongodb-instance/commit/c8fea750f8020ace8410c442b2684b33a9fddd3b)\n",
+				"semver": {
+					"vulnerable": "<0.0.3",
+					"unaffected": ">=0.0.3"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 235,
+					"ALTERNATIVE": [
+						"SNYK-JS-MONGODBINSTANCE-10268"
+					]
+				},
+				"patches": [],
+				"moduleName": "mongodb-instance",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:mongodb-instance:20161102",
+				"alternativeIds": [
+					"SNYK-JS-MONGODBINSTANCE-10268"
+				]
+			}
+		],
 		"mongoose": [
 			{
 				"title": "Denial of Service (DoS) via Infinite Loop",
@@ -5526,7 +7546,6 @@
 						"CWE-201"
 					],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-MONGOOSE-10081"
 					]
@@ -5768,7 +7787,6 @@
 						"CWE-79"
 					],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-MUSTACHE-10046"
 					]
@@ -5836,20 +7854,54 @@
 		],
 		"mysql": [
 			{
+				"title": "Unauthorized SSL Connection to to lack of cert authentication",
+				"moduleName": "mysql",
+				"description": "## Overview\n[`mysql`](https://www.npmjs.com/package/mysql) is a node.js driver for mysql.\nAffected versions of this package do not validate that the remote server has a trusted SSL certificate or not, making it easier for attackers to gain access to the MySQL Server.\n\n## Remediation\nUpgrade `mysql` to version 2.3.0 or higher.\n\n## References\n- [Github Issue](https://github.com/mysqljs/mysql/issues/816)\n- [Github Commit]( https://github.com/mysqljs/mysql/commit/f03bf567ba64008c09a773858338c01842ed76db)\n",
+				"language": "js",
+				"packageManager": "npm",
+				"identifiers": {
+					"CWE": [
+						"CWE-285"
+					],
+					"CVE": [],
+					"ALTERNATIVE": [
+						"SNYK-JS-MYSQL-10263"
+					]
+				},
+				"severity": "medium",
+				"semver": {
+					"unaffected": ">=2.3.0",
+					"vulnerable": "<2.3.0 >=2.0.0"
+				},
+				"credit": [
+					"Douglas Wilson"
+				],
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+				"disclosureTime": "2014-05-13T21:00:00.000Z",
+				"patches": [],
+				"publicationTime": "2017-01-04T18:36:45.767Z",
+				"modificationTime": "2016-12-28T11:36:45.767Z",
+				"creationTime": "2016-12-28T11:36:45.767Z",
+				"id": "npm:mysql:20140514",
+				"alternativeIds": [
+					"SNYK-JS-MYSQL-10263"
+				]
+			},
+			{
 				"title": "SQL Injection due to unescaped object keys",
 				"credit": [
 					"Sébastian Dejonghe"
 				],
 				"creationTime": "2016-01-05T12:38:01.749Z",
-				"modificationTime": "2016-01-05T12:38:01.749Z",
+				"modificationTime": "2016-12-27T12:38:01.749Z",
 				"publicationTime": "2016-01-05T12:38:01.749Z",
-				"description": "## Overview\nColumn identifiers are not properly escaped with `mysql.escape()` and can result in SQL injection vulnerability.\n\n## References\n\n- https://github.com/felixge/node-mysql/issues/342\n- https://github.com/felixge/node-mysql/commit/bc8f3df0694fa876d7858f9d56cb9a9696ef38fa",
+				"description": "## Overview\n[`mysql`](https://www.npmjs.com/package/mysql) is a node.js driver for mysql.\nAffected versions of this package do not properly escape column identifiers with `mysql.escape()` and can result in SQL injection vulnerability.\n\n## Remediation\nUpgrade `mysql` to version >=v2.0.0-alpha8 or higher.\n\n## References\n- [Github Issue](https://github.com/mysqljs/mysql/issues/342)\n- [Github Commit](https://github.com/felixge/node-mysql/commit/bc8f3df0694fa876d7858f9d56cb9a9696ef38fa)\n",
 				"semver": {
-					"vulnerable": "<=v2.0.0-alpha7",
-					"unaffected": ">=v2.0.0-alpha8"
+					"vulnerable": ">=v2.0.0-alpha <v2.0.0-alpha8",
+					"unaffected": ">=v2.0.0-alpha8 || <v2.0.0-alpha"
 				},
-				"CVSSv3": "",
-				"severity": "medium",
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+				"severity": "high",
 				"identifiers": {
 					"CWE": [
 						"CWE-89"
@@ -5868,6 +7920,181 @@
 				"id": "npm:mysql:20151228",
 				"alternativeIds": [
 					"SNYK-JS-MYSQL-10073"
+				]
+			}
+		],
+		"mystem": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T22:12:01.000Z",
+				"modificationTime": "2017-01-01T22:12:01.000Z",
+				"publicationTime": "2017-01-04T04:23:35.000Z",
+				"disclosureTime": "2017-01-01T22:12:01.000Z",
+				"description": "## Overview\n[`mystem`](https://www.npmjs.com/package/mystem) is a Node.js wrapper for MyStem morphology text analyzer by Yandex.ru\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `msystem`.\n\n## References\n- [Vulnerable Code](https://github.com/olebedev/node-mystem/blob/4563fe30b1cd46cf00bde254ac71bfd1cdeccac6/package.json#L8)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 259,
+					"ALTERNATIVE": [
+						"SNYK-JS-MYSTEM-10317"
+					]
+				},
+				"patches": [],
+				"moduleName": "mystem",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:mystem:20170101",
+				"alternativeIds": [
+					"SNYK-JS-MYSTEM-10317"
+				]
+			}
+		],
+		"mystem-fix": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T05:04:06.000Z",
+				"modificationTime": "2017-01-02T05:04:06.000Z",
+				"publicationTime": "2017-01-04T04:33:32.000Z",
+				"disclosureTime": "2017-01-02T05:04:06.000Z",
+				"description": "## Overview\n[`mystem-fix`](https://www.npmjs.com/package/mystem-fix) is a node.js wrapper for MyStem morphology text analyzer by Yandex.ru\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `mystem-fix`.\n\n## References\n- [Vulnerable Code](https://github.com/pulpiks/node-mystem/blob/master/package.json#L8)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 301,
+					"ALTERNATIVE": [
+						"SNYK-JS-MYSTEMFIX-10338"
+					]
+				},
+				"patches": [],
+				"moduleName": "mystem-fix",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:mystem-fix:20170102",
+				"alternativeIds": [
+					"SNYK-JS-MYSTEMFIX-10338"
+				]
+			}
+		],
+		"mystem-wrapper": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:30:11.000Z",
+				"modificationTime": "2017-01-02T04:30:11.000Z",
+				"publicationTime": "2017-01-04T04:25:47.000Z",
+				"disclosureTime": "2017-01-02T04:30:11.000Z",
+				"description": "## Overview\n[`mystem-wrapper`](https://www.npmjs.com/package/mystem-wrapper) is a Yandex mystem app wrapper module.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `mystem-wrapper`.\n\n## References\n- [Vulnerable Code](https://github.com/titarenko/mystem-wrapper/blob/0fd6872c01c8f206dc7e566c3214d5c2e5d2e20f/bin/install-mystem.js#L13)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 280,
+					"ALTERNATIVE": [
+						"SNYK-JS-MYSTEMWRAPPER-10331"
+					]
+				},
+				"patches": [],
+				"moduleName": "mystem-wrapper",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:mystem-wrapper:20170102",
+				"alternativeIds": [
+					"SNYK-JS-MYSTEMWRAPPER-10331"
+				]
+			}
+		],
+		"mystem3": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T16:51:16.000Z",
+				"modificationTime": "2017-01-01T16:51:16.000Z",
+				"publicationTime": "2017-01-04T04:01:11.000Z",
+				"disclosureTime": "2017-01-01T16:51:16.000Z",
+				"description": "## Overview\n[`mystem3`](https://www.npmjs.com/package/mystem3) is a NodeJS wrapper for the Yandex MyStem 3.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `mystem3`.\n\n## References\n- [Vulnerable Code](https://github.com/koorchik/node-mystem3/blob/f91f70b40de9f49bb4225f51bd2c706663d99485/bin/download-mystem.js#L11)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 229,
+					"ALTERNATIVE": [
+						"SNYK-JS-MYSTEM3-10301"
+					]
+				},
+				"patches": [],
+				"moduleName": "mystem3",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:mystem3:20170101",
+				"alternativeIds": [
+					"SNYK-JS-MYSTEM3-10301"
+				]
+			}
+		],
+		"native-opencv": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T22:50:01.000Z",
+				"modificationTime": "2017-01-01T22:50:01.000Z",
+				"publicationTime": "2017-01-04T04:21:37.000Z",
+				"disclosureTime": "2017-01-01T22:50:01.000Z",
+				"description": "## Overview\n[`native-opencv`](https://www.npmjs.com/package/native-opencv) is the OpenCV library installed via npm.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `native-opencv`.\n\n## References\n- [Vulnerable Code](https://github.com/BloodAxe/npm-native-opencv/blob/master/installer.js#L24)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 263,
+					"ALTERNATIVE": [
+						"SNYK-JS-NATIVEOPENCV-10321"
+					]
+				},
+				"patches": [],
+				"moduleName": "native-opencv",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:native-opencv:20170101",
+				"alternativeIds": [
+					"SNYK-JS-NATIVEOPENCV-10321"
 				]
 			}
 		],
@@ -5982,6 +8209,111 @@
 				]
 			}
 		],
+		"node-air-sdk": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:20:23.000Z",
+				"modificationTime": "2017-01-01T19:20:23.000Z",
+				"publicationTime": "2017-01-04T04:15:51.000Z",
+				"disclosureTime": "2017-01-01T19:20:23.000Z",
+				"description": "## Overview\n[`node-air-sdk`](https://www.npmjs.com/package/node-air-sdk) is an AIR SDK for nodejs.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `node-air-sdk`.\n\n## References\n- [Vulnerable Code](https://github.com/alvinlaw/node-air-sdk/blob/master/package.json#L27)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 250,
+					"ALTERNATIVE": [
+						"SNYK-JS-NODEAIRSDK-10310"
+					]
+				},
+				"patches": [],
+				"moduleName": "node-air-sdk",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:node-air-sdk:20170101",
+				"alternativeIds": [
+					"SNYK-JS-NODEAIRSDK-10310"
+				]
+			}
+		],
+		"node-browser": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:32:58.000Z",
+				"modificationTime": "2017-01-01T15:32:58.000Z",
+				"publicationTime": "2017-01-04T03:57:10.000Z",
+				"disclosureTime": "2017-01-01T15:32:58.000Z",
+				"description": "## Overview\n[`node-browser`](https://www.npmjs.com/package/node-browser) is a wrapper webdriver by nodejs.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `node-browser`.\n\n## References\n- [Vulnerable Code](https://github.com/imsobear/node-browser/blob/master/build.js#L15)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 214,
+					"ALTERNATIVE": [
+						"SNYK-JS-NODEBROWSER-10290"
+					]
+				},
+				"patches": [],
+				"moduleName": "node-browser",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:node-browser:20170101",
+				"alternativeIds": [
+					"SNYK-JS-NODEBROWSER-10290"
+				]
+			}
+		],
+		"node-bsdiff-android": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T17:20:35.000Z",
+				"modificationTime": "2017-01-01T17:20:35.000Z",
+				"publicationTime": "2017-01-04T04:13:31.000Z",
+				"disclosureTime": "2017-01-01T17:20:35.000Z",
+				"description": "## Overview\n[`node-bsdiff-android`](https://www.npmjs.com/package/node-bsdiff-android) is a bsdiff APK file.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `node-bsdiff-android`.\n\n## References\n- [Vulnerable Code](https://github.com/arthur-zhang/node-bsdiff-android/blob/master/install.js#L14)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 234,
+					"ALTERNATIVE": [
+						"SNYK-JS-NODEBSDIFFANDROID-10305"
+					]
+				},
+				"patches": [],
+				"moduleName": "node-bsdiff-android",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:node-bsdiff-android:20170101",
+				"alternativeIds": [
+					"SNYK-JS-NODEBSDIFFANDROID-10305"
+				]
+			}
+		],
 		"node-forge": [
 			{
 				"title": "Timing Attack due to unsafe HMAC comparison",
@@ -6048,6 +8380,41 @@
 				"id": "npm:node-krb5:20160804",
 				"alternativeIds": [
 					"SNYK-JS-NODEKRB5-10128"
+				]
+			}
+		],
+		"node-thulac": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T17:25:55.000Z",
+				"modificationTime": "2017-01-01T17:25:55.000Z",
+				"publicationTime": "2017-01-04T04:13:17.000Z",
+				"disclosureTime": "2017-01-01T17:25:55.000Z",
+				"description": "## Overview\n[`node-thulac`](https://www.npmjs.com/package/node-thulac) is a node binding for thulac.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `node-thulac`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 236,
+					"ALTERNATIVE": [
+						"SNYK-JS-NODETHULAC-10356"
+					]
+				},
+				"patches": [],
+				"moduleName": "node-thulac",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:node-thulac:20170101",
+				"alternativeIds": [
+					"SNYK-JS-NODETHULAC-10356"
 				]
 			}
 		],
@@ -6132,6 +8499,41 @@
 				]
 			}
 		],
+		"nodeschnaps": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:29:07.000Z",
+				"modificationTime": "2017-01-01T15:29:07.000Z",
+				"publicationTime": "2017-01-04T03:59:28.000Z",
+				"disclosureTime": "2017-01-01T15:29:07.000Z",
+				"description": "## Overview\n[`nodeschnaps`](https://www.npmjs.com/package/nodeschnaps) is a NodeJS compatibility layer for Java (Rhino).\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `nodeschnaps`.\n\n## References\n- [Vulnerable Code](https://github.com/killmag10/nodeschnaps/blob/13166ad327c8b4ff75325eb069e2ecef77b9dac4/Makefile#L146)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 212,
+					"ALTERNATIVE": [
+						"SNYK-JS-NODESCHNAPS-10288"
+					]
+				},
+				"patches": [],
+				"moduleName": "nodeschnaps",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:nodeschnaps:20170101",
+				"alternativeIds": [
+					"SNYK-JS-NODESCHNAPS-10288"
+				]
+			}
+		],
 		"nodewebkit": [
 			{
 				"title": "Resources downloaded over insecure protocol",
@@ -6209,6 +8611,76 @@
 				]
 			}
 		],
+		"npm-test-sqlite3-trunk": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:58:08.000Z",
+				"modificationTime": "2017-01-02T04:58:08.000Z",
+				"publicationTime": "2017-01-04T04:32:09.000Z",
+				"disclosureTime": "2017-01-02T04:58:08.000Z",
+				"description": "## Overview\n[`npm-test-sqlite3-trunk`](https://www.npmjs.com/package/npm-test-sqlite3-trunk)\nThe npm-test-sqlite3-trunk module provides asynchronous, non-blocking SQLite3 bindings\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `npm-test-sqlite3-trunk`.\n\n## References\n- [Vulnerable Code](https://github.com/mapbox/node-sqlite3/blob/7322ea714b13451bab75d5232a1dd2a05fcb5052/scripts/build_for_node_webkit.cmd#L8)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 297,
+					"ALTERNATIVE": [
+						"SNYK-JS-NPMTESTSQLITE3TRUNK-10337"
+					]
+				},
+				"patches": [],
+				"moduleName": "npm-test-sqlite3-trunk",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:npm-test-sqlite3-trunk:20170102",
+				"alternativeIds": [
+					"SNYK-JS-NPMTESTSQLITE3TRUNK-10337"
+				]
+			}
+		],
+		"ntfserver": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:26:09.000Z",
+				"modificationTime": "2017-01-01T19:26:09.000Z",
+				"publicationTime": "2017-01-04T04:16:54.000Z",
+				"disclosureTime": "2017-01-01T19:26:09.000Z",
+				"description": "## Overview\n[`ntfserver`](https://www.npmjs.com/package/ntfserver) is a Network Testing Framework Server.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `ntfserver`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 253,
+					"ALTERNATIVE": [
+						"SNYK-JS-NTFSERVER-10353"
+					]
+				},
+				"patches": [],
+				"moduleName": "ntfserver",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:ntfserver:20170101",
+				"alternativeIds": [
+					"SNYK-JS-NTFSERVER-10353"
+				]
+			}
+		],
 		"nunjucks": [
 			{
 				"title": "Content & Code Injection (XSS)",
@@ -6231,7 +8703,7 @@
 						"CWE-79"
 					],
 					"CVE": [],
-					"NSP": "",
+					"NSP": 147,
 					"ALTERNATIVE": [
 						"SNYK-JS-NUNJUCKS-10135"
 					]
@@ -6280,6 +8752,146 @@
 				"id": "npm:nw:20161219",
 				"alternativeIds": [
 					"SNYK-JS-NW-10252"
+				]
+			}
+		],
+		"nw-with-arm": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T16:43:28.000Z",
+				"modificationTime": "2017-01-01T16:43:28.000Z",
+				"publicationTime": "2017-01-04T04:02:03.000Z",
+				"disclosureTime": "2017-01-01T16:43:28.000Z",
+				"description": "## Overview\n[`nw-with-arm`](https://www.npmjs.com/package/nw-with-arm) is a NW Installer including ARM-Build.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `nw-with-arm`.\n\n## References\n- [Vulnerable Code](https://github.com/toni89/nw-with-arm/blob/f8cef4d3816bd3388ad0ad8c3e57009fb0afbf79/scripts/install.js#L38)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 226,
+					"ALTERNATIVE": [
+						"SNYK-JS-NWWITHARM-10299"
+					]
+				},
+				"patches": [],
+				"moduleName": "nw-with-arm",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:nw-with-arm:20170101",
+				"alternativeIds": [
+					"SNYK-JS-NWWITHARM-10299"
+				]
+			}
+		],
+		"openframe-ascii-image": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:59:28.000Z",
+				"modificationTime": "2017-01-02T04:59:28.000Z",
+				"publicationTime": "2017-01-04T04:30:36.000Z",
+				"disclosureTime": "2017-01-02T04:59:28.000Z",
+				"description": "## Overview\n[`openframe-ascii-image`](https://www.npmjs.com/package/openframe-ascii-image) module is an openframe plugin which adds support for ascii images via fim.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `openframe-ascii-image`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 298,
+					"ALTERNATIVE": [
+						"SNYK-JS-OPENFRAMEASCIIIMAGE-10342"
+					]
+				},
+				"patches": [],
+				"moduleName": "openframe-ascii-image",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:openframe-ascii-image:20170102",
+				"alternativeIds": [
+					"SNYK-JS-OPENFRAMEASCIIIMAGE-10342"
+				]
+			}
+		],
+		"openframe-glslviewer": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:22:22.000Z",
+				"modificationTime": "2017-01-01T15:22:22.000Z",
+				"publicationTime": "2017-01-04T02:28:15.000Z",
+				"disclosureTime": "2017-01-01T15:22:22.000Z",
+				"description": "## Overview\n[`openframe-glslviewer`](https://www.npmjs.com/package/openframe-glslviewer) is a Openframe extension which adds support for shaders via glslViewer.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `openframe-glslviewer`.\n\n## References\n- [Vulnerable Code](https://github.com/OpenframeProject/Openframe-glslViewer/blob/master/install.sh#L43)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 208,
+					"ALTERNATIVE": [
+						"SNYK-JS-OPENFRAMEGLSLVIEWER-10362"
+					]
+				},
+				"patches": [],
+				"moduleName": "openframe-glslviewer",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:openframe-glslviewer:20170101",
+				"alternativeIds": [
+					"SNYK-JS-OPENFRAMEGLSLVIEWER-10362"
+				]
+			}
+		],
+		"openframe-image": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:39:16.000Z",
+				"modificationTime": "2017-01-01T15:39:16.000Z",
+				"publicationTime": "2017-01-04T03:56:23.000Z",
+				"disclosureTime": "2017-01-01T15:39:16.000Z",
+				"description": "## Overview\n[`openframe-image`](https://www.npmjs.com/package/openframe-image) is an Openframe extension which adds support for images via fbi.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `openframe-image`.\n\n## References\n- [Vulnerable Code](https://github.com/OpenframeProject/Openframe-Image/blob/master/install.sh#L40)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 218,
+					"ALTERNATIVE": [
+						"SNYK-JS-OPENFRAMEIMAGE-10293"
+					]
+				},
+				"patches": [],
+				"moduleName": "openframe-image",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:openframe-image:20170101",
+				"alternativeIds": [
+					"SNYK-JS-OPENFRAMEIMAGE-10293"
 				]
 			}
 		],
@@ -6394,6 +9006,76 @@
 				]
 			}
 		],
+		"pennyworth": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:31:09.000Z",
+				"modificationTime": "2017-01-01T15:31:09.000Z",
+				"publicationTime": "2017-01-04T03:58:39.000Z",
+				"disclosureTime": "2017-01-01T15:31:09.000Z",
+				"description": "## Overview\n[`pennyworth`](https://www.npmjs.com/package/pennyworth) is a natural language templating engine.\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `pennyworth`.\n\n## References\n- [Vulnerable Code](https://github.com/karimsa/pennyworth/blob/5b2fc2f9d2a944637d874557de2392c390ba385d/package.json#L20)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 213,
+					"ALTERNATIVE": [
+						"SNYK-JS-PENNYWORTH-10289"
+					]
+				},
+				"patches": [],
+				"moduleName": "pennyworth",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:pennyworth:20170101",
+				"alternativeIds": [
+					"SNYK-JS-PENNYWORTH-10289"
+				]
+			}
+		],
+		"phantomjs-cheniu": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T22:47:13.000Z",
+				"modificationTime": "2017-01-01T22:47:13.000Z",
+				"publicationTime": "2017-01-04T04:23:20.000Z",
+				"disclosureTime": "2017-01-01T22:47:13.000Z",
+				"description": "## Overview\n[`phantomjs-cheniu`](https://www.npmjs.com/package/phantomjs-cheniu) is a Headless WebKit with JS API\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `phantomjs-cheniu`.\n\n## References\n- [Vulnerable Code](https://github.com/Medium/phantomjs/blob/ae83e7abf7c5551041812e234c7749ea412b7288/install.js#L264)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 262,
+					"ALTERNATIVE": [
+						"SNYK-JS-PHANTOMJSCHENIU-10320"
+					]
+				},
+				"patches": [],
+				"moduleName": "phantomjs-cheniu",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:phantomjs-cheniu:20170101",
+				"alternativeIds": [
+					"SNYK-JS-PHANTOMJSCHENIU-10320"
+				]
+			}
+		],
 		"pivottable": [
 			{
 				"title": "Cross-site Scripting (XSS)",
@@ -6428,6 +9110,41 @@
 				"id": "npm:pivottable:20160817",
 				"alternativeIds": [
 					"SNYK-JS-PIVOTTABLE-10132"
+				]
+			}
+		],
+		"pk-app-wonderbox": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:47:07.000Z",
+				"modificationTime": "2017-01-02T04:47:07.000Z",
+				"publicationTime": "2017-01-04T04:28:45.000Z",
+				"disclosureTime": "2017-01-02T04:47:07.000Z",
+				"description": "## Overview\n[`pk-app-wonderbox`](https://www.npmjs.com/package/pk-app-wonderbox) is an integration with wonderbox.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `pk-app-wonderbox`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 289,
+					"ALTERNATIVE": [
+						"SNYK-JS-PKAPPWONDERBOX-10344"
+					]
+				},
+				"patches": [],
+				"moduleName": "pk-app-wonderbox",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:pk-app-wonderbox:20170102",
+				"alternativeIds": [
+					"SNYK-JS-PKAPPWONDERBOX-10344"
 				]
 			}
 		],
@@ -6500,6 +9217,41 @@
 				]
 			}
 		],
+		"pm2-kafka": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T05:00:49.000Z",
+				"modificationTime": "2017-01-02T05:00:49.000Z",
+				"publicationTime": "2017-01-04T04:30:52.000Z",
+				"disclosureTime": "2017-01-02T05:00:49.000Z",
+				"description": "## Overview\n[`pm2-kafka`](https://www.npmjs.com/package/pm2-kafka) is a PM2 module that installs and runs a kafka server\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `pm2-kafka`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 299,
+					"ALTERNATIVE": [
+						"SNYK-JS-PM2KAFKA-10341"
+					]
+				},
+				"patches": [],
+				"moduleName": "pm2-kafka",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:pm2-kafka:20170102",
+				"alternativeIds": [
+					"SNYK-JS-PM2KAFKA-10341"
+				]
+			}
+		],
 		"pngcrush-installer": [
 			{
 				"title": "Resources downloaded over insecure protocol",
@@ -6534,6 +9286,41 @@
 				"id": "npm:pngcrush-installer:20161104",
 				"alternativeIds": [
 					"SNYK-JS-PNGCRUSHINSTALLER-10245"
+				]
+			}
+		],
+		"poco": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T01:29:30.000Z",
+				"modificationTime": "2017-01-02T01:29:30.000Z",
+				"publicationTime": "2017-01-04T04:21:54.000Z",
+				"disclosureTime": "2017-01-02T01:29:30.000Z",
+				"description": "## Overview\n[`poco`](https://www.npmjs.com/package/poco) - The POCO libraries - development release (1.5.4).\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `poco`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 271,
+					"ALTERNATIVE": [
+						"SNYK-JS-POCO-10348"
+					]
+				},
+				"patches": [],
+				"moduleName": "poco",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:poco:20170102",
+				"alternativeIds": [
+					"SNYK-JS-POCO-10348"
 				]
 			}
 		],
@@ -6605,6 +9392,41 @@
 				"id": "npm:pouchdb:20160830",
 				"alternativeIds": [
 					"SNYK-JS-POUCHDB-10153"
+				]
+			}
+		],
+		"prebuild-lwip": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:16:27.000Z",
+				"modificationTime": "2017-01-01T19:16:27.000Z",
+				"publicationTime": "2017-01-04T04:17:35.000Z",
+				"disclosureTime": "2017-01-01T19:16:27.000Z",
+				"description": "## Overview\n[`prebuild-lwip`](https://www.npmjs.com/package/prebuild-lwip) is a comprehensive, fast, and simple image processing and manipulation package.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `prebuild-lwip`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 248,
+					"ALTERNATIVE": [
+						"SNYK-JS-PREBUILDLWIP-10370"
+					]
+				},
+				"patches": [],
+				"moduleName": "prebuild-lwip",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:prebuild-lwip:20170101",
+				"alternativeIds": [
+					"SNYK-JS-PREBUILDLWIP-10370"
 				]
 			}
 		],
@@ -6731,6 +9553,41 @@
 				]
 			}
 		],
+		"qbs": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T01:03:04.000Z",
+				"modificationTime": "2017-01-02T01:03:04.000Z",
+				"publicationTime": "2017-01-04T04:20:31.000Z",
+				"disclosureTime": "2017-01-02T01:03:04.000Z",
+				"description": "## Overview\n[`qbs`](https://www.npmjs.com/package/qbs) is a build tool that helps simplify the build process for developing projects across multiple platforms.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `qbs`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 266,
+					"ALTERNATIVE": [
+						"SNYK-JS-QBS-10352"
+					]
+				},
+				"patches": [],
+				"moduleName": "qbs",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:qbs:20170102",
+				"alternativeIds": [
+					"SNYK-JS-QBS-10352"
+				]
+			}
+		],
 		"qs": [
 			{
 				"title": "Denial of Service (Memory Exhaustion)",
@@ -6841,6 +9698,76 @@
 				"id": "npm:qs:20140806-1",
 				"alternativeIds": [
 					"SNYK-JS-QS-10020"
+				]
+			}
+		],
+		"react-native-baidu-voice-synthesizer": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T05:05:15.000Z",
+				"modificationTime": "2017-01-02T05:05:15.000Z",
+				"publicationTime": "2017-01-04T04:32:48.000Z",
+				"disclosureTime": "2017-01-02T05:05:15.000Z",
+				"description": "## Overview\n[`react-native-baidu-voice-synthesizer`](https://www.npmjs.com/package/react-native-baidu-voice-synthesizer) is a baidu voice speech synthesizer for react native.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `react-native-baidu-voice-synthesizer`.\n\n## References\n- [Vulnerable Code](https://github.com/react-melon/react-native-baidu-voice-synthesizer/blob/72bb361fc9d4885b723727f8613ef5a915293907/scripts/install-sdk.js#L6)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 302,
+					"ALTERNATIVE": [
+						"SNYK-JS-REACTNATIVEBAIDUVOICESYNTHESIZER-10339"
+					]
+				},
+				"patches": [],
+				"moduleName": "react-native-baidu-voice-synthesizer",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:react-native-baidu-voice-synthesizer:20170102",
+				"alternativeIds": [
+					"SNYK-JS-REACTNATIVEBAIDUVOICESYNTHESIZER-10339"
+				]
+			}
+		],
+		"redis-srvr": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T17:29:08.000Z",
+				"modificationTime": "2017-01-01T17:29:08.000Z",
+				"publicationTime": "2017-01-04T04:13:00.000Z",
+				"disclosureTime": "2017-01-01T17:29:08.000Z",
+				"description": "## Overview\n[`redis-srvr`](https://www.npmjs.com/package/redis-srvr) is an npm wrapper for redis-server.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `redis-srvr`.\n\n## References\n- [Vulnerable Code](https://github.com/lennym/redis-srvr/blob/master/install.sh#L1)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 238,
+					"ALTERNATIVE": [
+						"SNYK-JS-REDISSRVR-10306"
+					]
+				},
+				"patches": [],
+				"moduleName": "redis-srvr",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:redis-srvr:20170101",
+				"alternativeIds": [
+					"SNYK-JS-REDISSRVR-10306"
 				]
 			}
 		],
@@ -7010,7 +9937,6 @@
 						"CWE-201"
 					],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-REQUEST-10088"
 					]
@@ -7108,6 +10034,41 @@
 				]
 			}
 		],
+		"resourcehacker": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:29:52.000Z",
+				"modificationTime": "2017-01-01T19:29:52.000Z",
+				"publicationTime": "2017-01-04T04:15:36.000Z",
+				"disclosureTime": "2017-01-01T19:29:52.000Z",
+				"description": "## Overview\n[`resourcehacker`](https://www.npmjs.com/package/resourcehacker) is a Node wrapper of Resource Hacker (windows executable resource editor).\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `resourcehacker`.\n\n## References\n- [Vulnerable Code](https://github.com/felicienfrancois/node-resourcehacker/blob/13f71e9e0c46788f6eff5a7e82b6fa11a0a3dde4/scripts/install.js#L4)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 254,
+					"ALTERNATIVE": [
+						"SNYK-JS-RESOURCEHACKER-10312"
+					]
+				},
+				"patches": [],
+				"moduleName": "resourcehacker",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:resourcehacker:20170101",
+				"alternativeIds": [
+					"SNYK-JS-RESOURCEHACKER-10312"
+				]
+			}
+		],
 		"restafary": [
 			{
 				"title": "Directory Traversal",
@@ -7182,6 +10143,111 @@
 				]
 			}
 		],
+		"robot-js": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:06:06.000Z",
+				"modificationTime": "2017-01-01T15:06:06.000Z",
+				"publicationTime": "2017-01-04T02:28:23.000Z",
+				"disclosureTime": "2017-01-01T15:06:06.000Z",
+				"description": "## Overview\n[`robot-js`](https://www.npmjs.com/package/robot-js) is a module for native system automation for node.js.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `robot-js`.\n\n## References\n- [Vulnerable Code](https://github.com/Robot/robot-js/blob/84db11e72404977efb270b1185c2a8d1fcb81016/Native/Install.js#L23)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 201,
+					"ALTERNATIVE": [
+						"SNYK-JS-ROBOTJS-10279"
+					]
+				},
+				"patches": [],
+				"moduleName": "robot-js",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:robot-js:20170101",
+				"alternativeIds": [
+					"SNYK-JS-ROBOTJS-10279"
+				]
+			}
+		],
+		"roslib-socketio": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:51:20.000Z",
+				"modificationTime": "2017-01-02T04:51:20.000Z",
+				"publicationTime": "2017-01-04T04:28:25.000Z",
+				"disclosureTime": "2017-01-02T04:51:20.000Z",
+				"description": "## Overview\n[`roslib-socketio`](https://www.npmjs.com/package/roslib-socketio) is the standard ROS Javascript Library fork for add support to socket.io.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `roslib-socketio`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 292,
+					"ALTERNATIVE": [
+						"SNYK-JS-ROSLIBSOCKETIO-10367"
+					]
+				},
+				"patches": [],
+				"moduleName": "roslib-socketio",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:roslib-socketio:20170102",
+				"alternativeIds": [
+					"SNYK-JS-ROSLIBSOCKETIO-10367"
+				]
+			}
+		],
+		"rs-brightcove": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T01:33:26.000Z",
+				"modificationTime": "2017-01-02T01:33:26.000Z",
+				"publicationTime": "2017-01-04T04:26:16.000Z",
+				"disclosureTime": "2017-01-02T01:33:26.000Z",
+				"description": "## Overview\n[`rs-brightcove`](https://www.npmjs.com/package/rs-brightcove) is a wrapper around brightcove's web api\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `rs-brightcove`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 273,
+					"ALTERNATIVE": [
+						"SNYK-JS-RSBRIGHTCOVE-10347"
+					]
+				},
+				"patches": [],
+				"moduleName": "rs-brightcove",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:rs-brightcove:20170102",
+				"alternativeIds": [
+					"SNYK-JS-RSBRIGHTCOVE-10347"
+				]
+			}
+		],
 		"sails": [
 			{
 				"title": "Broken CORS",
@@ -7192,6 +10258,7 @@
 				"identifiers": {
 					"CWE": [],
 					"CVE": [],
+					"NSP": 148,
 					"ALTERNATIVE": [
 						"SNYK-JS-SAILS-10159"
 					]
@@ -7230,7 +10297,6 @@
 				"identifiers": {
 					"CWE": [],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-SANITIZEHTML-10048"
 					]
@@ -7281,6 +10347,111 @@
 				"id": "npm:sanitize-html:20160801",
 				"alternativeIds": [
 					"SNYK-JS-SANITIZEHTML-10127"
+				]
+			}
+		],
+		"sauce-connect": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T00:09:53.000Z",
+				"modificationTime": "2017-01-01T00:09:53.000Z",
+				"publicationTime": "2017-01-04T01:42:58.000Z",
+				"disclosureTime": "2017-01-01T00:09:53.000Z",
+				"description": "## Overview\n[`sauce-connect`](https://www.npmjs.com/package/sauce-connect) is a Node.js wrapper over the SauceLabs SauceConnect.jar program for establishing a secure tunnel for intranet testing.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `sauce-connect`.\n\n## References\n- [Github Repo](https://github.com/ddopson/node-sauce-connect)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 186,
+					"ALTERNATIVE": [
+						"SNYK-JS-SAUCECONNECT-10272"
+					]
+				},
+				"patches": [],
+				"moduleName": "sauce-connect",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:sauce-connect:20170101",
+				"alternativeIds": [
+					"SNYK-JS-SAUCECONNECT-10272"
+				]
+			}
+		],
+		"scala-bin": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T16:45:51.000Z",
+				"modificationTime": "2017-01-01T16:45:51.000Z",
+				"publicationTime": "2017-01-04T04:01:30.000Z",
+				"disclosureTime": "2017-01-01T16:45:51.000Z",
+				"description": "## Overview\n[`scala-bin`](https://www.npmjs.com/package/scala-bin) is a binary wrapper for Scala.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `scala-bin`.\n\n## References\n- [Vulnerable Code](https://github.com/k-kinzal/scala-bin/blob/d1adabc323ebc63d704b0347f61ff686fbf6a923/src/common.js#L11)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 227,
+					"ALTERNATIVE": [
+						"SNYK-JS-SCALABIN-10300"
+					]
+				},
+				"patches": [],
+				"moduleName": "scala-bin",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:scala-bin:20170101",
+				"alternativeIds": [
+					"SNYK-JS-SCALABIN-10300"
+				]
+			}
+		],
+		"scalajs-standalone-bin": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T17:15:40.000Z",
+				"modificationTime": "2017-01-01T17:15:40.000Z",
+				"publicationTime": "2017-01-04T04:08:42.000Z",
+				"disclosureTime": "2017-01-01T17:15:40.000Z",
+				"description": "## Overview\n[`scalajs-standalone-bin`](https://www.npmjs.com/package/scalajs-standalone-bin) is a Binary wrapper for ScalaJS.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `scala-standalone-bin`.\n\n## References\n- [Vulnerable Code](https://github.com/k-kinzal/scalajs-standalone-bin/blob/0298772d1e1cad8bfabd56ec901dc385f0805a6d/src/common.js#L12)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 231,
+					"ALTERNATIVE": [
+						"SNYK-JS-SCALAJSSTANDALONEBIN-10302"
+					]
+				},
+				"patches": [],
+				"moduleName": "scalajs-standalone-bin",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:scalajs-standalone-bin:20170101",
+				"alternativeIds": [
+					"SNYK-JS-SCALAJSSTANDALONEBIN-10302"
 				]
 			}
 		],
@@ -7368,6 +10539,41 @@
 				]
 			}
 		],
+		"selenium-chromedriver": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T16:09:53.000Z",
+				"modificationTime": "2017-01-01T16:09:53.000Z",
+				"publicationTime": "2017-01-04T03:59:57.000Z",
+				"disclosureTime": "2017-01-01T16:09:53.000Z",
+				"description": "## Overview\n[`selenium-chromedriver`](https://www.npmjs.com/package/selenium-chromedriver) is a simple utility for downloading the Selenium Webdriver for Google Chrome.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `selenium-chromedriver`.\n\n## References\n- [Vulnerable Code](https://github.com/jugglinmike/selenium-chromedriver/blob/985816c137ce6d4ae16f4d6721c89ba2d6e2344f/install/index.js#L93)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 222,
+					"ALTERNATIVE": [
+						"SNYK-JS-SELENIUMCHROMEDRIVER-10295"
+					]
+				},
+				"patches": [],
+				"moduleName": "selenium-chromedriver",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:selenium-chromedriver:20170101",
+				"alternativeIds": [
+					"SNYK-JS-SELENIUMCHROMEDRIVER-10295"
+				]
+			}
+		],
 		"selenium-download": [
 			{
 				"title": "Resources downloaded over insecure protocol",
@@ -7400,6 +10606,111 @@
 				"id": "npm:selenium-download:20161102",
 				"alternativeIds": [
 					"SNYK-JS-SELENIUMDOWNLOAD-10223"
+				]
+			}
+		],
+		"selenium-portal": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T22:14:21.000Z",
+				"modificationTime": "2017-01-01T22:14:21.000Z",
+				"publicationTime": "2017-01-04T04:23:54.000Z",
+				"disclosureTime": "2017-01-01T22:14:21.000Z",
+				"description": "## Overview\n[`selenium-portal`](https://www.npmjs.com/package/selenium-portal) is a Selenium Testing Framework\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `selenium-portal`.\n\n## References\n- [Vulnerable Code](https://github.com/selenium-portal/portal/blob/af77a3986f36c35397098934bdfa32307514db0a/bin/scripts/preinstall.sh#L6)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 260,
+					"ALTERNATIVE": [
+						"SNYK-JS-SELENIUMPORTAL-10318"
+					]
+				},
+				"patches": [],
+				"moduleName": "selenium-portal",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:selenium-portal:20170101",
+				"alternativeIds": [
+					"SNYK-JS-SELENIUMPORTAL-10318"
+				]
+			}
+		],
+		"selenium-standalone-painful": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:36:49.000Z",
+				"modificationTime": "2017-01-02T04:36:49.000Z",
+				"publicationTime": "2017-01-04T04:26:31.000Z",
+				"disclosureTime": "2017-01-02T04:36:49.000Z",
+				"description": "## Overview\n[`selenium-standalone-painful`](https://www.npmjs.com/package/selenium-standalone-painful) installs a start-selenium command line to start a standalone selenium server with chrome-driver.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `selenium-standalone-painful`.\n\n## References\n- [Vulnerable Code](https://github.com/bevacqua/selenium-standalone-painful/blob/15e50489d2279f8bccbac11050df34dc97fefe8d/install.js#L54)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 284,
+					"ALTERNATIVE": [
+						"SNYK-JS-SELENIUMSTANDALONEPAINFUL-10333"
+					]
+				},
+				"patches": [],
+				"moduleName": "selenium-standalone-painful",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:selenium-standalone-painful:20170102",
+				"alternativeIds": [
+					"SNYK-JS-SELENIUMSTANDALONEPAINFUL-10333"
+				]
+			}
+		],
+		"selenium-wrapper": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T16:17:07.000Z",
+				"modificationTime": "2017-01-01T16:17:07.000Z",
+				"publicationTime": "2017-01-04T04:01:45.000Z",
+				"disclosureTime": "2017-01-01T16:17:07.000Z",
+				"description": "## Overview\n[`selenium-wrapper`](https://www.npmjs.com/package/selenium-wrapper) is a selenium server wrapper, including installation and chrome webdriver.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `selenium-wrapper`.\n\n## References\n- [Vulnerable Code](https://github.com/arian/selenium-wrapper/blob/0b6d75021f54c1dd2a1be8c227e37b8c237723d0/install.js#L11)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 224,
+					"ALTERNATIVE": [
+						"SNYK-JS-SELENIUMWRAPPER-10297"
+					]
+				},
+				"patches": [],
+				"moduleName": "selenium-wrapper",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:selenium-wrapper:20170101",
+				"alternativeIds": [
+					"SNYK-JS-SELENIUMWRAPPER-10297"
 				]
 			}
 		],
@@ -7686,7 +10997,6 @@
 						"CWE-89"
 					],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-SEQUELIZE-10094"
 					]
@@ -7903,6 +11213,41 @@
 				]
 			}
 		],
+		"serc.js": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:11:37.000Z",
+				"modificationTime": "2017-01-02T04:11:37.000Z",
+				"publicationTime": "2017-01-04T04:26:28.000Z",
+				"disclosureTime": "2017-01-02T04:11:37.000Z",
+				"description": "## Overview\n[`serc.js`](https://www.npmjs.com/package/serc.js) is a Selenium RC process wrapper\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `serc.js`.\n\n## References\n- [Vulnerable Code](https://github.com/nowk/serc.js/blob/5237d4955eb8bfed9fa42769d016d5b3596343da/scripts/install.js#L5)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 277,
+					"ALTERNATIVE": [
+						"SNYK-JS-SERCJS-10329"
+					]
+				},
+				"patches": [],
+				"moduleName": "serc.js",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:serc.js:20170102",
+				"alternativeIds": [
+					"SNYK-JS-SERCJS-10329"
+				]
+			}
+		],
 		"serve-index": [
 			{
 				"title": "Cross-Site Scripting due to improper file and directory names escaping",
@@ -8013,7 +11358,6 @@
 						"CWE-211"
 					],
 					"CVE": [],
-					"NSP": "",
 					"ALTERNATIVE": [
 						"SNYK-JS-SERVESTATIC-10034"
 					]
@@ -8029,6 +11373,41 @@
 				"id": "npm:serve-static:20150120",
 				"alternativeIds": [
 					"SNYK-JS-SERVESTATIC-10034"
+				]
+			}
+		],
+		"sfml": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:32:40.000Z",
+				"modificationTime": "2017-01-01T19:32:40.000Z",
+				"publicationTime": "2017-01-04T04:18:11.000Z",
+				"disclosureTime": "2017-01-01T19:32:40.000Z",
+				"description": "## Overview\n[`sfml`](https://www.npmjs.com/package/sfml) is Node v8 Bindings for SFML.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `sfml`.\n\n## References\n- [Vulnerable Code](https://github.com/bmeck/node-sfml/blob/master/install#L32)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 256,
+					"ALTERNATIVE": [
+						"SNYK-JS-SFML-10314"
+					]
+				},
+				"patches": [],
+				"moduleName": "sfml",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:sfml:20170101",
+				"alternativeIds": [
+					"SNYK-JS-SFML-10314"
 				]
 			}
 		],
@@ -8126,6 +11505,76 @@
 				]
 			}
 		],
+		"slimerjs-edge": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T18:58:24.000Z",
+				"modificationTime": "2017-01-01T18:58:24.000Z",
+				"publicationTime": "2017-01-04T04:14:35.000Z",
+				"disclosureTime": "2017-01-01T18:58:24.000Z",
+				"description": "## Overview\n[`slimerjs-edge`](https://www.npmjs.com/package/slimerjs-edge) is an npm wrapper for installing the bleeding edge version of slimerjs.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `slimerjs-edge`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 243,
+					"ALTERNATIVE": [
+						"SNYK-JS-SLIMERJSEDGE-10374"
+					]
+				},
+				"patches": [],
+				"moduleName": "slimerjs-edge",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:slimerjs-edge:20170101",
+				"alternativeIds": [
+					"SNYK-JS-SLIMERJSEDGE-10374"
+				]
+			}
+		],
+		"soci": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T01:27:34.000Z",
+				"modificationTime": "2017-01-02T01:27:34.000Z",
+				"publicationTime": "2017-01-04T04:24:05.000Z",
+				"disclosureTime": "2017-01-02T01:27:34.000Z",
+				"description": "## Overview\n[`soci`](https://www.npmjs.com/package/soci) is a db wrapper library for soci 3.2.2.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `soci`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 270,
+					"ALTERNATIVE": [
+						"SNYK-JS-SOCI-10349"
+					]
+				},
+				"patches": [],
+				"moduleName": "soci",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:soci:20170102",
+				"alternativeIds": [
+					"SNYK-JS-SOCI-10349"
+				]
+			}
+		],
 		"st": [
 			{
 				"title": "Directory Traversal",
@@ -8209,6 +11658,41 @@
 				"id": "npm:steroids:20161219",
 				"alternativeIds": [
 					"SNYK-JS-STEROIDS-10248"
+				]
+			}
+		],
+		"strider-sauce": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:08:28.000Z",
+				"modificationTime": "2017-01-01T15:08:28.000Z",
+				"publicationTime": "2017-01-04T02:29:00.000Z",
+				"disclosureTime": "2016-11-30T15:08:28.000Z",
+				"description": "## Overview\n[`strider-sauce`](https://www.npmjs.com/package/strider-sauce) is Sauce Labs / Selenium support for Strider.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nUpdate to version greater than `0.6.3`\n\n## References\n- [Github Commit](https://github.com/Strider-CD/strider-sauce/commit/5ff6d6593f89aee505b4e86958ab6f8898baa9eb)\n",
+				"semver": {
+					"vulnerable": "<=0.6.3",
+					"unaffected": ">0.6.3"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 202,
+					"ALTERNATIVE": [
+						"SNYK-JS-STRIDERSAUCE-10280"
+					]
+				},
+				"patches": [],
+				"moduleName": "strider-sauce",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:strider-sauce:20161130",
+				"alternativeIds": [
+					"SNYK-JS-STRIDERSAUCE-10280"
 				]
 			}
 		],
@@ -8539,6 +12023,76 @@
 				]
 			}
 		],
+		"tomita": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T01:04:33.000Z",
+				"modificationTime": "2017-01-02T01:04:33.000Z",
+				"publicationTime": "2017-01-04T04:23:24.000Z",
+				"disclosureTime": "2017-01-02T01:04:33.000Z",
+				"description": "## Overview\n[`tomita`](https://www.npmjs.com/package/tomita) is a node wrapper for Yandex Tomita Parser\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `tomita`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 267,
+					"ALTERNATIVE": [
+						"SNYK-JS-TOMITA-10351"
+					]
+				},
+				"patches": [],
+				"moduleName": "tomita",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:tomita:20170102",
+				"alternativeIds": [
+					"SNYK-JS-TOMITA-10351"
+				]
+			}
+		],
+		"tomita-parser": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T22:45:08.000Z",
+				"modificationTime": "2017-01-01T22:45:08.000Z",
+				"publicationTime": "2017-01-04T04:23:49.000Z",
+				"disclosureTime": "2017-01-01T22:45:08.000Z",
+				"description": "## Overview\n[`tomita-parser`](https://www.npmjs.com/package/tomita-parser) is a Node wrapper for Yandex Tomita Parser.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `tomita-parser`.\n\n## References\n- [Vulnerable Code](https://github.com/ArtiomShapovalov/tomita-parser/blob/6ce865e9290905d9533a5ea7dfab277f69e7a023/gulpfile.js#L11)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 261,
+					"ALTERNATIVE": [
+						"SNYK-JS-TOMITAPARSER-10319"
+					]
+				},
+				"patches": [],
+				"moduleName": "tomita-parser",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:tomita-parser:20170101",
+				"alternativeIds": [
+					"SNYK-JS-TOMITAPARSER-10319"
+				]
+			}
+		],
 		"tough-cookie": [
 			{
 				"title": "ReDoS via long string of semicolons",
@@ -8801,6 +12355,41 @@
 				]
 			}
 		],
+		"unicode-json": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T15:18:25.000Z",
+				"modificationTime": "2017-01-01T15:18:25.000Z",
+				"publicationTime": "2017-01-04T02:28:49.000Z",
+				"disclosureTime": "2017-01-01T15:18:25.000Z",
+				"description": "## Overview\n[`unicode-json`](https://www.npmjs.com/package/unicode-json) is a unicode lookup table.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received.\n\n## Remediation\nThere is no fix version for `unicode-json`.\n\n## References\n- [Vulnerable Code](https://github.com/Zertz/unicode-json/blob/master/install.js#L34)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:L",
+				"severity": "medium",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 206,
+					"ALTERNATIVE": [
+						"SNYK-JS-UNICODEJSON-10283"
+					]
+				},
+				"patches": [],
+				"moduleName": "unicode-json",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:unicode-json:20170101",
+				"alternativeIds": [
+					"SNYK-JS-UNICODEJSON-10283"
+				]
+			}
+		],
 		"uws": [
 			{
 				"title": "Denial of Service",
@@ -8813,6 +12402,7 @@
 						"CWE-400"
 					],
 					"CVE": [],
+					"NSP": 149,
 					"ALTERNATIVE": [
 						"SNYK-JS-UWS-10156"
 					]
@@ -9032,6 +12622,321 @@
 				]
 			}
 		],
+		"webdriver-launcher": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:11:33.000Z",
+				"modificationTime": "2017-01-01T19:11:33.000Z",
+				"publicationTime": "2017-01-04T04:17:18.000Z",
+				"disclosureTime": "2017-01-01T19:11:33.000Z",
+				"description": "## Overview\n[`webdriver-launcher`](https://www.npmjs.com/package/webdriver-launcher) is a Node.js Selenium Webdriver Launcher.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `webdriver-launcher`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 246,
+					"ALTERNATIVE": [
+						"SNYK-JS-WEBDRIVERLAUNCHER-10355"
+					]
+				},
+				"patches": [],
+				"moduleName": "webdriver-launcher",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:webdriver-launcher:20170101",
+				"alternativeIds": [
+					"SNYK-JS-WEBDRIVERLAUNCHER-10355"
+				]
+			}
+		],
+		"webdrvr": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T00:29:39.000Z",
+				"modificationTime": "2017-01-01T00:29:39.000Z",
+				"publicationTime": "2017-01-04T01:43:37.000Z",
+				"disclosureTime": "2017-01-01T00:29:39.000Z",
+				"description": "## Overview\n[`webdrvr`](https://www.npmjs.com/package/webdrvr) is a npm wrapper for Selenium Webdriver including Chromedriver / IEDriver / IOSDriver / Ghostdriver.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `webdrvr`.\n\n## References\n- [Vulnerable Code](https://github.com/uxebu/webdrvr/blob/master/test/integration-spec.js#L43)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 193,
+					"ALTERNATIVE": [
+						"SNYK-JS-WEBDRVR-10274"
+					]
+				},
+				"patches": [],
+				"moduleName": "webdrvr",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:webdrvr:20170101",
+				"alternativeIds": [
+					"SNYK-JS-WEBDRVR-10274"
+				]
+			}
+		],
+		"webrtc-native": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T22:26:03.000Z",
+				"modificationTime": "2017-01-01T22:26:03.000Z",
+				"publicationTime": "2017-01-04T01:43:16.000Z",
+				"disclosureTime": "2017-01-01T22:26:03.000Z",
+				"description": "## Overview\n[`webrtc-native`](https://www.npmjs.com/package/webrtc-native) uses WebRTC from chromium project.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `webrtc-native`.\n\n## References\n- [Vulnerable Code](https://github.com/vmolsa/webrtc-native/blob/master/scripts/install.js#L10)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 176,
+					"ALTERNATIVE": [
+						"SNYK-JS-WEBRTCNATIVE-10270"
+					]
+				},
+				"patches": [],
+				"moduleName": "webrtc-native",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:webrtc-native:20170101",
+				"alternativeIds": [
+					"SNYK-JS-WEBRTCNATIVE-10270"
+				]
+			}
+		],
+		"windows-iedriver": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:52:48.000Z",
+				"modificationTime": "2017-01-02T04:52:48.000Z",
+				"publicationTime": "2017-01-04T04:29:03.000Z",
+				"disclosureTime": "2017-01-02T04:52:48.000Z",
+				"description": "## Overview\n[`windows-iedriver`](https://www.npmjs.com/package/windows-iedriver) downloads a fixed version of iedriverserver.exe\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `windows-iedriver`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 293,
+					"ALTERNATIVE": [
+						"SNYK-JS-WINDOWSIEDRIVER-10343"
+					]
+				},
+				"patches": [],
+				"moduleName": "windows-iedriver",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:windows-iedriver:20170102",
+				"alternativeIds": [
+					"SNYK-JS-WINDOWSIEDRIVER-10343"
+				]
+			}
+		],
+		"windows-latestchromedriver": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:55:36.000Z",
+				"modificationTime": "2017-01-02T04:55:36.000Z",
+				"publicationTime": "2017-01-04T04:32:34.000Z",
+				"disclosureTime": "2017-01-02T04:55:36.000Z",
+				"description": "## Overview\n[`windows-latestchromedriver`](https://www.npmjs.com/package/windows-latestchromedriver) downloads the latest version of chromedriver.exe\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `windows-latestchromedriver`.\n\n## References\n- [Vulnerable Code](https://github.com/ISNIT0/Windows_LatestChromedriver/blob/master/download.js#L3)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 295,
+					"ALTERNATIVE": [
+						"SNYK-JS-WINDOWSLATESTCHROMEDRIVER-10336"
+					]
+				},
+				"patches": [],
+				"moduleName": "windows-latestchromedriver",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:windows-latestchromedriver:20170102",
+				"alternativeIds": [
+					"SNYK-JS-WINDOWSLATESTCHROMEDRIVER-10336"
+				]
+			}
+		],
+		"windows-selenium-chromedriver": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:40:04.000Z",
+				"modificationTime": "2017-01-02T04:40:04.000Z",
+				"publicationTime": "2017-01-04T04:28:55.000Z",
+				"disclosureTime": "2017-01-02T04:40:04.000Z",
+				"description": "## Overview\n[`windows-selenium-chromedriver`](https://www.npmjs.com/package/windows-selenium-chromedriver) downloads the Selenium Jar file.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `windows-selenium-chromedriver`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 285,
+					"ALTERNATIVE": [
+						"SNYK-JS-WINDOWSSELENIUMCHROMEDRIVER-10366"
+					]
+				},
+				"patches": [],
+				"moduleName": "windows-selenium-chromedriver",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:windows-selenium-chromedriver:20170102",
+				"alternativeIds": [
+					"SNYK-JS-WINDOWSSELENIUMCHROMEDRIVER-10366"
+				]
+			}
+		],
+		"windows-seleniumjar": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:56:41.000Z",
+				"modificationTime": "2017-01-02T04:56:41.000Z",
+				"publicationTime": "2017-01-04T04:30:42.000Z",
+				"disclosureTime": "2017-01-02T04:56:41.000Z",
+				"description": "## Overview\n[`windows-seleniumjar`](https://www.npmjs.com/package/windows-seleniumjar) is a module that downloads the Selenium Jar file\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `windows-seleniumjar`.\n\n\n## References\n - [Vulnerable Code](https://github.com/CraigAllardyce/Windows_SeleniumJar/blob/master/download.js#L2)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 296,
+					"ALTERNATIVE": [
+						"SNYK-JS-WINDOWSSELENIUMJAR-10365"
+					]
+				},
+				"patches": [],
+				"moduleName": "windows-seleniumjar",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:windows-seleniumjar:20170102",
+				"alternativeIds": [
+					"SNYK-JS-WINDOWSSELENIUMJAR-10365"
+				]
+			}
+		],
+		"windows-seleniumjar-mirror": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T04:31:28.000Z",
+				"modificationTime": "2017-01-02T04:31:28.000Z",
+				"publicationTime": "2017-01-04T04:24:49.000Z",
+				"disclosureTime": "2017-01-02T04:31:28.000Z",
+				"description": "## Overview\n[`windows-seleniumjar-mirror`](https://www.npmjs.com/package/windows-seleniumjar-mirror) downloads the Selenium Jar file.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `windows-seleniumjar-mirror`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 281,
+					"ALTERNATIVE": [
+						"SNYK-JS-WINDOWSSELENIUMJARMIRROR-10332"
+					]
+				},
+				"patches": [],
+				"moduleName": "windows-seleniumjar-mirror",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:windows-seleniumjar-mirror:20170102",
+				"alternativeIds": [
+					"SNYK-JS-WINDOWSSELENIUMJARMIRROR-10332"
+				]
+			}
+		],
+		"wixtoolset": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-02T00:49:45.000Z",
+				"modificationTime": "2017-01-02T00:49:45.000Z",
+				"publicationTime": "2017-01-04T04:23:30.000Z",
+				"disclosureTime": "2017-01-02T00:49:45.000Z",
+				"description": "## Overview\n[`wixtoolset`](https://www.npmjs.com/package/wixtoolset) is a Node module wrapper around the wixtoolset binaries.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `wixtoolset`.\n\n## References\n- [Vulnerable Code](https://github.com/rewiredpictures/node-wixtoolset/blob/master/install.js#L7)\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 264,
+					"ALTERNATIVE": [
+						"SNYK-JS-WIXTOOLSET-10322"
+					]
+				},
+				"patches": [],
+				"moduleName": "wixtoolset",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:wixtoolset:20170102",
+				"alternativeIds": [
+					"SNYK-JS-WIXTOOLSET-10322"
+				]
+			}
+		],
 		"ws": [
 			{
 				"title": "Remote Memory Exposure",
@@ -9166,6 +13071,41 @@
 				"id": "npm:ws:20160624",
 				"alternativeIds": [
 					"SNYK-JS-WS-10111"
+				]
+			}
+		],
+		"xd-testing": [
+			{
+				"title": "Downloads Resources over insecure protocol",
+				"credit": [
+					"Adam Baldwin"
+				],
+				"creationTime": "2017-01-01T19:33:59.000Z",
+				"modificationTime": "2017-01-01T19:33:59.000Z",
+				"publicationTime": "2017-01-04T04:17:53.000Z",
+				"disclosureTime": "2017-01-01T19:33:59.000Z",
+				"description": "## Overview\n[`xd-testing`](https://www.npmjs.com/package/xd-testing) is a testing library for cross-device (XD) web applications.\n\nAffected versions of the package are vulnerable to Man in the Middle (MitM) attacks due to downloading resources over an insecure protocol. Without a secure connection, it is possible for an attacker to intercept this connection and alter the packages received. In serious cases, this may even lead to Remote Code Execution (RCE) on your host server.\n\n## Remediation\nThere is no fix version for `xd-testing`.\n",
+				"semver": {
+					"vulnerable": "*",
+					"unaffected": "<0.0.0"
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+				"severity": "high",
+				"identifiers": {
+					"CWE": [],
+					"CVE": [],
+					"NSP": 257,
+					"ALTERNATIVE": [
+						"SNYK-JS-XDTESTING-10315"
+					]
+				},
+				"patches": [],
+				"moduleName": "xd-testing",
+				"language": "js",
+				"packageManager": "npm",
+				"id": "npm:xd-testing:20170101",
+				"alternativeIds": [
+					"SNYK-JS-XDTESTING-10315"
 				]
 			}
 		],
@@ -15630,6 +19570,38 @@
 				"publicationTime": "2015-11-16T22:00:00.000Z",
 				"disclosureTime": "2015-11-16T22:00:00.000Z",
 				"id": "SNYK-RUBY-MUSTACHEJSRAILS-20242"
+			}
+		],
+		"mysql2": [
+			{
+				"title": "SQL Injection",
+				"credit": [
+					"Unknown"
+				],
+				"description": "## Overview\n[`mysql2`](https://rubygems.org/gems/mysql2) is a simple, fast Mysql library for Ruby, binding to libmysql\nAffected versions of this gem do not sanitize input passed into the `quoted_column_names` function, allowing malicious users to perform SQL Injection attacks.\n\n\n## References\n- [Github Release Notes](https://github.com/brianmario/mysql2/releases/tag/0.2.12)\n- [Github Commit](https://github.com/brianmario/mysql2/commit/00fc49b9c247a1fef079bea1570b5767b1803e4c)\n",
+				"moduleName": "mysql2",
+				"language": "ruby",
+				"packageManager": "rubygems",
+				"semver": {
+					"patched": [
+						">= 0.2.12"
+					],
+					"vulnerable": [
+						">0.1.4, <0.2.12"
+					]
+				},
+				"identifiers": {
+					"CWE": [
+						"CWE-89"
+					]
+				},
+				"CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+				"severity": "medium",
+				"creationTime": "2016-12-17T14:30:00.000Z",
+				"modificationTime": "2016-12-17T14:30:00.000Z",
+				"publicationTime": "2017-01-04T18:30:00.000Z",
+				"disclosureTime": "2015-11-16T22:00:00.000Z",
+				"id": "SNYK-RUBY-MYSQL2-20283"
 			}
 		],
 		"net-ldap": [
